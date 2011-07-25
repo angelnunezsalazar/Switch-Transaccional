@@ -1,0 +1,2978 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Entidades.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="EntidadesStoreContainer">
+          <EntitySet Name="CAMPO" EntityType="Entidades.Store.CAMPO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CAMPO_PLANTILLA" EntityType="Entidades.Store.CAMPO_PLANTILLA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="COLUMNA" EntityType="Entidades.Store.COLUMNA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="COMPONENTE" EntityType="Entidades.Store.COMPONENTE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CONDICION_MENSAJE" EntityType="Entidades.Store.CONDICION_MENSAJE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CRIPTOGRAFIA_CAMPO" EntityType="Entidades.Store.CRIPTOGRAFIA_CAMPO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DINAMICA_CRIPTOGRAFIA" EntityType="Entidades.Store.DINAMICA_CRIPTOGRAFIA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ENTIDAD_COMUNICACION" EntityType="Entidades.Store.ENTIDAD_COMUNICACION" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ESTADO_TERMINAL" EntityType="Entidades.Store.ESTADO_TERMINAL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FUNCION" EntityType="Entidades.Store.FUNCION" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FUNCION_X_USUARIO" EntityType="Entidades.Store.FUNCION_X_USUARIO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRUPO_MENSAJE" EntityType="Entidades.Store.GRUPO_MENSAJE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GRUPO_VALIDACION" EntityType="Entidades.Store.GRUPO_VALIDACION" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MENSAJE" EntityType="Entidades.Store.MENSAJE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MENSAJE_TRANSACCIONAL" EntityType="Entidades.Store.MENSAJE_TRANSACCIONAL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PARAMETRO_TRANSFORMACION_CAMPO" EntityType="Entidades.Store.PARAMETRO_TRANSFORMACION_CAMPO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PASO_DINAMICA" EntityType="Entidades.Store.PASO_DINAMICA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PROTOCOLO" EntityType="Entidades.Store.PROTOCOLO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PUNTO_SERVICIO" EntityType="Entidades.Store.PUNTO_SERVICIO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="REGLA_MENSAJE_TRANSACCIONAL" EntityType="Entidades.Store.REGLA_MENSAJE_TRANSACCIONAL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TABLA" EntityType="Entidades.Store.TABLA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TERMINAL" EntityType="Entidades.Store.TERMINAL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TIPO_COMUNICACION" EntityType="Entidades.Store.TIPO_COMUNICACION" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TIPO_DATO" EntityType="Entidades.Store.TIPO_DATO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TIPO_DATO_COLUMNA" EntityType="Entidades.Store.TIPO_DATO_COLUMNA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TIPO_ENTIDAD" EntityType="Entidades.Store.TIPO_ENTIDAD" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TIPO_MENSAJE" EntityType="Entidades.Store.TIPO_MENSAJE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TRANSFORMACION" EntityType="Entidades.Store.TRANSFORMACION" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TRANSFORMACION_CAMPO" EntityType="Entidades.Store.TRANSFORMACION_CAMPO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USUARIO" EntityType="Entidades.Store.USUARIO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VALIDACION_CAMPO" EntityType="Entidades.Store.VALIDACION_CAMPO" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__CAMPO__CAMPO_PLANTILLA" Association="Entidades.Store.FK__CAMPO__CAMPO_PLANTILLA">
+            <End Role="CAMPO_PLANTILLA" EntitySet="CAMPO_PLANTILLA" />
+            <End Role="CAMPO" EntitySet="CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CAMPO__MENSAJE" Association="Entidades.Store.FK__CAMPO__MENSAJE">
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+            <End Role="CAMPO" EntitySet="CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CAMPO__TIPODATO" Association="Entidades.Store.FK__CAMPO__TIPODATO">
+            <End Role="TIPO_DATO" EntitySet="TIPO_DATO" />
+            <End Role="CAMPO" EntitySet="CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COLUMNA__TABLA" Association="Entidades.Store.FK__COLUMNA__TABLA">
+            <End Role="TABLA" EntitySet="TABLA" />
+            <End Role="COLUMNA" EntitySet="COLUMNA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ENTIDAD_GRUPO_MENSAJE" Association="Entidades.Store.FK__ENTIDAD_GRUPO_MENSAJE">
+            <End Role="GRUPO_MENSAJE" EntitySet="GRUPO_MENSAJE" />
+            <End Role="ENTIDAD_COMUNICACION" EntitySet="ENTIDAD_COMUNICACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ENTIDAD_PROTOCOLO" Association="Entidades.Store.FK__ENTIDAD_PROTOCOLO">
+            <End Role="PROTOCOLO" EntitySet="PROTOCOLO" />
+            <End Role="ENTIDAD_COMUNICACION" EntitySet="ENTIDAD_COMUNICACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FUNCION_X__FNC_C__2FCF1A8A" Association="Entidades.Store.FK__FUNCION_X__FNC_C__2FCF1A8A">
+            <End Role="FUNCION" EntitySet="FUNCION" />
+            <End Role="FUNCION_X_USUARIO" EntitySet="FUNCION_X_USUARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FUNCION_X__USR_C__30C33EC3" Association="Entidades.Store.FK__FUNCION_X__USR_C__30C33EC3">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="FUNCION_X_USUARIO" EntitySet="FUNCION_X_USUARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRUPO_MENSAJE_TIPO_MENSAJE" Association="Entidades.Store.FK__GRUPO_MENSAJE_TIPO_MENSAJE">
+            <End Role="TIPO_MENSAJE" EntitySet="TIPO_MENSAJE" />
+            <End Role="GRUPO_MENSAJE" EntitySet="GRUPO_MENSAJE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRUPO_VALIDACION_MENSAJE" Association="Entidades.Store.FK__GRUPO_VALIDACION_MENSAJE">
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+            <End Role="GRUPO_VALIDACION" EntitySet="GRUPO_VALIDACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MENSAJE__GRUPO_MENSAJE" Association="Entidades.Store.FK__MENSAJE__GRUPO_MENSAJE">
+            <End Role="GRUPO_MENSAJE" EntitySet="GRUPO_MENSAJE" />
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MENSAJE_TRANSACCIONAL_CONDICION_MENSAJE" Association="Entidades.Store.FK__MENSAJE_TRANSACCIONAL_CONDICION_MENSAJE">
+            <End Role="CONDICION_MENSAJE" EntitySet="CONDICION_MENSAJE" />
+            <End Role="MENSAJE_TRANSACCIONAL" EntitySet="MENSAJE_TRANSACCIONAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MENSAJE_TRANSACCIONAL_MENSAJE" Association="Entidades.Store.FK__MENSAJE_TRANSACCIONAL_MENSAJE">
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+            <End Role="MENSAJE_TRANSACCIONAL" EntitySet="MENSAJE_TRANSACCIONAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PARAMETRO__TRANSFORMACION_COLUMNA_DESTINO" Association="Entidades.Store.FK__PARAMETRO__TRANSFORMACION_COLUMNA_DESTINO">
+            <End Role="COLUMNA" EntitySet="COLUMNA" />
+            <End Role="PARAMETRO_TRANSFORMACION_CAMPO" EntitySet="PARAMETRO_TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PARAMETRO__TRANSFORMACION_COLUMNA_ORIGEN" Association="Entidades.Store.FK__PARAMETRO__TRANSFORMACION_COLUMNA_ORIGEN">
+            <End Role="COLUMNA" EntitySet="COLUMNA" />
+            <End Role="PARAMETRO_TRANSFORMACION_CAMPO" EntitySet="PARAMETRO_TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PARAMETRO__TRANSFORMACION_TABLA" Association="Entidades.Store.FK__PARAMETRO__TRANSFORMACION_TABLA">
+            <End Role="TABLA" EntitySet="TABLA" />
+            <End Role="PARAMETRO_TRANSFORMACION_CAMPO" EntitySet="PARAMETRO_TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PARAMETRO_TRANSFORMACION_CAMPO" Association="Entidades.Store.FK__PARAMETRO_TRANSFORMACION_CAMPO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="PARAMETRO_TRANSFORMACION_CAMPO" EntitySet="PARAMETRO_TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PARAMETRO_TRANSFORMACION_TRANSFORMACION_CAMPO" Association="Entidades.Store.FK__PARAMETRO_TRANSFORMACION_TRANSFORMACION_CAMPO">
+            <End Role="TRANSFORMACION_CAMPO" EntitySet="TRANSFORMACION_CAMPO" />
+            <End Role="PARAMETRO_TRANSFORMACION_CAMPO" EntitySet="PARAMETRO_TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PROTOCOLO__TIPO_COMUNICACION" Association="Entidades.Store.FK__PROTOCOLO__TIPO_COMUNICACION">
+            <End Role="TIPO_COMUNICACION" EntitySet="TIPO_COMUNICACION" />
+            <End Role="PROTOCOLO" EntitySet="PROTOCOLO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__REGLA_MENSAJE_CAMPO" Association="Entidades.Store.FK__REGLA_MENSAJE_CAMPO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="REGLA_MENSAJE_TRANSACCIONAL" EntitySet="REGLA_MENSAJE_TRANSACCIONAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__REGLA_MENSAJE_MENSAJE_TRANSACCIONAL" Association="Entidades.Store.FK__REGLA_MENSAJE_MENSAJE_TRANSACCIONAL">
+            <End Role="MENSAJE_TRANSACCIONAL" EntitySet="MENSAJE_TRANSACCIONAL" />
+            <End Role="REGLA_MENSAJE_TRANSACCIONAL" EntitySet="REGLA_MENSAJE_TRANSACCIONAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TERMINAL__ENTIDAD_COMUNICACION" Association="Entidades.Store.FK__TERMINAL__ENTIDAD_COMUNICACION">
+            <End Role="ENTIDAD_COMUNICACION" EntitySet="ENTIDAD_COMUNICACION" />
+            <End Role="TERMINAL" EntitySet="TERMINAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TERMINAL__ESTADO_TERMINAL" Association="Entidades.Store.FK__TERMINAL__ESTADO_TERMINAL">
+            <End Role="ESTADO_TERMINAL" EntitySet="ESTADO_TERMINAL" />
+            <End Role="TERMINAL" EntitySet="TERMINAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TERMINAL__PUNTO_SERVICIO" Association="Entidades.Store.FK__TERMINAL__PUNTO_SERVICIO">
+            <End Role="PUNTO_SERVICIO" EntitySet="PUNTO_SERVICIO" />
+            <End Role="TERMINAL" EntitySet="TERMINAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TRANSFORM__MENSAJE_DESTINO" Association="Entidades.Store.FK__TRANSFORM__MENSAJE_DESTINO">
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+            <End Role="TRANSFORMACION" EntitySet="TRANSFORMACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TRANSFORM__MENSAJE_ORIGEN" Association="Entidades.Store.FK__TRANSFORM__MENSAJE_ORIGEN">
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+            <End Role="TRANSFORMACION" EntitySet="TRANSFORMACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TRANSFORMACION__TRANSFORMACION_CAMPO" Association="Entidades.Store.FK__TRANSFORMACION__TRANSFORMACION_CAMPO">
+            <End Role="TRANSFORMACION" EntitySet="TRANSFORMACION" />
+            <End Role="TRANSFORMACION_CAMPO" EntitySet="TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TRANSFORMACION_CAMPO_CAMPO_DESTINO" Association="Entidades.Store.FK__TRANSFORMACION_CAMPO_CAMPO_DESTINO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="TRANSFORMACION_CAMPO" EntitySet="TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VALIDACIO__CAMPO_TABLA" Association="Entidades.Store.FK__VALIDACIO__CAMPO_TABLA">
+            <End Role="TABLA" EntitySet="TABLA" />
+            <End Role="VALIDACION_CAMPO" EntitySet="VALIDACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VALIDACION_CAMPO__CAMPO" Association="Entidades.Store.FK__VALIDACION_CAMPO__CAMPO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="VALIDACION_CAMPO" EntitySet="VALIDACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VALIDACION_CAMPO_COLUMNA" Association="Entidades.Store.FK__VALIDACION_CAMPO_COLUMNA">
+            <End Role="COLUMNA" EntitySet="COLUMNA" />
+            <End Role="VALIDACION_CAMPO" EntitySet="VALIDACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VALIDACION_GRUPO_VALIDACION" Association="Entidades.Store.FK__VALIDACION_GRUPO_VALIDACION">
+            <End Role="GRUPO_VALIDACION" EntitySet="GRUPO_VALIDACION" />
+            <End Role="VALIDACION_CAMPO" EntitySet="VALIDACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CAMPO_PLANTILLA_GRUPO_MENSAJE" Association="Entidades.Store.FK_CAMPO_PLANTILLA_GRUPO_MENSAJE">
+            <End Role="GRUPO_MENSAJE" EntitySet="GRUPO_MENSAJE" />
+            <End Role="CAMPO_PLANTILLA" EntitySet="CAMPO_PLANTILLA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CAMPO_PLANTILLA_TIPO_DATO" Association="Entidades.Store.FK_CAMPO_PLANTILLA_TIPO_DATO">
+            <End Role="TIPO_DATO" EntitySet="TIPO_DATO" />
+            <End Role="CAMPO_PLANTILLA" EntitySet="CAMPO_PLANTILLA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COLUMNA_TIPO_DATO_COLUMNA" Association="Entidades.Store.FK_COLUMNA_TIPO_DATO_COLUMNA">
+            <End Role="TIPO_DATO_COLUMNA" EntitySet="TIPO_DATO_COLUMNA" />
+            <End Role="COLUMNA" EntitySet="COLUMNA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRIPTOGRAFIA_CAMPO_DINAMICA_CRIPTOGRAFIA" Association="Entidades.Store.FK_CRIPTOGRAFIA_CAMPO_DINAMICA_CRIPTOGRAFIA">
+            <End Role="DINAMICA_CRIPTOGRAFIA" EntitySet="DINAMICA_CRIPTOGRAFIA" />
+            <End Role="CRIPTOGRAFIA_CAMPO" EntitySet="CRIPTOGRAFIA_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRIPTOGRAFIA_CAMPO_LLAVE_1_CAMPO" Association="Entidades.Store.FK_CRIPTOGRAFIA_CAMPO_LLAVE_1_CAMPO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="CRIPTOGRAFIA_CAMPO" EntitySet="CRIPTOGRAFIA_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRIPTOGRAFIA_CAMPO_LLAVE_2_CAMPO" Association="Entidades.Store.FK_CRIPTOGRAFIA_CAMPO_LLAVE_2_CAMPO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="CRIPTOGRAFIA_CAMPO" EntitySet="CRIPTOGRAFIA_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRIPTOGRAFIA_CAMPO_RESULTADO_CAMPO" Association="Entidades.Store.FK_CRIPTOGRAFIA_CAMPO_RESULTADO_CAMPO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="CRIPTOGRAFIA_CAMPO" EntitySet="CRIPTOGRAFIA_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DINAMICA_CRIPTOGRAFIA_MENSAJE" Association="Entidades.Store.FK_DINAMICA_CRIPTOGRAFIA_MENSAJE">
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+            <End Role="DINAMICA_CRIPTOGRAFIA" EntitySet="DINAMICA_CRIPTOGRAFIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ENTIDAD_COMUNICACION_TIPO_ENTIDAD" Association="Entidades.Store.FK_ENTIDAD_COMUNICACION_TIPO_ENTIDAD">
+            <End Role="TIPO_ENTIDAD" EntitySet="TIPO_ENTIDAD" />
+            <End Role="ENTIDAD_COMUNICACION" EntitySet="ENTIDAD_COMUNICACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PASO_DINAMICA_ENTIDAD_COMUNICACION" Association="Entidades.Store.FK_PASO_DINAMICA_ENTIDAD_COMUNICACION">
+            <End Role="ENTIDAD_COMUNICACION" EntitySet="ENTIDAD_COMUNICACION" />
+            <End Role="PASO_DINAMICA" EntitySet="PASO_DINAMICA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PASO_DINAMICA_MENSAJE_TRANSACCIONAL" Association="Entidades.Store.FK_PASO_DINAMICA_MENSAJE_TRANSACCIONAL">
+            <End Role="MENSAJE_TRANSACCIONAL" EntitySet="MENSAJE_TRANSACCIONAL" />
+            <End Role="PASO_DINAMICA" EntitySet="PASO_DINAMICA" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CAMPO">
+          <Key>
+            <PropertyRef Name="CAM_CODIGO" />
+            <PropertyRef Name="MEN_CODIGO" />
+          </Key>
+          <Property Name="CAM_CODIGO" Type="int" Nullable="false" />
+          <Property Name="MEN_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CAM_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CAM_LONGITUD" Type="int" Nullable="false" />
+          <Property Name="CAM_SELECTOR" Type="bit" Nullable="false" />
+          <Property Name="CAM_VARIABLE" Type="bit" />
+          <Property Name="CAM_LONGITUD_CABECERA" Type="int" />
+          <Property Name="CAM_REQUERIDO" Type="bit" Nullable="false" />
+          <Property Name="CAM_ALMACENADO" Type="bit" Nullable="false" />
+          <Property Name="CAM_POSICION_RELATIVA" Type="int" Nullable="false" />
+          <Property Name="CAM_PROTEGIDO_LOG" Type="bit" Nullable="false" />
+          <Property Name="CAM_VALOR_SELECTOR_REQUEST" Type="varchar" MaxLength="50" />
+          <Property Name="CAM_VALOR_SELECTOR_RESPONSE" Type="varchar" MaxLength="50" />
+          <Property Name="TDT_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CMP_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CAM_CABECERA" Type="bit" Nullable="false" />
+          <Property Name="CAM_BITMAP" Type="bit" Nullable="false" />
+          <Property Name="CAM_TRANSACCIONAL" Type="bit" Nullable="false" />
+          <Property Name="CAM_TANQUEO" Type="bit" />
+          <Property Name="CAM_DESTANQUEO" Type="bit" />
+        </EntityType>
+        <EntityType Name="CAMPO_PLANTILLA">
+          <Key>
+            <PropertyRef Name="CMP_CODIGO" />
+          </Key>
+          <Property Name="CMP_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CMP_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CMP_LONGITUD" Type="int" Nullable="false" />
+          <Property Name="CMP_SELECTOR" Type="bit" Nullable="false" />
+          <Property Name="CMP_VARIABLE" Type="bit" Nullable="false" />
+          <Property Name="CMP_PROTEGIDO_LOG" Type="bit" Nullable="false" />
+          <Property Name="CMP_ALMACENADO" Type="bit" Nullable="false" />
+          <Property Name="GMJ_CODIGO" Type="int" Nullable="false" />
+          <Property Name="TDT_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CMP_POSICION_RELATIVA" Type="int" Nullable="false" />
+          <Property Name="CMP_LONGITUD_CABECERA" Type="int" />
+          <Property Name="CMP_CABECERA" Type="bit" Nullable="false" />
+          <Property Name="CMP_BITMAP" Type="bit" Nullable="false" />
+          <Property Name="CMP_TRANSACCIONAL" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="COLUMNA">
+          <Key>
+            <PropertyRef Name="COL_CODIGO" />
+          </Key>
+          <Property Name="COL_CODIGO" Type="int" Nullable="false" />
+          <Property Name="COL_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="COL_LONGITUD" Type="int" Nullable="false" />
+          <Property Name="TBL_CODIGO" Type="int" Nullable="false" />
+          <Property Name="TDC_CODIGO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="COMPONENTE">
+          <Key>
+            <PropertyRef Name="COM_CODIGO" />
+          </Key>
+          <Property Name="COM_CODIGO" Type="int" Nullable="false" />
+          <Property Name="COM_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="COM_ARCHIVO" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CONDICION_MENSAJE">
+          <Key>
+            <PropertyRef Name="CNM_CODIGO" />
+          </Key>
+          <Property Name="CNM_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CNM_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CNM_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="CRIPTOGRAFIA_CAMPO">
+          <Key>
+            <PropertyRef Name="CRC_CODIGO" />
+            <PropertyRef Name="DNC_CODIGO" />
+          </Key>
+          <Property Name="CRC_CODIGO" Type="int" Nullable="false" />
+          <Property Name="DNC_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CAM_CODIGO_RESULTADO" Type="int" Nullable="false" />
+          <Property Name="MEN_CODIGO_RESULTADO" Type="int" Nullable="false" />
+          <Property Name="CAM_CODIGO_LLAVE_1" Type="int" />
+          <Property Name="MEN_CODIGO_LLAVE_1" Type="int" />
+          <Property Name="CAM_CODIGO_LLAVE_2" Type="int" />
+          <Property Name="MEN_CODIGO_LLAVE_2" Type="int" />
+          <Property Name="CRC_LLAVE_1" Type="varchar" MaxLength="64" />
+          <Property Name="CRC_LLAVE_2" Type="varchar" MaxLength="64" />
+          <Property Name="CRC_TIPO_LLAVE_1" Type="int" Nullable="false" />
+          <Property Name="CRC_TIPO_LLAVE_2" Type="int" />
+          <Property Name="CRC_SEGUNDA_LLAVE" Type="bit" Nullable="false" />
+          <Property Name="CRC_OPERACION_LLAVE" Type="int" />
+          <Property Name="CRC_ALGORITMO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DINAMICA_CRIPTOGRAFIA">
+          <Key>
+            <PropertyRef Name="DNC_CODIGO" />
+          </Key>
+          <Property Name="DNC_CODIGO" Type="int" Nullable="false" />
+          <Property Name="DNC_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DNC_TIPO" Type="int" Nullable="false" />
+          <Property Name="MEN_CODIGO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ENTIDAD_COMUNICACION">
+          <Key>
+            <PropertyRef Name="EDC_CODIGO" />
+          </Key>
+          <Property Name="EDC_CODIGO" Type="int" Nullable="false" />
+          <Property Name="EDC_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="EDC_DESCRIPCION" Type="varchar" MaxLength="200" />
+          <Property Name="EDC_RUTA_LOG" Type="varchar" MaxLength="300" />
+          <Property Name="EDC_NOMBRE_LOG" Type="varchar" MaxLength="50" />
+          <Property Name="PTR_CODIGO" Type="int" />
+          <Property Name="EDC_TIMEOUT_EN_COLA" Type="int" />
+          <Property Name="GMJ_CODIGO" Type="int" />
+          <Property Name="TEM_CODIGO" Type="int" />
+          <Property Name="EDC_COLA" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ESTADO_TERMINAL">
+          <Key>
+            <PropertyRef Name="EST_CODIGO" />
+          </Key>
+          <Property Name="EST_CODIGO" Type="int" Nullable="false" />
+          <Property Name="EST_NOMBRE" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FUNCION">
+          <Key>
+            <PropertyRef Name="FNC_CODIGO" />
+          </Key>
+          <Property Name="FNC_CODIGO" Type="float" Nullable="false" />
+          <Property Name="FNC_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="FNC_DESCRIPCION" Type="varchar" MaxLength="200" />
+          <Property Name="FNC_PAQUETE" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="FUNCION_X_USUARIO">
+          <Key>
+            <PropertyRef Name="USR_CODIGO" />
+            <PropertyRef Name="FNC_CODIGO" />
+          </Key>
+          <Property Name="USR_CODIGO" Type="int" Nullable="false" />
+          <Property Name="FNC_CODIGO" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GRUPO_MENSAJE">
+          <Key>
+            <PropertyRef Name="GMJ_CODIGO" />
+          </Key>
+          <Property Name="GMJ_CODIGO" Type="int" Nullable="false" />
+          <Property Name="GMJ_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="GMJ_DESCRIPCION" Type="varchar" MaxLength="200" />
+          <Property Name="TMJ_CODIGO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GRUPO_VALIDACION">
+          <Key>
+            <PropertyRef Name="GRV_CODIGO" />
+          </Key>
+          <Property Name="GRV_CODIGO" Type="int" Nullable="false" />
+          <Property Name="GRV_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MEN_CODIGO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MENSAJE">
+          <Key>
+            <PropertyRef Name="MEN_CODIGO" />
+          </Key>
+          <Property Name="MEN_CODIGO" Type="int" Nullable="false" />
+          <Property Name="MEN_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="MEN_DESCRIPCION" Type="varchar" MaxLength="200" />
+          <Property Name="GMJ_CODIGO" Type="int" />
+        </EntityType>
+        <EntityType Name="MENSAJE_TRANSACCIONAL">
+          <Key>
+            <PropertyRef Name="MTR_CODIGO" />
+          </Key>
+          <Property Name="MTR_CODIGO" Type="int" Nullable="false" />
+          <Property Name="MTR_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MEN_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CNM_CODIGO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PARAMETRO_TRANSFORMACION_CAMPO">
+          <Key>
+            <PropertyRef Name="PTC_CODIGO" />
+          </Key>
+          <Property Name="PTC_CODIGO" Type="int" Nullable="false" />
+          <Property Name="TRM_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CAM_CODIGO_CAMPO_DESTINO" Type="int" Nullable="false" />
+          <Property Name="MEN_CODIGO_MENSAJE_DESTINO" Type="int" Nullable="false" />
+          <Property Name="CAM_CODIGO_CAMPO_ORIGEN" Type="int" />
+          <Property Name="MEN_CODIGO_MENSAJE_ORIGEN" Type="int" />
+          <Property Name="PTC_POSICION_INICIAL" Type="int" />
+          <Property Name="PTC_LONGITUD" Type="int" />
+          <Property Name="PTC_TIPO" Type="int" />
+          <Property Name="TBL_CODIGO" Type="int" />
+          <Property Name="COL_CODIGO_ORIGEN" Type="int" />
+          <Property Name="COL_CODIGO_DESTINO" Type="int" />
+        </EntityType>
+        <EntityType Name="PASO_DINAMICA">
+          <Key>
+            <PropertyRef Name="PDT_CODIGO" />
+          </Key>
+          <Property Name="PDT_CODIGO" Type="int" Nullable="false" />
+          <Property Name="PDT_FUNCIONALIDAD" Type="int" Nullable="false" />
+          <Property Name="PDT_NUMERO" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="PDT_FIN" Type="bit" Nullable="false" />
+          <Property Name="PDT_PASO" Type="int" Nullable="false" />
+          <Property Name="MTR_CODIGO" Type="int" Nullable="false" />
+          <Property Name="PDT_REINTENTOS" Type="int" />
+          <Property Name="EDC_CODIGO" Type="int" />
+          <Property Name="PDT_INFORMACION_ADICIONAL" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PROTOCOLO">
+          <Key>
+            <PropertyRef Name="PTR_CODIGO" />
+          </Key>
+          <Property Name="PTR_CODIGO" Type="int" Nullable="false" />
+          <Property Name="PTR_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="PTR_TIMEOUT_REQUEST" Type="int" />
+          <Property Name="PTR_TIMEOUT_RESPONSE" Type="int" />
+          <Property Name="PTR_PUERTO" Type="int" />
+          <Property Name="PTR_COMPONENTE" Type="varchar" MaxLength="50" />
+          <Property Name="PTR_NOMBRE_CLASE" Type="varchar" MaxLength="50" />
+          <Property Name="PTR_NOMBRE_METODO" Type="varchar" MaxLength="50" />
+          <Property Name="TPO_CODIGO" Type="int" />
+          <Property Name="PTR_INICIA_COMM" Type="bit" />
+          <Property Name="PTR_ACEPTA_COMM" Type="bit" />
+          <Property Name="PTR_FRAME" Type="int" />
+          <Property Name="PTR_CARACTER_INICIO" Type="char" MaxLength="1" />
+          <Property Name="PTR_CARACTER_FIN" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="PUNTO_SERVICIO">
+          <Key>
+            <PropertyRef Name="PSR_CODIGO" />
+          </Key>
+          <Property Name="PSR_CODIGO" Type="int" Nullable="false" />
+          <Property Name="PSR_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PSR_ESTADO" Type="bit" Nullable="false" />
+          <Property Name="PSR_DIRECCION" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="REGLA_MENSAJE_TRANSACCIONAL">
+          <Key>
+            <PropertyRef Name="RMT_CODIGO" />
+          </Key>
+          <Property Name="RMT_CODIGO" Type="int" Nullable="false" />
+          <Property Name="RMT_POSICION_INICIAL" Type="int" />
+          <Property Name="RMT_LONGITUD" Type="int" />
+          <Property Name="RMT_VALOR" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CAM_CODIGO" Type="int" Nullable="false" />
+          <Property Name="MEN_CODIGO" Type="int" Nullable="false" />
+          <Property Name="MTR_CODIGO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TABLA">
+          <Key>
+            <PropertyRef Name="TBL_CODIGO" />
+          </Key>
+          <Property Name="TBL_CODIGO" Type="int" Nullable="false" />
+          <Property Name="TBL_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="TBL_DESCRIPCION" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="TERMINAL">
+          <Key>
+            <PropertyRef Name="TRM_CODIGO" />
+          </Key>
+          <Property Name="TRM_CODIGO" Type="int" Nullable="false" />
+          <Property Name="TRM_SERIAL" Type="varchar" MaxLength="20" />
+          <Property Name="TRM_FECHA_REGISTRO" Type="datetime" />
+          <Property Name="EST_CODIGO" Type="int" />
+          <Property Name="PSR_CODIGO" Type="int" />
+          <Property Name="EDC_CODIGO" Type="int" />
+        </EntityType>
+        <EntityType Name="TIPO_COMUNICACION">
+          <Key>
+            <PropertyRef Name="TPO_CODIGO" />
+          </Key>
+          <Property Name="TPO_CODIGO" Type="int" Nullable="false" />
+          <Property Name="TPO_NOMBRE" Type="varchar" MaxLength="100" />
+          <Property Name="TPO_DESCRIPION" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="TIPO_DATO">
+          <Key>
+            <PropertyRef Name="TDT_CODIGO" />
+          </Key>
+          <Property Name="TDT_CODIGO" Type="int" Nullable="false" />
+          <Property Name="TDT_DESCRIPCION" Type="varchar" MaxLength="200" />
+          <Property Name="TDT_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TIPO_DATO_COLUMNA">
+          <Key>
+            <PropertyRef Name="TDC_CODIGO" />
+          </Key>
+          <Property Name="TDC_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TDC_NOMBRE" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TIPO_ENTIDAD">
+          <Key>
+            <PropertyRef Name="TEM_CODIGO" />
+          </Key>
+          <Property Name="TEM_CODIGO" Type="int" Nullable="false" />
+          <Property Name="TEM_NOMBRE" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TIPO_MENSAJE">
+          <Key>
+            <PropertyRef Name="TMJ_CODIGO" />
+          </Key>
+          <Property Name="TMJ_CODIGO" Type="int" Nullable="false" />
+          <Property Name="TMJ_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="TMJ_DESCRIPCION" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="TRANSFORMACION">
+          <Key>
+            <PropertyRef Name="TRM_CODIGO" />
+          </Key>
+          <Property Name="TRM_CODIGO" Type="int" Nullable="false" />
+          <Property Name="TRM_NOMBRE" Type="varchar" MaxLength="200" />
+          <Property Name="MEN_CODIGO_MENSAJE_ORIGEN" Type="int" Nullable="false" />
+          <Property Name="MEN_CODIGO_MENSAJE_DESTINO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TRANSFORMACION_CAMPO">
+          <Key>
+            <PropertyRef Name="TRM_CODIGO" />
+            <PropertyRef Name="CAM_CODIGO_CAMPO_DESTINO" />
+            <PropertyRef Name="MEN_CODIGO_MENSAJE_DESTINO" />
+          </Key>
+          <Property Name="TRM_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CAM_CODIGO_CAMPO_DESTINO" Type="int" Nullable="false" />
+          <Property Name="MEN_CODIGO_MENSAJE_DESTINO" Type="int" Nullable="false" />
+          <Property Name="TCM_COMPONENTE" Type="varchar" MaxLength="50" />
+          <Property Name="TCM_CLASE" Type="varchar" MaxLength="50" />
+          <Property Name="TCM_METODO" Type="varchar" MaxLength="50" />
+          <Property Name="TCM_PROCEDIMIENTO" Type="varchar" MaxLength="100" />
+          <Property Name="TCM_VALOR_CONSTANTE" Type="varchar" MaxLength="200" />
+          <Property Name="TCM_FUNCIONALIDAD_ESTANDAR" Type="int" />
+          <Property Name="TCM_TIPO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="USR_CODIGO" />
+          </Key>
+          <Property Name="USR_CODIGO" Type="int" Nullable="false" />
+          <Property Name="USR_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="USR_CONTRASENHA" Type="varchar" MaxLength="50" />
+          <Property Name="USR_DATOS_USUARIO" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="VALIDACION_CAMPO">
+          <Key>
+            <PropertyRef Name="VLC_CODIGO" />
+            <PropertyRef Name="GRV_CODIGO" />
+            <PropertyRef Name="MEN_CODIGO" />
+            <PropertyRef Name="CAM_CODIGO" />
+          </Key>
+          <Property Name="VLC_CODIGO" Type="int" Nullable="false" />
+          <Property Name="GRV_CODIGO" Type="int" Nullable="false" />
+          <Property Name="MEN_CODIGO" Type="int" Nullable="false" />
+          <Property Name="CAM_CODIGO" Type="int" Nullable="false" />
+          <Property Name="VLC_INCLUSION_EXCLUSION" Type="int" />
+          <Property Name="VLC_CONDICION" Type="int" />
+          <Property Name="VLC_VALOR" Type="varchar" MaxLength="50" />
+          <Property Name="VLC_PROCEDIMIENTO" Type="varchar" MaxLength="100" />
+          <Property Name="TBL_CODIGO" Type="int" />
+          <Property Name="COL_CODIGO" Type="int" />
+          <Property Name="VLC_COMPONENTE" Type="varchar" MaxLength="50" />
+          <Property Name="VLC_CLASE" Type="varchar" MaxLength="50" />
+          <Property Name="VLC_METODO" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__CAMPO__CAMPO_PLANTILLA">
+          <End Role="CAMPO_PLANTILLA" Type="Entidades.Store.CAMPO_PLANTILLA" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CAMPO" Type="Entidades.Store.CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAMPO_PLANTILLA">
+              <PropertyRef Name="CMP_CODIGO" />
+            </Principal>
+            <Dependent Role="CAMPO">
+              <PropertyRef Name="CMP_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CAMPO__MENSAJE">
+          <End Role="MENSAJE" Type="Entidades.Store.MENSAJE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CAMPO" Type="Entidades.Store.CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENSAJE">
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="CAMPO">
+              <PropertyRef Name="MEN_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CAMPO__TIPODATO">
+          <End Role="TIPO_DATO" Type="Entidades.Store.TIPO_DATO" Multiplicity="1" />
+          <End Role="CAMPO" Type="Entidades.Store.CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_DATO">
+              <PropertyRef Name="TDT_CODIGO" />
+            </Principal>
+            <Dependent Role="CAMPO">
+              <PropertyRef Name="TDT_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__COLUMNA__TABLA">
+          <End Role="TABLA" Type="Entidades.Store.TABLA" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="COLUMNA" Type="Entidades.Store.COLUMNA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TABLA">
+              <PropertyRef Name="TBL_CODIGO" />
+            </Principal>
+            <Dependent Role="COLUMNA">
+              <PropertyRef Name="TBL_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ENTIDAD_GRUPO_MENSAJE">
+          <End Role="GRUPO_MENSAJE" Type="Entidades.Store.GRUPO_MENSAJE" Multiplicity="0..1" />
+          <End Role="ENTIDAD_COMUNICACION" Type="Entidades.Store.ENTIDAD_COMUNICACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRUPO_MENSAJE">
+              <PropertyRef Name="GMJ_CODIGO" />
+            </Principal>
+            <Dependent Role="ENTIDAD_COMUNICACION">
+              <PropertyRef Name="GMJ_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ENTIDAD_PROTOCOLO">
+          <End Role="PROTOCOLO" Type="Entidades.Store.PROTOCOLO" Multiplicity="0..1" />
+          <End Role="ENTIDAD_COMUNICACION" Type="Entidades.Store.ENTIDAD_COMUNICACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROTOCOLO">
+              <PropertyRef Name="PTR_CODIGO" />
+            </Principal>
+            <Dependent Role="ENTIDAD_COMUNICACION">
+              <PropertyRef Name="PTR_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FUNCION_X__FNC_C__2FCF1A8A">
+          <End Role="FUNCION" Type="Entidades.Store.FUNCION" Multiplicity="1" />
+          <End Role="FUNCION_X_USUARIO" Type="Entidades.Store.FUNCION_X_USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FUNCION">
+              <PropertyRef Name="FNC_CODIGO" />
+            </Principal>
+            <Dependent Role="FUNCION_X_USUARIO">
+              <PropertyRef Name="FNC_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FUNCION_X__USR_C__30C33EC3">
+          <End Role="USUARIO" Type="Entidades.Store.USUARIO" Multiplicity="1" />
+          <End Role="FUNCION_X_USUARIO" Type="Entidades.Store.FUNCION_X_USUARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="USR_CODIGO" />
+            </Principal>
+            <Dependent Role="FUNCION_X_USUARIO">
+              <PropertyRef Name="USR_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRUPO_MENSAJE_TIPO_MENSAJE">
+          <End Role="TIPO_MENSAJE" Type="Entidades.Store.TIPO_MENSAJE" Multiplicity="1" />
+          <End Role="GRUPO_MENSAJE" Type="Entidades.Store.GRUPO_MENSAJE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_MENSAJE">
+              <PropertyRef Name="TMJ_CODIGO" />
+            </Principal>
+            <Dependent Role="GRUPO_MENSAJE">
+              <PropertyRef Name="TMJ_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GRUPO_VALIDACION_MENSAJE">
+          <End Role="MENSAJE" Type="Entidades.Store.MENSAJE" Multiplicity="1" />
+          <End Role="GRUPO_VALIDACION" Type="Entidades.Store.GRUPO_VALIDACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENSAJE">
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="GRUPO_VALIDACION">
+              <PropertyRef Name="MEN_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MENSAJE__GRUPO_MENSAJE">
+          <End Role="GRUPO_MENSAJE" Type="Entidades.Store.GRUPO_MENSAJE" Multiplicity="0..1" />
+          <End Role="MENSAJE" Type="Entidades.Store.MENSAJE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRUPO_MENSAJE">
+              <PropertyRef Name="GMJ_CODIGO" />
+            </Principal>
+            <Dependent Role="MENSAJE">
+              <PropertyRef Name="GMJ_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MENSAJE_TRANSACCIONAL_CONDICION_MENSAJE">
+          <End Role="CONDICION_MENSAJE" Type="Entidades.Store.CONDICION_MENSAJE" Multiplicity="1" />
+          <End Role="MENSAJE_TRANSACCIONAL" Type="Entidades.Store.MENSAJE_TRANSACCIONAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CONDICION_MENSAJE">
+              <PropertyRef Name="CNM_CODIGO" />
+            </Principal>
+            <Dependent Role="MENSAJE_TRANSACCIONAL">
+              <PropertyRef Name="CNM_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MENSAJE_TRANSACCIONAL_MENSAJE">
+          <End Role="MENSAJE" Type="Entidades.Store.MENSAJE" Multiplicity="1" />
+          <End Role="MENSAJE_TRANSACCIONAL" Type="Entidades.Store.MENSAJE_TRANSACCIONAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENSAJE">
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="MENSAJE_TRANSACCIONAL">
+              <PropertyRef Name="MEN_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PARAMETRO__TRANSFORMACION_COLUMNA_DESTINO">
+          <End Role="COLUMNA" Type="Entidades.Store.COLUMNA" Multiplicity="0..1" />
+          <End Role="PARAMETRO_TRANSFORMACION_CAMPO" Type="Entidades.Store.PARAMETRO_TRANSFORMACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COLUMNA">
+              <PropertyRef Name="COL_CODIGO" />
+            </Principal>
+            <Dependent Role="PARAMETRO_TRANSFORMACION_CAMPO">
+              <PropertyRef Name="COL_CODIGO_DESTINO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PARAMETRO__TRANSFORMACION_COLUMNA_ORIGEN">
+          <End Role="COLUMNA" Type="Entidades.Store.COLUMNA" Multiplicity="0..1" />
+          <End Role="PARAMETRO_TRANSFORMACION_CAMPO" Type="Entidades.Store.PARAMETRO_TRANSFORMACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COLUMNA">
+              <PropertyRef Name="COL_CODIGO" />
+            </Principal>
+            <Dependent Role="PARAMETRO_TRANSFORMACION_CAMPO">
+              <PropertyRef Name="COL_CODIGO_ORIGEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PARAMETRO__TRANSFORMACION_TABLA">
+          <End Role="TABLA" Type="Entidades.Store.TABLA" Multiplicity="0..1" />
+          <End Role="PARAMETRO_TRANSFORMACION_CAMPO" Type="Entidades.Store.PARAMETRO_TRANSFORMACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TABLA">
+              <PropertyRef Name="TBL_CODIGO" />
+            </Principal>
+            <Dependent Role="PARAMETRO_TRANSFORMACION_CAMPO">
+              <PropertyRef Name="TBL_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PARAMETRO_TRANSFORMACION_CAMPO">
+          <End Role="CAMPO" Type="Entidades.Store.CAMPO" Multiplicity="0..1" />
+          <End Role="PARAMETRO_TRANSFORMACION_CAMPO" Type="Entidades.Store.PARAMETRO_TRANSFORMACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAMPO">
+              <PropertyRef Name="CAM_CODIGO" />
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="PARAMETRO_TRANSFORMACION_CAMPO">
+              <PropertyRef Name="CAM_CODIGO_CAMPO_ORIGEN" />
+              <PropertyRef Name="MEN_CODIGO_MENSAJE_ORIGEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PARAMETRO_TRANSFORMACION_TRANSFORMACION_CAMPO">
+          <End Role="TRANSFORMACION_CAMPO" Type="Entidades.Store.TRANSFORMACION_CAMPO" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PARAMETRO_TRANSFORMACION_CAMPO" Type="Entidades.Store.PARAMETRO_TRANSFORMACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRANSFORMACION_CAMPO">
+              <PropertyRef Name="TRM_CODIGO" />
+              <PropertyRef Name="CAM_CODIGO_CAMPO_DESTINO" />
+              <PropertyRef Name="MEN_CODIGO_MENSAJE_DESTINO" />
+            </Principal>
+            <Dependent Role="PARAMETRO_TRANSFORMACION_CAMPO">
+              <PropertyRef Name="TRM_CODIGO" />
+              <PropertyRef Name="CAM_CODIGO_CAMPO_DESTINO" />
+              <PropertyRef Name="MEN_CODIGO_MENSAJE_DESTINO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PROTOCOLO__TIPO_COMUNICACION">
+          <End Role="TIPO_COMUNICACION" Type="Entidades.Store.TIPO_COMUNICACION" Multiplicity="0..1" />
+          <End Role="PROTOCOLO" Type="Entidades.Store.PROTOCOLO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_COMUNICACION">
+              <PropertyRef Name="TPO_CODIGO" />
+            </Principal>
+            <Dependent Role="PROTOCOLO">
+              <PropertyRef Name="TPO_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__REGLA_MENSAJE_CAMPO">
+          <End Role="CAMPO" Type="Entidades.Store.CAMPO" Multiplicity="1" />
+          <End Role="REGLA_MENSAJE_TRANSACCIONAL" Type="Entidades.Store.REGLA_MENSAJE_TRANSACCIONAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAMPO">
+              <PropertyRef Name="CAM_CODIGO" />
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="REGLA_MENSAJE_TRANSACCIONAL">
+              <PropertyRef Name="CAM_CODIGO" />
+              <PropertyRef Name="MEN_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__REGLA_MENSAJE_MENSAJE_TRANSACCIONAL">
+          <End Role="MENSAJE_TRANSACCIONAL" Type="Entidades.Store.MENSAJE_TRANSACCIONAL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="REGLA_MENSAJE_TRANSACCIONAL" Type="Entidades.Store.REGLA_MENSAJE_TRANSACCIONAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENSAJE_TRANSACCIONAL">
+              <PropertyRef Name="MTR_CODIGO" />
+            </Principal>
+            <Dependent Role="REGLA_MENSAJE_TRANSACCIONAL">
+              <PropertyRef Name="MTR_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TERMINAL__ENTIDAD_COMUNICACION">
+          <End Role="ENTIDAD_COMUNICACION" Type="Entidades.Store.ENTIDAD_COMUNICACION" Multiplicity="0..1" />
+          <End Role="TERMINAL" Type="Entidades.Store.TERMINAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ENTIDAD_COMUNICACION">
+              <PropertyRef Name="EDC_CODIGO" />
+            </Principal>
+            <Dependent Role="TERMINAL">
+              <PropertyRef Name="EDC_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TERMINAL__ESTADO_TERMINAL">
+          <End Role="ESTADO_TERMINAL" Type="Entidades.Store.ESTADO_TERMINAL" Multiplicity="0..1" />
+          <End Role="TERMINAL" Type="Entidades.Store.TERMINAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTADO_TERMINAL">
+              <PropertyRef Name="EST_CODIGO" />
+            </Principal>
+            <Dependent Role="TERMINAL">
+              <PropertyRef Name="EST_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TERMINAL__PUNTO_SERVICIO">
+          <End Role="PUNTO_SERVICIO" Type="Entidades.Store.PUNTO_SERVICIO" Multiplicity="0..1" />
+          <End Role="TERMINAL" Type="Entidades.Store.TERMINAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUNTO_SERVICIO">
+              <PropertyRef Name="PSR_CODIGO" />
+            </Principal>
+            <Dependent Role="TERMINAL">
+              <PropertyRef Name="PSR_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TRANSFORM__MENSAJE_DESTINO">
+          <End Role="MENSAJE" Type="Entidades.Store.MENSAJE" Multiplicity="1" />
+          <End Role="TRANSFORMACION" Type="Entidades.Store.TRANSFORMACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENSAJE">
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="TRANSFORMACION">
+              <PropertyRef Name="MEN_CODIGO_MENSAJE_DESTINO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TRANSFORM__MENSAJE_ORIGEN">
+          <End Role="MENSAJE" Type="Entidades.Store.MENSAJE" Multiplicity="1" />
+          <End Role="TRANSFORMACION" Type="Entidades.Store.TRANSFORMACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENSAJE">
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="TRANSFORMACION">
+              <PropertyRef Name="MEN_CODIGO_MENSAJE_ORIGEN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TRANSFORMACION__TRANSFORMACION_CAMPO">
+          <End Role="TRANSFORMACION" Type="Entidades.Store.TRANSFORMACION" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TRANSFORMACION_CAMPO" Type="Entidades.Store.TRANSFORMACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRANSFORMACION">
+              <PropertyRef Name="TRM_CODIGO" />
+            </Principal>
+            <Dependent Role="TRANSFORMACION_CAMPO">
+              <PropertyRef Name="TRM_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TRANSFORMACION_CAMPO_CAMPO_DESTINO">
+          <End Role="CAMPO" Type="Entidades.Store.CAMPO" Multiplicity="1" />
+          <End Role="TRANSFORMACION_CAMPO" Type="Entidades.Store.TRANSFORMACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAMPO">
+              <PropertyRef Name="CAM_CODIGO" />
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="TRANSFORMACION_CAMPO">
+              <PropertyRef Name="CAM_CODIGO_CAMPO_DESTINO" />
+              <PropertyRef Name="MEN_CODIGO_MENSAJE_DESTINO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VALIDACIO__CAMPO_TABLA">
+          <End Role="TABLA" Type="Entidades.Store.TABLA" Multiplicity="0..1" />
+          <End Role="VALIDACION_CAMPO" Type="Entidades.Store.VALIDACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TABLA">
+              <PropertyRef Name="TBL_CODIGO" />
+            </Principal>
+            <Dependent Role="VALIDACION_CAMPO">
+              <PropertyRef Name="TBL_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VALIDACION_CAMPO__CAMPO">
+          <End Role="CAMPO" Type="Entidades.Store.CAMPO" Multiplicity="1" />
+          <End Role="VALIDACION_CAMPO" Type="Entidades.Store.VALIDACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAMPO">
+              <PropertyRef Name="CAM_CODIGO" />
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="VALIDACION_CAMPO">
+              <PropertyRef Name="CAM_CODIGO" />
+              <PropertyRef Name="MEN_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VALIDACION_CAMPO_COLUMNA">
+          <End Role="COLUMNA" Type="Entidades.Store.COLUMNA" Multiplicity="0..1" />
+          <End Role="VALIDACION_CAMPO" Type="Entidades.Store.VALIDACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COLUMNA">
+              <PropertyRef Name="COL_CODIGO" />
+            </Principal>
+            <Dependent Role="VALIDACION_CAMPO">
+              <PropertyRef Name="COL_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VALIDACION_GRUPO_VALIDACION">
+          <End Role="GRUPO_VALIDACION" Type="Entidades.Store.GRUPO_VALIDACION" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="VALIDACION_CAMPO" Type="Entidades.Store.VALIDACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRUPO_VALIDACION">
+              <PropertyRef Name="GRV_CODIGO" />
+            </Principal>
+            <Dependent Role="VALIDACION_CAMPO">
+              <PropertyRef Name="GRV_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CAMPO_PLANTILLA_GRUPO_MENSAJE">
+          <End Role="GRUPO_MENSAJE" Type="Entidades.Store.GRUPO_MENSAJE" Multiplicity="1" />
+          <End Role="CAMPO_PLANTILLA" Type="Entidades.Store.CAMPO_PLANTILLA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRUPO_MENSAJE">
+              <PropertyRef Name="GMJ_CODIGO" />
+            </Principal>
+            <Dependent Role="CAMPO_PLANTILLA">
+              <PropertyRef Name="GMJ_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CAMPO_PLANTILLA_TIPO_DATO">
+          <End Role="TIPO_DATO" Type="Entidades.Store.TIPO_DATO" Multiplicity="1" />
+          <End Role="CAMPO_PLANTILLA" Type="Entidades.Store.CAMPO_PLANTILLA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_DATO">
+              <PropertyRef Name="TDT_CODIGO" />
+            </Principal>
+            <Dependent Role="CAMPO_PLANTILLA">
+              <PropertyRef Name="TDT_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COLUMNA_TIPO_DATO_COLUMNA">
+          <End Role="TIPO_DATO_COLUMNA" Type="Entidades.Store.TIPO_DATO_COLUMNA" Multiplicity="1" />
+          <End Role="COLUMNA" Type="Entidades.Store.COLUMNA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_DATO_COLUMNA">
+              <PropertyRef Name="TDC_CODIGO" />
+            </Principal>
+            <Dependent Role="COLUMNA">
+              <PropertyRef Name="TDC_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRIPTOGRAFIA_CAMPO_DINAMICA_CRIPTOGRAFIA">
+          <End Role="DINAMICA_CRIPTOGRAFIA" Type="Entidades.Store.DINAMICA_CRIPTOGRAFIA" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CRIPTOGRAFIA_CAMPO" Type="Entidades.Store.CRIPTOGRAFIA_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DINAMICA_CRIPTOGRAFIA">
+              <PropertyRef Name="DNC_CODIGO" />
+            </Principal>
+            <Dependent Role="CRIPTOGRAFIA_CAMPO">
+              <PropertyRef Name="DNC_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRIPTOGRAFIA_CAMPO_LLAVE_1_CAMPO">
+          <End Role="CAMPO" Type="Entidades.Store.CAMPO" Multiplicity="0..1" />
+          <End Role="CRIPTOGRAFIA_CAMPO" Type="Entidades.Store.CRIPTOGRAFIA_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAMPO">
+              <PropertyRef Name="CAM_CODIGO" />
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="CRIPTOGRAFIA_CAMPO">
+              <PropertyRef Name="CAM_CODIGO_LLAVE_1" />
+              <PropertyRef Name="MEN_CODIGO_LLAVE_1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRIPTOGRAFIA_CAMPO_LLAVE_2_CAMPO">
+          <End Role="CAMPO" Type="Entidades.Store.CAMPO" Multiplicity="0..1" />
+          <End Role="CRIPTOGRAFIA_CAMPO" Type="Entidades.Store.CRIPTOGRAFIA_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAMPO">
+              <PropertyRef Name="CAM_CODIGO" />
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="CRIPTOGRAFIA_CAMPO">
+              <PropertyRef Name="CAM_CODIGO_LLAVE_2" />
+              <PropertyRef Name="MEN_CODIGO_LLAVE_2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRIPTOGRAFIA_CAMPO_RESULTADO_CAMPO">
+          <End Role="CAMPO" Type="Entidades.Store.CAMPO" Multiplicity="1" />
+          <End Role="CRIPTOGRAFIA_CAMPO" Type="Entidades.Store.CRIPTOGRAFIA_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAMPO">
+              <PropertyRef Name="CAM_CODIGO" />
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="CRIPTOGRAFIA_CAMPO">
+              <PropertyRef Name="CAM_CODIGO_RESULTADO" />
+              <PropertyRef Name="MEN_CODIGO_RESULTADO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DINAMICA_CRIPTOGRAFIA_MENSAJE">
+          <End Role="MENSAJE" Type="Entidades.Store.MENSAJE" Multiplicity="1" />
+          <End Role="DINAMICA_CRIPTOGRAFIA" Type="Entidades.Store.DINAMICA_CRIPTOGRAFIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENSAJE">
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="DINAMICA_CRIPTOGRAFIA">
+              <PropertyRef Name="MEN_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ENTIDAD_COMUNICACION_TIPO_ENTIDAD">
+          <End Role="TIPO_ENTIDAD" Type="Entidades.Store.TIPO_ENTIDAD" Multiplicity="0..1" />
+          <End Role="ENTIDAD_COMUNICACION" Type="Entidades.Store.ENTIDAD_COMUNICACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPO_ENTIDAD">
+              <PropertyRef Name="TEM_CODIGO" />
+            </Principal>
+            <Dependent Role="ENTIDAD_COMUNICACION">
+              <PropertyRef Name="TEM_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PASO_DINAMICA_ENTIDAD_COMUNICACION">
+          <End Role="ENTIDAD_COMUNICACION" Type="Entidades.Store.ENTIDAD_COMUNICACION" Multiplicity="0..1" />
+          <End Role="PASO_DINAMICA" Type="Entidades.Store.PASO_DINAMICA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ENTIDAD_COMUNICACION">
+              <PropertyRef Name="EDC_CODIGO" />
+            </Principal>
+            <Dependent Role="PASO_DINAMICA">
+              <PropertyRef Name="EDC_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PASO_DINAMICA_MENSAJE_TRANSACCIONAL">
+          <End Role="MENSAJE_TRANSACCIONAL" Type="Entidades.Store.MENSAJE_TRANSACCIONAL" Multiplicity="1" />
+          <End Role="PASO_DINAMICA" Type="Entidades.Store.PASO_DINAMICA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENSAJE_TRANSACCIONAL">
+              <PropertyRef Name="MTR_CODIGO" />
+            </Principal>
+            <Dependent Role="PASO_DINAMICA">
+              <PropertyRef Name="MTR_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Entidades" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="dbSwitch">
+          <EntitySet Name="CAMPO" EntityType="Entidades.CAMPO" />
+          <EntitySet Name="CAMPO_PLANTILLA" EntityType="Entidades.CAMPO_PLANTILLA" />
+          <EntitySet Name="COLUMNA" EntityType="Entidades.COLUMNA" />
+          <EntitySet Name="COMPONENTE" EntityType="Entidades.COMPONENTE" />
+          <EntitySet Name="CONDICION_MENSAJE" EntityType="Entidades.CONDICION_MENSAJE" />
+          <EntitySet Name="CRIPTOGRAFIA_CAMPO" EntityType="Entidades.CRIPTOGRAFIA_CAMPO" />
+          <EntitySet Name="DINAMICA_CRIPTOGRAFIA" EntityType="Entidades.DINAMICA_CRIPTOGRAFIA" />
+          <EntitySet Name="ENTIDAD_COMUNICACION" EntityType="Entidades.ENTIDAD_COMUNICACION" />
+          <EntitySet Name="ESTADO_TERMINAL" EntityType="Entidades.ESTADO_TERMINAL" />
+          <EntitySet Name="FUNCION" EntityType="Entidades.FUNCION" />
+          <EntitySet Name="GRUPO_MENSAJE" EntityType="Entidades.GRUPO_MENSAJE" />
+          <EntitySet Name="GRUPO_VALIDACION" EntityType="Entidades.GRUPO_VALIDACION" />
+          <EntitySet Name="MENSAJE" EntityType="Entidades.MENSAJE" />
+          <EntitySet Name="MENSAJE_TRANSACCIONAL" EntityType="Entidades.MENSAJE_TRANSACCIONAL" />
+          <EntitySet Name="PARAMETRO_TRANSFORMACION_CAMPO" EntityType="Entidades.PARAMETRO_TRANSFORMACION_CAMPO" />
+          <EntitySet Name="PASO_DINAMICA" EntityType="Entidades.PASO_DINAMICA" />
+          <EntitySet Name="PROTOCOLO" EntityType="Entidades.PROTOCOLO" />
+          <EntitySet Name="PUNTO_SERVICIO" EntityType="Entidades.PUNTO_SERVICIO" />
+          <EntitySet Name="REGLA_MENSAJE_TRANSACCIONAL" EntityType="Entidades.REGLA_MENSAJE_TRANSACCIONAL" />
+          <EntitySet Name="TABLA" EntityType="Entidades.TABLA" />
+          <EntitySet Name="TERMINAL" EntityType="Entidades.TERMINAL" />
+          <EntitySet Name="TIPO_COMUNICACION" EntityType="Entidades.TIPO_COMUNICACION" />
+          <EntitySet Name="TIPO_DATO" EntityType="Entidades.TIPO_DATO" />
+          <EntitySet Name="TIPO_DATO_COLUMNA" EntityType="Entidades.TIPO_DATO_COLUMNA" />
+          <EntitySet Name="TIPO_ENTIDAD" EntityType="Entidades.TIPO_ENTIDAD" />
+          <EntitySet Name="TIPO_MENSAJE" EntityType="Entidades.TIPO_MENSAJE" />
+          <EntitySet Name="TRANSFORMACION" EntityType="Entidades.TRANSFORMACION" />
+          <EntitySet Name="TRANSFORMACION_CAMPO" EntityType="Entidades.TRANSFORMACION_CAMPO" />
+          <EntitySet Name="USUARIO" EntityType="Entidades.USUARIO" />
+          <EntitySet Name="VALIDACION_CAMPO" EntityType="Entidades.VALIDACION_CAMPO" />
+          <AssociationSet Name="FK__CAMPO__CAMPO_PLANTILLA" Association="Entidades.FK__CAMPO__CAMPO_PLANTILLA">
+            <End Role="CAMPO_PLANTILLA" EntitySet="CAMPO_PLANTILLA" />
+            <End Role="CAMPO" EntitySet="CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CAMPO__MENSAJE" Association="Entidades.FK__CAMPO__MENSAJE">
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+            <End Role="CAMPO" EntitySet="CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CAMPO__TIPODATO" Association="Entidades.FK__CAMPO__TIPODATO">
+            <End Role="TIPO_DATO" EntitySet="TIPO_DATO" />
+            <End Role="CAMPO" EntitySet="CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PARAMETRO_TRANSFORMACION_CAMPO" Association="Entidades.FK__PARAMETRO_TRANSFORMACION_CAMPO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="PARAMETRO_TRANSFORMACION_CAMPO" EntitySet="PARAMETRO_TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__REGLA_MENSAJE_CAMPO" Association="Entidades.FK__REGLA_MENSAJE_CAMPO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="REGLA_MENSAJE_TRANSACCIONAL" EntitySet="REGLA_MENSAJE_TRANSACCIONAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TRANSFORMACION_CAMPO_CAMPO_DESTINO" Association="Entidades.FK__TRANSFORMACION_CAMPO_CAMPO_DESTINO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="TRANSFORMACION_CAMPO" EntitySet="TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VALIDACION_CAMPO__CAMPO" Association="Entidades.FK__VALIDACION_CAMPO__CAMPO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="VALIDACION_CAMPO" EntitySet="VALIDACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRIPTOGRAFIA_CAMPO_LLAVE_1_CAMPO" Association="Entidades.FK_CRIPTOGRAFIA_CAMPO_LLAVE_1_CAMPO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="CRIPTOGRAFIA_CAMPO" EntitySet="CRIPTOGRAFIA_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRIPTOGRAFIA_CAMPO_LLAVE_2_CAMPO" Association="Entidades.FK_CRIPTOGRAFIA_CAMPO_LLAVE_2_CAMPO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="CRIPTOGRAFIA_CAMPO" EntitySet="CRIPTOGRAFIA_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRIPTOGRAFIA_CAMPO_RESULTADO_CAMPO" Association="Entidades.FK_CRIPTOGRAFIA_CAMPO_RESULTADO_CAMPO">
+            <End Role="CAMPO" EntitySet="CAMPO" />
+            <End Role="CRIPTOGRAFIA_CAMPO" EntitySet="CRIPTOGRAFIA_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CAMPO_PLANTILLA_GRUPO_MENSAJE" Association="Entidades.FK_CAMPO_PLANTILLA_GRUPO_MENSAJE">
+            <End Role="GRUPO_MENSAJE" EntitySet="GRUPO_MENSAJE" />
+            <End Role="CAMPO_PLANTILLA" EntitySet="CAMPO_PLANTILLA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CAMPO_PLANTILLA_TIPO_DATO" Association="Entidades.FK_CAMPO_PLANTILLA_TIPO_DATO">
+            <End Role="TIPO_DATO" EntitySet="TIPO_DATO" />
+            <End Role="CAMPO_PLANTILLA" EntitySet="CAMPO_PLANTILLA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COLUMNA__TABLA" Association="Entidades.FK__COLUMNA__TABLA">
+            <End Role="TABLA" EntitySet="TABLA" />
+            <End Role="COLUMNA" EntitySet="COLUMNA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PARAMETRO__TRANSFORMACION_COLUMNA_DESTINO" Association="Entidades.FK__PARAMETRO__TRANSFORMACION_COLUMNA_DESTINO">
+            <End Role="COLUMNA" EntitySet="COLUMNA" />
+            <End Role="PARAMETRO_TRANSFORMACION_CAMPO" EntitySet="PARAMETRO_TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PARAMETRO__TRANSFORMACION_COLUMNA_ORIGEN" Association="Entidades.FK__PARAMETRO__TRANSFORMACION_COLUMNA_ORIGEN">
+            <End Role="COLUMNA" EntitySet="COLUMNA" />
+            <End Role="PARAMETRO_TRANSFORMACION_CAMPO" EntitySet="PARAMETRO_TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VALIDACION_CAMPO_COLUMNA" Association="Entidades.FK__VALIDACION_CAMPO_COLUMNA">
+            <End Role="COLUMNA" EntitySet="COLUMNA" />
+            <End Role="VALIDACION_CAMPO" EntitySet="VALIDACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COLUMNA_TIPO_DATO_COLUMNA" Association="Entidades.FK_COLUMNA_TIPO_DATO_COLUMNA">
+            <End Role="TIPO_DATO_COLUMNA" EntitySet="TIPO_DATO_COLUMNA" />
+            <End Role="COLUMNA" EntitySet="COLUMNA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MENSAJE_TRANSACCIONAL_CONDICION_MENSAJE" Association="Entidades.FK__MENSAJE_TRANSACCIONAL_CONDICION_MENSAJE">
+            <End Role="CONDICION_MENSAJE" EntitySet="CONDICION_MENSAJE" />
+            <End Role="MENSAJE_TRANSACCIONAL" EntitySet="MENSAJE_TRANSACCIONAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CRIPTOGRAFIA_CAMPO_DINAMICA_CRIPTOGRAFIA" Association="Entidades.FK_CRIPTOGRAFIA_CAMPO_DINAMICA_CRIPTOGRAFIA">
+            <End Role="DINAMICA_CRIPTOGRAFIA" EntitySet="DINAMICA_CRIPTOGRAFIA" />
+            <End Role="CRIPTOGRAFIA_CAMPO" EntitySet="CRIPTOGRAFIA_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DINAMICA_CRIPTOGRAFIA_MENSAJE" Association="Entidades.FK_DINAMICA_CRIPTOGRAFIA_MENSAJE">
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+            <End Role="DINAMICA_CRIPTOGRAFIA" EntitySet="DINAMICA_CRIPTOGRAFIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ENTIDAD_GRUPO_MENSAJE" Association="Entidades.FK__ENTIDAD_GRUPO_MENSAJE">
+            <End Role="GRUPO_MENSAJE" EntitySet="GRUPO_MENSAJE" />
+            <End Role="ENTIDAD_COMUNICACION" EntitySet="ENTIDAD_COMUNICACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ENTIDAD_PROTOCOLO" Association="Entidades.FK__ENTIDAD_PROTOCOLO">
+            <End Role="PROTOCOLO" EntitySet="PROTOCOLO" />
+            <End Role="ENTIDAD_COMUNICACION" EntitySet="ENTIDAD_COMUNICACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TERMINAL__ENTIDAD_COMUNICACION" Association="Entidades.FK__TERMINAL__ENTIDAD_COMUNICACION">
+            <End Role="ENTIDAD_COMUNICACION" EntitySet="ENTIDAD_COMUNICACION" />
+            <End Role="TERMINAL" EntitySet="TERMINAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ENTIDAD_COMUNICACION_TIPO_ENTIDAD" Association="Entidades.FK_ENTIDAD_COMUNICACION_TIPO_ENTIDAD">
+            <End Role="TIPO_ENTIDAD" EntitySet="TIPO_ENTIDAD" />
+            <End Role="ENTIDAD_COMUNICACION" EntitySet="ENTIDAD_COMUNICACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PASO_DINAMICA_ENTIDAD_COMUNICACION" Association="Entidades.FK_PASO_DINAMICA_ENTIDAD_COMUNICACION">
+            <End Role="ENTIDAD_COMUNICACION" EntitySet="ENTIDAD_COMUNICACION" />
+            <End Role="PASO_DINAMICA" EntitySet="PASO_DINAMICA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TERMINAL__ESTADO_TERMINAL" Association="Entidades.FK__TERMINAL__ESTADO_TERMINAL">
+            <End Role="ESTADO_TERMINAL" EntitySet="ESTADO_TERMINAL" />
+            <End Role="TERMINAL" EntitySet="TERMINAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRUPO_MENSAJE_TIPO_MENSAJE" Association="Entidades.FK__GRUPO_MENSAJE_TIPO_MENSAJE">
+            <End Role="TIPO_MENSAJE" EntitySet="TIPO_MENSAJE" />
+            <End Role="GRUPO_MENSAJE" EntitySet="GRUPO_MENSAJE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MENSAJE__GRUPO_MENSAJE" Association="Entidades.FK__MENSAJE__GRUPO_MENSAJE">
+            <End Role="GRUPO_MENSAJE" EntitySet="GRUPO_MENSAJE" />
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GRUPO_VALIDACION_MENSAJE" Association="Entidades.FK__GRUPO_VALIDACION_MENSAJE">
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+            <End Role="GRUPO_VALIDACION" EntitySet="GRUPO_VALIDACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VALIDACION_GRUPO_VALIDACION" Association="Entidades.FK__VALIDACION_GRUPO_VALIDACION">
+            <End Role="GRUPO_VALIDACION" EntitySet="GRUPO_VALIDACION" />
+            <End Role="VALIDACION_CAMPO" EntitySet="VALIDACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MENSAJE_TRANSACCIONAL_MENSAJE" Association="Entidades.FK__MENSAJE_TRANSACCIONAL_MENSAJE">
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+            <End Role="MENSAJE_TRANSACCIONAL" EntitySet="MENSAJE_TRANSACCIONAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TRANSFORM__MENSAJE_DESTINO" Association="Entidades.FK__TRANSFORM__MENSAJE_DESTINO">
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+            <End Role="TRANSFORMACION" EntitySet="TRANSFORMACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TRANSFORM__MENSAJE_ORIGEN" Association="Entidades.FK__TRANSFORM__MENSAJE_ORIGEN">
+            <End Role="MENSAJE" EntitySet="MENSAJE" />
+            <End Role="TRANSFORMACION" EntitySet="TRANSFORMACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__REGLA_MENSAJE_MENSAJE_TRANSACCIONAL" Association="Entidades.FK__REGLA_MENSAJE_MENSAJE_TRANSACCIONAL">
+            <End Role="MENSAJE_TRANSACCIONAL" EntitySet="MENSAJE_TRANSACCIONAL" />
+            <End Role="REGLA_MENSAJE_TRANSACCIONAL" EntitySet="REGLA_MENSAJE_TRANSACCIONAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PASO_DINAMICA_MENSAJE_TRANSACCIONAL" Association="Entidades.FK_PASO_DINAMICA_MENSAJE_TRANSACCIONAL">
+            <End Role="MENSAJE_TRANSACCIONAL" EntitySet="MENSAJE_TRANSACCIONAL" />
+            <End Role="PASO_DINAMICA" EntitySet="PASO_DINAMICA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PARAMETRO__TRANSFORMACION_TABLA" Association="Entidades.FK__PARAMETRO__TRANSFORMACION_TABLA">
+            <End Role="TABLA" EntitySet="TABLA" />
+            <End Role="PARAMETRO_TRANSFORMACION_CAMPO" EntitySet="PARAMETRO_TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PARAMETRO_TRANSFORMACION_TRANSFORMACION_CAMPO" Association="Entidades.FK__PARAMETRO_TRANSFORMACION_TRANSFORMACION_CAMPO">
+            <End Role="TRANSFORMACION_CAMPO" EntitySet="TRANSFORMACION_CAMPO" />
+            <End Role="PARAMETRO_TRANSFORMACION_CAMPO" EntitySet="PARAMETRO_TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PROTOCOLO__TIPO_COMUNICACION" Association="Entidades.FK__PROTOCOLO__TIPO_COMUNICACION">
+            <End Role="TIPO_COMUNICACION" EntitySet="TIPO_COMUNICACION" />
+            <End Role="PROTOCOLO" EntitySet="PROTOCOLO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TERMINAL__PUNTO_SERVICIO" Association="Entidades.FK__TERMINAL__PUNTO_SERVICIO">
+            <End Role="PUNTO_SERVICIO" EntitySet="PUNTO_SERVICIO" />
+            <End Role="TERMINAL" EntitySet="TERMINAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__VALIDACIO__CAMPO_TABLA" Association="Entidades.FK__VALIDACIO__CAMPO_TABLA">
+            <End Role="TABLA" EntitySet="TABLA" />
+            <End Role="VALIDACION_CAMPO" EntitySet="VALIDACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TRANSFORMACION__TRANSFORMACION_CAMPO" Association="Entidades.FK__TRANSFORMACION__TRANSFORMACION_CAMPO">
+            <End Role="TRANSFORMACION" EntitySet="TRANSFORMACION" />
+            <End Role="TRANSFORMACION_CAMPO" EntitySet="TRANSFORMACION_CAMPO" />
+          </AssociationSet>
+          <AssociationSet Name="FUNCION_X_USUARIO" Association="Entidades.FUNCION_X_USUARIO">
+            <End Role="FUNCION" EntitySet="FUNCION" />
+            <End Role="USUARIO" EntitySet="USUARIO" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CAMPO">
+          <Key>
+            <PropertyRef Name="CAM_CODIGO" />
+            <PropertyRef Name="MEN_CODIGO" />
+          </Key>
+          <Property Name="CAM_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="MEN_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CAM_NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CAM_LONGITUD" Type="Int32" Nullable="false" />
+          <Property Name="CAM_SELECTOR" Type="Boolean" Nullable="false" />
+          <Property Name="CAM_VARIABLE" Type="Boolean" />
+          <Property Name="CAM_LONGITUD_CABECERA" Type="Int32" />
+          <Property Name="CAM_REQUERIDO" Type="Boolean" Nullable="false" />
+          <Property Name="CAM_ALMACENADO" Type="Boolean" Nullable="false" />
+          <Property Name="CAM_POSICION_RELATIVA" Type="Int32" Nullable="false" />
+          <Property Name="CAM_PROTEGIDO_LOG" Type="Boolean" Nullable="false" />
+          <Property Name="CAM_VALOR_SELECTOR_REQUEST" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CAM_VALOR_SELECTOR_RESPONSE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CAM_CABECERA" Type="Boolean" Nullable="false" />
+          <Property Name="CAM_BITMAP" Type="Boolean" Nullable="false" />
+          <Property Name="CAM_TRANSACCIONAL" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="CAMPO_PLANTILLA" Relationship="Entidades.FK__CAMPO__CAMPO_PLANTILLA" FromRole="CAMPO" ToRole="CAMPO_PLANTILLA" />
+          <NavigationProperty Name="MENSAJE" Relationship="Entidades.FK__CAMPO__MENSAJE" FromRole="CAMPO" ToRole="MENSAJE" />
+          <NavigationProperty Name="TIPO_DATO" Relationship="Entidades.FK__CAMPO__TIPODATO" FromRole="CAMPO" ToRole="TIPO_DATO" />
+          <NavigationProperty Name="PARAMETRO_TRANSFORMACION_CAMPO" Relationship="Entidades.FK__PARAMETRO_TRANSFORMACION_CAMPO" FromRole="CAMPO" ToRole="PARAMETRO_TRANSFORMACION_CAMPO" />
+          <NavigationProperty Name="REGLA_MENSAJE_TRANSACCIONAL" Relationship="Entidades.FK__REGLA_MENSAJE_CAMPO" FromRole="CAMPO" ToRole="REGLA_MENSAJE_TRANSACCIONAL" />
+          <NavigationProperty Name="TRANSFORMACION_CAMPO" Relationship="Entidades.FK__TRANSFORMACION_CAMPO_CAMPO_DESTINO" FromRole="CAMPO" ToRole="TRANSFORMACION_CAMPO" />
+          <NavigationProperty Name="VALIDACION_CAMPO" Relationship="Entidades.FK__VALIDACION_CAMPO__CAMPO" FromRole="CAMPO" ToRole="VALIDACION_CAMPO" />
+          <NavigationProperty Name="CRIPTOGRAFIA_CAMPO" Relationship="Entidades.FK_CRIPTOGRAFIA_CAMPO_LLAVE_1_CAMPO" FromRole="CAMPO" ToRole="CRIPTOGRAFIA_CAMPO" />
+          <NavigationProperty Name="CRIPTOGRAFIA_CAMPO1" Relationship="Entidades.FK_CRIPTOGRAFIA_CAMPO_LLAVE_2_CAMPO" FromRole="CAMPO" ToRole="CRIPTOGRAFIA_CAMPO" />
+          <NavigationProperty Name="CRIPTOGRAFIA_CAMPO2" Relationship="Entidades.FK_CRIPTOGRAFIA_CAMPO_RESULTADO_CAMPO" FromRole="CAMPO" ToRole="CRIPTOGRAFIA_CAMPO" />
+          <Property Name="CAM_TANQUEO" Type="Boolean" Nullable="true" />
+          <Property Name="CAM_DESTANQUEO" Type="Boolean" Nullable="true" /></EntityType>
+        <EntityType Name="CAMPO_PLANTILLA">
+          <Key>
+            <PropertyRef Name="CMP_CODIGO" />
+          </Key>
+          <Property Name="CMP_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CMP_NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CMP_LONGITUD" Type="Int32" Nullable="false" />
+          <Property Name="CMP_SELECTOR" Type="Boolean" Nullable="false" />
+          <Property Name="CMP_VARIABLE" Type="Boolean" Nullable="false" />
+          <Property Name="CMP_PROTEGIDO_LOG" Type="Boolean" Nullable="false" />
+          <Property Name="CMP_ALMACENADO" Type="Boolean" Nullable="false" />
+          <Property Name="CMP_POSICION_RELATIVA" Type="Int32" Nullable="false" />
+          <Property Name="CMP_LONGITUD_CABECERA" Type="Int32" />
+          <Property Name="CMP_CABECERA" Type="Boolean" Nullable="false" />
+          <Property Name="CMP_BITMAP" Type="Boolean" Nullable="false" />
+          <Property Name="CMP_TRANSACCIONAL" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="CAMPO" Relationship="Entidades.FK__CAMPO__CAMPO_PLANTILLA" FromRole="CAMPO_PLANTILLA" ToRole="CAMPO" />
+          <NavigationProperty Name="GRUPO_MENSAJE" Relationship="Entidades.FK_CAMPO_PLANTILLA_GRUPO_MENSAJE" FromRole="CAMPO_PLANTILLA" ToRole="GRUPO_MENSAJE" />
+          <NavigationProperty Name="TIPO_DATO" Relationship="Entidades.FK_CAMPO_PLANTILLA_TIPO_DATO" FromRole="CAMPO_PLANTILLA" ToRole="TIPO_DATO" />
+        </EntityType>
+        <EntityType Name="COLUMNA">
+          <Key>
+            <PropertyRef Name="COL_CODIGO" />
+          </Key>
+          <Property Name="COL_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="COL_NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="COL_LONGITUD" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TABLA" Relationship="Entidades.FK__COLUMNA__TABLA" FromRole="COLUMNA" ToRole="TABLA" />
+          <NavigationProperty Name="PARAMETRO_TRANSFORMACION_CAMPO" Relationship="Entidades.FK__PARAMETRO__TRANSFORMACION_COLUMNA_DESTINO" FromRole="COLUMNA" ToRole="PARAMETRO_TRANSFORMACION_CAMPO" />
+          <NavigationProperty Name="PARAMETRO_TRANSFORMACION_CAMPO1" Relationship="Entidades.FK__PARAMETRO__TRANSFORMACION_COLUMNA_ORIGEN" FromRole="COLUMNA" ToRole="PARAMETRO_TRANSFORMACION_CAMPO" />
+          <NavigationProperty Name="VALIDACION_CAMPO" Relationship="Entidades.FK__VALIDACION_CAMPO_COLUMNA" FromRole="COLUMNA" ToRole="VALIDACION_CAMPO" />
+          <NavigationProperty Name="TIPO_DATO_COLUMNA" Relationship="Entidades.FK_COLUMNA_TIPO_DATO_COLUMNA" FromRole="COLUMNA" ToRole="TIPO_DATO_COLUMNA" />
+        </EntityType>
+        <EntityType Name="COMPONENTE">
+          <Key>
+            <PropertyRef Name="COM_CODIGO" />
+          </Key>
+          <Property Name="COM_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="COM_NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="COM_ARCHIVO" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CONDICION_MENSAJE">
+          <Key>
+            <PropertyRef Name="CNM_CODIGO" />
+          </Key>
+          <Property Name="CNM_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CNM_NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CNM_DESCRIPCION" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MENSAJE_TRANSACCIONAL" Relationship="Entidades.FK__MENSAJE_TRANSACCIONAL_CONDICION_MENSAJE" FromRole="CONDICION_MENSAJE" ToRole="MENSAJE_TRANSACCIONAL" />
+        </EntityType>
+        <EntityType Name="CRIPTOGRAFIA_CAMPO">
+          <Key>
+            <PropertyRef Name="CRC_CODIGO" />
+            <PropertyRef Name="DNC_CODIGO" />
+          </Key>
+          <Property Name="CRC_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="DNC_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CRC_LLAVE_1" Type="String" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="CRC_LLAVE_2" Type="String" MaxLength="64" Unicode="false" FixedLength="false" />
+          <Property Name="CRC_TIPO_LLAVE_1" Type="Int32" Nullable="false" />
+          <Property Name="CRC_TIPO_LLAVE_2" Type="Int32" />
+          <Property Name="CRC_SEGUNDA_LLAVE" Type="Boolean" Nullable="false" />
+          <Property Name="CRC_OPERACION_LLAVE" Type="Int32" />
+          <Property Name="CRC_ALGORITMO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CAMPO_LLAVE_1" Relationship="Entidades.FK_CRIPTOGRAFIA_CAMPO_LLAVE_1_CAMPO" FromRole="CRIPTOGRAFIA_CAMPO" ToRole="CAMPO" />
+          <NavigationProperty Name="CAMPO_LLAVE_2" Relationship="Entidades.FK_CRIPTOGRAFIA_CAMPO_LLAVE_2_CAMPO" FromRole="CRIPTOGRAFIA_CAMPO" ToRole="CAMPO" />
+          <NavigationProperty Name="CAMPO_RESULTADO" Relationship="Entidades.FK_CRIPTOGRAFIA_CAMPO_RESULTADO_CAMPO" FromRole="CRIPTOGRAFIA_CAMPO" ToRole="CAMPO" />
+          <NavigationProperty Name="DINAMICA_CRIPTOGRAFIA" Relationship="Entidades.FK_CRIPTOGRAFIA_CAMPO_DINAMICA_CRIPTOGRAFIA" FromRole="CRIPTOGRAFIA_CAMPO" ToRole="DINAMICA_CRIPTOGRAFIA" />
+        </EntityType>
+        <EntityType Name="DINAMICA_CRIPTOGRAFIA">
+          <Key>
+            <PropertyRef Name="DNC_CODIGO" />
+          </Key>
+          <Property Name="DNC_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="DNC_NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DNC_TIPO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CRIPTOGRAFIA_CAMPO" Relationship="Entidades.FK_CRIPTOGRAFIA_CAMPO_DINAMICA_CRIPTOGRAFIA" FromRole="DINAMICA_CRIPTOGRAFIA" ToRole="CRIPTOGRAFIA_CAMPO" />
+          <NavigationProperty Name="MENSAJE" Relationship="Entidades.FK_DINAMICA_CRIPTOGRAFIA_MENSAJE" FromRole="DINAMICA_CRIPTOGRAFIA" ToRole="MENSAJE" />
+        </EntityType>
+        <EntityType Name="ENTIDAD_COMUNICACION">
+          <Key>
+            <PropertyRef Name="EDC_CODIGO" />
+          </Key>
+          <Property Name="EDC_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="EDC_NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="EDC_DESCRIPCION" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="EDC_RUTA_LOG" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="EDC_NOMBRE_LOG" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="EDC_TIMEOUT_EN_COLA" Type="Int32" />
+          <Property Name="EDC_COLA" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRUPO_MENSAJE" Relationship="Entidades.FK__ENTIDAD_GRUPO_MENSAJE" FromRole="ENTIDAD_COMUNICACION" ToRole="GRUPO_MENSAJE" />
+          <NavigationProperty Name="PROTOCOLO" Relationship="Entidades.FK__ENTIDAD_PROTOCOLO" FromRole="ENTIDAD_COMUNICACION" ToRole="PROTOCOLO" />
+          <NavigationProperty Name="TERMINAL" Relationship="Entidades.FK__TERMINAL__ENTIDAD_COMUNICACION" FromRole="ENTIDAD_COMUNICACION" ToRole="TERMINAL" />
+          <NavigationProperty Name="TIPO_ENTIDAD" Relationship="Entidades.FK_ENTIDAD_COMUNICACION_TIPO_ENTIDAD" FromRole="ENTIDAD_COMUNICACION" ToRole="TIPO_ENTIDAD" />
+          <NavigationProperty Name="PASO_DINAMICA" Relationship="Entidades.FK_PASO_DINAMICA_ENTIDAD_COMUNICACION" FromRole="ENTIDAD_COMUNICACION" ToRole="PASO_DINAMICA" />
+        </EntityType>
+        <EntityType Name="ESTADO_TERMINAL">
+          <Key>
+            <PropertyRef Name="EST_CODIGO" />
+          </Key>
+          <Property Name="EST_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="EST_NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="TERMINAL" Relationship="Entidades.FK__TERMINAL__ESTADO_TERMINAL" FromRole="ESTADO_TERMINAL" ToRole="TERMINAL" />
+        </EntityType>
+        <EntityType Name="FUNCION">
+          <Key>
+            <PropertyRef Name="FNC_CODIGO" />
+          </Key>
+          <Property Name="FNC_CODIGO" Type="Double" Nullable="false" />
+          <Property Name="FNC_NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FNC_DESCRIPCION" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="FNC_PAQUETE" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="USUARIO" Relationship="Entidades.FUNCION_X_USUARIO" FromRole="FUNCION" ToRole="USUARIO" />
+        </EntityType>
+        <EntityType Name="GRUPO_MENSAJE">
+          <Key>
+            <PropertyRef Name="GMJ_CODIGO" />
+          </Key>
+          <Property Name="GMJ_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="GMJ_NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="GMJ_DESCRIPCION" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CAMPO_PLANTILLA" Relationship="Entidades.FK_CAMPO_PLANTILLA_GRUPO_MENSAJE" FromRole="GRUPO_MENSAJE" ToRole="CAMPO_PLANTILLA" />
+          <NavigationProperty Name="ENTIDAD_COMUNICACION" Relationship="Entidades.FK__ENTIDAD_GRUPO_MENSAJE" FromRole="GRUPO_MENSAJE" ToRole="ENTIDAD_COMUNICACION" />
+          <NavigationProperty Name="TIPO_MENSAJE" Relationship="Entidades.FK__GRUPO_MENSAJE_TIPO_MENSAJE" FromRole="GRUPO_MENSAJE" ToRole="TIPO_MENSAJE" />
+          <NavigationProperty Name="MENSAJE" Relationship="Entidades.FK__MENSAJE__GRUPO_MENSAJE" FromRole="GRUPO_MENSAJE" ToRole="MENSAJE" />
+        </EntityType>
+        <EntityType Name="GRUPO_VALIDACION">
+          <Key>
+            <PropertyRef Name="GRV_CODIGO" />
+          </Key>
+          <Property Name="GRV_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="GRV_NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MENSAJE" Relationship="Entidades.FK__GRUPO_VALIDACION_MENSAJE" FromRole="GRUPO_VALIDACION" ToRole="MENSAJE" />
+          <NavigationProperty Name="VALIDACION_CAMPO" Relationship="Entidades.FK__VALIDACION_GRUPO_VALIDACION" FromRole="GRUPO_VALIDACION" ToRole="VALIDACION_CAMPO" />
+        </EntityType>
+        <EntityType Name="MENSAJE">
+          <Key>
+            <PropertyRef Name="MEN_CODIGO" />
+          </Key>
+          <Property Name="MEN_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="MEN_NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MEN_DESCRIPCION" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CAMPO" Relationship="Entidades.FK__CAMPO__MENSAJE" FromRole="MENSAJE" ToRole="CAMPO" />
+          <NavigationProperty Name="DINAMICA_CRIPTOGRAFIA" Relationship="Entidades.FK_DINAMICA_CRIPTOGRAFIA_MENSAJE" FromRole="MENSAJE" ToRole="DINAMICA_CRIPTOGRAFIA" />
+          <NavigationProperty Name="GRUPO_MENSAJE" Relationship="Entidades.FK__MENSAJE__GRUPO_MENSAJE" FromRole="MENSAJE" ToRole="GRUPO_MENSAJE" />
+          <NavigationProperty Name="GRUPO_VALIDACION" Relationship="Entidades.FK__GRUPO_VALIDACION_MENSAJE" FromRole="MENSAJE" ToRole="GRUPO_VALIDACION" />
+          <NavigationProperty Name="MENSAJE_TRANSACCIONAL" Relationship="Entidades.FK__MENSAJE_TRANSACCIONAL_MENSAJE" FromRole="MENSAJE" ToRole="MENSAJE_TRANSACCIONAL" />
+          <NavigationProperty Name="TRANSFORMACION" Relationship="Entidades.FK__TRANSFORM__MENSAJE_DESTINO" FromRole="MENSAJE" ToRole="TRANSFORMACION" />
+          <NavigationProperty Name="TRANSFORMACION1" Relationship="Entidades.FK__TRANSFORM__MENSAJE_ORIGEN" FromRole="MENSAJE" ToRole="TRANSFORMACION" />
+        </EntityType>
+        <EntityType Name="MENSAJE_TRANSACCIONAL">
+          <Key>
+            <PropertyRef Name="MTR_CODIGO" />
+          </Key>
+          <Property Name="MTR_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="MTR_NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CONDICION_MENSAJE" Relationship="Entidades.FK__MENSAJE_TRANSACCIONAL_CONDICION_MENSAJE" FromRole="MENSAJE_TRANSACCIONAL" ToRole="CONDICION_MENSAJE" />
+          <NavigationProperty Name="MENSAJE" Relationship="Entidades.FK__MENSAJE_TRANSACCIONAL_MENSAJE" FromRole="MENSAJE_TRANSACCIONAL" ToRole="MENSAJE" />
+          <NavigationProperty Name="REGLA_MENSAJE_TRANSACCIONAL" Relationship="Entidades.FK__REGLA_MENSAJE_MENSAJE_TRANSACCIONAL" FromRole="MENSAJE_TRANSACCIONAL" ToRole="REGLA_MENSAJE_TRANSACCIONAL" />
+          <NavigationProperty Name="PASO_DINAMICA" Relationship="Entidades.FK_PASO_DINAMICA_MENSAJE_TRANSACCIONAL" FromRole="MENSAJE_TRANSACCIONAL" ToRole="PASO_DINAMICA" />
+        </EntityType>
+        <EntityType Name="PARAMETRO_TRANSFORMACION_CAMPO">
+          <Key>
+            <PropertyRef Name="PTC_CODIGO" />
+          </Key>
+          <Property Name="PTC_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="PTC_POSICION_INICIAL" Type="Int32" />
+          <Property Name="PTC_LONGITUD" Type="Int32" />
+          <Property Name="PTC_TIPO" Type="Int32" />
+          <NavigationProperty Name="CAMPO" Relationship="Entidades.FK__PARAMETRO_TRANSFORMACION_CAMPO" FromRole="PARAMETRO_TRANSFORMACION_CAMPO" ToRole="CAMPO" />
+          <NavigationProperty Name="COLUMNA_DESTINO" Relationship="Entidades.FK__PARAMETRO__TRANSFORMACION_COLUMNA_DESTINO" FromRole="PARAMETRO_TRANSFORMACION_CAMPO" ToRole="COLUMNA" />
+          <NavigationProperty Name="COLUMNA_ORIGEN" Relationship="Entidades.FK__PARAMETRO__TRANSFORMACION_COLUMNA_ORIGEN" FromRole="PARAMETRO_TRANSFORMACION_CAMPO" ToRole="COLUMNA" />
+          <NavigationProperty Name="TABLA" Relationship="Entidades.FK__PARAMETRO__TRANSFORMACION_TABLA" FromRole="PARAMETRO_TRANSFORMACION_CAMPO" ToRole="TABLA" />
+          <NavigationProperty Name="TRANSFORMACION_CAMPO" Relationship="Entidades.FK__PARAMETRO_TRANSFORMACION_TRANSFORMACION_CAMPO" FromRole="PARAMETRO_TRANSFORMACION_CAMPO" ToRole="TRANSFORMACION_CAMPO" />
+        </EntityType>
+        <EntityType Name="PASO_DINAMICA">
+          <Key>
+            <PropertyRef Name="PDT_CODIGO" />
+          </Key>
+          <Property Name="PDT_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="PDT_FUNCIONALIDAD" Type="Int32" Nullable="false" />
+          <Property Name="PDT_NUMERO" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="PDT_FIN" Type="Boolean" Nullable="false" />
+          <Property Name="PDT_PASO" Type="Int32" Nullable="false" />
+          <Property Name="PDT_REINTENTOS" Type="Int32" />
+          <NavigationProperty Name="ENTIDAD_COMUNICACION" Relationship="Entidades.FK_PASO_DINAMICA_ENTIDAD_COMUNICACION" FromRole="PASO_DINAMICA" ToRole="ENTIDAD_COMUNICACION" />
+          <NavigationProperty Name="MENSAJE_TRANSACCIONAL" Relationship="Entidades.FK_PASO_DINAMICA_MENSAJE_TRANSACCIONAL" FromRole="PASO_DINAMICA" ToRole="MENSAJE_TRANSACCIONAL" />
+          <Property Name="PDT_INFORMACION_ADICIONAL" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="PROTOCOLO">
+          <Key>
+            <PropertyRef Name="PTR_CODIGO" />
+          </Key>
+          <Property Name="PTR_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="PTR_NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PTR_TIMEOUT_REQUEST" Type="Int32" />
+          <Property Name="PTR_TIMEOUT_RESPONSE" Type="Int32" />
+          <Property Name="PTR_PUERTO" Type="Int32" />
+          <Property Name="PTR_COMPONENTE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PTR_NOMBRE_CLASE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PTR_NOMBRE_METODO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PTR_INICIA_COMM" Type="Boolean" />
+          <Property Name="PTR_ACEPTA_COMM" Type="Boolean" />
+          <Property Name="PTR_FRAME" Type="Int32" />
+          <Property Name="PTR_CARACTER_INICIO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="PTR_CARACTER_FIN" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="ENTIDAD_COMUNICACION" Relationship="Entidades.FK__ENTIDAD_PROTOCOLO" FromRole="PROTOCOLO" ToRole="ENTIDAD_COMUNICACION" />
+          <NavigationProperty Name="TIPO_COMUNICACION" Relationship="Entidades.FK__PROTOCOLO__TIPO_COMUNICACION" FromRole="PROTOCOLO" ToRole="TIPO_COMUNICACION" />
+        </EntityType>
+        <EntityType Name="PUNTO_SERVICIO">
+          <Key>
+            <PropertyRef Name="PSR_CODIGO" />
+          </Key>
+          <Property Name="PSR_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="PSR_NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PSR_ESTADO" Type="Boolean" Nullable="false" />
+          <Property Name="PSR_DIRECCION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="TERMINAL" Relationship="Entidades.FK__TERMINAL__PUNTO_SERVICIO" FromRole="PUNTO_SERVICIO" ToRole="TERMINAL" />
+        </EntityType>
+        <EntityType Name="REGLA_MENSAJE_TRANSACCIONAL">
+          <Key>
+            <PropertyRef Name="RMT_CODIGO" />
+          </Key>
+          <Property Name="RMT_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="RMT_POSICION_INICIAL" Type="Int32" />
+          <Property Name="RMT_LONGITUD" Type="Int32" />
+          <Property Name="RMT_VALOR" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CAMPO" Relationship="Entidades.FK__REGLA_MENSAJE_CAMPO" FromRole="REGLA_MENSAJE_TRANSACCIONAL" ToRole="CAMPO" />
+          <NavigationProperty Name="MENSAJE_TRANSACCIONAL" Relationship="Entidades.FK__REGLA_MENSAJE_MENSAJE_TRANSACCIONAL" FromRole="REGLA_MENSAJE_TRANSACCIONAL" ToRole="MENSAJE_TRANSACCIONAL" />
+        </EntityType>
+        <EntityType Name="TABLA">
+          <Key>
+            <PropertyRef Name="TBL_CODIGO" />
+          </Key>
+          <Property Name="TBL_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="TBL_NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TBL_DESCRIPCION" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="COLUMNA" Relationship="Entidades.FK__COLUMNA__TABLA" FromRole="TABLA" ToRole="COLUMNA" />
+          <NavigationProperty Name="PARAMETRO_TRANSFORMACION_CAMPO" Relationship="Entidades.FK__PARAMETRO__TRANSFORMACION_TABLA" FromRole="TABLA" ToRole="PARAMETRO_TRANSFORMACION_CAMPO" />
+          <NavigationProperty Name="VALIDACION_CAMPO" Relationship="Entidades.FK__VALIDACIO__CAMPO_TABLA" FromRole="TABLA" ToRole="VALIDACION_CAMPO" />
+        </EntityType>
+        <EntityType Name="TERMINAL">
+          <Key>
+            <PropertyRef Name="TRM_CODIGO" />
+          </Key>
+          <Property Name="TRM_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="TRM_SERIAL" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TRM_FECHA_REGISTRO" Type="DateTime" />
+          <NavigationProperty Name="ENTIDAD_COMUNICACION" Relationship="Entidades.FK__TERMINAL__ENTIDAD_COMUNICACION" FromRole="TERMINAL" ToRole="ENTIDAD_COMUNICACION" />
+          <NavigationProperty Name="ESTADO_TERMINAL" Relationship="Entidades.FK__TERMINAL__ESTADO_TERMINAL" FromRole="TERMINAL" ToRole="ESTADO_TERMINAL" />
+          <NavigationProperty Name="PUNTO_SERVICIO" Relationship="Entidades.FK__TERMINAL__PUNTO_SERVICIO" FromRole="TERMINAL" ToRole="PUNTO_SERVICIO" />
+        </EntityType>
+        <EntityType Name="TIPO_COMUNICACION">
+          <Key>
+            <PropertyRef Name="TPO_CODIGO" />
+          </Key>
+          <Property Name="TPO_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="TPO_NOMBRE" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TPO_DESCRIPION" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="PROTOCOLO" Relationship="Entidades.FK__PROTOCOLO__TIPO_COMUNICACION" FromRole="TIPO_COMUNICACION" ToRole="PROTOCOLO" />
+        </EntityType>
+        <EntityType Name="TIPO_DATO">
+          <Key>
+            <PropertyRef Name="TDT_CODIGO" />
+          </Key>
+          <Property Name="TDT_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="TDT_DESCRIPCION" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="TDT_NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CAMPO" Relationship="Entidades.FK__CAMPO__TIPODATO" FromRole="TIPO_DATO" ToRole="CAMPO" />
+          <NavigationProperty Name="CAMPO_PLANTILLA" Relationship="Entidades.FK_CAMPO_PLANTILLA_TIPO_DATO" FromRole="TIPO_DATO" ToRole="CAMPO_PLANTILLA" />
+        </EntityType>
+        <EntityType Name="TIPO_DATO_COLUMNA">
+          <Key>
+            <PropertyRef Name="TDC_CODIGO" />
+          </Key>
+          <Property Name="TDC_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="TDC_NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="COLUMNA" Relationship="Entidades.FK_COLUMNA_TIPO_DATO_COLUMNA" FromRole="TIPO_DATO_COLUMNA" ToRole="COLUMNA" />
+        </EntityType>
+        <EntityType Name="TIPO_ENTIDAD">
+          <Key>
+            <PropertyRef Name="TEM_CODIGO" />
+          </Key>
+          <Property Name="TEM_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="TEM_NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="ENTIDAD_COMUNICACION" Relationship="Entidades.FK_ENTIDAD_COMUNICACION_TIPO_ENTIDAD" FromRole="TIPO_ENTIDAD" ToRole="ENTIDAD_COMUNICACION" />
+        </EntityType>
+        <EntityType Name="TIPO_MENSAJE">
+          <Key>
+            <PropertyRef Name="TMJ_CODIGO" />
+          </Key>
+          <Property Name="TMJ_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="TMJ_NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TMJ_DESCRIPCION" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="GRUPO_MENSAJE" Relationship="Entidades.FK__GRUPO_MENSAJE_TIPO_MENSAJE" FromRole="TIPO_MENSAJE" ToRole="GRUPO_MENSAJE" />
+        </EntityType>
+        <EntityType Name="TRANSFORMACION">
+          <Key>
+            <PropertyRef Name="TRM_CODIGO" />
+          </Key>
+          <Property Name="TRM_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="TRM_NOMBRE" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MENSAJE_DESTINO" Relationship="Entidades.FK__TRANSFORM__MENSAJE_DESTINO" FromRole="TRANSFORMACION" ToRole="MENSAJE" />
+          <NavigationProperty Name="MENSAJE_ORIGEN" Relationship="Entidades.FK__TRANSFORM__MENSAJE_ORIGEN" FromRole="TRANSFORMACION" ToRole="MENSAJE" />
+          <NavigationProperty Name="TRANSFORMACION_CAMPO" Relationship="Entidades.FK__TRANSFORMACION__TRANSFORMACION_CAMPO" FromRole="TRANSFORMACION" ToRole="TRANSFORMACION_CAMPO" />
+        </EntityType>
+        <EntityType Name="TRANSFORMACION_CAMPO">
+          <Key>
+            <PropertyRef Name="TRM_CODIGO" />
+            <PropertyRef Name="CAM_CODIGO_CAMPO_DESTINO" />
+            <PropertyRef Name="MEN_CODIGO_MENSAJE_DESTINO" />
+          </Key>
+          <Property Name="TRM_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CAM_CODIGO_CAMPO_DESTINO" Type="Int32" Nullable="false" />
+          <Property Name="MEN_CODIGO_MENSAJE_DESTINO" Type="Int32" Nullable="false" />
+          <Property Name="TCM_COMPONENTE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TCM_CLASE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TCM_METODO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="TCM_PROCEDIMIENTO" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TCM_VALOR_CONSTANTE" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="TCM_FUNCIONALIDAD_ESTANDAR" Type="Int32" />
+          <Property Name="TCM_TIPO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CAMPO_DESTINO" Relationship="Entidades.FK__TRANSFORMACION_CAMPO_CAMPO_DESTINO" FromRole="TRANSFORMACION_CAMPO" ToRole="CAMPO" />
+          <NavigationProperty Name="PARAMETRO_TRANSFORMACION_CAMPO" Relationship="Entidades.FK__PARAMETRO_TRANSFORMACION_TRANSFORMACION_CAMPO" FromRole="TRANSFORMACION_CAMPO" ToRole="PARAMETRO_TRANSFORMACION_CAMPO" />
+          <NavigationProperty Name="TRANSFORMACION" Relationship="Entidades.FK__TRANSFORMACION__TRANSFORMACION_CAMPO" FromRole="TRANSFORMACION_CAMPO" ToRole="TRANSFORMACION" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="USR_CODIGO" />
+          </Key>
+          <Property Name="USR_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="USR_NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="USR_CONTRASENHA" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="USR_DATOS_USUARIO" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="FUNCION" Relationship="Entidades.FUNCION_X_USUARIO" FromRole="USUARIO" ToRole="FUNCION" />
+        </EntityType>
+        <EntityType Name="VALIDACION_CAMPO">
+          <Key>
+            <PropertyRef Name="VLC_CODIGO" />
+            <PropertyRef Name="GRV_CODIGO" />
+            <PropertyRef Name="MEN_CODIGO" />
+            <PropertyRef Name="CAM_CODIGO" />
+          </Key>
+          <Property Name="VLC_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="GRV_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="MEN_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="CAM_CODIGO" Type="Int32" Nullable="false" />
+          <Property Name="VLC_INCLUSION_EXCLUSION" Type="Int32" />
+          <Property Name="VLC_CONDICION" Type="Int32" />
+          <Property Name="VLC_VALOR" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="VLC_PROCEDIMIENTO" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="VLC_COMPONENTE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="VLC_CLASE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="VLC_METODO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CAMPO" Relationship="Entidades.FK__VALIDACION_CAMPO__CAMPO" FromRole="VALIDACION_CAMPO" ToRole="CAMPO" />
+          <NavigationProperty Name="COLUMNA" Relationship="Entidades.FK__VALIDACION_CAMPO_COLUMNA" FromRole="VALIDACION_CAMPO" ToRole="COLUMNA" />
+          <NavigationProperty Name="GRUPO_VALIDACION" Relationship="Entidades.FK__VALIDACION_GRUPO_VALIDACION" FromRole="VALIDACION_CAMPO" ToRole="GRUPO_VALIDACION" />
+          <NavigationProperty Name="TABLA" Relationship="Entidades.FK__VALIDACIO__CAMPO_TABLA" FromRole="VALIDACION_CAMPO" ToRole="TABLA" />
+        </EntityType>
+        <Association Name="FK__CAMPO__CAMPO_PLANTILLA">
+          <End Role="CAMPO_PLANTILLA" Type="Entidades.CAMPO_PLANTILLA" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CAMPO" Type="Entidades.CAMPO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__CAMPO__MENSAJE">
+          <End Role="MENSAJE" Type="Entidades.MENSAJE" Multiplicity="1" />
+          <End Role="CAMPO" Type="Entidades.CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENSAJE">
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="CAMPO">
+              <PropertyRef Name="MEN_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CAMPO__TIPODATO">
+          <End Role="TIPO_DATO" Type="Entidades.TIPO_DATO" Multiplicity="1" />
+          <End Role="CAMPO" Type="Entidades.CAMPO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__PARAMETRO_TRANSFORMACION_CAMPO">
+          <End Role="CAMPO" Type="Entidades.CAMPO" Multiplicity="0..1" />
+          <End Role="PARAMETRO_TRANSFORMACION_CAMPO" Type="Entidades.PARAMETRO_TRANSFORMACION_CAMPO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__REGLA_MENSAJE_CAMPO">
+          <End Role="CAMPO" Type="Entidades.CAMPO" Multiplicity="1" />
+          <End Role="REGLA_MENSAJE_TRANSACCIONAL" Type="Entidades.REGLA_MENSAJE_TRANSACCIONAL" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__TRANSFORMACION_CAMPO_CAMPO_DESTINO">
+          <End Role="CAMPO" Type="Entidades.CAMPO" Multiplicity="1" />
+          <End Role="TRANSFORMACION_CAMPO" Type="Entidades.TRANSFORMACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAMPO">
+              <PropertyRef Name="CAM_CODIGO" />
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="TRANSFORMACION_CAMPO">
+              <PropertyRef Name="CAM_CODIGO_CAMPO_DESTINO" />
+              <PropertyRef Name="MEN_CODIGO_MENSAJE_DESTINO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__VALIDACION_CAMPO__CAMPO">
+          <End Role="CAMPO" Type="Entidades.CAMPO" Multiplicity="1" />
+          <End Role="VALIDACION_CAMPO" Type="Entidades.VALIDACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CAMPO">
+              <PropertyRef Name="CAM_CODIGO" />
+              <PropertyRef Name="MEN_CODIGO" />
+            </Principal>
+            <Dependent Role="VALIDACION_CAMPO">
+              <PropertyRef Name="CAM_CODIGO" />
+              <PropertyRef Name="MEN_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CRIPTOGRAFIA_CAMPO_LLAVE_1_CAMPO">
+          <End Role="CAMPO" Type="Entidades.CAMPO" Multiplicity="0..1" />
+          <End Role="CRIPTOGRAFIA_CAMPO" Type="Entidades.CRIPTOGRAFIA_CAMPO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_CRIPTOGRAFIA_CAMPO_LLAVE_2_CAMPO">
+          <End Role="CAMPO" Type="Entidades.CAMPO" Multiplicity="0..1" />
+          <End Role="CRIPTOGRAFIA_CAMPO" Type="Entidades.CRIPTOGRAFIA_CAMPO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_CRIPTOGRAFIA_CAMPO_RESULTADO_CAMPO">
+          <End Role="CAMPO" Type="Entidades.CAMPO" Multiplicity="1" />
+          <End Role="CRIPTOGRAFIA_CAMPO" Type="Entidades.CRIPTOGRAFIA_CAMPO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_CAMPO_PLANTILLA_GRUPO_MENSAJE">
+          <End Role="GRUPO_MENSAJE" Type="Entidades.GRUPO_MENSAJE" Multiplicity="1" />
+          <End Role="CAMPO_PLANTILLA" Type="Entidades.CAMPO_PLANTILLA" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_CAMPO_PLANTILLA_TIPO_DATO">
+          <End Role="TIPO_DATO" Type="Entidades.TIPO_DATO" Multiplicity="1" />
+          <End Role="CAMPO_PLANTILLA" Type="Entidades.CAMPO_PLANTILLA" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__COLUMNA__TABLA">
+          <End Role="TABLA" Type="Entidades.TABLA" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="COLUMNA" Type="Entidades.COLUMNA" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__PARAMETRO__TRANSFORMACION_COLUMNA_DESTINO">
+          <End Role="COLUMNA" Type="Entidades.COLUMNA" Multiplicity="0..1" />
+          <End Role="PARAMETRO_TRANSFORMACION_CAMPO" Type="Entidades.PARAMETRO_TRANSFORMACION_CAMPO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__PARAMETRO__TRANSFORMACION_COLUMNA_ORIGEN">
+          <End Role="COLUMNA" Type="Entidades.COLUMNA" Multiplicity="0..1" />
+          <End Role="PARAMETRO_TRANSFORMACION_CAMPO" Type="Entidades.PARAMETRO_TRANSFORMACION_CAMPO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__VALIDACION_CAMPO_COLUMNA">
+          <End Role="COLUMNA" Type="Entidades.COLUMNA" Multiplicity="0..1" />
+          <End Role="VALIDACION_CAMPO" Type="Entidades.VALIDACION_CAMPO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_COLUMNA_TIPO_DATO_COLUMNA">
+          <End Role="TIPO_DATO_COLUMNA" Type="Entidades.TIPO_DATO_COLUMNA" Multiplicity="1" />
+          <End Role="COLUMNA" Type="Entidades.COLUMNA" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__MENSAJE_TRANSACCIONAL_CONDICION_MENSAJE">
+          <End Role="CONDICION_MENSAJE" Type="Entidades.CONDICION_MENSAJE" Multiplicity="1" />
+          <End Role="MENSAJE_TRANSACCIONAL" Type="Entidades.MENSAJE_TRANSACCIONAL" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_CRIPTOGRAFIA_CAMPO_DINAMICA_CRIPTOGRAFIA">
+          <End Role="DINAMICA_CRIPTOGRAFIA" Type="Entidades.DINAMICA_CRIPTOGRAFIA" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CRIPTOGRAFIA_CAMPO" Type="Entidades.CRIPTOGRAFIA_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DINAMICA_CRIPTOGRAFIA">
+              <PropertyRef Name="DNC_CODIGO" />
+            </Principal>
+            <Dependent Role="CRIPTOGRAFIA_CAMPO">
+              <PropertyRef Name="DNC_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DINAMICA_CRIPTOGRAFIA_MENSAJE">
+          <End Role="MENSAJE" Type="Entidades.MENSAJE" Multiplicity="1" />
+          <End Role="DINAMICA_CRIPTOGRAFIA" Type="Entidades.DINAMICA_CRIPTOGRAFIA" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__ENTIDAD_GRUPO_MENSAJE">
+          <End Role="GRUPO_MENSAJE" Type="Entidades.GRUPO_MENSAJE" Multiplicity="0..1" />
+          <End Role="ENTIDAD_COMUNICACION" Type="Entidades.ENTIDAD_COMUNICACION" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__ENTIDAD_PROTOCOLO">
+          <End Role="PROTOCOLO" Type="Entidades.PROTOCOLO" Multiplicity="0..1" />
+          <End Role="ENTIDAD_COMUNICACION" Type="Entidades.ENTIDAD_COMUNICACION" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__TERMINAL__ENTIDAD_COMUNICACION">
+          <End Role="ENTIDAD_COMUNICACION" Type="Entidades.ENTIDAD_COMUNICACION" Multiplicity="0..1" />
+          <End Role="TERMINAL" Type="Entidades.TERMINAL" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_ENTIDAD_COMUNICACION_TIPO_ENTIDAD">
+          <End Role="TIPO_ENTIDAD" Type="Entidades.TIPO_ENTIDAD" Multiplicity="0..1" />
+          <End Role="ENTIDAD_COMUNICACION" Type="Entidades.ENTIDAD_COMUNICACION" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_PASO_DINAMICA_ENTIDAD_COMUNICACION">
+          <End Role="ENTIDAD_COMUNICACION" Type="Entidades.ENTIDAD_COMUNICACION" Multiplicity="0..1" />
+          <End Role="PASO_DINAMICA" Type="Entidades.PASO_DINAMICA" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__TERMINAL__ESTADO_TERMINAL">
+          <End Role="ESTADO_TERMINAL" Type="Entidades.ESTADO_TERMINAL" Multiplicity="0..1" />
+          <End Role="TERMINAL" Type="Entidades.TERMINAL" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__GRUPO_MENSAJE_TIPO_MENSAJE">
+          <End Role="TIPO_MENSAJE" Type="Entidades.TIPO_MENSAJE" Multiplicity="1" />
+          <End Role="GRUPO_MENSAJE" Type="Entidades.GRUPO_MENSAJE" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__MENSAJE__GRUPO_MENSAJE">
+          <End Role="GRUPO_MENSAJE" Type="Entidades.GRUPO_MENSAJE" Multiplicity="0..1" />
+          <End Role="MENSAJE" Type="Entidades.MENSAJE" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__GRUPO_VALIDACION_MENSAJE">
+          <End Role="MENSAJE" Type="Entidades.MENSAJE" Multiplicity="1" />
+          <End Role="GRUPO_VALIDACION" Type="Entidades.GRUPO_VALIDACION" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__VALIDACION_GRUPO_VALIDACION">
+          <End Role="GRUPO_VALIDACION" Type="Entidades.GRUPO_VALIDACION" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="VALIDACION_CAMPO" Type="Entidades.VALIDACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GRUPO_VALIDACION">
+              <PropertyRef Name="GRV_CODIGO" />
+            </Principal>
+            <Dependent Role="VALIDACION_CAMPO">
+              <PropertyRef Name="GRV_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MENSAJE_TRANSACCIONAL_MENSAJE">
+          <End Role="MENSAJE" Type="Entidades.MENSAJE" Multiplicity="1" />
+          <End Role="MENSAJE_TRANSACCIONAL" Type="Entidades.MENSAJE_TRANSACCIONAL" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__TRANSFORM__MENSAJE_DESTINO">
+          <End Role="MENSAJE" Type="Entidades.MENSAJE" Multiplicity="1" />
+          <End Role="TRANSFORMACION" Type="Entidades.TRANSFORMACION" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__TRANSFORM__MENSAJE_ORIGEN">
+          <End Role="MENSAJE" Type="Entidades.MENSAJE" Multiplicity="1" />
+          <End Role="TRANSFORMACION" Type="Entidades.TRANSFORMACION" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__REGLA_MENSAJE_MENSAJE_TRANSACCIONAL">
+          <End Role="MENSAJE_TRANSACCIONAL" Type="Entidades.MENSAJE_TRANSACCIONAL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="REGLA_MENSAJE_TRANSACCIONAL" Type="Entidades.REGLA_MENSAJE_TRANSACCIONAL" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_PASO_DINAMICA_MENSAJE_TRANSACCIONAL">
+          <End Role="MENSAJE_TRANSACCIONAL" Type="Entidades.MENSAJE_TRANSACCIONAL" Multiplicity="1" />
+          <End Role="PASO_DINAMICA" Type="Entidades.PASO_DINAMICA" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__PARAMETRO__TRANSFORMACION_TABLA">
+          <End Role="TABLA" Type="Entidades.TABLA" Multiplicity="0..1" />
+          <End Role="PARAMETRO_TRANSFORMACION_CAMPO" Type="Entidades.PARAMETRO_TRANSFORMACION_CAMPO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__PARAMETRO_TRANSFORMACION_TRANSFORMACION_CAMPO">
+          <End Role="TRANSFORMACION_CAMPO" Type="Entidades.TRANSFORMACION_CAMPO" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PARAMETRO_TRANSFORMACION_CAMPO" Type="Entidades.PARAMETRO_TRANSFORMACION_CAMPO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__PROTOCOLO__TIPO_COMUNICACION">
+          <End Role="TIPO_COMUNICACION" Type="Entidades.TIPO_COMUNICACION" Multiplicity="0..1" />
+          <End Role="PROTOCOLO" Type="Entidades.PROTOCOLO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__TERMINAL__PUNTO_SERVICIO">
+          <End Role="PUNTO_SERVICIO" Type="Entidades.PUNTO_SERVICIO" Multiplicity="0..1" />
+          <End Role="TERMINAL" Type="Entidades.TERMINAL" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__VALIDACIO__CAMPO_TABLA">
+          <End Role="TABLA" Type="Entidades.TABLA" Multiplicity="0..1" />
+          <End Role="VALIDACION_CAMPO" Type="Entidades.VALIDACION_CAMPO" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__TRANSFORMACION__TRANSFORMACION_CAMPO">
+          <End Role="TRANSFORMACION" Type="Entidades.TRANSFORMACION" Multiplicity="1" />
+          <End Role="TRANSFORMACION_CAMPO" Type="Entidades.TRANSFORMACION_CAMPO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRANSFORMACION">
+              <PropertyRef Name="TRM_CODIGO" />
+            </Principal>
+            <Dependent Role="TRANSFORMACION_CAMPO">
+              <PropertyRef Name="TRM_CODIGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FUNCION_X_USUARIO">
+          <End Role="FUNCION" Type="Entidades.FUNCION" Multiplicity="*" />
+          <End Role="USUARIO" Type="Entidades.USUARIO" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="EntidadesStoreContainer" CdmEntityContainer="dbSwitch">
+          <EntitySetMapping Name="CAMPO">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.CAMPO)">
+              <MappingFragment StoreEntitySet="CAMPO">
+                <ScalarProperty Name="CAM_DESTANQUEO" ColumnName="CAM_DESTANQUEO" />
+                <ScalarProperty Name="CAM_TANQUEO" ColumnName="CAM_TANQUEO" />
+                <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO" />
+                <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+                <ScalarProperty Name="CAM_NOMBRE" ColumnName="CAM_NOMBRE" />
+                <ScalarProperty Name="CAM_LONGITUD" ColumnName="CAM_LONGITUD" />
+                <ScalarProperty Name="CAM_SELECTOR" ColumnName="CAM_SELECTOR" />
+                <ScalarProperty Name="CAM_VARIABLE" ColumnName="CAM_VARIABLE" />
+                <ScalarProperty Name="CAM_LONGITUD_CABECERA" ColumnName="CAM_LONGITUD_CABECERA" />
+                <ScalarProperty Name="CAM_REQUERIDO" ColumnName="CAM_REQUERIDO" />
+                <ScalarProperty Name="CAM_ALMACENADO" ColumnName="CAM_ALMACENADO" />
+                <ScalarProperty Name="CAM_POSICION_RELATIVA" ColumnName="CAM_POSICION_RELATIVA" />
+                <ScalarProperty Name="CAM_PROTEGIDO_LOG" ColumnName="CAM_PROTEGIDO_LOG" />
+                <ScalarProperty Name="CAM_VALOR_SELECTOR_REQUEST" ColumnName="CAM_VALOR_SELECTOR_REQUEST" />
+                <ScalarProperty Name="CAM_VALOR_SELECTOR_RESPONSE" ColumnName="CAM_VALOR_SELECTOR_RESPONSE" />
+                <ScalarProperty Name="CAM_CABECERA" ColumnName="CAM_CABECERA" />
+                <ScalarProperty Name="CAM_BITMAP" ColumnName="CAM_BITMAP" />
+                <ScalarProperty Name="CAM_TRANSACCIONAL" ColumnName="CAM_TRANSACCIONAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CAMPO_PLANTILLA">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.CAMPO_PLANTILLA)">
+              <MappingFragment StoreEntitySet="CAMPO_PLANTILLA">
+                <ScalarProperty Name="CMP_CODIGO" ColumnName="CMP_CODIGO" />
+                <ScalarProperty Name="CMP_NOMBRE" ColumnName="CMP_NOMBRE" />
+                <ScalarProperty Name="CMP_LONGITUD" ColumnName="CMP_LONGITUD" />
+                <ScalarProperty Name="CMP_SELECTOR" ColumnName="CMP_SELECTOR" />
+                <ScalarProperty Name="CMP_VARIABLE" ColumnName="CMP_VARIABLE" />
+                <ScalarProperty Name="CMP_PROTEGIDO_LOG" ColumnName="CMP_PROTEGIDO_LOG" />
+                <ScalarProperty Name="CMP_ALMACENADO" ColumnName="CMP_ALMACENADO" />
+                <ScalarProperty Name="CMP_POSICION_RELATIVA" ColumnName="CMP_POSICION_RELATIVA" />
+                <ScalarProperty Name="CMP_LONGITUD_CABECERA" ColumnName="CMP_LONGITUD_CABECERA" />
+                <ScalarProperty Name="CMP_CABECERA" ColumnName="CMP_CABECERA" />
+                <ScalarProperty Name="CMP_BITMAP" ColumnName="CMP_BITMAP" />
+                <ScalarProperty Name="CMP_TRANSACCIONAL" ColumnName="CMP_TRANSACCIONAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COLUMNA">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.COLUMNA)">
+              <MappingFragment StoreEntitySet="COLUMNA">
+                <ScalarProperty Name="COL_CODIGO" ColumnName="COL_CODIGO" />
+                <ScalarProperty Name="COL_NOMBRE" ColumnName="COL_NOMBRE" />
+                <ScalarProperty Name="COL_LONGITUD" ColumnName="COL_LONGITUD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COMPONENTE">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.COMPONENTE)">
+              <MappingFragment StoreEntitySet="COMPONENTE">
+                <ScalarProperty Name="COM_CODIGO" ColumnName="COM_CODIGO" />
+                <ScalarProperty Name="COM_NOMBRE" ColumnName="COM_NOMBRE" />
+                <ScalarProperty Name="COM_ARCHIVO" ColumnName="COM_ARCHIVO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CONDICION_MENSAJE">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.CONDICION_MENSAJE)">
+              <MappingFragment StoreEntitySet="CONDICION_MENSAJE">
+                <ScalarProperty Name="CNM_CODIGO" ColumnName="CNM_CODIGO" />
+                <ScalarProperty Name="CNM_NOMBRE" ColumnName="CNM_NOMBRE" />
+                <ScalarProperty Name="CNM_DESCRIPCION" ColumnName="CNM_DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CRIPTOGRAFIA_CAMPO">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.CRIPTOGRAFIA_CAMPO)">
+              <MappingFragment StoreEntitySet="CRIPTOGRAFIA_CAMPO">
+                <ScalarProperty Name="CRC_CODIGO" ColumnName="CRC_CODIGO" />
+                <ScalarProperty Name="DNC_CODIGO" ColumnName="DNC_CODIGO" />
+                <ScalarProperty Name="CRC_LLAVE_1" ColumnName="CRC_LLAVE_1" />
+                <ScalarProperty Name="CRC_LLAVE_2" ColumnName="CRC_LLAVE_2" />
+                <ScalarProperty Name="CRC_TIPO_LLAVE_1" ColumnName="CRC_TIPO_LLAVE_1" />
+                <ScalarProperty Name="CRC_TIPO_LLAVE_2" ColumnName="CRC_TIPO_LLAVE_2" />
+                <ScalarProperty Name="CRC_SEGUNDA_LLAVE" ColumnName="CRC_SEGUNDA_LLAVE" />
+                <ScalarProperty Name="CRC_OPERACION_LLAVE" ColumnName="CRC_OPERACION_LLAVE" />
+                <ScalarProperty Name="CRC_ALGORITMO" ColumnName="CRC_ALGORITMO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DINAMICA_CRIPTOGRAFIA">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.DINAMICA_CRIPTOGRAFIA)">
+              <MappingFragment StoreEntitySet="DINAMICA_CRIPTOGRAFIA">
+                <ScalarProperty Name="DNC_CODIGO" ColumnName="DNC_CODIGO" />
+                <ScalarProperty Name="DNC_NOMBRE" ColumnName="DNC_NOMBRE" />
+                <ScalarProperty Name="DNC_TIPO" ColumnName="DNC_TIPO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ENTIDAD_COMUNICACION">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.ENTIDAD_COMUNICACION)">
+              <MappingFragment StoreEntitySet="ENTIDAD_COMUNICACION">
+                <ScalarProperty Name="EDC_CODIGO" ColumnName="EDC_CODIGO" />
+                <ScalarProperty Name="EDC_NOMBRE" ColumnName="EDC_NOMBRE" />
+                <ScalarProperty Name="EDC_DESCRIPCION" ColumnName="EDC_DESCRIPCION" />
+                <ScalarProperty Name="EDC_RUTA_LOG" ColumnName="EDC_RUTA_LOG" />
+                <ScalarProperty Name="EDC_NOMBRE_LOG" ColumnName="EDC_NOMBRE_LOG" />
+                <ScalarProperty Name="EDC_TIMEOUT_EN_COLA" ColumnName="EDC_TIMEOUT_EN_COLA" />
+                <ScalarProperty Name="EDC_COLA" ColumnName="EDC_COLA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ESTADO_TERMINAL">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.ESTADO_TERMINAL)">
+              <MappingFragment StoreEntitySet="ESTADO_TERMINAL">
+                <ScalarProperty Name="EST_CODIGO" ColumnName="EST_CODIGO" />
+                <ScalarProperty Name="EST_NOMBRE" ColumnName="EST_NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FUNCION">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.FUNCION)">
+              <MappingFragment StoreEntitySet="FUNCION">
+                <ScalarProperty Name="FNC_CODIGO" ColumnName="FNC_CODIGO" />
+                <ScalarProperty Name="FNC_NOMBRE" ColumnName="FNC_NOMBRE" />
+                <ScalarProperty Name="FNC_DESCRIPCION" ColumnName="FNC_DESCRIPCION" />
+                <ScalarProperty Name="FNC_PAQUETE" ColumnName="FNC_PAQUETE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRUPO_MENSAJE">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.GRUPO_MENSAJE)">
+              <MappingFragment StoreEntitySet="GRUPO_MENSAJE">
+                <ScalarProperty Name="GMJ_CODIGO" ColumnName="GMJ_CODIGO" />
+                <ScalarProperty Name="GMJ_NOMBRE" ColumnName="GMJ_NOMBRE" />
+                <ScalarProperty Name="GMJ_DESCRIPCION" ColumnName="GMJ_DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GRUPO_VALIDACION">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.GRUPO_VALIDACION)">
+              <MappingFragment StoreEntitySet="GRUPO_VALIDACION">
+                <ScalarProperty Name="GRV_CODIGO" ColumnName="GRV_CODIGO" />
+                <ScalarProperty Name="GRV_NOMBRE" ColumnName="GRV_NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MENSAJE">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.MENSAJE)">
+              <MappingFragment StoreEntitySet="MENSAJE">
+                <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+                <ScalarProperty Name="MEN_NOMBRE" ColumnName="MEN_NOMBRE" />
+                <ScalarProperty Name="MEN_DESCRIPCION" ColumnName="MEN_DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MENSAJE_TRANSACCIONAL">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.MENSAJE_TRANSACCIONAL)">
+              <MappingFragment StoreEntitySet="MENSAJE_TRANSACCIONAL">
+                <ScalarProperty Name="MTR_CODIGO" ColumnName="MTR_CODIGO" />
+                <ScalarProperty Name="MTR_NOMBRE" ColumnName="MTR_NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PARAMETRO_TRANSFORMACION_CAMPO">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.PARAMETRO_TRANSFORMACION_CAMPO)">
+              <MappingFragment StoreEntitySet="PARAMETRO_TRANSFORMACION_CAMPO">
+                <ScalarProperty Name="PTC_CODIGO" ColumnName="PTC_CODIGO" />
+                <ScalarProperty Name="PTC_POSICION_INICIAL" ColumnName="PTC_POSICION_INICIAL" />
+                <ScalarProperty Name="PTC_LONGITUD" ColumnName="PTC_LONGITUD" />
+                <ScalarProperty Name="PTC_TIPO" ColumnName="PTC_TIPO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PASO_DINAMICA">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.PASO_DINAMICA)">
+              <MappingFragment StoreEntitySet="PASO_DINAMICA">
+                <ScalarProperty Name="PDT_INFORMACION_ADICIONAL" ColumnName="PDT_INFORMACION_ADICIONAL" />
+                <ScalarProperty Name="PDT_CODIGO" ColumnName="PDT_CODIGO" />
+                <ScalarProperty Name="PDT_FUNCIONALIDAD" ColumnName="PDT_FUNCIONALIDAD" />
+                <ScalarProperty Name="PDT_NUMERO" ColumnName="PDT_NUMERO" />
+                <ScalarProperty Name="PDT_FIN" ColumnName="PDT_FIN" />
+                <ScalarProperty Name="PDT_PASO" ColumnName="PDT_PASO" />
+                <ScalarProperty Name="PDT_REINTENTOS" ColumnName="PDT_REINTENTOS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PROTOCOLO">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.PROTOCOLO)">
+              <MappingFragment StoreEntitySet="PROTOCOLO">
+                <ScalarProperty Name="PTR_CODIGO" ColumnName="PTR_CODIGO" />
+                <ScalarProperty Name="PTR_NOMBRE" ColumnName="PTR_NOMBRE" />
+                <ScalarProperty Name="PTR_TIMEOUT_REQUEST" ColumnName="PTR_TIMEOUT_REQUEST" />
+                <ScalarProperty Name="PTR_TIMEOUT_RESPONSE" ColumnName="PTR_TIMEOUT_RESPONSE" />
+                <ScalarProperty Name="PTR_PUERTO" ColumnName="PTR_PUERTO" />
+                <ScalarProperty Name="PTR_COMPONENTE" ColumnName="PTR_COMPONENTE" />
+                <ScalarProperty Name="PTR_NOMBRE_CLASE" ColumnName="PTR_NOMBRE_CLASE" />
+                <ScalarProperty Name="PTR_NOMBRE_METODO" ColumnName="PTR_NOMBRE_METODO" />
+                <ScalarProperty Name="PTR_INICIA_COMM" ColumnName="PTR_INICIA_COMM" />
+                <ScalarProperty Name="PTR_ACEPTA_COMM" ColumnName="PTR_ACEPTA_COMM" />
+                <ScalarProperty Name="PTR_FRAME" ColumnName="PTR_FRAME" />
+                <ScalarProperty Name="PTR_CARACTER_INICIO" ColumnName="PTR_CARACTER_INICIO" />
+                <ScalarProperty Name="PTR_CARACTER_FIN" ColumnName="PTR_CARACTER_FIN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PUNTO_SERVICIO">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.PUNTO_SERVICIO)">
+              <MappingFragment StoreEntitySet="PUNTO_SERVICIO">
+                <ScalarProperty Name="PSR_CODIGO" ColumnName="PSR_CODIGO" />
+                <ScalarProperty Name="PSR_NOMBRE" ColumnName="PSR_NOMBRE" />
+                <ScalarProperty Name="PSR_ESTADO" ColumnName="PSR_ESTADO" />
+                <ScalarProperty Name="PSR_DIRECCION" ColumnName="PSR_DIRECCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGLA_MENSAJE_TRANSACCIONAL">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.REGLA_MENSAJE_TRANSACCIONAL)">
+              <MappingFragment StoreEntitySet="REGLA_MENSAJE_TRANSACCIONAL">
+                <ScalarProperty Name="RMT_CODIGO" ColumnName="RMT_CODIGO" />
+                <ScalarProperty Name="RMT_POSICION_INICIAL" ColumnName="RMT_POSICION_INICIAL" />
+                <ScalarProperty Name="RMT_LONGITUD" ColumnName="RMT_LONGITUD" />
+                <ScalarProperty Name="RMT_VALOR" ColumnName="RMT_VALOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TABLA">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.TABLA)">
+              <MappingFragment StoreEntitySet="TABLA">
+                <ScalarProperty Name="TBL_CODIGO" ColumnName="TBL_CODIGO" />
+                <ScalarProperty Name="TBL_NOMBRE" ColumnName="TBL_NOMBRE" />
+                <ScalarProperty Name="TBL_DESCRIPCION" ColumnName="TBL_DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TERMINAL">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.TERMINAL)">
+              <MappingFragment StoreEntitySet="TERMINAL">
+                <ScalarProperty Name="TRM_CODIGO" ColumnName="TRM_CODIGO" />
+                <ScalarProperty Name="TRM_SERIAL" ColumnName="TRM_SERIAL" />
+                <ScalarProperty Name="TRM_FECHA_REGISTRO" ColumnName="TRM_FECHA_REGISTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_COMUNICACION">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.TIPO_COMUNICACION)">
+              <MappingFragment StoreEntitySet="TIPO_COMUNICACION">
+                <ScalarProperty Name="TPO_CODIGO" ColumnName="TPO_CODIGO" />
+                <ScalarProperty Name="TPO_NOMBRE" ColumnName="TPO_NOMBRE" />
+                <ScalarProperty Name="TPO_DESCRIPION" ColumnName="TPO_DESCRIPION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_DATO">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.TIPO_DATO)">
+              <MappingFragment StoreEntitySet="TIPO_DATO">
+                <ScalarProperty Name="TDT_CODIGO" ColumnName="TDT_CODIGO" />
+                <ScalarProperty Name="TDT_DESCRIPCION" ColumnName="TDT_DESCRIPCION" />
+                <ScalarProperty Name="TDT_NOMBRE" ColumnName="TDT_NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_DATO_COLUMNA">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.TIPO_DATO_COLUMNA)">
+              <MappingFragment StoreEntitySet="TIPO_DATO_COLUMNA">
+                <ScalarProperty Name="TDC_CODIGO" ColumnName="TDC_CODIGO" />
+                <ScalarProperty Name="TDC_NOMBRE" ColumnName="TDC_NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_ENTIDAD">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.TIPO_ENTIDAD)">
+              <MappingFragment StoreEntitySet="TIPO_ENTIDAD">
+                <ScalarProperty Name="TEM_CODIGO" ColumnName="TEM_CODIGO" />
+                <ScalarProperty Name="TEM_NOMBRE" ColumnName="TEM_NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_MENSAJE">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.TIPO_MENSAJE)">
+              <MappingFragment StoreEntitySet="TIPO_MENSAJE">
+                <ScalarProperty Name="TMJ_CODIGO" ColumnName="TMJ_CODIGO" />
+                <ScalarProperty Name="TMJ_NOMBRE" ColumnName="TMJ_NOMBRE" />
+                <ScalarProperty Name="TMJ_DESCRIPCION" ColumnName="TMJ_DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRANSFORMACION">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.TRANSFORMACION)">
+              <MappingFragment StoreEntitySet="TRANSFORMACION">
+                <ScalarProperty Name="TRM_CODIGO" ColumnName="TRM_CODIGO" />
+                <ScalarProperty Name="TRM_NOMBRE" ColumnName="TRM_NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRANSFORMACION_CAMPO">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.TRANSFORMACION_CAMPO)">
+              <MappingFragment StoreEntitySet="TRANSFORMACION_CAMPO">
+                <ScalarProperty Name="TRM_CODIGO" ColumnName="TRM_CODIGO" />
+                <ScalarProperty Name="CAM_CODIGO_CAMPO_DESTINO" ColumnName="CAM_CODIGO_CAMPO_DESTINO" />
+                <ScalarProperty Name="MEN_CODIGO_MENSAJE_DESTINO" ColumnName="MEN_CODIGO_MENSAJE_DESTINO" />
+                <ScalarProperty Name="TCM_COMPONENTE" ColumnName="TCM_COMPONENTE" />
+                <ScalarProperty Name="TCM_CLASE" ColumnName="TCM_CLASE" />
+                <ScalarProperty Name="TCM_METODO" ColumnName="TCM_METODO" />
+                <ScalarProperty Name="TCM_PROCEDIMIENTO" ColumnName="TCM_PROCEDIMIENTO" />
+                <ScalarProperty Name="TCM_VALOR_CONSTANTE" ColumnName="TCM_VALOR_CONSTANTE" />
+                <ScalarProperty Name="TCM_FUNCIONALIDAD_ESTANDAR" ColumnName="TCM_FUNCIONALIDAD_ESTANDAR" />
+                <ScalarProperty Name="TCM_TIPO" ColumnName="TCM_TIPO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIO">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.USUARIO)">
+              <MappingFragment StoreEntitySet="USUARIO">
+                <ScalarProperty Name="USR_CODIGO" ColumnName="USR_CODIGO" />
+                <ScalarProperty Name="USR_NOMBRE" ColumnName="USR_NOMBRE" />
+                <ScalarProperty Name="USR_CONTRASENHA" ColumnName="USR_CONTRASENHA" />
+                <ScalarProperty Name="USR_DATOS_USUARIO" ColumnName="USR_DATOS_USUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VALIDACION_CAMPO">
+            <EntityTypeMapping TypeName="IsTypeOf(Entidades.VALIDACION_CAMPO)">
+              <MappingFragment StoreEntitySet="VALIDACION_CAMPO">
+                <ScalarProperty Name="VLC_CODIGO" ColumnName="VLC_CODIGO" />
+                <ScalarProperty Name="GRV_CODIGO" ColumnName="GRV_CODIGO" />
+                <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+                <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO" />
+                <ScalarProperty Name="VLC_INCLUSION_EXCLUSION" ColumnName="VLC_INCLUSION_EXCLUSION" />
+                <ScalarProperty Name="VLC_CONDICION" ColumnName="VLC_CONDICION" />
+                <ScalarProperty Name="VLC_VALOR" ColumnName="VLC_VALOR" />
+                <ScalarProperty Name="VLC_PROCEDIMIENTO" ColumnName="VLC_PROCEDIMIENTO" />
+                <ScalarProperty Name="VLC_COMPONENTE" ColumnName="VLC_COMPONENTE" />
+                <ScalarProperty Name="VLC_CLASE" ColumnName="VLC_CLASE" />
+                <ScalarProperty Name="VLC_METODO" ColumnName="VLC_METODO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK__CAMPO__CAMPO_PLANTILLA" TypeName="Entidades.FK__CAMPO__CAMPO_PLANTILLA" StoreEntitySet="CAMPO">
+            <EndProperty Name="CAMPO_PLANTILLA">
+              <ScalarProperty Name="CMP_CODIGO" ColumnName="CMP_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="CAMPO">
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__CAMPO__MENSAJE" TypeName="Entidades.FK__CAMPO__MENSAJE" StoreEntitySet="CAMPO">
+            <EndProperty Name="MENSAJE">
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="CAMPO">
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__CAMPO__TIPODATO" TypeName="Entidades.FK__CAMPO__TIPODATO" StoreEntitySet="CAMPO">
+            <EndProperty Name="TIPO_DATO">
+              <ScalarProperty Name="TDT_CODIGO" ColumnName="TDT_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="CAMPO">
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__PARAMETRO_TRANSFORMACION_CAMPO" TypeName="Entidades.FK__PARAMETRO_TRANSFORMACION_CAMPO" StoreEntitySet="PARAMETRO_TRANSFORMACION_CAMPO">
+            <EndProperty Name="CAMPO">
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO_CAMPO_ORIGEN" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO_MENSAJE_ORIGEN" />
+            </EndProperty>
+            <EndProperty Name="PARAMETRO_TRANSFORMACION_CAMPO">
+              <ScalarProperty Name="PTC_CODIGO" ColumnName="PTC_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="CAM_CODIGO_CAMPO_ORIGEN" IsNull="false" />
+            <Condition ColumnName="MEN_CODIGO_MENSAJE_ORIGEN" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__REGLA_MENSAJE_CAMPO" TypeName="Entidades.FK__REGLA_MENSAJE_CAMPO" StoreEntitySet="REGLA_MENSAJE_TRANSACCIONAL">
+            <EndProperty Name="CAMPO">
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="REGLA_MENSAJE_TRANSACCIONAL">
+              <ScalarProperty Name="RMT_CODIGO" ColumnName="RMT_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__TRANSFORMACION_CAMPO_CAMPO_DESTINO" TypeName="Entidades.FK__TRANSFORMACION_CAMPO_CAMPO_DESTINO" StoreEntitySet="TRANSFORMACION_CAMPO">
+            <EndProperty Name="CAMPO">
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO_CAMPO_DESTINO" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO_MENSAJE_DESTINO" />
+            </EndProperty>
+            <EndProperty Name="TRANSFORMACION_CAMPO">
+              <ScalarProperty Name="TRM_CODIGO" ColumnName="TRM_CODIGO" />
+              <ScalarProperty Name="CAM_CODIGO_CAMPO_DESTINO" ColumnName="CAM_CODIGO_CAMPO_DESTINO" />
+              <ScalarProperty Name="MEN_CODIGO_MENSAJE_DESTINO" ColumnName="MEN_CODIGO_MENSAJE_DESTINO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__VALIDACION_CAMPO__CAMPO" TypeName="Entidades.FK__VALIDACION_CAMPO__CAMPO" StoreEntitySet="VALIDACION_CAMPO">
+            <EndProperty Name="CAMPO">
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="VALIDACION_CAMPO">
+              <ScalarProperty Name="VLC_CODIGO" ColumnName="VLC_CODIGO" />
+              <ScalarProperty Name="GRV_CODIGO" ColumnName="GRV_CODIGO" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_CRIPTOGRAFIA_CAMPO_LLAVE_1_CAMPO" TypeName="Entidades.FK_CRIPTOGRAFIA_CAMPO_LLAVE_1_CAMPO" StoreEntitySet="CRIPTOGRAFIA_CAMPO">
+            <EndProperty Name="CAMPO">
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO_LLAVE_1" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO_LLAVE_1" />
+            </EndProperty>
+            <EndProperty Name="CRIPTOGRAFIA_CAMPO">
+              <ScalarProperty Name="CRC_CODIGO" ColumnName="CRC_CODIGO" />
+              <ScalarProperty Name="DNC_CODIGO" ColumnName="DNC_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="CAM_CODIGO_LLAVE_1" IsNull="false" />
+            <Condition ColumnName="MEN_CODIGO_LLAVE_1" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_CRIPTOGRAFIA_CAMPO_LLAVE_2_CAMPO" TypeName="Entidades.FK_CRIPTOGRAFIA_CAMPO_LLAVE_2_CAMPO" StoreEntitySet="CRIPTOGRAFIA_CAMPO">
+            <EndProperty Name="CAMPO">
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO_LLAVE_2" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO_LLAVE_2" />
+            </EndProperty>
+            <EndProperty Name="CRIPTOGRAFIA_CAMPO">
+              <ScalarProperty Name="CRC_CODIGO" ColumnName="CRC_CODIGO" />
+              <ScalarProperty Name="DNC_CODIGO" ColumnName="DNC_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="CAM_CODIGO_LLAVE_2" IsNull="false" />
+            <Condition ColumnName="MEN_CODIGO_LLAVE_2" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_CRIPTOGRAFIA_CAMPO_RESULTADO_CAMPO" TypeName="Entidades.FK_CRIPTOGRAFIA_CAMPO_RESULTADO_CAMPO" StoreEntitySet="CRIPTOGRAFIA_CAMPO">
+            <EndProperty Name="CAMPO">
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO_RESULTADO" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO_RESULTADO" />
+            </EndProperty>
+            <EndProperty Name="CRIPTOGRAFIA_CAMPO">
+              <ScalarProperty Name="CRC_CODIGO" ColumnName="CRC_CODIGO" />
+              <ScalarProperty Name="DNC_CODIGO" ColumnName="DNC_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_CAMPO_PLANTILLA_GRUPO_MENSAJE" TypeName="Entidades.FK_CAMPO_PLANTILLA_GRUPO_MENSAJE" StoreEntitySet="CAMPO_PLANTILLA">
+            <EndProperty Name="GRUPO_MENSAJE">
+              <ScalarProperty Name="GMJ_CODIGO" ColumnName="GMJ_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="CAMPO_PLANTILLA">
+              <ScalarProperty Name="CMP_CODIGO" ColumnName="CMP_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_CAMPO_PLANTILLA_TIPO_DATO" TypeName="Entidades.FK_CAMPO_PLANTILLA_TIPO_DATO" StoreEntitySet="CAMPO_PLANTILLA">
+            <EndProperty Name="TIPO_DATO">
+              <ScalarProperty Name="TDT_CODIGO" ColumnName="TDT_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="CAMPO_PLANTILLA">
+              <ScalarProperty Name="CMP_CODIGO" ColumnName="CMP_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__COLUMNA__TABLA" TypeName="Entidades.FK__COLUMNA__TABLA" StoreEntitySet="COLUMNA">
+            <EndProperty Name="TABLA">
+              <ScalarProperty Name="TBL_CODIGO" ColumnName="TBL_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="COLUMNA">
+              <ScalarProperty Name="COL_CODIGO" ColumnName="COL_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__PARAMETRO__TRANSFORMACION_COLUMNA_DESTINO" TypeName="Entidades.FK__PARAMETRO__TRANSFORMACION_COLUMNA_DESTINO" StoreEntitySet="PARAMETRO_TRANSFORMACION_CAMPO">
+            <EndProperty Name="COLUMNA">
+              <ScalarProperty Name="COL_CODIGO" ColumnName="COL_CODIGO_DESTINO" />
+            </EndProperty>
+            <EndProperty Name="PARAMETRO_TRANSFORMACION_CAMPO">
+              <ScalarProperty Name="PTC_CODIGO" ColumnName="PTC_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="COL_CODIGO_DESTINO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__PARAMETRO__TRANSFORMACION_COLUMNA_ORIGEN" TypeName="Entidades.FK__PARAMETRO__TRANSFORMACION_COLUMNA_ORIGEN" StoreEntitySet="PARAMETRO_TRANSFORMACION_CAMPO">
+            <EndProperty Name="COLUMNA">
+              <ScalarProperty Name="COL_CODIGO" ColumnName="COL_CODIGO_ORIGEN" />
+            </EndProperty>
+            <EndProperty Name="PARAMETRO_TRANSFORMACION_CAMPO">
+              <ScalarProperty Name="PTC_CODIGO" ColumnName="PTC_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="COL_CODIGO_ORIGEN" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__VALIDACION_CAMPO_COLUMNA" TypeName="Entidades.FK__VALIDACION_CAMPO_COLUMNA" StoreEntitySet="VALIDACION_CAMPO">
+            <EndProperty Name="COLUMNA">
+              <ScalarProperty Name="COL_CODIGO" ColumnName="COL_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="VALIDACION_CAMPO">
+              <ScalarProperty Name="VLC_CODIGO" ColumnName="VLC_CODIGO" />
+              <ScalarProperty Name="GRV_CODIGO" ColumnName="GRV_CODIGO" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="COL_CODIGO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_COLUMNA_TIPO_DATO_COLUMNA" TypeName="Entidades.FK_COLUMNA_TIPO_DATO_COLUMNA" StoreEntitySet="COLUMNA">
+            <EndProperty Name="TIPO_DATO_COLUMNA">
+              <ScalarProperty Name="TDC_CODIGO" ColumnName="TDC_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="COLUMNA">
+              <ScalarProperty Name="COL_CODIGO" ColumnName="COL_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__MENSAJE_TRANSACCIONAL_CONDICION_MENSAJE" TypeName="Entidades.FK__MENSAJE_TRANSACCIONAL_CONDICION_MENSAJE" StoreEntitySet="MENSAJE_TRANSACCIONAL">
+            <EndProperty Name="CONDICION_MENSAJE">
+              <ScalarProperty Name="CNM_CODIGO" ColumnName="CNM_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="MENSAJE_TRANSACCIONAL">
+              <ScalarProperty Name="MTR_CODIGO" ColumnName="MTR_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_CRIPTOGRAFIA_CAMPO_DINAMICA_CRIPTOGRAFIA" TypeName="Entidades.FK_CRIPTOGRAFIA_CAMPO_DINAMICA_CRIPTOGRAFIA" StoreEntitySet="CRIPTOGRAFIA_CAMPO">
+            <EndProperty Name="DINAMICA_CRIPTOGRAFIA">
+              <ScalarProperty Name="DNC_CODIGO" ColumnName="DNC_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="CRIPTOGRAFIA_CAMPO">
+              <ScalarProperty Name="CRC_CODIGO" ColumnName="CRC_CODIGO" />
+              <ScalarProperty Name="DNC_CODIGO" ColumnName="DNC_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_DINAMICA_CRIPTOGRAFIA_MENSAJE" TypeName="Entidades.FK_DINAMICA_CRIPTOGRAFIA_MENSAJE" StoreEntitySet="DINAMICA_CRIPTOGRAFIA">
+            <EndProperty Name="MENSAJE">
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="DINAMICA_CRIPTOGRAFIA">
+              <ScalarProperty Name="DNC_CODIGO" ColumnName="DNC_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__ENTIDAD_GRUPO_MENSAJE" TypeName="Entidades.FK__ENTIDAD_GRUPO_MENSAJE" StoreEntitySet="ENTIDAD_COMUNICACION">
+            <EndProperty Name="GRUPO_MENSAJE">
+              <ScalarProperty Name="GMJ_CODIGO" ColumnName="GMJ_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="ENTIDAD_COMUNICACION">
+              <ScalarProperty Name="EDC_CODIGO" ColumnName="EDC_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="GMJ_CODIGO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__ENTIDAD_PROTOCOLO" TypeName="Entidades.FK__ENTIDAD_PROTOCOLO" StoreEntitySet="ENTIDAD_COMUNICACION">
+            <EndProperty Name="PROTOCOLO">
+              <ScalarProperty Name="PTR_CODIGO" ColumnName="PTR_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="ENTIDAD_COMUNICACION">
+              <ScalarProperty Name="EDC_CODIGO" ColumnName="EDC_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="PTR_CODIGO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__TERMINAL__ENTIDAD_COMUNICACION" TypeName="Entidades.FK__TERMINAL__ENTIDAD_COMUNICACION" StoreEntitySet="TERMINAL">
+            <EndProperty Name="ENTIDAD_COMUNICACION">
+              <ScalarProperty Name="EDC_CODIGO" ColumnName="EDC_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="TERMINAL">
+              <ScalarProperty Name="TRM_CODIGO" ColumnName="TRM_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="EDC_CODIGO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_ENTIDAD_COMUNICACION_TIPO_ENTIDAD" TypeName="Entidades.FK_ENTIDAD_COMUNICACION_TIPO_ENTIDAD" StoreEntitySet="ENTIDAD_COMUNICACION">
+            <EndProperty Name="TIPO_ENTIDAD">
+              <ScalarProperty Name="TEM_CODIGO" ColumnName="TEM_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="ENTIDAD_COMUNICACION">
+              <ScalarProperty Name="EDC_CODIGO" ColumnName="EDC_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="TEM_CODIGO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_PASO_DINAMICA_ENTIDAD_COMUNICACION" TypeName="Entidades.FK_PASO_DINAMICA_ENTIDAD_COMUNICACION" StoreEntitySet="PASO_DINAMICA">
+            <EndProperty Name="ENTIDAD_COMUNICACION">
+              <ScalarProperty Name="EDC_CODIGO" ColumnName="EDC_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="PASO_DINAMICA">
+              <ScalarProperty Name="PDT_CODIGO" ColumnName="PDT_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="EDC_CODIGO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__TERMINAL__ESTADO_TERMINAL" TypeName="Entidades.FK__TERMINAL__ESTADO_TERMINAL" StoreEntitySet="TERMINAL">
+            <EndProperty Name="ESTADO_TERMINAL">
+              <ScalarProperty Name="EST_CODIGO" ColumnName="EST_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="TERMINAL">
+              <ScalarProperty Name="TRM_CODIGO" ColumnName="TRM_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="EST_CODIGO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__GRUPO_MENSAJE_TIPO_MENSAJE" TypeName="Entidades.FK__GRUPO_MENSAJE_TIPO_MENSAJE" StoreEntitySet="GRUPO_MENSAJE">
+            <EndProperty Name="TIPO_MENSAJE">
+              <ScalarProperty Name="TMJ_CODIGO" ColumnName="TMJ_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="GRUPO_MENSAJE">
+              <ScalarProperty Name="GMJ_CODIGO" ColumnName="GMJ_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__MENSAJE__GRUPO_MENSAJE" TypeName="Entidades.FK__MENSAJE__GRUPO_MENSAJE" StoreEntitySet="MENSAJE">
+            <EndProperty Name="GRUPO_MENSAJE">
+              <ScalarProperty Name="GMJ_CODIGO" ColumnName="GMJ_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="MENSAJE">
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="GMJ_CODIGO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__GRUPO_VALIDACION_MENSAJE" TypeName="Entidades.FK__GRUPO_VALIDACION_MENSAJE" StoreEntitySet="GRUPO_VALIDACION">
+            <EndProperty Name="MENSAJE">
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="GRUPO_VALIDACION">
+              <ScalarProperty Name="GRV_CODIGO" ColumnName="GRV_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__VALIDACION_GRUPO_VALIDACION" TypeName="Entidades.FK__VALIDACION_GRUPO_VALIDACION" StoreEntitySet="VALIDACION_CAMPO">
+            <EndProperty Name="GRUPO_VALIDACION">
+              <ScalarProperty Name="GRV_CODIGO" ColumnName="GRV_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="VALIDACION_CAMPO">
+              <ScalarProperty Name="VLC_CODIGO" ColumnName="VLC_CODIGO" />
+              <ScalarProperty Name="GRV_CODIGO" ColumnName="GRV_CODIGO" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__MENSAJE_TRANSACCIONAL_MENSAJE" TypeName="Entidades.FK__MENSAJE_TRANSACCIONAL_MENSAJE" StoreEntitySet="MENSAJE_TRANSACCIONAL">
+            <EndProperty Name="MENSAJE">
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="MENSAJE_TRANSACCIONAL">
+              <ScalarProperty Name="MTR_CODIGO" ColumnName="MTR_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__TRANSFORM__MENSAJE_DESTINO" TypeName="Entidades.FK__TRANSFORM__MENSAJE_DESTINO" StoreEntitySet="TRANSFORMACION">
+            <EndProperty Name="MENSAJE">
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO_MENSAJE_DESTINO" />
+            </EndProperty>
+            <EndProperty Name="TRANSFORMACION">
+              <ScalarProperty Name="TRM_CODIGO" ColumnName="TRM_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__TRANSFORM__MENSAJE_ORIGEN" TypeName="Entidades.FK__TRANSFORM__MENSAJE_ORIGEN" StoreEntitySet="TRANSFORMACION">
+            <EndProperty Name="MENSAJE">
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO_MENSAJE_ORIGEN" />
+            </EndProperty>
+            <EndProperty Name="TRANSFORMACION">
+              <ScalarProperty Name="TRM_CODIGO" ColumnName="TRM_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__REGLA_MENSAJE_MENSAJE_TRANSACCIONAL" TypeName="Entidades.FK__REGLA_MENSAJE_MENSAJE_TRANSACCIONAL" StoreEntitySet="REGLA_MENSAJE_TRANSACCIONAL">
+            <EndProperty Name="MENSAJE_TRANSACCIONAL">
+              <ScalarProperty Name="MTR_CODIGO" ColumnName="MTR_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="REGLA_MENSAJE_TRANSACCIONAL">
+              <ScalarProperty Name="RMT_CODIGO" ColumnName="RMT_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK_PASO_DINAMICA_MENSAJE_TRANSACCIONAL" TypeName="Entidades.FK_PASO_DINAMICA_MENSAJE_TRANSACCIONAL" StoreEntitySet="PASO_DINAMICA">
+            <EndProperty Name="MENSAJE_TRANSACCIONAL">
+              <ScalarProperty Name="MTR_CODIGO" ColumnName="MTR_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="PASO_DINAMICA">
+              <ScalarProperty Name="PDT_CODIGO" ColumnName="PDT_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__PARAMETRO__TRANSFORMACION_TABLA" TypeName="Entidades.FK__PARAMETRO__TRANSFORMACION_TABLA" StoreEntitySet="PARAMETRO_TRANSFORMACION_CAMPO">
+            <EndProperty Name="TABLA">
+              <ScalarProperty Name="TBL_CODIGO" ColumnName="TBL_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="PARAMETRO_TRANSFORMACION_CAMPO">
+              <ScalarProperty Name="PTC_CODIGO" ColumnName="PTC_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="TBL_CODIGO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__PARAMETRO_TRANSFORMACION_TRANSFORMACION_CAMPO" TypeName="Entidades.FK__PARAMETRO_TRANSFORMACION_TRANSFORMACION_CAMPO" StoreEntitySet="PARAMETRO_TRANSFORMACION_CAMPO">
+            <EndProperty Name="TRANSFORMACION_CAMPO">
+              <ScalarProperty Name="TRM_CODIGO" ColumnName="TRM_CODIGO" />
+              <ScalarProperty Name="CAM_CODIGO_CAMPO_DESTINO" ColumnName="CAM_CODIGO_CAMPO_DESTINO" />
+              <ScalarProperty Name="MEN_CODIGO_MENSAJE_DESTINO" ColumnName="MEN_CODIGO_MENSAJE_DESTINO" />
+            </EndProperty>
+            <EndProperty Name="PARAMETRO_TRANSFORMACION_CAMPO">
+              <ScalarProperty Name="PTC_CODIGO" ColumnName="PTC_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__PROTOCOLO__TIPO_COMUNICACION" TypeName="Entidades.FK__PROTOCOLO__TIPO_COMUNICACION" StoreEntitySet="PROTOCOLO">
+            <EndProperty Name="TIPO_COMUNICACION">
+              <ScalarProperty Name="TPO_CODIGO" ColumnName="TPO_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="PROTOCOLO">
+              <ScalarProperty Name="PTR_CODIGO" ColumnName="PTR_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="TPO_CODIGO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__TERMINAL__PUNTO_SERVICIO" TypeName="Entidades.FK__TERMINAL__PUNTO_SERVICIO" StoreEntitySet="TERMINAL">
+            <EndProperty Name="PUNTO_SERVICIO">
+              <ScalarProperty Name="PSR_CODIGO" ColumnName="PSR_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="TERMINAL">
+              <ScalarProperty Name="TRM_CODIGO" ColumnName="TRM_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="PSR_CODIGO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__VALIDACIO__CAMPO_TABLA" TypeName="Entidades.FK__VALIDACIO__CAMPO_TABLA" StoreEntitySet="VALIDACION_CAMPO">
+            <EndProperty Name="TABLA">
+              <ScalarProperty Name="TBL_CODIGO" ColumnName="TBL_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="VALIDACION_CAMPO">
+              <ScalarProperty Name="VLC_CODIGO" ColumnName="VLC_CODIGO" />
+              <ScalarProperty Name="GRV_CODIGO" ColumnName="GRV_CODIGO" />
+              <ScalarProperty Name="MEN_CODIGO" ColumnName="MEN_CODIGO" />
+              <ScalarProperty Name="CAM_CODIGO" ColumnName="CAM_CODIGO" />
+            </EndProperty>
+            <Condition ColumnName="TBL_CODIGO" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__TRANSFORMACION__TRANSFORMACION_CAMPO" TypeName="Entidades.FK__TRANSFORMACION__TRANSFORMACION_CAMPO" StoreEntitySet="TRANSFORMACION_CAMPO">
+            <EndProperty Name="TRANSFORMACION">
+              <ScalarProperty Name="TRM_CODIGO" ColumnName="TRM_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="TRANSFORMACION_CAMPO">
+              <ScalarProperty Name="TRM_CODIGO" ColumnName="TRM_CODIGO" />
+              <ScalarProperty Name="CAM_CODIGO_CAMPO_DESTINO" ColumnName="CAM_CODIGO_CAMPO_DESTINO" />
+              <ScalarProperty Name="MEN_CODIGO_MENSAJE_DESTINO" ColumnName="MEN_CODIGO_MENSAJE_DESTINO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FUNCION_X_USUARIO" TypeName="Entidades.FUNCION_X_USUARIO" StoreEntitySet="FUNCION_X_USUARIO">
+            <EndProperty Name="FUNCION">
+              <ScalarProperty Name="FNC_CODIGO" ColumnName="FNC_CODIGO" />
+            </EndProperty>
+            <EndProperty Name="USUARIO">
+              <ScalarProperty Name="USR_CODIGO" ColumnName="USR_CODIGO" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="Entidades">
+        <EntityTypeShape EntityType="Entidades.CAMPO" Width="1.5" PointX="5.25" PointY="10.75" Height="6.01861653645833" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.CAMPO_PLANTILLA" Width="1.5" PointX="3" PointY="11.875" Height="3.9033007812499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.COLUMNA" Width="1.5" PointX="8.25" PointY="0.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.COMPONENTE" Width="1.5" PointX="0.75" PointY="0.75" Height="1.5956835937500002" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.CONDICION_MENSAJE" Width="1.5" PointX="3" PointY="17.875" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.CRIPTOGRAFIA_CAMPO" Width="1.5" PointX="7.5" PointY="16" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.DINAMICA_CRIPTOGRAFIA" Width="1.5" PointX="5.25" PointY="20.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.ENTIDAD_COMUNICACION" Width="1.5" PointX="17.25" PointY="5.25" Height="3.3263964843750014" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.ESTADO_TERMINAL" Width="1.5" PointX="17.25" PointY="2.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.FUNCION" Width="1.5" PointX="12.75" PointY="14" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.GRUPO_MENSAJE" Width="1.5" PointX="0.75" PointY="9.625" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.GRUPO_VALIDACION" Width="1.5" PointX="8.25" PointY="5.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.MENSAJE" Width="1.5" PointX="3" PointY="7.75" Height="2.9417936197916683" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.MENSAJE_TRANSACCIONAL" Width="1.5" PointX="5.25" PointY="17.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.PARAMETRO_TRANSFORMACION_CAMPO" Width="1.5" PointX="10.5" PointY="12.375" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.PASO_DINAMICA" Width="1.5" PointX="19.5" PointY="11.25" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.PROTOCOLO" Width="1.5" PointX="15" PointY="1.875" Height="3.9033007812499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.PUNTO_SERVICIO" Width="1.5" PointX="17.25" PointY="10.125" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.REGLA_MENSAJE_TRANSACCIONAL" Width="1.5" PointX="7.5" PointY="12.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.TABLA" Width="1.5" PointX="6" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.TERMINAL" Width="1.5" PointX="19.5" PointY="5.875" Height="2.1725878906250005" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.TIPO_COMUNICACION" Width="1.5" PointX="12.75" PointY="3" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.TIPO_DATO" Width="1.5" PointX="0.75" PointY="12.75" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.TIPO_DATO_COLUMNA" Width="1.5" PointX="6" PointY="4.375" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.TIPO_ENTIDAD" Width="1.5" PointX="15" PointY="7.125" Height="1.5956835937500005" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.TIPO_MENSAJE" Width="1.5" PointX="1.5" PointY="4.875" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.TRANSFORMACION" Width="1.5" PointX="5.25" PointY="7.75" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.TRANSFORMACION_CAMPO" Width="1.5" PointX="7.5" PointY="8" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.USUARIO" Width="1.5" PointX="15" PointY="14" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidades.VALIDACION_CAMPO" Width="1.5" PointX="10.5" PointY="6.875" Height="3.9033007812500005" IsExpanded="true" />
+        <AssociationConnector Association="Entidades.FK__CAMPO__CAMPO_PLANTILLA" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.826650390625" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="13.826650390624998" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="13.826650390625" />
+          <ConnectorPoint PointX="5.25" PointY="13.826650390625" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__CAMPO__MENSAJE" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="9.2208968098958337" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="9.2208968098958337" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="9.2208968098958337" />
+          <ConnectorPoint PointX="5" PointY="9.2208968098958337" />
+          <ConnectorPoint PointX="5" PointY="9.9802864583333317" />
+          <ConnectorPoint PointX="6" PointY="9.9802864583333317" />
+          <ConnectorPoint PointX="6" PointY="10.75" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__CAMPO__TIPODATO" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="14.730286458333335" />
+          <ConnectorPoint PointX="1.5" PointY="16.304708658854167" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="16.304708658854167" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="16.304708658854167" />
+          <ConnectorPoint PointX="5.25" PointY="16.304708658854167" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__PARAMETRO_TRANSFORMACION_CAMPO" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="12.53125" />
+          <ConnectorPoint PointX="7.166666666666667" PointY="12.53125" />
+          <ConnectorPoint PointX="7.333333333333333" PointY="12.53125" />
+          <ConnectorPoint PointX="9.2916666666666661" PointY="12.53125" />
+          <ConnectorPoint PointX="9.4583333333333339" PointY="12.53125" />
+          <ConnectorPoint PointX="9.9166666666666661" PointY="12.531249999999998" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="12.53125" />
+          <ConnectorPoint PointX="10.5" PointY="12.53125" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__REGLA_MENSAJE_CAMPO" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="13.8362939453125" />
+          <ConnectorPoint PointX="7.166666666666667" PointY="13.8362939453125" />
+          <ConnectorPoint PointX="7.333333333333333" PointY="13.8362939453125" />
+          <ConnectorPoint PointX="7.5" PointY="13.8362939453125" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__TRANSFORMACION_CAMPO_CAMPO_DESTINO" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="11.134348958333334" />
+          <ConnectorPoint PointX="7.5" PointY="11.134348958333334" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__VALIDACION_CAMPO__CAMPO" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="15.333707240885417" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="15.333707240885417" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="15.333707240885417" />
+          <ConnectorPoint PointX="7.25" PointY="15.333707240885417" />
+          <ConnectorPoint PointX="7.25" PointY="12.125" />
+          <ConnectorPoint PointX="9.2916666666666661" PointY="12.125" />
+          <ConnectorPoint PointX="9.4583333333333339" PointY="12.125" />
+          <ConnectorPoint PointX="9.9166666666666661" PointY="12.124999999999998" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="12.125" />
+          <ConnectorPoint PointX="10.791667166666665" PointY="12.125" />
+          <ConnectorPoint PointX="10.958333833333333" PointY="12.125" />
+          <ConnectorPoint PointX="11.25" PointY="12.125" />
+          <ConnectorPoint PointX="11.25" PointY="10.77830078125" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK_CRIPTOGRAFIA_CAMPO_LLAVE_1_CAMPO" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="16.384308268229166" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="16.384308268229166" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="16.384308268229166" />
+          <ConnectorPoint PointX="7.5" PointY="16.384308268229166" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK_CRIPTOGRAFIA_CAMPO_LLAVE_2_CAMPO" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="16.129654134114581" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="16.129654134114581" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="16.129654134114581" />
+          <ConnectorPoint PointX="7.5" PointY="16.129654134114581" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK_CRIPTOGRAFIA_CAMPO_RESULTADO_CAMPO" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="16.638962402343751" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="16.638962402343751" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="16.638962402343751" />
+          <ConnectorPoint PointX="7.5" PointY="16.638962402343751" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK_CAMPO_PLANTILLA_GRUPO_MENSAJE" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="10.807444661458334" />
+          <ConnectorPoint PointX="2.75" PointY="10.807444661458334" />
+          <ConnectorPoint PointX="2.75" PointY="10.941793619791667" />
+          <ConnectorPoint PointX="3.75" PointY="10.941793619791667" />
+          <ConnectorPoint PointX="3.75" PointY="11.875" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK_CAMPO_PLANTILLA_TIPO_DATO" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="13.740143229166668" />
+          <ConnectorPoint PointX="3" PointY="13.740143229166668" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__COLUMNA__TABLA" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="1.8362939453124998" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="1.8362939453124991" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="1.8362939453124998" />
+          <ConnectorPoint PointX="8.25" PointY="1.8362939453124998" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__PARAMETRO__TRANSFORMACION_COLUMNA_DESTINO" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="2.0285953776041667" />
+          <ConnectorPoint PointX="10.125" PointY="2.0285953776041667" />
+          <ConnectorPoint PointX="10.125" PointY="13.85912309375" />
+          <ConnectorPoint PointX="10.5" PointY="13.85912309375" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__PARAMETRO__TRANSFORMACION_COLUMNA_ORIGEN" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="2.69914506640625" />
+          <ConnectorPoint PointX="10" PointY="2.69914506640625" />
+          <ConnectorPoint PointX="10" PointY="13.195186546875" />
+          <ConnectorPoint PointX="10.041666666666666" PointY="13.195186546875" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="13.195186546875" />
+          <ConnectorPoint PointX="10.5" PointY="13.195186546875" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__VALIDACION_CAMPO_COLUMNA" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="1.3580451888020835" />
+          <ConnectorPoint PointX="11.25" PointY="1.3580451888020835" />
+          <ConnectorPoint PointX="11.25" PointY="6.875" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK_COLUMNA_TIPO_DATO_COLUMNA" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="5.172841796875" />
+          <ConnectorPoint PointX="7.875" PointY="5.172841796875" />
+          <ConnectorPoint PointX="7.875" PointY="2.6029943502604165" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="2.6029943502604156" />
+          <ConnectorPoint PointX="8.2083333333333339" PointY="2.6029943502604165" />
+          <ConnectorPoint PointX="8.25" PointY="2.6029943502604165" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__MENSAJE_TRANSACCIONAL_CONDICION_MENSAJE" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="18.768992513020834" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="18.768992513020834" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="18.768992513020834" />
+          <ConnectorPoint PointX="5.25" PointY="18.768992513020834" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK_CRIPTOGRAFIA_CAMPO_DINAMICA_CRIPTOGRAFIA" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="21.740143229166666" />
+          <ConnectorPoint PointX="8.25" PointY="21.740143229166666" />
+          <ConnectorPoint PointX="8.25" PointY="19.518697916666667" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK_DINAMICA_CRIPTOGRAFIA_MENSAJE" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="9.98759721484375" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="9.98759721484375" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="9.98759721484375" />
+          <ConnectorPoint PointX="4.875" PointY="9.98759721484375" />
+          <ConnectorPoint PointX="4.875" PointY="21.740143229166666" />
+          <ConnectorPoint PointX="5.25" PointY="21.740143229166666" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__ENTIDAD_GRUPO_MENSAJE" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="9.625" />
+          <ConnectorPoint PointX="1.5" PointY="7.2879850260416674" />
+          <ConnectorPoint PointX="1.8541666666666667" PointY="7.2879850260416665" />
+          <ConnectorPoint PointX="2.0208333333333335" PointY="7.2879850260416674" />
+          <ConnectorPoint PointX="3.6979166666666665" PointY="7.2879850260416665" />
+          <ConnectorPoint PointX="3.8645833333333335" PointY="7.2879850260416674" />
+          <ConnectorPoint PointX="9.9166666666666661" PointY="7.2879850260416665" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="7.2879850260416674" />
+          <ConnectorPoint PointX="10.25" PointY="7.2879850260416674" />
+          <ConnectorPoint PointX="10.25" PointY="6.6249999999999991" />
+          <ConnectorPoint PointX="10.291666666666666" PointY="6.6249999999999982" />
+          <ConnectorPoint PointX="10.458333333333334" PointY="6.6249999999999991" />
+          <ConnectorPoint PointX="10.760414166666665" PointY="6.6249999999999982" />
+          <ConnectorPoint PointX="10.927080833333333" PointY="6.6249999999999991" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="6.6249999999999982" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="6.6249999999999991" />
+          <ConnectorPoint PointX="11.572918666666666" PointY="6.6249999999999982" />
+          <ConnectorPoint PointX="11.739585333333334" PointY="6.6249999999999991" />
+          <ConnectorPoint PointX="16.875" PointY="6.6249999999999991" />
+          <ConnectorPoint PointX="16.875" PointY="6.9131982421875016" />
+          <ConnectorPoint PointX="17.25" PointY="6.9131982421875016" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__ENTIDAD_PROTOCOLO" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.5" PointY="5.514150390625" />
+          <ConnectorPoint PointX="17.25" PointY="5.514150390625" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__TERMINAL__ENTIDAD_COMUNICACION" ManuallyRouted="false">
+          <ConnectorPoint PointX="18.75" PointY="6.9612939453125" />
+          <ConnectorPoint PointX="19.041666666666668" PointY="6.9612939453124989" />
+          <ConnectorPoint PointX="19.208333333333332" PointY="6.9612939453125" />
+          <ConnectorPoint PointX="19.5" PointY="6.9612939453125" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK_ENTIDAD_COMUNICACION_TIPO_ENTIDAD" ManuallyRouted="false">
+          <ConnectorPoint PointX="16.5" PointY="7.8506982421875007" />
+          <ConnectorPoint PointX="17.25" PointY="7.8506982421875007" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK_PASO_DINAMICA_ENTIDAD_COMUNICACION" ManuallyRouted="false">
+          <ConnectorPoint PointX="18.75" PointY="6.0743949726562505" />
+          <ConnectorPoint PointX="19.125" PointY="6.0743949726562505" />
+          <ConnectorPoint PointX="19.125" PointY="12.528595377604166" />
+          <ConnectorPoint PointX="19.5" PointY="12.528595377604166" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__TERMINAL__ESTADO_TERMINAL" ManuallyRouted="false">
+          <ConnectorPoint PointX="18.75" PointY="3.547841796875" />
+          <ConnectorPoint PointX="20.25" PointY="3.547841796875" />
+          <ConnectorPoint PointX="20.25" PointY="5.875" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__GRUPO_MENSAJE_TIPO_MENSAJE" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9375" PointY="6.6629850260416674" />
+          <ConnectorPoint PointX="1.9375" PointY="9.625" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__MENSAJE__GRUPO_MENSAJE" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="10.158396809895834" />
+          <ConnectorPoint PointX="3" PointY="10.158396809895834" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__GRUPO_VALIDACION_MENSAJE" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.78125" PointY="7.75" />
+          <ConnectorPoint PointX="3.78125" PointY="6.5355843098958335" />
+          <ConnectorPoint PointX="8.25" PointY="6.5355843098958335" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__VALIDACION_GRUPO_VALIDACION" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="5.9375" />
+          <ConnectorPoint PointX="9.9166666666666661" PointY="5.9374999999999991" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="5.9375" />
+          <ConnectorPoint PointX="10.291666666666666" PointY="5.9374999999999991" />
+          <ConnectorPoint PointX="10.458333333333334" PointY="5.9375" />
+          <ConnectorPoint PointX="10.8437475" PointY="5.9375" />
+          <ConnectorPoint PointX="10.8437475" PointY="6.875" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__MENSAJE_TRANSACCIONAL_MENSAJE" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="8.4541964049479166" />
+          <ConnectorPoint PointX="4.75" PointY="8.4541964049479166" />
+          <ConnectorPoint PointX="4.75" PointY="19.377042201822917" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="19.377042201822917" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="19.377042201822917" />
+          <ConnectorPoint PointX="5.25" PointY="19.377042201822917" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__TRANSFORM__MENSAJE_DESTINO" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="8.0395982024739574" />
+          <ConnectorPoint PointX="5.25" PointY="8.0395982024739574" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__TRANSFORM__MENSAJE_ORIGEN" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="8.8375466074218743" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="8.8375466074218743" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="8.8375466074218743" />
+          <ConnectorPoint PointX="5.25" PointY="8.8375466074218743" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__REGLA_MENSAJE_MENSAJE_TRANSACCIONAL" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="18.8362939453125" />
+          <ConnectorPoint PointX="7.125" PointY="18.8362939453125" />
+          <ConnectorPoint PointX="7.125" PointY="14.410692917968749" />
+          <ConnectorPoint PointX="7.166666666666667" PointY="14.410692917968749" />
+          <ConnectorPoint PointX="7.333333333333333" PointY="14.410692917968749" />
+          <ConnectorPoint PointX="7.5" PointY="14.410692917968749" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK_PASO_DINAMICA_MENSAJE_TRANSACCIONAL" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="19.751892903645835" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="19.751892903645835" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="19.751892903645835" />
+          <ConnectorPoint PointX="20.25" PointY="19.751892903645835" />
+          <ConnectorPoint PointX="20.25" PointY="13.807190755208332" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__PARAMETRO__TRANSFORMACION_TABLA" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="1.26189497265625" />
+          <ConnectorPoint PointX="8" PointY="1.26189497265625" />
+          <ConnectorPoint PointX="8" PointY="3.5571907552083335" />
+          <ConnectorPoint PointX="8.0416666666666661" PointY="3.5571907552083331" />
+          <ConnectorPoint PointX="8.2083333333333339" PointY="3.5571907552083335" />
+          <ConnectorPoint PointX="9.9166666666666661" PointY="3.5571907552083326" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="3.5571907552083335" />
+          <ConnectorPoint PointX="10.375" PointY="3.5571907552083335" />
+          <ConnectorPoint PointX="10.375" PointY="11.75" />
+          <ConnectorPoint PointX="10.875000499999999" PointY="11.75" />
+          <ConnectorPoint PointX="10.875000499999999" PointY="12.375" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__PARAMETRO_TRANSFORMACION_TRANSFORMACION_CAMPO" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="9.7593489583333337" />
+          <ConnectorPoint PointX="9.375" PointY="9.7593489583333337" />
+          <ConnectorPoint PointX="9.375" PointY="14.523059640625" />
+          <ConnectorPoint PointX="10.5" PointY="14.523059640625" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__PROTOCOLO__TIPO_COMUNICACION" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.25" PointY="3.8939925130208337" />
+          <ConnectorPoint PointX="15" PointY="3.8939925130208337" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__TERMINAL__PUNTO_SERVICIO" ManuallyRouted="false">
+          <ConnectorPoint PointX="18.75" PointY="11.115143229166666" />
+          <ConnectorPoint PointX="19.041666666666668" PointY="11.115143229166666" />
+          <ConnectorPoint PointX="19.208333333333332" PointY="11.115143229166666" />
+          <ConnectorPoint PointX="19.25" PointY="11.115143229166666" />
+          <ConnectorPoint PointX="19.25" PointY="7.53569291796875" />
+          <ConnectorPoint PointX="19.5" PointY="7.53569291796875" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__VALIDACIO__CAMPO_TABLA" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="2.2508966477864583" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="2.2508966477864578" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="2.2508966477864583" />
+          <ConnectorPoint PointX="8.125" PointY="2.2508966477864583" />
+          <ConnectorPoint PointX="8.125" PointY="3.8071907552083335" />
+          <ConnectorPoint PointX="9.9166666666666661" PointY="3.8071907552083326" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="3.8071907552083335" />
+          <ConnectorPoint PointX="10.291666666666666" PointY="3.8071907552083331" />
+          <ConnectorPoint PointX="10.458333333333334" PointY="3.8071907552083335" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="3.8071907552083331" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="3.8071907552083335" />
+          <ConnectorPoint PointX="11.656252" PointY="3.8071907552083335" />
+          <ConnectorPoint PointX="11.656252" PointY="6.875" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FK__TRANSFORMACION__TRANSFORMACION_CAMPO" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="8.8651432291666659" />
+          <ConnectorPoint PointX="7.5" PointY="8.8651432291666659" /></AssociationConnector>
+        <AssociationConnector Association="Entidades.FUNCION_X_USUARIO" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.25" PointY="14.990143229166666" />
+          <ConnectorPoint PointX="15" PointY="14.990143229166666" /></AssociationConnector></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

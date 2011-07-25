@@ -1,0 +1,5 @@
+﻿<asp:GridView runat="server" HorizontalAlign="Center">
+                    <HeaderStyle CssClass="tabla_cabecera" />
+                    <RowStyle CssClass="tabla_fila_impar" />
+                    <AlternatingRowStyle CssClass="tabla_fila_par" />
+</asp:GridView>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{225E2A64-1C6B-41B4-9A03-53B123701B2A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Switch</RootNamespace>
+    <AssemblyName>Switch</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comunicacion\Comunicacion.cs" />
+    <Compile Include="Criptografia\Algoritmos\Algoritmo.cs" />
+    <Compile Include="Criptografia\Criptografia.cs" />
+    <Compile Include="Criptografia\CriptografiaCampo.cs" />
+    <Compile Include="Criptografia\CriptografiaMensaje.cs" />
+    <Compile Include="Criptografia\Llaves\Llave.cs" />
+    <Compile Include="Criptografia\Operaciones\Operacion.cs" />
+    <Compile Include="Descartar\Descartar.cs" />
+    <Compile Include="Dinamica\Dinamica.cs" />
+    <Compile Include="Dinamica\DinamicaDeMensaje.cs" />
+    <Compile Include="Dinamica\Paso.cs" />
+    <Compile Include="Componente.cs" />
+    <Compile Include="DA\IFactoryDA.cs" />
+    <Compile Include="Dinamica\ResultadoDinamica.cs" />
+    <Compile Include="Dinamica\ResultadoPaso.cs" />
+    <Compile Include="Switch.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tanqueos\Tanqueo.cs" />
+    <Compile Include="Transformacion\TipoTransformacion\Componente.cs" />
+    <Compile Include="Transformacion\TipoTransformacion\Concatenacion.cs" />
+    <Compile Include="Transformacion\TipoTransformacion\FuncionalidadEstandar.cs" />
+    <Compile Include="Transformacion\TipoTransformacion\Procedimiento.cs" />
+    <Compile Include="Transformacion\Transformacion.cs" />
+    <Compile Include="Transformacion\TransformacionCampo.cs" />
+    <Compile Include="Transformacion\TransformacionMensaje.cs" />
+    <Compile Include="Transformacion\TipoTransformacion\ValorConstante.cs" />
+    <Compile Include="Validacion\ValidacionCampo.cs" />
+    <Compile Include="Validacion\ValidacionMensaje.cs" />
+    <Compile Include="Validacion\Validacion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessEntity\BusinessEntity.csproj">
+      <Project>{8A204E0B-0B2A-4645-82C1-696C70A7FBFB}</Project>
+      <Name>BusinessEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColaMensajes\ColaMensajes.csproj">
+      <Project>{988C5C45-1C70-4AC3-B3E5-2311B08DCD5F}</Project>
+      <Name>ColaMensajes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{081FDCDF-97C4-4F29-99FF-0330C00377A7}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj">
+      <Project>{FFBEC6CC-C011-49CB-86AE-637DF13907F9}</Project>
+      <Name>Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mensajeria\Mensajeria.csproj">
+      <Project>{2B876A0D-DA29-4D6E-8C6B-F34801588800}</Project>
+      <Name>Mensajeria</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilidades\Utilidades.csproj">
+      <Project>{99FD67DE-4806-4A7E-A654-CCF0D32594B5}</Project>
+      <Name>Utilidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

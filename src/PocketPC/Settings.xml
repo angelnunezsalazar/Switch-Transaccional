@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="IP" value="192.168.3.121" />
+    <add key="DNS" value="switch.zapto.org" />
+    <add key="Usar" value="IP" />
+    <add key="Puerto" value="333" />
+    <add key="NumeroTransaccion" value="0" />
+  </appSettings>
+</configuration>

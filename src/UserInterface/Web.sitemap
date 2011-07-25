@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="Switch" description="Switch">
+    <siteMapNode title="Parametros"  description="Parametros" >
+      <siteMapNode url="~/Parametros/CargarComponentes/ConsultarComponentes.aspx" title="Componentes"  description="Componentes" />
+    </siteMapNode>
+    <siteMapNode title="Tablas"  description="Parametros" >
+      <siteMapNode url="~/Mensajeria/MantenimientoTabla/ConsultarTabla.aspx" title="Tabla"  description="Tabla" />
+      <siteMapNode url="~/Mensajeria/ValoresTabla/ConsultarValoresTabla.aspx" title="Valores Tabla"  description="Valores Tabla" />
+    </siteMapNode>
+    <siteMapNode title="Comunicacion"  description="Comunicacion" >
+      <siteMapNode url="~/Comunicacion/MantenimientoProtocolo/ConsultarProtocolo.aspx" title="Protocolo"  description="Protocolo" />
+      <siteMapNode url="~/Comunicacion/MantenimientoEntidadComunicacion/ConsultarEntidadComunicacion.aspx" title="Entidad Comunicacion"  description="GrupoMensaje" />
+    </siteMapNode>
+    <siteMapNode title="Terminales"  description="Terminales" >
+      <siteMapNode url="~/Terminales/MantenimientoPuntoServicio/ConsultarPuntoServicio.aspx" title="Punto Servicio"  description="PuntoServicio" />
+      <siteMapNode url="~/Terminales/MantenimientoEstadoTerminal/ConsultarEstadoTerminal.aspx" title="Estado Terminal"  description="EstadoTerminal" />
+      <siteMapNode url="~/Terminales/MantenimientoTerminal/ConsultarTerminal.aspx" title="Terminal"  description="Terminal" />
+    </siteMapNode>
+    <siteMapNode title="Mensajeria"  description="Mensajeria" >
+      <siteMapNode url="~/Mensajeria/MantenimientoGrupoMensaje/ConsultarGrupoMensaje.aspx" title="Grupo Mensaje"  description="GrupoMensaje" />
+      <siteMapNode url="~/Mensajeria/MantenimientoCampoPlantilla/ConsultarCampoPlantilla.aspx" title="Campo Plantilla"  description="MaestroDeMensaje" />
+      <siteMapNode url="~/Mensajeria/MantenimientoMensaje/ConsultarMensaje.aspx" title="Mensaje"  description="Mensaje" />
+      <siteMapNode url="~/Mensajeria/MantenimientoValorSelector/ConsultarValorSelector.aspx" title="Valor Selector"  description="ValorSelector" />
+      <siteMapNode url="~/Mensajeria/MantenimientoMensajeTransaccional/ConsultarMensajeTransaccional.aspx" title="Mensaje Transaccional"  description="MensajeTransaccional" />
+    </siteMapNode>
+    <siteMapNode title="Seguridad"  description="Seguridad" >
+      <siteMapNode url="~/Seguridad/DinamicaDeCriptografia/ConsultarDinamicaDeCriptografia.aspx" title="Dinámica Criptografia"  description="DinámicaCriptografia" />
+    </siteMapNode>
+    <siteMapNode title="Operacion"  description="Operacion" >
+      <siteMapNode url="~/Mensajeria/MantenimientoGrupoValidacion/ConsultarGrupoValidacion.aspx" title="Grupo Validacion"  description="GrupoValidacion" />
+      <siteMapNode url="~/Operacion/MantenimientoTransformacionMensaje/ConsultarTransformacionMensaje.aspx" title="Transformacion Mensaje"  description="TransformacionMensaje" />
+      <siteMapNode url="~/Operacion/MantenimientoTanqueo/ConsultarTanqueo.aspx" title="Tanqueo Mensaje"  description="TanqueoMensaje" />
+      <siteMapNode url="~/Operacion/MantenimientoDinamica/ConsultarDinamica.aspx" title="Dinamica Transaccional"  description="DinamicaTransaccional" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

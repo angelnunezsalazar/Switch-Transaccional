@@ -1,0 +1,142 @@
+
+body
+{
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color:#F3F3F3;
+}
+
+.titulo
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:18px;
+	color:#0F5C05;
+	font-weight: bolder;
+	text-align:center;
+}
+
+.texto1
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	margin: 3px 3px 3px 3px;
+	font-weight: bolder;
+	color:#FFFFFF;
+}
+
+.texto
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	margin: 3px 3px 3px 3px;
+	color:#0F5C05;
+}
+
+.control
+{
+    margin: 3px 3px 3px 3px;
+}
+
+.tabla_cabecera
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight: bold;
+	height:30px;
+	background-image:url('../../Includes/Imagenes/tabla_cabecera.gif');
+	color:#FFFFFF;
+}
+
+.tabla_fila_impar
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:30px;
+	background: #ACCFAD url('../../Includes/Imagenes/tabla_fila_impar.gif') repeat-x top left;
+	color:#000000;
+}
+
+.tabla_fila_par
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:30px;
+	background: #D7D7D7 url('../../Includes/Imagenes/tabla_fila_par.gif') repeat-x top left;
+	color:#000000;
+}
+
+.tabla_mantenimiento
+{
+    /*background-color:#e2eace;*/
+    /*border-collapse:separate;*/
+}
+
+.form_columna1
+{
+    background: #88C46B url('../../Includes/Imagenes/form_columna1.gif') repeat-x top left;
+    height:30px;
+}
+
+.form_columna2
+{
+    background: #DADDDC url('../../Includes/Imagenes/form_columna2.gif') repeat-x top left;
+    height:30px;
+}
+
+.form_columna3
+{
+    background: #11931D;
+    width:1px;
+}
+
+.form_pie
+{
+    background: #11931D;
+    height:1px;
+}
+
+.nodo_raiz
+{
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight: bolder;
+}
+
+.nodo
+{
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+a.nodo_raiz
+{
+    color:#2FA120;
+	text-decoration:none;
+}
+
+a.nodo:link, a.nodo:visited
+{
+    color:#2FA120;
+	text-decoration:none;
+}
+
+a.nodo:hover, a.nodo:active
+{
+	color:#30F055;
+	text-decoration:underline;
+}
+
+a.nodo_seleccionado
+{
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+a.nodo_seleccionado:link, a.nodo_seleccionado:visited
+{
+    color:#A50023;
+	text-decoration:none;
+}
+
