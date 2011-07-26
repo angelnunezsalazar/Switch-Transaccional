@@ -7,7 +7,9 @@
     </boolean>
   </SettingsComponent>
   <RecentFiles>
-    <RecentFiles />
+    <RecentFiles>
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:App.Config" caret="554" fromTop="6" />
+    </RecentFiles>
     <RecentEdits />
   </RecentFiles>
   <NAntValidationSettings>

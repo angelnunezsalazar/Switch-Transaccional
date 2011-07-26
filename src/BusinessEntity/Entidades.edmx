@@ -1,42 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Entidades.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+    <Schema Namespace="Entidades.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="EntidadesStoreContainer">
-          <EntitySet Name="CAMPO" EntityType="Entidades.Store.CAMPO" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CAMPO_PLANTILLA" EntityType="Entidades.Store.CAMPO_PLANTILLA" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="COLUMNA" EntityType="Entidades.Store.COLUMNA" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="COMPONENTE" EntityType="Entidades.Store.COMPONENTE" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CONDICION_MENSAJE" EntityType="Entidades.Store.CONDICION_MENSAJE" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="CRIPTOGRAFIA_CAMPO" EntityType="Entidades.Store.CRIPTOGRAFIA_CAMPO" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="DINAMICA_CRIPTOGRAFIA" EntityType="Entidades.Store.DINAMICA_CRIPTOGRAFIA" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ENTIDAD_COMUNICACION" EntityType="Entidades.Store.ENTIDAD_COMUNICACION" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ESTADO_TERMINAL" EntityType="Entidades.Store.ESTADO_TERMINAL" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="FUNCION" EntityType="Entidades.Store.FUNCION" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="FUNCION_X_USUARIO" EntityType="Entidades.Store.FUNCION_X_USUARIO" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="GRUPO_MENSAJE" EntityType="Entidades.Store.GRUPO_MENSAJE" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="GRUPO_VALIDACION" EntityType="Entidades.Store.GRUPO_VALIDACION" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="MENSAJE" EntityType="Entidades.Store.MENSAJE" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="MENSAJE_TRANSACCIONAL" EntityType="Entidades.Store.MENSAJE_TRANSACCIONAL" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PARAMETRO_TRANSFORMACION_CAMPO" EntityType="Entidades.Store.PARAMETRO_TRANSFORMACION_CAMPO" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PASO_DINAMICA" EntityType="Entidades.Store.PASO_DINAMICA" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PROTOCOLO" EntityType="Entidades.Store.PROTOCOLO" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="PUNTO_SERVICIO" EntityType="Entidades.Store.PUNTO_SERVICIO" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="REGLA_MENSAJE_TRANSACCIONAL" EntityType="Entidades.Store.REGLA_MENSAJE_TRANSACCIONAL" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TABLA" EntityType="Entidades.Store.TABLA" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TERMINAL" EntityType="Entidades.Store.TERMINAL" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TIPO_COMUNICACION" EntityType="Entidades.Store.TIPO_COMUNICACION" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TIPO_DATO" EntityType="Entidades.Store.TIPO_DATO" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TIPO_DATO_COLUMNA" EntityType="Entidades.Store.TIPO_DATO_COLUMNA" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TIPO_ENTIDAD" EntityType="Entidades.Store.TIPO_ENTIDAD" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TIPO_MENSAJE" EntityType="Entidades.Store.TIPO_MENSAJE" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TRANSFORMACION" EntityType="Entidades.Store.TRANSFORMACION" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TRANSFORMACION_CAMPO" EntityType="Entidades.Store.TRANSFORMACION_CAMPO" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="USUARIO" EntityType="Entidades.Store.USUARIO" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="VALIDACION_CAMPO" EntityType="Entidades.Store.VALIDACION_CAMPO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CAMPO" EntityType="Entidades.Store.CAMPO" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="CAMPO_PLANTILLA" EntityType="Entidades.Store.CAMPO_PLANTILLA" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="COLUMNA" EntityType="Entidades.Store.COLUMNA" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="COMPONENTE" EntityType="Entidades.Store.COMPONENTE" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="CONDICION_MENSAJE" EntityType="Entidades.Store.CONDICION_MENSAJE" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="CRIPTOGRAFIA_CAMPO" EntityType="Entidades.Store.CRIPTOGRAFIA_CAMPO" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="DINAMICA_CRIPTOGRAFIA" EntityType="Entidades.Store.DINAMICA_CRIPTOGRAFIA" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="ENTIDAD_COMUNICACION" EntityType="Entidades.Store.ENTIDAD_COMUNICACION" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="ESTADO_TERMINAL" EntityType="Entidades.Store.ESTADO_TERMINAL" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="FUNCION" EntityType="Entidades.Store.FUNCION" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="FUNCION_X_USUARIO" EntityType="Entidades.Store.FUNCION_X_USUARIO" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="GRUPO_MENSAJE" EntityType="Entidades.Store.GRUPO_MENSAJE" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="GRUPO_VALIDACION" EntityType="Entidades.Store.GRUPO_VALIDACION" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="MENSAJE" EntityType="Entidades.Store.MENSAJE" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="MENSAJE_TRANSACCIONAL" EntityType="Entidades.Store.MENSAJE_TRANSACCIONAL" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="PARAMETRO_TRANSFORMACION_CAMPO" EntityType="Entidades.Store.PARAMETRO_TRANSFORMACION_CAMPO" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="PASO_DINAMICA" EntityType="Entidades.Store.PASO_DINAMICA" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="PROTOCOLO" EntityType="Entidades.Store.PROTOCOLO" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="PUNTO_SERVICIO" EntityType="Entidades.Store.PUNTO_SERVICIO" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="REGLA_MENSAJE_TRANSACCIONAL" EntityType="Entidades.Store.REGLA_MENSAJE_TRANSACCIONAL" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TABLA" EntityType="Entidades.Store.TABLA" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TERMINAL" EntityType="Entidades.Store.TERMINAL" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TIPO_COMUNICACION" EntityType="Entidades.Store.TIPO_COMUNICACION" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TIPO_DATO" EntityType="Entidades.Store.TIPO_DATO" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TIPO_DATO_COLUMNA" EntityType="Entidades.Store.TIPO_DATO_COLUMNA" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TIPO_ENTIDAD" EntityType="Entidades.Store.TIPO_ENTIDAD" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TIPO_MENSAJE" EntityType="Entidades.Store.TIPO_MENSAJE" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TRANSFORMACION" EntityType="Entidades.Store.TRANSFORMACION" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TRANSFORMACION_CAMPO" EntityType="Entidades.Store.TRANSFORMACION_CAMPO" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="USUARIO" EntityType="Entidades.Store.USUARIO" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="VALIDACION_CAMPO" EntityType="Entidades.Store.VALIDACION_CAMPO" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
           <AssociationSet Name="FK__CAMPO__CAMPO_PLANTILLA" Association="Entidades.Store.FK__CAMPO__CAMPO_PLANTILLA">
             <End Role="CAMPO_PLANTILLA" EntitySet="CAMPO_PLANTILLA" />
             <End Role="CAMPO" EntitySet="CAMPO" />
@@ -1122,7 +1122,7 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Entidades" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+      <Schema Namespace="Entidades" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="dbSwitch">
           <EntitySet Name="CAMPO" EntityType="Entidades.CAMPO" />
           <EntitySet Name="CAMPO_PLANTILLA" EntityType="Entidades.CAMPO_PLANTILLA" />
@@ -1950,7 +1950,7 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="EntidadesStoreContainer" CdmEntityContainer="dbSwitch">
           <EntitySetMapping Name="CAMPO">
             <EntityTypeMapping TypeName="IsTypeOf(Entidades.CAMPO)">
@@ -2677,20 +2677,20 @@
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:Designer>
     <edmx:Connection>
-      <DesignerInfoPropertySet>
+      <DesignerInfoPropertySet xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
         <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
       </DesignerInfoPropertySet>
     </edmx:Connection>
     <edmx:Options>
-      <DesignerInfoPropertySet>
+      <DesignerInfoPropertySet xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram Name="Entidades">
+      <Diagram Name="Entidades" xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
         <EntityTypeShape EntityType="Entidades.CAMPO" Width="1.5" PointX="5.25" PointY="10.75" Height="6.01861653645833" IsExpanded="true" />
         <EntityTypeShape EntityType="Entidades.CAMPO_PLANTILLA" Width="1.5" PointX="3" PointY="11.875" Height="3.9033007812499996" IsExpanded="true" />
         <EntityTypeShape EntityType="Entidades.COLUMNA" Width="1.5" PointX="8.25" PointY="0.75" Height="2.5571907552083335" IsExpanded="true" />
