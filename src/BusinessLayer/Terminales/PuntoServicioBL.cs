@@ -1,41 +1,37 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using BusinessEntity;
-using DataAccess.Terminales;
 
 namespace BusinessLayer.Terminales
 {
+    using System;
+    using System.Linq;
+
+    using DataAccess.Services;
+    using DataAccess.Aspects;
+
     [DataObject(true)]
-    public class PuntoServicioBL
+    public class PuntoServicioBL : Service<PuntoServicio>
     {
-        public static List<PUNTO_SERVICIO> obtenerPuntoServicio(string nombre, string estado)
+        public List<PuntoServicio> Buscar(string nombre, string estado)
         {
-            return PuntoServicioDA.obtenerPuntoServicio(nombre, estado);
+            var puntosServicio = context.PuntoServicio.Where(x => x.Nombre.Contains(nombre));
+
+            if (estado != "%")
+            {
+                puntosServicio = puntosServicio.Where(x => x.Estado == Boolean.Parse(estado));
+            }
+
+            return puntosServicio.ToList();
         }
 
-        public static PUNTO_SERVICIO obtenerPuntoServicio(int codigo)
+        [Transaction]
+        public override void Eliminar(PuntoServicio oldEntity)
         {
-            return PuntoServicioDA.obtenerPuntoServicio(codigo);
-        }
-
-        public static List<PUNTO_SERVICIO> obtenerPuntoServicio()
-        {
-            return PuntoServicioDA.obtenerPuntoServicio();
-        }
-
-        public static EstadoOperacion insertarPuntoServicio(PUNTO_SERVICIO puntoServicio)
-        {
-            return PuntoServicioDA.insertarPuntoServicio(puntoServicio);
-        }
-
-        public static EstadoOperacion modificarPuntoServicio(PUNTO_SERVICIO puntoServicio)
-        {
-            return PuntoServicioDA.modificarPuntoServicio(puntoServicio);
-        }
-
-        public static EstadoOperacion eliminarPuntoServicio(PUNTO_SERVICIO puntoServicio)
-        {
-            return PuntoServicioDA.eliminarPuntoServicio(puntoServicio);
+            PuntoServicio puntoServicio = dataAccess.Get(oldEntity.Id);
+            if (puntoServicio.Terminales.Count > 0)
+                throw new Exception("El Punto de Servicio esta asignado a un Terminal y no se puede eliminar");
+            dataAccess.Remove(puntoServicio);
         }
     }
 }

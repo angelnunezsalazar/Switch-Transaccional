@@ -10,7 +10,7 @@ namespace Switch.DA
     {
         List<GRUPO_VALIDACION> GrupoValidacion();
         List<TRANSFORMACION> Transformacion();
-        List<ENTIDAD_COMUNICACION> Entidad();
+        List<EntidadComunicacion> Entidad();
         bool ExisteEnTabla(string tabla,string columna,string valor);
         string ValorTabla(string tabla, string columnaOrigen,string columnaDestino,string valor);
         bool ValidarProcedure(string procedure,string valor);
@@ -29,7 +29,7 @@ namespace Switch.DA
             return TransformacionMensajeDA.obtenerListaTransformacionComponente();
         }
 
-        public List<ENTIDAD_COMUNICACION> Entidad()
+        public List<EntidadComunicacion> Entidad()
         {
             return null;
         }

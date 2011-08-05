@@ -35,7 +35,7 @@ namespace DataAccess.Operacion
                                                      PDT_FIN = (bool)reader["PDT_FIN"],
                                                      PDT_NUMERO = (string)reader["PDT_NUMERO"],
                                                      PDT_PASO = (int)reader["PDT_PASO"],
-                                                     ENTIDAD_COMUNICACION = new ENTIDAD_COMUNICACION
+                                                     EntidadComunicacion = new EntidadComunicacion
                                                                                 {
                                                                                     EDC_COLA = DBNull.Value == reader["EDC_COLA"] ?
                                                                                                 null : (string)reader["EDC_COLA"]
@@ -52,7 +52,7 @@ namespace DataAccess.Operacion
 
         public static List<PASO_DINAMICA> obtenerDinamicaTransaccional(int codigoMensajeTransaccional)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.PARAMETRO_TRANSFORMACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 return (from p in contexto.PASO_DINAMICA
@@ -63,7 +63,7 @@ namespace DataAccess.Operacion
 
         public static PASO_DINAMICA obtenerPasoDinamica(int codigoPasoDinamica)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.PARAMETRO_TRANSFORMACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 return (from p in contexto.PASO_DINAMICA
@@ -76,7 +76,7 @@ namespace DataAccess.Operacion
         {
             string rama1 = numeroPaso + "1";
             string rama2 = numeroPaso + "2";
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.PARAMETRO_TRANSFORMACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 return (from p in contexto.PASO_DINAMICA
@@ -88,7 +88,7 @@ namespace DataAccess.Operacion
 
         public static PASO_DINAMICA obtenerUltimoPasoDinamica(int codigoMenajeTransaccional)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.PARAMETRO_TRANSFORMACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 return (from p in contexto.PASO_DINAMICA
@@ -103,7 +103,7 @@ namespace DataAccess.Operacion
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -149,7 +149,7 @@ namespace DataAccess.Operacion
                             pasoDinamica.PDT_FUNCIONALIDAD == (int)EnumTipoFuncionalidad.Recibir)
                         {
                             Comando.Parameters.Add(Factoria.CrearParametro("@reintentos", pasoDinamica.PDT_REINTENTOS));
-                            Comando.Parameters.Add(Factoria.CrearParametro("@entidadComunicacion", pasoDinamica.ENTIDAD_COMUNICACION.EDC_CODIGO));
+                            Comando.Parameters.Add(Factoria.CrearParametro("@entidadComunicacion", pasoDinamica.EntidadComunicacion.EDC_CODIGO));
                         }
                         else
                         {
@@ -176,7 +176,7 @@ namespace DataAccess.Operacion
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {

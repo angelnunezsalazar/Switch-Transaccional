@@ -46,8 +46,8 @@
             </td>
             <td>
                 <asp:DropDownList ID="ddlEntidadComunicacion" runat="server" AppendDataBoundItems="True"
-                    DataSourceID="dsEntidadComunicacion" DataTextField="EDC_NOMBRE" 
-                    DataValueField="EDC_CODIGO">
+                    DataSourceID="dsEntidadComunicacion" DataTextField="Nombre" 
+                    DataValueField="Id">
                     <asp:ListItem Value="0">Todos</asp:ListItem>
                 </asp:DropDownList>
                 <asp:ObjectDataSource ID="dsEntidadComunicacion" runat="server" 
@@ -59,11 +59,11 @@
         </tr>
         <tr>
             <td class="style1">
-                <span class="texto">Estado de terminal </span>
+                <span class="texto">Estado de Terminal </span>
             </td>
             <td>
                 <asp:DropDownList ID="ddlEstadoTerminal" runat="server" DataSourceID="oEstadoTerminal"
-                    DataTextField="EST_NOMBRE" DataValueField="EST_CODIGO" AppendDataBoundItems="True">
+                    DataTextField="Nombre" DataValueField="Codigo" AppendDataBoundItems="True">
                     <asp:ListItem Value="0">Todos</asp:ListItem>
                 </asp:DropDownList>
                 <asp:ObjectDataSource ID="oEstadoTerminal" runat="server" OldValuesParameterFormatString="original_{0}"
@@ -93,27 +93,27 @@
             <td>
                 <asp:GridView ID="grvListaTerminales" runat="server" AutoGenerateColumns="False"
                     DataSourceID="oTerminal" HorizontalAlign="Center" Width="700px" 
-                    DataKeyNames="TRM_CODIGO">
+                    DataKeyNames="Id">
                     <Columns>
-                        <asp:BoundField DataField="TRM_SERIAL" HeaderText="Nro Serie" SortExpression="TRM_SERIAL" />
+                        <asp:BoundField DataField="Serial" HeaderText="Nro Serie" SortExpression="Serial" />
                         <asp:TemplateField HeaderText="Entidad Comunicación">
                             <ItemTemplate>
-                                <asp:Label ID="lblEntidadComunicacion" runat="server" Text='<%# Bind("ENTIDAD_COMUNICACION.EDC_NOMBRE") %>'></asp:Label>
+                                <asp:Label ID="lblEntidadComunicacion" runat="server" Text='<%# Bind("EntidadComunicacion.Nombre") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Estado Terminal">
                             <ItemTemplate>
-                                <asp:Label ID="lblEstadoTerminal" runat="server" Text='<%# Bind("ESTADO_TERMINAL.EST_NOMBRE") %>'></asp:Label>
+                                <asp:Label ID="lblEstadoTerminal" runat="server" Text='<%# Bind("EstadoTerminal.Nombre") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Punto Servicio">
                             <ItemTemplate>
-                                <asp:Label ID="lblPuntoServicio" runat="server" Text='<%# Bind("PUNTO_SERVICIO.PSR_NOMBRE") %>'></asp:Label>
+                                <asp:Label ID="lblPuntoServicio" runat="server" Text='<%# Bind("PuntoServicio.Nombre") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:ImageButton ID="imgbtnModificar" runat="server" PostBackUrl='<%# "~/Terminales/MantenimientoTerminal/ModificarTerminal.aspx?Codigo="+ Eval("TRM_CODIGO") %>'
+                                <asp:ImageButton ID="imgbtnModificar" runat="server" PostBackUrl='<%# "~/Terminales/MantenimientoTerminal/ModificarTerminal.aspx?Codigo="+ Eval("Id") %>'
                                     AlternateText="Modificar" ImageUrl="~/Includes/Imagenes/iconEdit.png" />
                             </ItemTemplate>
                         </asp:TemplateField>
@@ -128,7 +128,7 @@
                 <asp:ObjectDataSource ID="oTerminal" runat="server" OldValuesParameterFormatString="original_{0}"
                     SelectMethod="obtenerTerminal" 
                     TypeName="BusinessLayer.Terminales.TerminalBL" 
-                    DataObjectTypeName="BusinessEntity.TERMINAL" DeleteMethod="eliminarTerminal">
+                    DataObjectTypeName="BusinessEntity.Terminal" DeleteMethod="eliminarTerminal">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="txtSerial" DefaultValue="%" Name="serial" PropertyName="Text"
                             Type="String" />

@@ -19,7 +19,7 @@ namespace Mensajeria.Convertidor
         public abstract Mensaje Convertir(byte[] trama, Mensajeria mensajeria);
         public abstract byte[] Convertir(Mensaje mensaje);
 
-        public static Convertidor ObtenerConvertidor(GRUPO_MENSAJE grupoMensaje, EnumTipoMensaje tipo)
+        public  Convertidor ObtenerConvertidor(GRUPO_MENSAJE grupoMensaje, EnumTipoMensaje tipo)
         {
             switch (tipo)
             {

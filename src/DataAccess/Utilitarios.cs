@@ -5,7 +5,7 @@ namespace DataAccess.Utilitarios
 {
     public sealed class Util
     {
-        public static Nullable<T> DbValueToNullable<T>(object dbValue) where T : struct
+        public  Nullable<T> DbValueToNullable<T>(object dbValue) where T : struct
         {
             Nullable<T> returnValue = null;
 
@@ -17,7 +17,7 @@ namespace DataAccess.Utilitarios
             return returnValue;
         }
 
-        public static object NullableToDbValue<T>(object value) where T:struct
+        public  object NullableToDbValue<T>(object value) where T:struct
         {
             if (value == null)
                 return DBNull.Value;
@@ -28,7 +28,7 @@ namespace DataAccess.Utilitarios
             }
         }
 
-        public static object StringToDbValue(string value)
+        public  object StringToDbValue(string value)
         {
             if (value == string.Empty)
                 return DBNull.Value;
@@ -36,7 +36,7 @@ namespace DataAccess.Utilitarios
                 return value;
         }
 
-        public static SortedList<int, string> GetEnumDataSource<T>() where T : struct
+        public  SortedList<int, string> GetEnumDataSource<T>() where T : struct
         {
             Type myEnumType = typeof(T);
             if (myEnumType.BaseType != typeof(Enum))

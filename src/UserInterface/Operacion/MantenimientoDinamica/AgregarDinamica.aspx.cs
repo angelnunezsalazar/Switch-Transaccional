@@ -52,7 +52,7 @@ namespace UserInterface.Operacion.MantenimientoDinamica
             if (pasoDinamica.PDT_FUNCIONALIDAD == TipoFuncionalidadBL.obtenerCodigoEnviar() || 
                 pasoDinamica.PDT_FUNCIONALIDAD == TipoFuncionalidadBL.obtenerCodigoRecibir())
             {
-                pasoDinamica.ENTIDAD_COMUNICACION = new ENTIDAD_COMUNICACION()
+                pasoDinamica.EntidadComunicacion = new EntidadComunicacion()
                 {
                     EDC_CODIGO = int.Parse(this.drlEntidad.SelectedValue)
                 };

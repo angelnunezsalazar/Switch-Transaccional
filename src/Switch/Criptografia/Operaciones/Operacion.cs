@@ -8,7 +8,7 @@ namespace Switch.Criptografia.Operaciones
 {
     public class Operacion
     {
-        public static Valor Operar(Valor llave1, Valor llave2
+        public  Valor Operar(Valor llave1, Valor llave2
             , EnumOperacionLlave operacionLlave)
         {
             switch (operacionLlave)
@@ -22,12 +22,12 @@ namespace Switch.Criptografia.Operaciones
             }
         }
 
-        private static Valor Concatenacion(Valor llave1, Valor llave2)
+        private  Valor Concatenacion(Valor llave1, Valor llave2)
         {
             return llave1.Concat(llave2);
         }
 
-        private static Valor  XOR(Valor llave1, Valor llave2)
+        private  Valor  XOR(Valor llave1, Valor llave2)
         {
             byte[] llaveArray1 = ASCIIEncoding.ASCII.GetBytes(llave1.ToString());
             byte[] llaveArray2 = ASCIIEncoding.ASCII.GetBytes(llave2.ToString());
@@ -44,7 +44,7 @@ namespace Switch.Criptografia.Operaciones
             return new Caracter(resultado);
         }
 
-        private static byte[] ToByteArray(BitArray bits)
+        private  byte[] ToByteArray(BitArray bits)
         {
             int numBytes = bits.Count / 8;
             if (bits.Count % 8 != 0) numBytes++;

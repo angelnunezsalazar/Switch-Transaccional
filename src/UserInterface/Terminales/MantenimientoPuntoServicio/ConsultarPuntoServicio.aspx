@@ -72,21 +72,21 @@
         <tr>
             <td>
                 <asp:GridView ID="grvPuntoServicio" runat="server" DataSourceID="dsPuntoServicio"
-                    AutoGenerateColumns="False" DataKeyNames="PSR_CODIGO" OnDataBound="grvPuntoServicio_DataBound"
+                    AutoGenerateColumns="False" DataKeyNames="Id" OnDataBound="grvPuntoServicio_DataBound"
                     HorizontalAlign="Center">
                     <Columns>
-                        <asp:BoundField DataField="PSR_NOMBRE" HeaderText="Nombre" SortExpression="PSR_IDENTIFICADOR"
+                        <asp:BoundField DataField="Nombre" HeaderText="Nombre"
                             ItemStyle-Width="150px">
                             <ItemStyle Width="150px"></ItemStyle>
                         </asp:BoundField>
-                        <asp:BoundField DataField="PSR_DIRECCION" HeaderText="Direccion" SortExpression="PSR_DIRECCION"
+                        <asp:BoundField DataField="" HeaderText=""
                             ItemStyle-Width="400px">
                             <ItemStyle Width="400px"></ItemStyle>
                         </asp:BoundField>
-                        <asp:CheckBoxField DataField="PSR_ESTADO" HeaderText="Habilitado" SortExpression="PSR_ESTADO_PTO_SERVICIO" />
+                        <asp:CheckBoxField DataField="Estado" HeaderText="Habilitado"/>
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:ImageButton ID="imgModificar" runat="server" PostBackUrl='<%# "~/Terminales/MantenimientoPuntoServicio/ModificarPuntoServicio.aspx?Codigo="+ Eval("PSR_CODIGO") %>'
+                                <asp:ImageButton ID="imgModificar" runat="server" PostBackUrl='<%# "~/Terminales/MantenimientoPuntoServicio/ModificarPuntoServicio.aspx?Codigo="+ Eval("Id") %>'
                                     AlternateText="Modificar" Height="16px" ImageUrl="~/Includes/Imagenes/iconEdit.png" />
                             </ItemTemplate>
                         </asp:TemplateField>
@@ -100,8 +100,8 @@
                     
                 </asp:GridView>
                 <asp:ObjectDataSource ID="dsPuntoServicio" runat="server" OldValuesParameterFormatString="original_{0}"
-                    SelectMethod="obtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL"
-                    DataObjectTypeName="BusinessEntity.PUNTO_SERVICIO" DeleteMethod="eliminarPuntoServicio"
+                    SelectMethod="ObtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL"
+                    DataObjectTypeName="BusinessEntity.PuntoServicio"
                     OnDeleted="dsPuntoServicio_Deleted">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="txtNombre" DefaultValue="%" Name="nombre" PropertyName="Text"

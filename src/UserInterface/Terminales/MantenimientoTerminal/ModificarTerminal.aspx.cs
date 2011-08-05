@@ -12,21 +12,8 @@ namespace UserInterface.Terminales.MantenimientoTerminal
 
         protected void oTerminal_Updating(object sender, ObjectDataSourceMethodEventArgs e)
         {
-            BusinessEntity.TERMINAL miTerminal = (BusinessEntity.TERMINAL)e.InputParameters[0];
-
-            DropDownList puntoServicioCombo = (DropDownList)this.fvTerminal.FindControl("ddlPtoServicio");
-            DropDownList entidadCombo = (DropDownList)this.fvTerminal.FindControl("ddlEntidad");
-            DropDownList estadoTerminalCombo = (DropDownList)this.fvTerminal.FindControl("ddlEstadoTerminal");
-
-            BusinessEntity.PUNTO_SERVICIO puntoServicio = new BusinessEntity.PUNTO_SERVICIO() { PSR_CODIGO = Int32.Parse(puntoServicioCombo.SelectedValue) };
-            BusinessEntity.ENTIDAD_COMUNICACION entidadComunicacion = new BusinessEntity.ENTIDAD_COMUNICACION() { EDC_CODIGO = Int32.Parse(entidadCombo.SelectedValue) };
-            BusinessEntity.ESTADO_TERMINAL estadoTerminal = new BusinessEntity.ESTADO_TERMINAL() { EST_CODIGO = Int32.Parse(estadoTerminalCombo.SelectedValue) };
-
-            miTerminal.PUNTO_SERVICIO = puntoServicio;
-            miTerminal.ESTADO_TERMINAL = estadoTerminal;
-            miTerminal.ENTIDAD_COMUNICACION = entidadComunicacion;
-
-            miTerminal.TRM_CODIGO = int.Parse(Request.QueryString["Codigo"]);
+            BusinessEntity.Terminal terminal = (BusinessEntity.Terminal)e.InputParameters[0];
+            terminal.Id = int.Parse(Request.QueryString["Codigo"]);
         }
 
         protected void oTerminal_Updated(object sender, ObjectDataSourceStatusEventArgs e)

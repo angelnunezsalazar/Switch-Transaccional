@@ -13,7 +13,7 @@ namespace DataAccess.Operacion
     {
         public static TRANSFORMACION_CAMPO obtenerTransformacionCampo(int codigoTransformacion, int codigoMensaje, int codigoCampo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TRANSFORMACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 return (from tc in contexto.TRANSFORMACION_CAMPO
@@ -27,7 +27,7 @@ namespace DataAccess.Operacion
 
         public static int obtenerCantidadTransformacionCampo(int codigoTransformacion, int codigoMensaje, int codigoCampo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TRANSFORMACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 return (from tc in contexto.TRANSFORMACION_CAMPO
@@ -40,7 +40,7 @@ namespace DataAccess.Operacion
 
         public static TRANSFORMACION_CAMPO obtenerTransformacionCampoConCampoDestino(int codigoTransformacion, int codigoMensaje, int codigoCampo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TRANSFORMACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 return (from tc in contexto.TRANSFORMACION_CAMPO
@@ -58,7 +58,7 @@ namespace DataAccess.Operacion
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
 
                     using (contexto.CreateConeccionScope())
@@ -111,7 +111,7 @@ namespace DataAccess.Operacion
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -152,7 +152,7 @@ namespace DataAccess.Operacion
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -184,7 +184,7 @@ namespace DataAccess.Operacion
         }
 
 
-        private static DbCommand crearComando(dbSwitch contexto, TRANSFORMACION_CAMPO transformacionCampo, string query)
+        private static DbCommand crearComando(Switch contexto, TRANSFORMACION_CAMPO transformacionCampo, string query)
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             DbCommand Comando = contexto.CreateCommand(query, CommandType.Text);

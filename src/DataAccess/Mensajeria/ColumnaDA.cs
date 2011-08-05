@@ -13,7 +13,7 @@ namespace DataAccess.Mensajeria
     {
         public static List<COLUMNA> obtenerColumna(int codigoTabla)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.COLUMNA.MergeOption = MergeOption.NoTracking;
                 return contexto.COLUMNA.Include("TIPO_DATO_COLUMNA").Where(o => o.TABLA.TBL_CODIGO == codigoTabla).ToList<COLUMNA>();
@@ -22,7 +22,7 @@ namespace DataAccess.Mensajeria
 
         public static COLUMNA obtenerColumnaPorCodigo(int codigoColumna)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.COLUMNA.MergeOption = MergeOption.NoTracking;
                 return contexto.COLUMNA.Where(o => o.COL_CODIGO == codigoColumna).FirstOrDefault();
@@ -30,7 +30,7 @@ namespace DataAccess.Mensajeria
         }
         public static COLUMNA obtenerColumnaPorNombre(string nombreColumna)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.COLUMNA.MergeOption = MergeOption.NoTracking;
                 return contexto.COLUMNA.Where(o => o.COL_NOMBRE == nombreColumna).FirstOrDefault();
@@ -40,7 +40,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
 
                     using (contexto.CreateConeccionScope())
@@ -73,7 +73,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -107,7 +107,7 @@ namespace DataAccess.Mensajeria
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -136,7 +136,7 @@ namespace DataAccess.Mensajeria
             }
         }
 
-        private static DbCommand crearComando(dbSwitch contexto, COLUMNA Columna, string query)
+        private static DbCommand crearComando(Switch contexto, COLUMNA Columna, string query)
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
 

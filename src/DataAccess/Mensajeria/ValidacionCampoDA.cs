@@ -14,7 +14,7 @@ namespace DataAccess.Mensajeria
     {
         public static List<VALIDACION_CAMPO> obtenerValidacionCampo(int grupoVal, int mensaje, int campo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.VALIDACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 return contexto.VALIDACION_CAMPO.Include("TABLA").Include("COLUMNA").Where(o => o.GRV_CODIGO == grupoVal && o.MEN_CODIGO == mensaje && o.CAM_CODIGO == campo).ToList<VALIDACION_CAMPO>();
@@ -23,7 +23,7 @@ namespace DataAccess.Mensajeria
 
         public static VALIDACION_CAMPO obtenerValidacionCampoPorCodigo(int codigo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.VALIDACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 return contexto.VALIDACION_CAMPO.Include("TABLA").Include("COLUMNA").Where(o => o.VLC_CODIGO == codigo).First();
@@ -34,7 +34,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -104,7 +104,7 @@ namespace DataAccess.Mensajeria
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -163,7 +163,7 @@ namespace DataAccess.Mensajeria
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -190,7 +190,7 @@ namespace DataAccess.Mensajeria
 
         public static List<VALIDACION_CAMPO> obtenerListaValidacionCampoComponente()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.VALIDACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 var listaValidacionCampo =

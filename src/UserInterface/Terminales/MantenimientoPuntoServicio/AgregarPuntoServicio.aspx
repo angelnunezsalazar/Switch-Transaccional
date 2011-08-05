@@ -33,9 +33,7 @@
         </tr>
         <tr>
             <td>
-                <asp:FormView ID="FormView1" runat="server" DataSourceID="oPuntoServicio" DefaultMode="Insert"
-                    OnDataBound="FormView1_DataBound" OnItemInserted="FormView1_ItemInserted" OnItemInserting="FormView1_ItemInserting"
-                    OnLoad="FormView1_Load" HorizontalAlign="Center">
+                <asp:FormView ID="FormView1" runat="server" DataSourceID="oPuntoServicio" DefaultMode="Insert" HorizontalAlign="Center">
                     <InsertItemTemplate>
                         <table style="width: 100%;">
                             <tr>
@@ -43,7 +41,7 @@
                                     <span class="texto">Nombre</span>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtNombre" runat="server" Text='<%# Bind("PSR_NOMBRE") %>' MaxLength="50"
+                                    <asp:TextBox ID="txtNombre" runat="server" Text='<%# Bind("Nombre") %>' MaxLength="50"
                                         Width="250px" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre"
                                         ErrorMessage="Debe ingresar el Nombre" ValidationGroup="AgregarPuntoServicio">*</asp:RequiredFieldValidator>
@@ -54,9 +52,9 @@
                                     <span class="texto">Dirección</span>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtDireccion" runat="server" Text='<%# Bind("PSR_DIRECCION") %>'
+                                    <asp:TextBox ID="txt" runat="server" Text='<%# Bind("") %>'
                                         MaxLength="100" Width="350px" />
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDireccion"
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt"
                                         ErrorMessage="Debe ingresar la Dirección" ValidationGroup="AgregarPuntoServicio">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
@@ -65,7 +63,7 @@
                                     <span class="texto">Habilitado </span>
                                 </td>
                                 <td>
-                                    <asp:CheckBox ID="chkHabilitado" runat="server" Checked='<%# Bind("PSR_ESTADO") %>' />
+                                    <asp:CheckBox ID="chkHabilitado" runat="server" Checked='<%# Bind("Estado") %>' />
                                 </td>
                             </tr>
                         </table>
@@ -81,9 +79,9 @@
                         </table>
                     </InsertItemTemplate>
                 </asp:FormView>
-                <asp:ObjectDataSource ID="oPuntoServicio" runat="server" DataObjectTypeName="BusinessEntity.PUNTO_SERVICIO"
+                <asp:ObjectDataSource ID="oPuntoServicio" runat="server" DataObjectTypeName="BusinessEntity.PuntoServicio"
                     InsertMethod="insertarPuntoServicio" OldValuesParameterFormatString="original_{0}"
-                    SelectMethod="obtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL"
+                    SelectMethod="ObtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL"
                     OnInserted="oPuntoServicio_Inserted"></asp:ObjectDataSource>
             </td>
         </tr>

@@ -9,7 +9,7 @@ namespace DataAccess.Comunicacion
     {
         public static List<TIPO_COMUNICACION> obtenerTipoComunicacion()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TIPO_COMUNICACION.MergeOption = MergeOption.NoTracking;
                 return contexto.TIPO_COMUNICACION.OrderBy(o=>o.TPO_CODIGO).ToList<TIPO_COMUNICACION>();

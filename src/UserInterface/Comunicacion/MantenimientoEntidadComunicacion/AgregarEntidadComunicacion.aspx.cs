@@ -27,7 +27,7 @@ namespace UserInterface.Comunicacion.MantenimientoEntidadComunicacion
                 return;
             }
 
-            ENTIDAD_COMUNICACION entidadComunicacion = new ENTIDAD_COMUNICACION();
+            EntidadComunicacion entidadComunicacion = new EntidadComunicacion();
             entidadComunicacion.EDC_NOMBRE = this.txtNombre.Text;
             entidadComunicacion.EDC_DESCRIPCION = this.txtDescripcion.Text;
             entidadComunicacion.EDC_COLA = this.txtCola.Text;

@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using BusinessEntity;
 
 namespace UserInterface.Terminales.MantenimientoEstadoTerminal
 {
-    public partial class ConsultarEstadoTerminal : System.Web.UI.Page
+    using System.Web.UI;
+
+    using BusinessLayer.Terminales;
+
+    public partial class ConsultarEstadoTerminal : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,57 +21,22 @@ namespace UserInterface.Terminales.MantenimientoEstadoTerminal
             if (Page.IsValid)
             {
                 string descripcion = ((TextBox)this.grvEstadoTerminal.FooterRow.FindControl("txtDescripcion")).Text;
+                
+                EstadoTerminalBL estadoTerminalBl=new EstadoTerminalBL();
+                estadoTerminalBl.Insertar(new EstadoTerminal { Nombre = descripcion });
+                this.grvEstadoTerminal.DataBind();
 
-                ESTADO_TERMINAL nuevoEstadoTerminal = new ESTADO_TERMINAL();
-                nuevoEstadoTerminal.EST_NOMBRE = descripcion;
-
-                EstadoOperacion Estado = BusinessLayer.Terminales.EstadoTerminalBL.insertarEstadoTerminal(nuevoEstadoTerminal);
-
-                if (Estado.Estado)
-                {
-                    this.grvEstadoTerminal.DataBind();
-                }
-                else
-                {
-                    this.lblMensaje.Text = Estado.Mensaje;
-                }
             }
-        }
-
-        protected void dsEstadoTerminal_Updated(object sender, ObjectDataSourceStatusEventArgs e)
-        {
-            VerificarResultado(e);
-        }
-
-        private void VerificarResultado(ObjectDataSourceStatusEventArgs e)
-        {
-            EstadoOperacion Estado = (EstadoOperacion)e.ReturnValue;
-
-            if (!Estado.Estado)
-            {
-                this.lblMensaje.Text = Estado.Mensaje;
-            }
-        }
-
-        protected void dsEstadoTerminal_Deleted(object sender, ObjectDataSourceStatusEventArgs e)
-        {
-            VerificarResultado(e);
         }
 
         protected void dsEstadoTerminal_Selected(object sender, ObjectDataSourceStatusEventArgs e)
         {
-            List<ESTADO_TERMINAL> lista = (List<ESTADO_TERMINAL>)e.ReturnValue;
+            List<EstadoTerminal> lista = (List<EstadoTerminal>)e.ReturnValue;
             if (lista.Count == 0)
             {
-                ESTADO_TERMINAL estadoTerminal = new ESTADO_TERMINAL();
-                estadoTerminal.EST_NOMBRE = "";
+                EstadoTerminal estadoTerminal = new EstadoTerminal { Nombre = "" };
                 lista.Add(estadoTerminal);
             }
-        }
-
-        protected void GridView1_DataBound(object sender, EventArgs e)
-        {
-
         }
 
         protected void grvEstadoTerminal_DataBound(object sender, EventArgs e)

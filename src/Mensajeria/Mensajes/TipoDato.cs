@@ -5,13 +5,13 @@ namespace Mensajeria.Mensajes
 {
     public class TipoDato
     {
-        public static Boolean EsAlfaNumerico(String trama)
+        public  Boolean EsAlfaNumerico(String trama)
         {
             Regex objAlphaNumericPattern = new Regex("[^a-zA-Z0-9]");
             return !objAlphaNumericPattern.IsMatch(trama); 
         }
 
-        public static Boolean EsNumericoConPunto(String trama)
+        public  Boolean EsNumericoConPunto(String trama)
         {
             Regex objPositivePattern = new Regex("^[.][0-9]+$|[0-9]*[.]*[0-9]+$");
             Regex objTwoDotPattern = new Regex("[0-9]*[.][0-9]*[.][0-9]*");
@@ -19,7 +19,7 @@ namespace Mensajeria.Mensajes
             !objTwoDotPattern.IsMatch(trama);
         }
 
-        public static Boolean EsNumericoSinPunto(String trama)
+        public  Boolean EsNumericoSinPunto(String trama)
         {
             Regex objNotIntPattern = new Regex("[^0-9-]");
             Regex objIntPattern = new Regex("^-[0-9]+$|^[0-9]+$");

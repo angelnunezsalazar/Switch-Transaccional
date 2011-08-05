@@ -9,7 +9,7 @@ namespace DataAccess.Mensajeria
     {
         public static List<CONDICION_MENSAJE> obtenerCondicionMensaje()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.CONDICION_MENSAJE.MergeOption = MergeOption.NoTracking;
                 return contexto.CONDICION_MENSAJE.ToList<CONDICION_MENSAJE>();

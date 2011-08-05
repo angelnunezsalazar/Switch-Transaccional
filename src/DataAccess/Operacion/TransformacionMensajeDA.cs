@@ -45,7 +45,7 @@ namespace DataAccess.Operacion
             }
 
 
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TRANSFORMACION.MergeOption = MergeOption.NoTracking;
                 ObjectQuery<TRANSFORMACION> Transformacion = new ObjectQuery<TRANSFORMACION>(query.ToString(), contexto);
@@ -58,7 +58,7 @@ namespace DataAccess.Operacion
 
         public static List<TRANSFORMACION> obtenerListaTransformacionComponente()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TRANSFORMACION.MergeOption = MergeOption.NoTracking;
                 var listaTransformacion =
@@ -80,7 +80,7 @@ namespace DataAccess.Operacion
 
         public static TRANSFORMACION obtenerTransformacion(int codigoTransformacion)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TRANSFORMACION.MergeOption = MergeOption.NoTracking;
                 var listaTransformacion =
@@ -95,7 +95,7 @@ namespace DataAccess.Operacion
 
         public static List<TRANSFORMACION> obtenerTransformacionSinRelacionesPorMensajeOrigen(int codigoMensajeOrigen)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TRANSFORMACION.MergeOption = MergeOption.NoTracking;
                 var listaTransformacion =
@@ -108,7 +108,7 @@ namespace DataAccess.Operacion
 
         public static List<TRANSFORMACION> obtenerTransformacionConTransformacionCampoConParametros()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TRANSFORMACION.MergeOption = MergeOption.NoTracking;
                 var listaTransformacion =
@@ -155,7 +155,7 @@ namespace DataAccess.Operacion
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
 
                     using (contexto.CreateConeccionScope())
@@ -197,7 +197,7 @@ namespace DataAccess.Operacion
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -231,7 +231,7 @@ namespace DataAccess.Operacion
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -258,7 +258,7 @@ namespace DataAccess.Operacion
             }
         }
 
-        private static DbCommand crearComando(dbSwitch contexto, TRANSFORMACION Transformacion, string query)
+        private static DbCommand crearComando(Switch contexto, TRANSFORMACION Transformacion, string query)
         {
             DbCommand Comando = contexto.CreateCommand(query, CommandType.Text);
             Comando.Parameters.Add(Factoria.CrearParametro("@codigo", Transformacion.TRM_CODIGO));

@@ -9,7 +9,7 @@ namespace DataAccess.Mensajeria
     {
         public static List<TIPO_DATO_COLUMNA> obtenerTipoDatoColumna()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TIPO_DATO_COLUMNA.MergeOption = MergeOption.NoTracking;
                 return contexto.TIPO_DATO_COLUMNA.ToList<TIPO_DATO_COLUMNA>();

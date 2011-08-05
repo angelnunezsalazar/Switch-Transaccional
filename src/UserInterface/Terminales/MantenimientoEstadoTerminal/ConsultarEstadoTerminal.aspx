@@ -29,7 +29,7 @@
         <tr>
             <td align="center">
                 <asp:GridView ID="grvEstadoTerminal" runat="server" AutoGenerateColumns="False" DataSourceID="dsEstadoTerminal"
-                    ShowFooter="True" DataKeyNames="EST_CODIGO" OnDataBound="grvEstadoTerminal_DataBound">
+                    ShowFooter="True" DataKeyNames="Id" OnDataBound="grvEstadoTerminal_DataBound">
                     <Columns>
                         <asp:TemplateField HeaderText="">
                             <FooterTemplate>
@@ -39,7 +39,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Nombre" >
                             <EditItemTemplate>
-                                <asp:TextBox ID="txtNombreEdit" runat="server" Text='<%# Bind("EST_NOMBRE") %>' MaxLength="50" Width="150px"></asp:TextBox>
+                                <asp:TextBox ID="txtNombreEdit" runat="server" Text='<%# Bind("Nombre") %>' MaxLength="50" Width="150px"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNombreEdit"
                                     ErrorMessage="Debe ingresar el Nombre" ValidationGroup="ModificarEstado">*</asp:RequiredFieldValidator>
                             </EditItemTemplate>
@@ -49,7 +49,7 @@
                                     ErrorMessage="Debe ingresar el Nombre" ValidationGroup="NuevoEstado">*</asp:RequiredFieldValidator>
                             </FooterTemplate>
                             <ItemTemplate>
-                                <asp:Label ID="lblNombreItem" runat="server" Text='<%# Eval("EST_NOMBRE") %>'></asp:Label>
+                                <asp:Label ID="lblNombreItem" runat="server" Text='<%# Eval("Nombre") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField>
@@ -70,11 +70,15 @@
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
-                <asp:ObjectDataSource ID="dsEstadoTerminal" runat="server" DataObjectTypeName="BusinessEntity.ESTADO_TERMINAL"
-                    DeleteMethod="eliminarEstadoTerminal" OldValuesParameterFormatString="original_{0}"
-                    SelectMethod="obtenerEstadoTerminal" TypeName="BusinessLayer.Terminales.EstadoTerminalBL"
-                    UpdateMethod="modificarEstadoTerminal" OnDeleted="dsEstadoTerminal_Deleted" OnUpdated="dsEstadoTerminal_Updated"
-                    OnSelected="dsEstadoTerminal_Selected"></asp:ObjectDataSource>
+                <asp:ObjectDataSource ID="dsEstadoTerminal" runat="server" 
+                    DataObjectTypeName="BusinessEntity.EstadoTerminal"
+                    TypeName="BusinessLayer.Terminales.EstadoTerminalBL"
+                    DeleteMethod="Eliminar"
+                     OldValuesParameterFormatString="{0}"
+                    SelectMethod="ObtenerTodos" 
+                    UpdateMethod="Modificar"
+                    OnSelected="dsEstadoTerminal_Selected">
+                </asp:ObjectDataSource>
             </td>
         </tr>
         <tr>

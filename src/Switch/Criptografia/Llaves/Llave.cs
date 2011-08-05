@@ -7,7 +7,7 @@ namespace Switch.Criptografia.Llaves
 {
     public class Llave
     {
-        public static Valor ValorLlave(Mensaje mensaje, string llaveFija, CAMPO campo, int tipoLlave)
+        public  Valor ValorLlave(Mensaje mensaje, string llaveFija, CAMPO campo, int tipoLlave)
         {
             EnumTipoLlave tipoTransformacion = (EnumTipoLlave)
                 Enum.ToObject(typeof(EnumTipoLlave), tipoLlave);

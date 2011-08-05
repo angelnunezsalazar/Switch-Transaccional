@@ -13,7 +13,7 @@ namespace DataAccess.Mensajeria
     {
         public static List<TABLA> obtenerTabla()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TABLA.MergeOption = MergeOption.NoTracking;
                 return contexto.TABLA.ToList<TABLA>();
@@ -22,7 +22,7 @@ namespace DataAccess.Mensajeria
 
         public static TABLA obtenerTablaPorCodigo(int codigoTabla)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TABLA.MergeOption = MergeOption.NoTracking;
                 return contexto.TABLA.Where(o => o.TBL_CODIGO == codigoTabla).First();
@@ -33,7 +33,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
 
                     using (contexto.CreateConeccionScope())
@@ -66,7 +66,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -99,7 +99,7 @@ namespace DataAccess.Mensajeria
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -128,7 +128,7 @@ namespace DataAccess.Mensajeria
             }
         }
 
-        private static DbCommand crearComando(dbSwitch contexto, TABLA tabla, string query)
+        private static DbCommand crearComando(Switch contexto, TABLA tabla, string query)
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
 
@@ -145,7 +145,7 @@ namespace DataAccess.Mensajeria
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             DataTable dataTable = new DataTable();
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 using (DbCommand Comando = contexto.CreateCommand("Select * from " + tabla, CommandType.Text))
                 {
@@ -165,7 +165,7 @@ namespace DataAccess.Mensajeria
 
         public static bool ExisteValorTabla(string tabla, string columnaOrigen, string cadenaBuscar)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 using (DbCommand Comando = contexto.CreateCommand("Select count(*) from " + tabla + " where " + columnaOrigen + "='" + cadenaBuscar + "'",
                 CommandType.Text))
@@ -180,7 +180,7 @@ namespace DataAccess.Mensajeria
         public static string ObtenerValorTabla(string tabla, string columnaOrigen, string columnaDestino, string cadenaBuscar)
         {
             string cadenaEncontrada = null;
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 using (DbCommand Comando = contexto.CreateCommand("Select " + columnaDestino + " from " + tabla + " where " + columnaOrigen + "='" + cadenaBuscar + "'",
                 CommandType.Text))
@@ -198,7 +198,7 @@ namespace DataAccess.Mensajeria
 
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     DbCommand Comando = contexto.CreateCommand(queryMaxId, CommandType.Text);
 
@@ -236,7 +236,7 @@ namespace DataAccess.Mensajeria
 
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     DbCommand Comando = contexto.CreateCommand(queryUpdate, CommandType.Text);
 
@@ -264,7 +264,7 @@ namespace DataAccess.Mensajeria
 
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     DbCommand Comando = contexto.CreateCommand(query, CommandType.Text);
 

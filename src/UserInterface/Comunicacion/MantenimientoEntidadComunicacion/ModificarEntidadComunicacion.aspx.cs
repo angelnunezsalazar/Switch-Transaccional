@@ -12,7 +12,7 @@ namespace UserInterface.Comunicacion.MantenimientoEntidadComunicacion
             this.lblMensaje.Text = "";
             if (!IsPostBack)
             {
-                ENTIDAD_COMUNICACION entidadComunicacion = EntidadComunicacionBL.obtenerEntidadComunicacion(int.Parse(Request.QueryString["Codigo"]));
+                EntidadComunicacion entidadComunicacion = EntidadComunicacionBL.obtenerEntidadComunicacion(int.Parse(Request.QueryString["Codigo"]));
                 if (entidadComunicacion != null)
                 {
 
@@ -51,7 +51,7 @@ namespace UserInterface.Comunicacion.MantenimientoEntidadComunicacion
                 return;
             }
 
-            ENTIDAD_COMUNICACION entidadComunicacion = new ENTIDAD_COMUNICACION()
+            EntidadComunicacion entidadComunicacion = new EntidadComunicacion()
             {
                 EDC_CODIGO = int.Parse(Request.QueryString["Codigo"])
             };

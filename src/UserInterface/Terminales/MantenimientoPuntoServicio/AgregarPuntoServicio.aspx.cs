@@ -29,27 +29,5 @@ namespace UserInterface.Terminales.MantenimientoPuntoServicio
             }
 
         }
-
-        protected void FormView1_ItemInserted(object sender, FormViewInsertedEventArgs e)
-        {
-
-        }
-
-        protected void FormView1_ItemInserting(object sender, FormViewInsertEventArgs e)
-        {
-
-        }
-
-        protected void FormView1_DataBound(object sender, EventArgs e)
-        {
-
-
-        }
-
-        protected void FormView1_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

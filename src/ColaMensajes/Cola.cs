@@ -16,7 +16,7 @@ namespace ColaMensajes
 
     public class Cola
     {
-        public static readonly TimeSpan TimeSpan = new TimeSpan(1, 0, 0);
+        public readonly TimeSpan TimeSpan = new TimeSpan(1, 0, 0);
 
         private static readonly string MAQUINA = @".\";
         private static readonly string PRIVATE_QUEQUE = MAQUINA + @"Private$\";
@@ -37,7 +37,7 @@ namespace ColaMensajes
             }
         }
 
-        public static void EliminarCola(string nombreCola)
+        public void EliminarCola(string nombreCola)
         {
             if (MessageQueue.Exists(nombreCola))
             {
@@ -52,7 +52,7 @@ namespace ColaMensajes
             }
         }
 
-        public static MessageListener StartListener(string nombreCola, ReceiveCompletedEventHandler MQueueReceiveEventHandler)
+        public MessageListener StartListener(string nombreCola, ReceiveCompletedEventHandler MQueueReceiveEventHandler)
         {
             MessageListener MsgListener;
 
@@ -70,7 +70,7 @@ namespace ColaMensajes
             return MsgListener;
         }
 
-        public static void EnviarMensaje(object mensaje,string id,
+        public void EnviarMensaje(object mensaje, string id,
             string nombreColaRequest, string nombreColaResponse)
         {
             MessageQueue colaRequest = new MessageQueue(PRIVATE_QUEQUE + nombreColaRequest);
@@ -87,7 +87,7 @@ namespace ColaMensajes
             colaRequest.Close();
         }
 
-        public static void EnviarMensaje(object mensaje, string id,
+        public void EnviarMensaje(object mensaje, string id,
             MessageQueue colaRequest, string nombreColaResponse)
         {
             Message Msg = new Message(mensaje)
@@ -102,7 +102,7 @@ namespace ColaMensajes
             colaRequest.Close();
         }
 
-        private static void EstablecerFormateador(MessageQueue cola)
+        private void EstablecerFormateador(MessageQueue cola)
         {
             cola.Formatter = new XmlMessageFormatter(new[] { TIPO_SERIALIZACION });
         }

@@ -14,7 +14,7 @@ namespace DataAccess.Seguridad
     {
         public static List<CRIPTOGRAFIA_CAMPO> obtenerCriptografiaCampo()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.CRIPTOGRAFIA_CAMPO.MergeOption = MergeOption.NoTracking;
                 return contexto.CRIPTOGRAFIA_CAMPO.Include("CAMPO_RESULTADO").ToList<CRIPTOGRAFIA_CAMPO>();
@@ -23,7 +23,7 @@ namespace DataAccess.Seguridad
 
         public static List<CRIPTOGRAFIA_CAMPO> obtenerCriptografiaCampo(int codigoDinamicaCriptografia)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.CRIPTOGRAFIA_CAMPO.MergeOption = MergeOption.NoTracking;
                 return contexto.CRIPTOGRAFIA_CAMPO.Include("CAMPO_LLAVE_1").Include("CAMPO_LLAVE_2").Include("CAMPO_RESULTADO")
@@ -33,7 +33,7 @@ namespace DataAccess.Seguridad
 
         public static CRIPTOGRAFIA_CAMPO obtenerCriptografiaCampo(int codigoDinamicaCriptografia,int codigoCriptografiaCampo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.CRIPTOGRAFIA_CAMPO.MergeOption = MergeOption.NoTracking;
                 return contexto.CRIPTOGRAFIA_CAMPO.Include("CAMPO_LLAVE_1").Include("CAMPO_LLAVE_2").Include("CAMPO_RESULTADO")
@@ -48,7 +48,7 @@ namespace DataAccess.Seguridad
             try
             {
                 DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -115,12 +115,12 @@ namespace DataAccess.Seguridad
             try
             {
                 DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
                         string query =
-                        "UPDATE dbSwitch.dbo.CRIPTOGRAFIA_CAMPO" +
+                        "UPDATE Switch.dbo.CRIPTOGRAFIA_CAMPO" +
                            " SET CAM_CODIGO_RESULTADO = @campoResultado_codigo" +
                               ",MEN_CODIGO_RESULTADO = @mensajeResultado_codigo" +
                               ",CAM_CODIGO_LLAVE_1 = @campoLlave1_codigo" +
@@ -160,7 +160,7 @@ namespace DataAccess.Seguridad
             try
             {
                 DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -187,7 +187,7 @@ namespace DataAccess.Seguridad
             }
         }
 
-        private static DbCommand crearComando(dbSwitch contexto, CRIPTOGRAFIA_CAMPO CriptografiaCampo, string query)
+        private static DbCommand crearComando(Switch contexto, CRIPTOGRAFIA_CAMPO CriptografiaCampo, string query)
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
 

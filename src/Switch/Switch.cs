@@ -29,7 +29,7 @@ namespace Switch
             IniciarListener();
         }
 
-        private static GRUPO_MENSAJE ObtenerGrupoMensajePorColaMensaje(string queueName)
+        private  GRUPO_MENSAJE ObtenerGrupoMensajePorColaMensaje(string queueName)
         {
             GRUPO_MENSAJE grupoMensaje = GrupoMensajeDA.ObtenerGrupoMensajePorColaMensaje(queueName);
             return grupoMensaje;

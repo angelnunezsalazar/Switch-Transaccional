@@ -6,7 +6,7 @@ namespace Switch
 {
     class Program
     {
-        static void Main()
+         void Main()
         {
             new Switch(new FactoryDA(), new DllDinamica());
             Thread.CurrentThread.Join();

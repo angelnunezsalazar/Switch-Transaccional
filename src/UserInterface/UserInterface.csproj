@@ -41,12 +41,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="StructureMap, Version=2.6.2.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.2.6.2\lib\StructureMap.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data.Entity">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -55,48 +54,18 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Mobile" />
-    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comunicacion\MantenimientoEntidadComunicacion\AgregarEntidadComunicacion.aspx.cs">
-      <DependentUpon>AgregarEntidadComunicacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Comunicacion\MantenimientoEntidadComunicacion\AgregarEntidadComunicacion.aspx.designer.cs">
-      <DependentUpon>AgregarEntidadComunicacion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Comunicacion\MantenimientoEntidadComunicacion\ConsultarEntidadComunicacion.aspx.cs">
-      <DependentUpon>ConsultarEntidadComunicacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Comunicacion\MantenimientoEntidadComunicacion\ConsultarEntidadComunicacion.aspx.designer.cs">
-      <DependentUpon>ConsultarEntidadComunicacion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Comunicacion\MantenimientoEntidadComunicacion\ModificarEntidadComunicacion.aspx.cs">
-      <DependentUpon>ModificarEntidadComunicacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Comunicacion\MantenimientoEntidadComunicacion\ModificarEntidadComunicacion.aspx.designer.cs">
-      <DependentUpon>ModificarEntidadComunicacion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Comunicacion\MantenimientoProtocolo\ModificarProtocolo.aspx.cs">
-      <DependentUpon>ModificarProtocolo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Comunicacion\MantenimientoProtocolo\ModificarProtocolo.aspx.designer.cs">
-      <DependentUpon>ModificarProtocolo.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Controles\Templates\GridViewTemplated.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -119,6 +88,9 @@
     <Compile Include="Frames\Navegacion.aspx.designer.cs">
       <DependentUpon>Navegacion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="MasterPage\Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,322 +98,7 @@
     <Compile Include="MasterPage\Principal.Master.designer.cs">
       <DependentUpon>Principal.Master</DependentUpon>
     </Compile>
-    <Compile Include="Comunicacion\MantenimientoProtocolo\AgregarProtocolo.aspx.cs">
-      <DependentUpon>AgregarProtocolo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Comunicacion\MantenimientoProtocolo\AgregarProtocolo.aspx.designer.cs">
-      <DependentUpon>AgregarProtocolo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Comunicacion\MantenimientoProtocolo\ConsultarProtocolo.aspx.cs">
-      <DependentUpon>ConsultarProtocolo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Comunicacion\MantenimientoProtocolo\ConsultarProtocolo.aspx.designer.cs">
-      <DependentUpon>ConsultarProtocolo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\ValoresTabla\ConsultarValoresTabla.aspx.cs">
-      <DependentUpon>ConsultarValoresTabla.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\ValoresTabla\ConsultarValoresTabla.aspx.designer.cs">
-      <DependentUpon>ConsultarValoresTabla.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoCampoMensaje\ConsultarCampoMensaje.aspx.cs">
-      <DependentUpon>ConsultarCampoMensaje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoCampoMensaje\ConsultarCampoMensaje.aspx.designer.cs">
-      <DependentUpon>ConsultarCampoMensaje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoCampoPlantilla\ModificarCampoPlantilla.aspx.cs">
-      <DependentUpon>ModificarCampoPlantilla.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoCampoPlantilla\ModificarCampoPlantilla.aspx.designer.cs">
-      <DependentUpon>ModificarCampoPlantilla.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoColumna\ConsultarColumna.aspx.cs">
-      <DependentUpon>ConsultarColumna.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoColumna\ConsultarColumna.aspx.designer.cs">
-      <DependentUpon>ConsultarColumna.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoMensaje\ConsultarGrupoMensaje.aspx.cs">
-      <DependentUpon>ConsultarGrupoMensaje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoMensaje\ConsultarGrupoMensaje.aspx.designer.cs">
-      <DependentUpon>ConsultarGrupoMensaje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoMensaje\AgregarGrupoMensaje.aspx.cs">
-      <DependentUpon>AgregarGrupoMensaje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoMensaje\AgregarGrupoMensaje.aspx.designer.cs">
-      <DependentUpon>AgregarGrupoMensaje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoMensaje\ModificarGrupoMensaje.aspx.cs">
-      <DependentUpon>ModificarGrupoMensaje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoMensaje\ModificarGrupoMensaje.aspx.designer.cs">
-      <DependentUpon>ModificarGrupoMensaje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoMensaje\VerEntidadesEnGrupoMensaje.aspx.cs">
-      <DependentUpon>VerEntidadesEnGrupoMensaje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoMensaje\VerEntidadesEnGrupoMensaje.aspx.designer.cs">
-      <DependentUpon>VerEntidadesEnGrupoMensaje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoValidacion\AgregarGrupoValidacion.aspx.cs">
-      <DependentUpon>AgregarGrupoValidacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoValidacion\AgregarGrupoValidacion.aspx.designer.cs">
-      <DependentUpon>AgregarGrupoValidacion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoValidacion\AgregarValidacionCampo.aspx.cs">
-      <DependentUpon>AgregarValidacionCampo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoValidacion\AgregarValidacionCampo.aspx.designer.cs">
-      <DependentUpon>AgregarValidacionCampo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoValidacion\ConsultarDetalleReglasValidacion.aspx.cs">
-      <DependentUpon>ConsultarDetalleReglasValidacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoValidacion\ConsultarDetalleReglasValidacion.aspx.designer.cs">
-      <DependentUpon>ConsultarDetalleReglasValidacion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoValidacion\ConsultarGrupoValidacion.aspx.cs">
-      <DependentUpon>ConsultarGrupoValidacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoValidacion\ConsultarGrupoValidacion.aspx.designer.cs">
-      <DependentUpon>ConsultarGrupoValidacion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoValidacion\ModificarGrupoValidacion.aspx.cs">
-      <DependentUpon>ModificarGrupoValidacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoValidacion\ModificarGrupoValidacion.aspx.designer.cs">
-      <DependentUpon>ModificarGrupoValidacion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoValidacion\ModificarValidacionCampo.aspx.cs">
-      <DependentUpon>ModificarValidacionCampo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoGrupoValidacion\ModificarValidacionCampo.aspx.designer.cs">
-      <DependentUpon>ModificarValidacionCampo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoMensajeTransaccional\ConsultarMensajeTransaccional.aspx.cs">
-      <DependentUpon>ConsultarMensajeTransaccional.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoMensajeTransaccional\ConsultarMensajeTransaccional.aspx.designer.cs">
-      <DependentUpon>ConsultarMensajeTransaccional.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoMensajeTransaccional\ConsultarReglaMensajeTransaccional.aspx.cs">
-      <DependentUpon>ConsultarReglaMensajeTransaccional.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoMensajeTransaccional\ConsultarReglaMensajeTransaccional.aspx.designer.cs">
-      <DependentUpon>ConsultarReglaMensajeTransaccional.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoMensaje\AgregarMensaje.aspx.cs">
-      <DependentUpon>AgregarMensaje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoMensaje\AgregarMensaje.aspx.designer.cs">
-      <DependentUpon>AgregarMensaje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoMensaje\ConsultarMensaje.aspx.cs">
-      <DependentUpon>ConsultarMensaje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoMensaje\ConsultarMensaje.aspx.designer.cs">
-      <DependentUpon>ConsultarMensaje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoMensaje\ModificarMensaje.aspx.cs">
-      <DependentUpon>ModificarMensaje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoMensaje\ModificarMensaje.aspx.designer.cs">
-      <DependentUpon>ModificarMensaje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoCampoPlantilla\AgregarCampoPlantilla.aspx.cs">
-      <DependentUpon>AgregarCampoPlantilla.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoCampoPlantilla\AgregarCampoPlantilla.aspx.designer.cs">
-      <DependentUpon>AgregarCampoPlantilla.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoCampoPlantilla\ConsultarCampoPlantilla.aspx.cs">
-      <DependentUpon>ConsultarCampoPlantilla.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoCampoPlantilla\ConsultarCampoPlantilla.aspx.designer.cs">
-      <DependentUpon>ConsultarCampoPlantilla.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoReglasValidacion\AgregarDetalleReglasValidacion.aspx.cs">
-      <DependentUpon>AgregarDetalleReglasValidacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoReglasValidacion\AgregarDetalleReglasValidacion.aspx.designer.cs">
-      <DependentUpon>AgregarDetalleReglasValidacion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoReglasValidacion\ModificarReglasValidacion.aspx.cs">
-      <DependentUpon>ModificarReglasValidacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoReglasValidacion\ModificarReglasValidacion.aspx.designer.cs">
-      <DependentUpon>ModificarReglasValidacion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoTabla\ConsultarTabla.aspx.cs">
-      <DependentUpon>ConsultarTabla.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoTabla\ConsultarTabla.aspx.designer.cs">
-      <DependentUpon>ConsultarTabla.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoValorSelector\ConsultarValorSelector.aspx.cs">
-      <DependentUpon>ConsultarValorSelector.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mensajeria\MantenimientoValorSelector\ConsultarValorSelector.aspx.designer.cs">
-      <DependentUpon>ConsultarValorSelector.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoDinamica\AgregarDinamica.aspx.cs">
-      <DependentUpon>AgregarDinamica.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoDinamica\AgregarDinamica.aspx.designer.cs">
-      <DependentUpon>AgregarDinamica.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoDinamica\ConsultarDinamica.aspx.cs">
-      <DependentUpon>ConsultarDinamica.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoDinamica\ConsultarDinamica.aspx.designer.cs">
-      <DependentUpon>ConsultarDinamica.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoDinamica\ModificarDinamica.aspx.cs">
-      <DependentUpon>ModificarDinamica.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoDinamica\ModificarDinamica.aspx.designer.cs">
-      <DependentUpon>ModificarDinamica.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoParametroTransformacionCampo\AgregarParametroTransformacionCampo.aspx.cs">
-      <DependentUpon>AgregarParametroTransformacionCampo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoParametroTransformacionCampo\AgregarParametroTransformacionCampo.aspx.designer.cs">
-      <DependentUpon>AgregarParametroTransformacionCampo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoParametroTransformacionCampo\ConsultarParametroTransformacionCampo.aspx.cs">
-      <DependentUpon>ConsultarParametroTransformacionCampo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoParametroTransformacionCampo\ConsultarParametroTransformacionCampo.aspx.designer.cs">
-      <DependentUpon>ConsultarParametroTransformacionCampo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoParametroTransformacionCampo\ModificarParametroTransformacionCampo.aspx.cs">
-      <DependentUpon>ModificarParametroTransformacionCampo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoParametroTransformacionCampo\ModificarParametroTransformacionCampo.aspx.designer.cs">
-      <DependentUpon>ModificarParametroTransformacionCampo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTanqueo\ConsultarTanqueo.aspx.cs">
-      <DependentUpon>ConsultarTanqueo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTanqueo\ConsultarTanqueo.aspx.designer.cs">
-      <DependentUpon>ConsultarTanqueo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTransformacionCampo\AgregarTransformacionCampo.aspx.cs">
-      <DependentUpon>AgregarTransformacionCampo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTransformacionCampo\AgregarTransformacionCampo.aspx.designer.cs">
-      <DependentUpon>AgregarTransformacionCampo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTransformacionCampo\ConsultarTransformacionCampo.aspx.cs">
-      <DependentUpon>ConsultarTransformacionCampo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTransformacionCampo\ConsultarTransformacionCampo.aspx.designer.cs">
-      <DependentUpon>ConsultarTransformacionCampo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTransformacionCampo\ModificarTransformacionCampo.aspx.cs">
-      <DependentUpon>ModificarTransformacionCampo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTransformacionCampo\ModificarTransformacionCampo.aspx.designer.cs">
-      <DependentUpon>ModificarTransformacionCampo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTransformacionMensaje\AgregarTransformacionMensaje.aspx.cs">
-      <DependentUpon>AgregarTransformacionMensaje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTransformacionMensaje\AgregarTransformacionMensaje.aspx.designer.cs">
-      <DependentUpon>AgregarTransformacionMensaje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTransformacionMensaje\ConsultarTransformacionMensaje.aspx.cs">
-      <DependentUpon>ConsultarTransformacionMensaje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTransformacionMensaje\ConsultarTransformacionMensaje.aspx.designer.cs">
-      <DependentUpon>ConsultarTransformacionMensaje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTransformacionMensaje\ModificarTransformacionMensaje.aspx.cs">
-      <DependentUpon>ModificarTransformacionMensaje.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Operacion\MantenimientoTransformacionMensaje\ModificarTransformacionMensaje.aspx.designer.cs">
-      <DependentUpon>ModificarTransformacionMensaje.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Parametros\CargarComponentes\ConsultarComponentes.aspx.cs">
-      <DependentUpon>ConsultarComponentes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Parametros\CargarComponentes\ConsultarComponentes.aspx.designer.cs">
-      <DependentUpon>ConsultarComponentes.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Seguridad\MantenimientoCriptografiaCampo\AgregarCampoCriptografia.aspx.cs">
-      <DependentUpon>AgregarCampoCriptografia.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Seguridad\MantenimientoCriptografiaCampo\AgregarCampoCriptografia.aspx.designer.cs">
-      <DependentUpon>AgregarCampoCriptografia.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Seguridad\MantenimientoCriptografiaCampo\ConsultarCampoCriptografia.aspx.cs">
-      <DependentUpon>ConsultarCampoCriptografia.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Seguridad\MantenimientoCriptografiaCampo\ConsultarCampoCriptografia.aspx.designer.cs">
-      <DependentUpon>ConsultarCampoCriptografia.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Seguridad\DinamicaDeCriptografia\ConsultarDinamicaDeCriptografia.aspx.cs">
-      <DependentUpon>ConsultarDinamicaDeCriptografia.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Seguridad\DinamicaDeCriptografia\ConsultarDinamicaDeCriptografia.aspx.designer.cs">
-      <DependentUpon>ConsultarDinamicaDeCriptografia.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Seguridad\MantenimientoCriptografiaCampo\ModificarCampoCriptografia.aspx.cs">
-      <DependentUpon>ModificarCampoCriptografia.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Seguridad\MantenimientoCriptografiaCampo\ModificarCampoCriptografia.aspx.designer.cs">
-      <DependentUpon>ModificarCampoCriptografia.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Terminales\MantenimientoEstadoTerminal\ConsultarEstadoTerminal.aspx.cs">
       <DependentUpon>ConsultarEstadoTerminal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -501,16 +158,16 @@
       <Project>{19CC30BD-3D17-42DD-B3F1-1440C22D89C0}</Project>
       <Name>BusinessLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{081FDCDF-97C4-4F29-99FF-0330C00377A7}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Utilidades\Utilidades.csproj">
       <Project>{99FD67DE-4806-4A7E-A654-CCF0D32594B5}</Project>
       <Name>Utilidades</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Comunicacion\MantenimientoEntidadComunicacion\AgregarEntidadComunicacion.aspx" />
-    <Content Include="Comunicacion\MantenimientoEntidadComunicacion\ConsultarEntidadComunicacion.aspx" />
-    <Content Include="Comunicacion\MantenimientoEntidadComunicacion\ModificarEntidadComunicacion.aspx" />
-    <Content Include="Comunicacion\MantenimientoProtocolo\ModificarProtocolo.aspx" />
     <Content Include="Includes\Imagenes\blank.gif" />
     <Content Include="Includes\Imagenes\iconCancel.png" />
     <Content Include="Includes\Imagenes\iconEdit.png" />
@@ -519,22 +176,6 @@
     <Content Include="Includes\Imagenes\iconNew.png" />
     <Content Include="Includes\Imagenes\iconSave.png" />
     <Content Include="MasterPage\Principal.Master" />
-    <Content Include="Comunicacion\MantenimientoProtocolo\AgregarProtocolo.aspx" />
-    <Content Include="Comunicacion\MantenimientoProtocolo\ConsultarProtocolo.aspx" />
-    <Content Include="Mensajeria\MantenimientoCampoMensaje\ConsultarCampoMensaje.aspx" />
-    <Content Include="Mensajeria\MantenimientoCampoPlantilla\ModificarCampoPlantilla.aspx" />
-    <Content Include="Mensajeria\MantenimientoGrupoMensaje\ConsultarGrupoMensaje.aspx" />
-    <Content Include="Mensajeria\MantenimientoGrupoMensaje\AgregarGrupoMensaje.aspx" />
-    <Content Include="Mensajeria\MantenimientoGrupoMensaje\ModificarGrupoMensaje.aspx" />
-    <Content Include="Mensajeria\MantenimientoGrupoMensaje\VerEntidadesEnGrupoMensaje.aspx" />
-    <Content Include="Mensajeria\MantenimientoMensajeTransaccional\ConsultarMensajeTransaccional.aspx" />
-    <Content Include="Mensajeria\MantenimientoMensajeTransaccional\ConsultarReglaMensajeTransaccional.aspx" />
-    <Content Include="Mensajeria\MantenimientoMensaje\AgregarMensaje.aspx" />
-    <Content Include="Mensajeria\MantenimientoMensaje\ConsultarMensaje.aspx" />
-    <Content Include="Mensajeria\MantenimientoMensaje\ModificarMensaje.aspx" />
-    <Content Include="Mensajeria\MantenimientoCampoPlantilla\AgregarCampoPlantilla.aspx" />
-    <Content Include="Mensajeria\MantenimientoCampoPlantilla\ConsultarCampoPlantilla.aspx" />
-    <Content Include="Mensajeria\MantenimientoValorSelector\ConsultarValorSelector.aspx" />
     <Content Include="Terminales\MantenimientoEstadoTerminal\ConsultarEstadoTerminal.aspx" />
     <Content Include="Terminales\MantenimientoPuntoServicio\AgregarPuntoServicio.aspx" />
     <Content Include="Terminales\MantenimientoPuntoServicio\ConsultarPuntoServicio.aspx" />
@@ -549,17 +190,6 @@
     <Content Include="App_Themes\Default\Switch.css" />
     <Content Include="Includes\Js\jquery-1.2.6-vsdoc.js" />
     <Content Include="Includes\Js\jquery-1.2.6.js" />
-    <Content Include="Mensajeria\MantenimientoGrupoValidacion\ModificarGrupoValidacion.aspx" />
-    <Content Include="Mensajeria\MantenimientoReglasValidacion\AgregarDetalleReglasValidacion.aspx" />
-    <Content Include="Mensajeria\MantenimientoReglasValidacion\ModificarReglasValidacion.aspx" />
-    <Content Include="Operacion\MantenimientoParametroTransformacionCampo\AgregarParametroTransformacionCampo.aspx" />
-    <Content Include="Operacion\MantenimientoParametroTransformacionCampo\ConsultarParametroTransformacionCampo.aspx" />
-    <Content Include="Operacion\MantenimientoParametroTransformacionCampo\ModificarParametroTransformacionCampo.aspx" />
-    <Content Include="Operacion\MantenimientoTransformacionCampo\ConsultarTransformacionCampo.aspx" />
-    <Content Include="Mensajeria\MantenimientoGrupoValidacion\ConsultarGrupoValidacion.aspx" />
-    <Content Include="Operacion\MantenimientoTransformacionMensaje\AgregarTransformacionMensaje.aspx" />
-    <Content Include="Operacion\MantenimientoTransformacionMensaje\ConsultarTransformacionMensaje.aspx" />
-    <Content Include="Operacion\MantenimientoTransformacionMensaje\ModificarTransformacionMensaje.aspx" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
@@ -567,27 +197,12 @@
     <Content Include="Includes\Imagenes\tabla_cabecera.gif" />
     <Content Include="Includes\Imagenes\tabla_fila_impar.gif" />
     <Content Include="Includes\Imagenes\tabla_fila_par.gif" />
-    <Content Include="Mensajeria\ValoresTabla\ConsultarValoresTabla.aspx" />
-    <Content Include="Mensajeria\MantenimientoColumna\ConsultarColumna.aspx" />
-    <Content Include="Mensajeria\MantenimientoGrupoValidacion\AgregarGrupoValidacion.aspx" />
-    <Content Include="Mensajeria\MantenimientoGrupoValidacion\AgregarValidacionCampo.aspx" />
-    <Content Include="Mensajeria\MantenimientoGrupoValidacion\ConsultarDetalleReglasValidacion.aspx" />
-    <Content Include="Mensajeria\MantenimientoGrupoValidacion\ModificarValidacionCampo.aspx" />
-    <Content Include="Mensajeria\MantenimientoTabla\ConsultarTabla.aspx" />
-    <Content Include="Operacion\MantenimientoDinamica\AgregarDinamica.aspx" />
-    <Content Include="Operacion\MantenimientoDinamica\ConsultarDinamica.aspx" />
-    <Content Include="Operacion\MantenimientoDinamica\ModificarDinamica.aspx" />
-    <Content Include="Operacion\MantenimientoTanqueo\ConsultarTanqueo.aspx" />
-    <Content Include="Operacion\MantenimientoTransformacionCampo\AgregarTransformacionCampo.aspx" />
-    <Content Include="Operacion\MantenimientoTransformacionCampo\ModificarTransformacionCampo.aspx" />
-    <Content Include="Parametros\CargarComponentes\ConsultarComponentes.aspx" />
-    <Content Include="Seguridad\MantenimientoCriptografiaCampo\AgregarCampoCriptografia.aspx" />
-    <Content Include="Seguridad\MantenimientoCriptografiaCampo\ConsultarCampoCriptografia.aspx" />
-    <Content Include="Seguridad\DinamicaDeCriptografia\ConsultarDinamicaDeCriptografia.aspx" />
-    <Content Include="Seguridad\MantenimientoCriptografiaCampo\ModificarCampoCriptografia.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -70,10 +70,10 @@ namespace BusinessLayer.Operacion
 
             if (pasoDinamica.PDT_FUNCIONALIDAD == TipoFuncionalidadBL.obtenerCodigoEnviar())
             {
-                List<ENTIDAD_COMUNICACION> listaEntidadComunicacion = EntidadComunicacionDA.obtenerEntidadComunicacionEnGrupoMensaje(codigoGrupoMensaje);
+                List<EntidadComunicacion> listaEntidadComunicacion = EntidadComunicacionDA.obtenerEntidadComunicacionEnGrupoMensaje(codigoGrupoMensaje);
 
-                ENTIDAD_COMUNICACION entidadEnGrupo = (from e in listaEntidadComunicacion
-                                                       where e.EDC_CODIGO == pasoDinamica.ENTIDAD_COMUNICACION.EDC_CODIGO
+                EntidadComunicacion entidadEnGrupo = (from e in listaEntidadComunicacion
+                                                       where e.EDC_CODIGO == pasoDinamica.EntidadComunicacion.EDC_CODIGO
                                                        select e).FirstOrDefault();
 
                 if (entidadEnGrupo != null)

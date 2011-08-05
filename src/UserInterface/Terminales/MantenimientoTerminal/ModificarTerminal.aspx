@@ -56,7 +56,7 @@
                                 <td>
                                     <asp:DropDownList ID="ddlEntidad" runat="server" DataSourceID="oEntidad" DataTextField="EDC_NOMBRE"
                                         DataValueField="EDC_CODIGO" AppendDataBoundItems="True" Width="200px"
-                                        SelectedValue='<%# Eval("ENTIDAD_COMUNICACION.EDC_CODIGO")%>'>
+                                        SelectedValue='<%# Eval("EntidadComunicacion.EDC_CODIGO")%>'>
                                         <asp:ListItem Value="-1">Seleccionar Entidad</asp:ListItem>
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ddlEntidad"
@@ -73,13 +73,13 @@
                                 <td>
                                     <asp:DropDownList ID="ddlPtoServicio" runat="server" DataSourceID="oPtoServicio"
                                         DataTextField="PSR_NOMBRE" DataValueField="PSR_CODIGO" AppendDataBoundItems="True"
-                                        Width="200px" SelectedValue='<%# Eval("PUNTO_SERVICIO.PSR_CODIGO")%>'>
+                                        Width="200px" SelectedValue='<%# Eval("PuntoServicio.PSR_CODIGO")%>'>
                                         <asp:ListItem Value="-1">Seleccionar Punto de Servicio</asp:ListItem>
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlPtoServicio"
                                         ErrorMessage="Debe ingresar el Punto de Servicio" InitialValue="-1" ValidationGroup="AgregarTerminal">*</asp:RequiredFieldValidator>
                                     <asp:ObjectDataSource ID="oPtoServicio" runat="server" OldValuesParameterFormatString="original_{0}"
-                                        SelectMethod="obtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL">
+                                        SelectMethod="ObtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL">
                                     </asp:ObjectDataSource>
                                 </td>
                             </tr>
@@ -90,13 +90,13 @@
                                 <td>
                                     <asp:DropDownList ID="ddlEstadoTerminal" runat="server" DataSourceID="dsEstadoTerminal"
                                         DataTextField="EST_NOMBRE" DataValueField="EST_CODIGO" AppendDataBoundItems="True"
-                                        Width="200px" SelectedValue='<%# Eval("ESTADO_TERMINAL.EST_CODIGO")%>'>
+                                        Width="200px" SelectedValue='<%# Eval("EstadoTerminal.EST_CODIGO")%>'>
                                         <asp:ListItem Value="-1">Seleccionar Estado Terminal</asp:ListItem>
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlEstadoTerminal"
                                         ErrorMessage="Debe ingresar el Estado del Terminal" InitialValue="-1" ValidationGroup="AgregarTerminal">*</asp:RequiredFieldValidator>
-                                    <asp:EntityDataSource ID="dsEstadoTerminal" runat="server" ConnectionString="name=dbSwitch"
-                                        DefaultContainerName="dbSwitch" EntitySetName="ESTADO_TERMINAL">
+                                    <asp:EntityDataSource ID="dsEstadoTerminal" runat="server" ConnectionString="name=Switch"
+                                        DefaultContainerName="Switch" EntitySetName="EstadoTerminal">
                                     </asp:EntityDataSource>
                                 </td>
                             </tr>
@@ -118,7 +118,7 @@
                         </table>
                     </EditItemTemplate>
                 </asp:FormView>
-                <asp:ObjectDataSource ID="oTerminal" runat="server" DataObjectTypeName="BusinessEntity.TERMINAL"
+                <asp:ObjectDataSource ID="oTerminal" runat="server" DataObjectTypeName="BusinessEntity.Terminal"
                     OldValuesParameterFormatString="original_{0}" SelectMethod="obtenerTerminal"
                     TypeName="BusinessLayer.Terminales.TerminalBL" UpdateMethod="modificarTerminal"
                     OnUpdating="oTerminal_Updating" onupdated="oTerminal_Updated">

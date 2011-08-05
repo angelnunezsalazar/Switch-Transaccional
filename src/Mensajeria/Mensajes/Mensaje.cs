@@ -59,7 +59,7 @@ namespace Mensajeria.Mensajes
             return true;
         }
 
-        public static Mensaje CrearMensaje(EnumTipoMensaje tipo)
+        public  Mensaje CrearMensaje(EnumTipoMensaje tipo)
         {
             switch (tipo)
             {

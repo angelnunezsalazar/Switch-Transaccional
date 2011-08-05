@@ -14,7 +14,7 @@ namespace DataAccess.Mensajeria
 
         public static List<GRUPO_MENSAJE> obtenerGrupoMensaje()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.GRUPO_MENSAJE.MergeOption = MergeOption.NoTracking;
                 return contexto.GRUPO_MENSAJE.Include("TIPO_MENSAJE").ToList<GRUPO_MENSAJE>();
@@ -23,7 +23,7 @@ namespace DataAccess.Mensajeria
 
         public static GRUPO_MENSAJE obtenerGrupoMensaje(int codigo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.GRUPO_MENSAJE.MergeOption = MergeOption.NoTracking;
                 return contexto.GRUPO_MENSAJE.Include("TIPO_MENSAJE").Where(o => o.GMJ_CODIGO == codigo).FirstOrDefault<GRUPO_MENSAJE>();
@@ -32,7 +32,7 @@ namespace DataAccess.Mensajeria
 
         public static List<GRUPO_MENSAJE> obtenerGrupoMensajeConCamposConDatos()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.GRUPO_MENSAJE.MergeOption = MergeOption.NoTracking;
                 contexto.CAMPO_PLANTILLA.MergeOption = MergeOption.NoTracking;
@@ -49,7 +49,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -91,7 +91,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -127,7 +127,7 @@ namespace DataAccess.Mensajeria
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -166,7 +166,7 @@ namespace DataAccess.Mensajeria
             }
         }
 
-        private static DbCommand crearComando(dbSwitch contexto, GRUPO_MENSAJE grupoMensaje, string query)
+        private static DbCommand crearComando(Switch contexto, GRUPO_MENSAJE grupoMensaje, string query)
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             DbCommand Comando = contexto.CreateCommand(query, CommandType.Text);
@@ -182,7 +182,7 @@ namespace DataAccess.Mensajeria
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
 
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 string query = "ObtenerGrupoyTipoMensaje";
 

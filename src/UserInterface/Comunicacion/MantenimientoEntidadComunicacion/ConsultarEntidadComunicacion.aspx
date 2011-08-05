@@ -64,7 +64,7 @@
                             </asp:GridView>
                             <asp:ObjectDataSource ID="dsEntidadComunicacion" runat="server" OldValuesParameterFormatString="original_{0}"
                                 SelectMethod="obtenerEntidadComunicacion" TypeName="BusinessLayer.Comunicacion.EntidadComunicacionBL"
-                                DataObjectTypeName="BusinessEntity.ENTIDAD_COMUNICACION" DeleteMethod="eliminarEntidadComunicacion"
+                                DataObjectTypeName="BusinessEntity.EntidadComunicacion" DeleteMethod="eliminarEntidadComunicacion"
                                 OnDeleted="dsEntidadComunicacion_Deleted"></asp:ObjectDataSource>
                         </td>
                     </tr>

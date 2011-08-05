@@ -9,7 +9,7 @@ namespace DataAccess.Comunicacion
     {
         public static List<TIPO_ENTIDAD> obtenerTipoTerminal()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.TIPO_ENTIDAD.MergeOption = MergeOption.NoTracking;
                 return contexto.TIPO_ENTIDAD.ToList<TIPO_ENTIDAD>();

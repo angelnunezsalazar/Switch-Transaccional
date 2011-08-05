@@ -8,7 +8,7 @@ namespace Switch.Criptografia.Algoritmos
 {
     public class Algoritmo
     {
-        public static string Encriptar(Valor llave, Valor palabra, EnumAlgoritmo algoritmo)
+        public  string Encriptar(Valor llave, Valor palabra, EnumAlgoritmo algoritmo)
         {
             byte[] keyArray;
             byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(palabra.ToString());
@@ -36,7 +36,7 @@ namespace Switch.Criptografia.Algoritmos
             return Convert.ToBase64String(resultArray, 0, resultArray.Length);
         }
 
-        public static string Desencriptar(Valor llave, Valor palabra, EnumAlgoritmo algoritmo)
+        public  string Desencriptar(Valor llave, Valor palabra, EnumAlgoritmo algoritmo)
         {
             byte[] keyArray;
             byte[] toEncryptArray = Convert.FromBase64String(palabra.ToString());
@@ -65,7 +65,7 @@ namespace Switch.Criptografia.Algoritmos
             return UTF8Encoding.UTF8.GetString(resultArray).Trim(caracteresTRIM);
         }
 
-        private static SymmetricAlgorithm ProveedorAlgoritmo(EnumAlgoritmo algoritmo)
+        private  SymmetricAlgorithm ProveedorAlgoritmo(EnumAlgoritmo algoritmo)
         {
             switch (algoritmo)
             {
@@ -81,10 +81,10 @@ namespace Switch.Criptografia.Algoritmos
         }
 
 
-        private static byte[] IV_DES = { 0, 0, 0, 0, 0, 0, 0, 0 };
-        private static byte[] IV_Rijndael = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        private  byte[] IV_DES = { 0, 0, 0, 0, 0, 0, 0, 0 };
+        private  byte[] IV_Rijndael = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-        private static byte[] IV(EnumAlgoritmo algoritmo)
+        private  byte[] IV(EnumAlgoritmo algoritmo)
         {
             switch (algoritmo)
             {

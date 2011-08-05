@@ -13,7 +13,7 @@ namespace DataAccess.Seguridad
     {
         public static List<DINAMICA_CRIPTOGRAFIA> obtenerDinamicaCriptografia()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.DINAMICA_CRIPTOGRAFIA.MergeOption = MergeOption.NoTracking;
                 return contexto.DINAMICA_CRIPTOGRAFIA.ToList<DINAMICA_CRIPTOGRAFIA>();
@@ -22,7 +22,7 @@ namespace DataAccess.Seguridad
 
         public static DINAMICA_CRIPTOGRAFIA obtenerDinamicaCriptografia(int codigoDinamicaCriptografia)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.DINAMICA_CRIPTOGRAFIA.MergeOption = MergeOption.NoTracking;
                 return contexto.DINAMICA_CRIPTOGRAFIA.Include("MENSAJE").Include("MENSAJE.GRUPO_MENSAJE")
@@ -32,7 +32,7 @@ namespace DataAccess.Seguridad
 
         public static List<DINAMICA_CRIPTOGRAFIA> obtenerDinamicaCriptografiaPorMensaje(int codigoMensaje)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.DINAMICA_CRIPTOGRAFIA.MergeOption = MergeOption.NoTracking;
                 return contexto.DINAMICA_CRIPTOGRAFIA
@@ -44,7 +44,7 @@ namespace DataAccess.Seguridad
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
 
                     using (contexto.CreateConeccionScope())
@@ -86,7 +86,7 @@ namespace DataAccess.Seguridad
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -119,7 +119,7 @@ namespace DataAccess.Seguridad
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -158,7 +158,7 @@ namespace DataAccess.Seguridad
             }
         }
 
-        private static DbCommand crearComando(dbSwitch contexto, DINAMICA_CRIPTOGRAFIA DinamicaCriptografia, string query)
+        private static DbCommand crearComando(Switch contexto, DINAMICA_CRIPTOGRAFIA DinamicaCriptografia, string query)
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
 

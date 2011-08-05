@@ -12,16 +12,16 @@ namespace Switch.Tanqueos
 
     public class Tanqueo
     {
-        private static List<MensajeTanqueado> MensajesTanqueados = new List<MensajeTanqueado>();
+        private  List<MensajeTanqueado> MensajesTanqueados = new List<MensajeTanqueado>();
 
-        public static void Tanquear(DinamicaDeMensaje dinamica)
+        public  void Tanquear(DinamicaDeMensaje dinamica)
         {
             MensajeTanqueado mensajeTanqueado;
             mensajeTanqueado.dinamica = dinamica;
             MensajesTanqueados.Add(mensajeTanqueado);
         }
 
-        public static DinamicaDeMensaje Destanquear(Mensaje mensaje)
+        public  DinamicaDeMensaje Destanquear(Mensaje mensaje)
         {
             MensajeTanqueado mensajeTanqueado = MensajesTanqueados
                 .Where(m => m.dinamica.Mensaje.EsMensajeTanqueado(mensaje))

@@ -43,7 +43,7 @@
                                     <span class="texto">Número de Serie</span>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtSerial" runat="server" MaxLength="20" Width="160px" Text='<%# Bind("TRM_SERIAL") %>'/>
+                                    <asp:TextBox ID="txtSerial" runat="server" MaxLength="20" Width="160px" Text='<%# Bind("Serial") %>'/>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                                         ControlToValidate="txtSerial" ErrorMessage="Debe ingresar el Número de Serie" 
                                         ValidationGroup="AgregarTerminal">*</asp:RequiredFieldValidator>
@@ -54,8 +54,8 @@
                                     <span class="texto">Entidad de Comunicación</span>
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="ddlEntidad" runat="server" DataSourceID="oEntidad" DataTextField="EDC_NOMBRE"
-                                        DataValueField="EDC_CODIGO" AppendDataBoundItems="True" Width="200px">
+                                    <asp:DropDownList ID="ddlEntidad" runat="server" DataSourceID="oEntidad" DataTextField="Nombre"
+                                        DataValueField="Id" AppendDataBoundItems="True" Width="200px" Text='<%# Bind("EntidadComunicacionId") %>'>
                                         <asp:ListItem Value="-1">Seleccionar Entidad</asp:ListItem>
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
@@ -73,8 +73,8 @@
                                 </td>
                                 <td>
                                     <asp:DropDownList ID="ddlPtoServicio" runat="server" DataSourceID="oPtoServicio"
-                                        DataTextField="PSR_NOMBRE" DataValueField="PSR_CODIGO" 
-                                        AppendDataBoundItems="True" Width="200px">
+                                        DataTextField="Nombre" DataValueField="Id" 
+                                        AppendDataBoundItems="True" Width="200px" Text='<%# Bind("Id") %>'>
                                         <asp:ListItem Value="-1">Seleccionar Punto de Servicio</asp:ListItem>
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
@@ -82,7 +82,7 @@
                                         ErrorMessage="Debe ingresar el Punto de Servicio" InitialValue="-1" 
                                         ValidationGroup="AgregarTerminal">*</asp:RequiredFieldValidator>
                                     <asp:ObjectDataSource ID="oPtoServicio" runat="server" OldValuesParameterFormatString="original_{0}"
-                                        SelectMethod="obtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL">
+                                        SelectMethod="ObtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL">
                                     </asp:ObjectDataSource>
                                 </td>
                             </tr>
@@ -92,16 +92,16 @@
                                 </td>
                                 <td>
                                     <asp:DropDownList ID="ddlEstadoTerminal" runat="server" DataSourceID="dsEstadoTerminal"
-                                        DataTextField="EST_NOMBRE" DataValueField="EST_CODIGO" 
-                                        AppendDataBoundItems="True" Width="200px">
+                                        DataTextField="Nombre" DataValueField="Id" 
+                                        AppendDataBoundItems="True" Width="200px" Text='<%# Bind("EstadoTerminalId") %>'>
                                         <asp:ListItem Value="-1">Seleccionar Estado Terminal</asp:ListItem>
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
                                         ControlToValidate="ddlEstadoTerminal" 
                                         ErrorMessage="Debe ingresar el Estado del Terminal" InitialValue="-1" 
                                         ValidationGroup="AgregarTerminal">*</asp:RequiredFieldValidator>
-                                    <asp:EntityDataSource ID="dsEstadoTerminal" runat="server" ConnectionString="name=dbSwitch"
-                                        DefaultContainerName="dbSwitch" EntitySetName="ESTADO_TERMINAL">
+                                    <asp:EntityDataSource ID="dsEstadoTerminal" runat="server" ConnectionString="name=Switch"
+                                        DefaultContainerName="Switch" EntitySetName="EstadoTerminal">
                                     </asp:EntityDataSource>
                                 </td>
                             </tr>
@@ -125,9 +125,9 @@
                     </InsertItemTemplate>
                 </asp:FormView>
                 <asp:ObjectDataSource ID="oTerminal" runat="server" 
-                    DataObjectTypeName="BusinessEntity.TERMINAL" OldValuesParameterFormatString="original_{0}"
+                    DataObjectTypeName="BusinessEntity.Terminal" OldValuesParameterFormatString="original_{0}"
                     SelectMethod="obtenerTerminal" TypeName="BusinessLayer.Terminales.TerminalBL"
-                    OnInserting="oTerminal_Inserting1" OnInserted="oTerminal_Inserted" 
+                    OnInserted="oTerminal_Inserted" 
                     InsertMethod="insertarTerminal"></asp:ObjectDataSource>
             </td>
         </tr>

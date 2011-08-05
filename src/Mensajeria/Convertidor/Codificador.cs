@@ -7,7 +7,7 @@ namespace Mensajeria.Convertidor
 {
     public class Codificador
     {
-        public static Valor Valor(EnumTipoDatoCampo tipoDato, byte[] trama, int inicio, int longitud)
+        public  Valor Valor(EnumTipoDatoCampo tipoDato, byte[] trama, int inicio, int longitud)
         {
             switch (tipoDato)
             {
@@ -25,7 +25,7 @@ namespace Mensajeria.Convertidor
             }
         }
 
-        public static Valor Valor(EnumTipoDatoCampo tipoDato,string mensaje)
+        public  Valor Valor(EnumTipoDatoCampo tipoDato,string mensaje)
         {
             switch (tipoDato)
             {
@@ -43,18 +43,18 @@ namespace Mensajeria.Convertidor
             }
         }
 
-        public static byte[] Codificacion(string mensaje)
+        public  byte[] Codificacion(string mensaje)
         {
             return Encoding.ASCII.GetBytes(mensaje);
         }
 
-        public static string Codificacion(byte[] mensaje)
+        public  string Codificacion(byte[] mensaje)
         {
             return Encoding.ASCII.GetString(mensaje);
         }
 
 
-        private static byte[] IntToBcd(Int64 i)
+        private  byte[] IntToBcd(Int64 i)
         {
             string s = i.ToString();
             int longitud = s.Length;
@@ -91,7 +91,7 @@ namespace Mensajeria.Convertidor
             return b;
         }
 
-        private static byte[] EnByte(byte[] trama, int inicio, int longitud)
+        private  byte[] EnByte(byte[] trama, int inicio, int longitud)
         {
             byte[] valorTrama = new byte[longitud];
             for (int i = 0; i < longitud; i++)

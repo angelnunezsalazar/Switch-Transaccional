@@ -3,7 +3,7 @@ namespace ColaMensajes
 {
     class Program
     {
-        static void Main(string[] args)
+         void Main(string[] args)
         {
             //UtilidadesCola.CrearCola("ColaEntidad1", false);
             //Cola.CrearCola(Cola.REQUEST_QUEQUE, false);

@@ -13,7 +13,7 @@ namespace DataAccess.Mensajeria
     {
         public static List<MENSAJE_TRANSACCIONAL> obtenerMensajeTransaccional()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.MENSAJE_TRANSACCIONAL.MergeOption = MergeOption.NoTracking;
                 return contexto.MENSAJE_TRANSACCIONAL.ToList<MENSAJE_TRANSACCIONAL>();
@@ -22,7 +22,7 @@ namespace DataAccess.Mensajeria
 
         public static MENSAJE_TRANSACCIONAL obtenerMensajeTransaccional(int codigoMensajeTransaccional)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.MENSAJE_TRANSACCIONAL.MergeOption = MergeOption.NoTracking;
                 return contexto.MENSAJE_TRANSACCIONAL.Include("MENSAJE").Include("MENSAJE.GRUPO_MENSAJE")
@@ -32,7 +32,7 @@ namespace DataAccess.Mensajeria
 
         public static MENSAJE_TRANSACCIONAL obtenerMensajeTransaccionalSinMensaje(int codigoMensajeTransaccional)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.MENSAJE_TRANSACCIONAL.MergeOption = MergeOption.NoTracking;
                 return contexto.MENSAJE_TRANSACCIONAL
@@ -42,7 +42,7 @@ namespace DataAccess.Mensajeria
 
         public static List<MENSAJE_TRANSACCIONAL> obtenerMensajeTransaccionalPorMensaje(int codigoMensaje)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.MENSAJE_TRANSACCIONAL.MergeOption = MergeOption.NoTracking;
                 return contexto.MENSAJE_TRANSACCIONAL.Include("CONDICION_MENSAJE")
@@ -54,7 +54,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -96,7 +96,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -130,7 +130,7 @@ namespace DataAccess.Mensajeria
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -157,7 +157,7 @@ namespace DataAccess.Mensajeria
             }
         }
 
-        private static DbCommand crearComando(dbSwitch contexto, MENSAJE_TRANSACCIONAL MensajeTransaccional, string query)
+        private static DbCommand crearComando(Switch contexto, MENSAJE_TRANSACCIONAL MensajeTransaccional, string query)
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             DbCommand Comando = contexto.CreateCommand(query, CommandType.Text);

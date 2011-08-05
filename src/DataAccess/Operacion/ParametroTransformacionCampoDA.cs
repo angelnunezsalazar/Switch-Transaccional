@@ -14,7 +14,7 @@ namespace DataAccess.Mensajeria
     {
         public static List<PARAMETRO_TRANSFORMACION_CAMPO> obtenerParametroTransformacionCampo()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.PARAMETRO_TRANSFORMACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 return (from p in contexto.PARAMETRO_TRANSFORMACION_CAMPO
@@ -24,7 +24,7 @@ namespace DataAccess.Mensajeria
 
         public static List<PARAMETRO_TRANSFORMACION_CAMPO> obtenerParametroTransformacionCampo(int codigoTransformacion, int codigoMensaje, int codigoCampo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.PARAMETRO_TRANSFORMACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 var listaParametros= (from p in contexto.PARAMETRO_TRANSFORMACION_CAMPO
@@ -43,7 +43,7 @@ namespace DataAccess.Mensajeria
 
         public static PARAMETRO_TRANSFORMACION_CAMPO obtenerParametroTransformacionCampo(int codigoParametro)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.PARAMETRO_TRANSFORMACION_CAMPO.MergeOption = MergeOption.NoTracking;
                 var listaParametros = (from p in contexto.PARAMETRO_TRANSFORMACION_CAMPO
@@ -62,7 +62,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
 
                     using (contexto.CreateConeccionScope())
@@ -121,7 +121,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
 
                     using (contexto.CreateConeccionScope())
@@ -163,7 +163,7 @@ namespace DataAccess.Mensajeria
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -191,7 +191,7 @@ namespace DataAccess.Mensajeria
         }
 
 
-        private static DbCommand crearComando(dbSwitch contexto, PARAMETRO_TRANSFORMACION_CAMPO parametroTransformacionCampo, string query)
+        private static DbCommand crearComando(Switch contexto, PARAMETRO_TRANSFORMACION_CAMPO parametroTransformacionCampo, string query)
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             DbCommand Comando = contexto.CreateCommand(query, CommandType.Text);

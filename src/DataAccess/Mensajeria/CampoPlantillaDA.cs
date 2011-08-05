@@ -15,18 +15,16 @@ namespace DataAccess.Mensajeria
     {
         public static List<CAMPO_PLANTILLA> obtenerCampoPlantilla()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
-            {
-                contexto.CAMPO_PLANTILLA.MergeOption = MergeOption.NoTracking;
-                return contexto.CAMPO_PLANTILLA.OrderBy(o => o.CMP_POSICION_RELATIVA).ToList<CAMPO_PLANTILLA>();
+            using (Switch contexto = new Switch())
+            {                
+                return contexto.CAMPO_PLANTILLA.AsNoTracking().OrderBy(o => o.CMP_POSICION_RELATIVA).ToList();
             }
         }
 
         public static List<CAMPO_PLANTILLA> obtenerCampoPlantillaNoAsignadosMensaje(int codigoMensaje)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
-                contexto.CAMPO_PLANTILLA.MergeOption = MergeOption.NoTracking;
                 var listaCampoPlantilla = (from m in contexto.MENSAJE
                                            where m.MEN_CODIGO == codigoMensaje
                                            from cp in contexto.CAMPO_PLANTILLA
@@ -37,13 +35,13 @@ namespace DataAccess.Mensajeria
                                           select c.CAMPO_PLANTILLA);
 
 
-                return listaCampoPlantilla.ToList<CAMPO_PLANTILLA>();
+                return listaCampoPlantilla.ToList();
             }
         }
 
         public static CAMPO_PLANTILLA obtenerCampoPlantilla(int codigo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.CAMPO_PLANTILLA.MergeOption = MergeOption.NoTracking;
                 return contexto.CAMPO_PLANTILLA.Include("TIPO_DATO").Include("GRUPO_MENSAJE")
@@ -53,7 +51,7 @@ namespace DataAccess.Mensajeria
 
         public static CAMPO_PLANTILLA obtenerCampoPlantillaSinRelaciones(int codigo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.CAMPO_PLANTILLA.MergeOption = MergeOption.NoTracking;
                 return contexto.CAMPO_PLANTILLA
@@ -63,7 +61,7 @@ namespace DataAccess.Mensajeria
 
         public static CAMPO_PLANTILLA obtenerCampoPlantillaPorPosicionRelativaPorGrupoMensaje(int posicionRelativa, int grupoMensaje)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.CAMPO_PLANTILLA.MergeOption = MergeOption.NoTracking;
                 return contexto.CAMPO_PLANTILLA
@@ -73,7 +71,7 @@ namespace DataAccess.Mensajeria
 
         public static List<CAMPO_PLANTILLA> obtenerCampoPlantillaCabeceraPorCodigoGrupoMensaje(int codigoGrupoMensaje)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.CAMPO_PLANTILLA.MergeOption = MergeOption.NoTracking;
                 var listaMensajes = (from c in contexto.CAMPO_PLANTILLA.Include("TIPO_DATO")
@@ -87,7 +85,7 @@ namespace DataAccess.Mensajeria
 
         public static List<CAMPO_PLANTILLA> obtenerCampoPlantillaCuerpoPorCodigoGrupoMensaje(int codigoGrupoMensaje)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.CAMPO_PLANTILLA.MergeOption = MergeOption.NoTracking;
                 var listaMensajes = (from c in contexto.CAMPO_PLANTILLA.Include("TIPO_DATO")
@@ -102,7 +100,7 @@ namespace DataAccess.Mensajeria
 
         public static List<CAMPO_PLANTILLA> obtenerCampoPlantillaPorCodigoGrupoMensaje(int codigoGrupoMensaje)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.CAMPO_PLANTILLA.MergeOption = MergeOption.NoTracking;
                 var listaMensajes = (from c in contexto.CAMPO_PLANTILLA.Include("TIPO_DATO")
@@ -118,7 +116,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -180,7 +178,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -228,7 +226,7 @@ namespace DataAccess.Mensajeria
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -266,7 +264,7 @@ namespace DataAccess.Mensajeria
             }
         }
 
-        private static DbCommand crearComando(dbSwitch contexto, CAMPO_PLANTILLA CampoPlantilla, string query)
+        private static DbCommand crearComando(Switch contexto, CAMPO_PLANTILLA CampoPlantilla, string query)
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
 

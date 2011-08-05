@@ -12,7 +12,7 @@ namespace Utilidades
 
     public class DllDinamica : IDllDinamica
     {
-        public static Func<string> DirectorioComponentes = () => ConfigurationManager.AppSettings["DirectorioComponentes"];
+        public  Func<string> DirectorioComponentes = () => ConfigurationManager.AppSettings["DirectorioComponentes"];
 
         public object Ejecutar(string componente, string clase, string metodo, object[] parametros)
         {

@@ -108,7 +108,7 @@
                 </asp:GridView>
                 <asp:ObjectDataSource ID="dsEntidad" runat="server" OldValuesParameterFormatString="original_{0}"
                     SelectMethod="obtenerEntidadComunicacionEnGrupoMensaje" TypeName="BusinessLayer.Comunicacion.EntidadComunicacionBL"
-                    OnSelected="dsEntidad_Selected" DataObjectTypeName="BusinessEntity.ENTIDAD_COMUNICACION"
+                    OnSelected="dsEntidad_Selected" DataObjectTypeName="BusinessEntity.EntidadComunicacion"
                     DeleteMethod="eliminarEntidadDeGrupoMensaje" OnDeleted="dsEntidad_Deleted">
                     <SelectParameters>
                         <asp:QueryStringParameter Name="codigoGrupoMensaje" QueryStringField="Codigo" Type="Int32" />

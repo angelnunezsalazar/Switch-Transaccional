@@ -13,7 +13,7 @@ namespace DataAccess.Parametros
     {
         public static List<COMPONENTE> obtenerComponente()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.COMPONENTE.MergeOption = MergeOption.NoTracking;
                 var lista= contexto.COMPONENTE.ToList<COMPONENTE>();
@@ -26,7 +26,7 @@ namespace DataAccess.Parametros
             try
             {
                 DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -64,7 +64,7 @@ namespace DataAccess.Parametros
             try
             {
                 DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -95,7 +95,7 @@ namespace DataAccess.Parametros
             try
             {
                 DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -121,7 +121,7 @@ namespace DataAccess.Parametros
             }
         }
 
-        private static DbCommand crearComando(dbSwitch contexto, COMPONENTE Componente, string query)
+        private static DbCommand crearComando(Switch contexto, COMPONENTE Componente, string query)
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
 

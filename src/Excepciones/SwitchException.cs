@@ -24,7 +24,7 @@ namespace Excepciones
           System.Runtime.Serialization.StreamingContext context)
             : base(info, context) { }
 
-        private static string MensajeException(EnumSwitchException tipoException)
+        private  string MensajeException(EnumSwitchException tipoException)
         {
             switch (tipoException)
             {

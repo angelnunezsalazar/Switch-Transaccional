@@ -16,7 +16,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -54,7 +54,7 @@ namespace DataAccess.Mensajeria
 
         public static GRUPO_VALIDACION obtenerGrupoValidacionPorCodigo(int codigo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.GRUPO_VALIDACION.MergeOption = MergeOption.NoTracking;
                 return contexto.GRUPO_VALIDACION.Include("MENSAJE").Include("MENSAJE.GRUPO_MENSAJE").Where(o => o.GRV_CODIGO == codigo).First();
@@ -63,7 +63,7 @@ namespace DataAccess.Mensajeria
 
         public static List<GRUPO_VALIDACION> obtenerGrupoValidacionComponente()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.GRUPO_VALIDACION.MergeOption = MergeOption.NoTracking;
                 return contexto.GRUPO_VALIDACION.Include("VALIDACION_CAMPO")
@@ -76,7 +76,7 @@ namespace DataAccess.Mensajeria
 
         public static List<GRUPO_VALIDACION> obtenerGrupoValidacion(int mensaje)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.GRUPO_VALIDACION.MergeOption = MergeOption.NoTracking;
                 return contexto.GRUPO_VALIDACION.Include("MENSAJE").Include("MENSAJE.GRUPO_MENSAJE").Where(o => o.MENSAJE.MEN_CODIGO == mensaje).ToList<GRUPO_VALIDACION>();
@@ -85,7 +85,7 @@ namespace DataAccess.Mensajeria
 
         public static List<GRUPO_VALIDACION> obtenerGrupoValidacionSinRelaciones(int mensaje)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.GRUPO_VALIDACION.MergeOption = MergeOption.NoTracking;
                 return contexto.GRUPO_VALIDACION.Where(o => o.MENSAJE.MEN_CODIGO == mensaje).ToList<GRUPO_VALIDACION>();
@@ -97,7 +97,7 @@ namespace DataAccess.Mensajeria
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -128,7 +128,7 @@ namespace DataAccess.Mensajeria
 
         public static List<GRUPO_VALIDACION> obtenerListaGrupoValidacionComponente()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.GRUPO_VALIDACION.MergeOption = MergeOption.NoTracking;
                 var listaGrupoValidacion =
@@ -146,7 +146,7 @@ namespace DataAccess.Mensajeria
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {

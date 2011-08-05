@@ -37,7 +37,7 @@
                                     <span class="texto">Nombre</span>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtNombre" runat="server" Text='<%# Bind("PSR_NOMBRE") %>' MaxLength="50"
+                                    <asp:TextBox ID="txtNombre" runat="server" Text='<%# Bind("Nombre") %>' MaxLength="50"
                                         Width="250px" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre"
                                         ErrorMessage="Ingrese el Nombre" ValidationGroup="ModificarPuntoServicio">*</asp:RequiredFieldValidator>
@@ -45,13 +45,13 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <span class="texto">Direccion</span>
+                                    <span class="texto"></span>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtDireccion" runat="server" Text='<%# Bind("PSR_DIRECCION") %>'
+                                    <asp:TextBox ID="txt" runat="server" Text='<%# Bind("") %>'
                                         MaxLength="100" Width="350px" />
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDireccion"
-                                        ErrorMessage="Ingrese la Direccion" ValidationGroup="ModificarPuntoServicio">*</asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt"
+                                        ErrorMessage="Ingrese la " ValidationGroup="ModificarPuntoServicio">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
@@ -59,7 +59,7 @@
                                     <span class="texto">Estado</span>
                                 </td>
                                 <td>
-                                    <asp:CheckBox ID="chkEstado" runat="server" Checked='<%# Bind("PSR_ESTADO") %>' />
+                                    <asp:CheckBox ID="chkEstado" runat="server" Checked='<%# Bind("Estado") %>' />
                                 </td>
                             </tr>
                             <tr>
@@ -73,8 +73,8 @@
                     </EditItemTemplate>
                 </asp:FormView>
                 <asp:ObjectDataSource ID="dsPuntoServicio" runat="server" OldValuesParameterFormatString="original_{0}"
-                    SelectMethod="obtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL"
-                    DataObjectTypeName="BusinessEntity.PUNTO_SERVICIO" UpdateMethod="modificarPuntoServicio"
+                    SelectMethod="ObtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL"
+                    DataObjectTypeName="BusinessEntity.PuntoServicio" UpdateMethod="ModificarPuntoServicio"
                     OnUpdated="dsPuntoServicio_Updated">
                     <SelectParameters>
                         <asp:QueryStringParameter Name="codigo" QueryStringField="Codigo" Type="Int32" />

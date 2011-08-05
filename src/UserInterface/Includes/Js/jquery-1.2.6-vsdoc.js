@@ -5228,7 +5228,7 @@ jQuery.fn.extend({
 		///	</summary>
 		///	<private />
 		var offsetParent = this[0].offsetParent;
-		while ( offsetParent && (!/^body|html$/i.test(offsetParent.tagName) && jQuery.css(offsetParent, 'position') == 'static') )
+		while ( offsetParent && (!/^body|html$/i.test(offsetParent.tagName) && jQuery.css(offsetParent, 'position') == '') )
 			offsetParent = offsetParent.offsetParent;
 		return jQuery(offsetParent);
 	}

@@ -6,7 +6,7 @@ namespace Utilidades
     public class ConvertidorUtil
     {
         private const int LONGITUD_BYTE = 8;
-        public static string ToHex(string palabra)
+        public  string ToHex(string palabra)
         {
             string resultado = "";
             for (int i = 0; i < palabra.Length; i++)
@@ -16,7 +16,7 @@ namespace Utilidades
             return resultado;
         }
 
-        public static bool[] toBoolArray(byte[] arregloBytes)
+        public  bool[] toBoolArray(byte[] arregloBytes)
         {
             bool[] arregloBools = new bool[arregloBytes.Length * LONGITUD_BYTE];
             int posicionArregloBools = 0;
@@ -32,7 +32,7 @@ namespace Utilidades
             return arregloBools;
         }
 
-        private static string byte_to_hex(byte n)
+        private  string byte_to_hex(byte n)
         {
             string resp = "";
             int h = (n & 0xF0) >> 4;

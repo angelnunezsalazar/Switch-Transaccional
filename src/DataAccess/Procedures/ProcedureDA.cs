@@ -9,7 +9,7 @@ namespace DataAccess.Procedures
     {
         public static object EjecutarProcedure(string procedure, string parametro)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 using (SqlCommand Comando = (SqlCommand)contexto.CreateCommand(procedure, CommandType.StoredProcedure))
                 {

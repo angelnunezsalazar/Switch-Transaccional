@@ -15,7 +15,7 @@ namespace DataAccess.Comunicacion
     {
         public static List<PROTOCOLO> obtenerProtocolo()
         {
-            using (dbSwitch contexto = new dbSwitch())
+            using (Switch contexto = new Switch())
             {
                 contexto.PROTOCOLO.MergeOption = MergeOption.NoTracking;
                 return contexto.PROTOCOLO.Include("TIPO_COMUNICACION").ToList<PROTOCOLO>();
@@ -24,7 +24,7 @@ namespace DataAccess.Comunicacion
 
         public static PROTOCOLO obtenerProtocolo(int codigo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.PROTOCOLO.MergeOption = MergeOption.NoTracking;
                 return contexto.PROTOCOLO.Include("TIPO_COMUNICACION").Where(o => o.PTR_CODIGO == codigo).FirstOrDefault<PROTOCOLO>();
@@ -33,11 +33,11 @@ namespace DataAccess.Comunicacion
 
         public static List<PROTOCOLO> obtenerProtocolosNoAsignados()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.PROTOCOLO.MergeOption = MergeOption.NoTracking;
                 List<PROTOCOLO> lista = (from p in contexto.PROTOCOLO
-                                         where p.ENTIDAD_COMUNICACION.Count == 0
+                                         where p.EntidadComunicacion.Count == 0
                                          select p).ToList<PROTOCOLO>();
 
                 return lista;
@@ -50,7 +50,7 @@ namespace DataAccess.Comunicacion
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -115,7 +115,7 @@ namespace DataAccess.Comunicacion
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -160,7 +160,7 @@ namespace DataAccess.Comunicacion
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -200,7 +200,7 @@ namespace DataAccess.Comunicacion
         }
 
 
-        private static DbCommand crearComando(dbSwitch contexto,PROTOCOLO Protocolo, string query)
+        private static DbCommand crearComando(Switch contexto,PROTOCOLO Protocolo, string query)
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             DbCommand Comando = contexto.CreateCommand(query, CommandType.Text);

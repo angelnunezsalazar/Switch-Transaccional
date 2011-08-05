@@ -10,14 +10,14 @@ namespace Switch.Comunicacion
 {
     public class Comunicacion : Componente
     {
-        List<ENTIDAD_COMUNICACION> listaEntidades;
+        List<EntidadComunicacion> listaEntidades;
 
         public Comunicacion(IFactoryDA factoryDA)
         {
             listaEntidades = factoryDA.Entidad();
         }
 
-        public ENTIDAD_COMUNICACION ObtenerEntidad(int idEntidad)
+        public EntidadComunicacion ObtenerEntidad(int idEntidad)
         {
             return listaEntidades.Where(e => e.EDC_CODIGO == idEntidad).SingleOrDefault();
         }
@@ -41,12 +41,12 @@ namespace Switch.Comunicacion
 
     public class EnviarMensaje : Paso
     {
-        public ENTIDAD_COMUNICACION EntidadComunicacion { get; private set; }
+        public EntidadComunicacion EntidadComunicacion { get; private set; }
 
         public EnviarMensaje(PASO_DINAMICA pasoDinamica)
             : base(pasoDinamica)
         {
-            EntidadComunicacion = pasoDinamica.ENTIDAD_COMUNICACION;
+            EntidadComunicacion = pasoDinamica.EntidadComunicacion;
         }
 
         public override EnumResultadoPaso EjecutarPaso(Mensajeria.Mensajes.Mensaje mensajeOrigen)

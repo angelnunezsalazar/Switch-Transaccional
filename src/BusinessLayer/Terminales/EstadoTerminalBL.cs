@@ -1,37 +1,26 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using BusinessEntity;
-using DataAccess.Terminales;
 
 namespace BusinessLayer.Terminales
 {
+    using System;
+
+    using DataAccess.Aspects;
+    using DataAccess.Services;
+
+
     [DataObject(true)]
-    public class EstadoTerminalBL
+    public class EstadoTerminalBL : Service<EstadoTerminal>
     {
-
-        public static ESTADO_TERMINAL obtenerEstadoTerminal(int codigo)
+        [Transaction]
+        public override void Eliminar(EstadoTerminal oldEntity)
         {
-            return EstadoTerminalDA.obtenerEstadoTerminal(codigo);
+            EstadoTerminal estadoTerminal = dataAccess.Get(oldEntity.Id);
+            if (estadoTerminal.Terminales.Count > 0)
+                throw new Exception("El Punto de Servicio esta asignado a un Terminal y no se puede eliminar");
+
+            dataAccess.Remove(estadoTerminal);
         }
 
-        public static List<ESTADO_TERMINAL> obtenerEstadoTerminal()
-        {
-            return EstadoTerminalDA.obtenerEstadoTerminal();
-        }
-
-        public static EstadoOperacion insertarEstadoTerminal(ESTADO_TERMINAL estadoTerminal)
-        {
-            return EstadoTerminalDA.insertarEstadoTerminal(estadoTerminal);
-        }
-
-        public static EstadoOperacion modificarEstadoTerminal(ESTADO_TERMINAL estadoTerminal)
-        {
-            return EstadoTerminalDA.modificarEstadoTerminal(estadoTerminal);
-        }
-
-        public static EstadoOperacion eliminarEstadoTerminal(ESTADO_TERMINAL estadoTerminal)
-        {
-            return EstadoTerminalDA.eliminarEstadoTerminal(estadoTerminal);
-        }
     }
 }

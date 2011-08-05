@@ -200,12 +200,12 @@ public class GridViewTemplate : ITemplate
         }
     }
 
-    public static string IdFooter(string fieldName)
+    public  string IdFooter(string fieldName)
     {
         return "txt" + fieldName + "Footer";
     }
 
-    public static string IdEdit(string fieldName)
+    public  string IdEdit(string fieldName)
     {
         return "txt" + fieldName + "Edit";
     }

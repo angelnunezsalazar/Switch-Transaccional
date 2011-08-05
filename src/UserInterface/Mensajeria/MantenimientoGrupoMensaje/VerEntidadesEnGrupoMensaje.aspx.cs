@@ -14,10 +14,10 @@ namespace UserInterface.Mensajeria.MantenimientoGrupoMensaje
 
         protected void dsEntidad_Selected(object sender, ObjectDataSourceStatusEventArgs e)
         {
-            List<ENTIDAD_COMUNICACION> lista = (List<ENTIDAD_COMUNICACION>)e.ReturnValue;
+            List<EntidadComunicacion> lista = (List<EntidadComunicacion>)e.ReturnValue;
             if (lista.Count == 0)
             {
-                ENTIDAD_COMUNICACION entidad = new ENTIDAD_COMUNICACION();
+                EntidadComunicacion entidad = new EntidadComunicacion();
                 entidad.EDC_NOMBRE = "";
                 lista.Add(entidad);
             }

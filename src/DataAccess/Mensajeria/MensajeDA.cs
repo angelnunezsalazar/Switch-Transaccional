@@ -14,7 +14,7 @@ namespace DataAccess.Mensajeria
     {
         public static List<MENSAJE> obtenerMensaje()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.MENSAJE.MergeOption = MergeOption.NoTracking;
                 return contexto.MENSAJE.ToList<MENSAJE>();
@@ -23,7 +23,7 @@ namespace DataAccess.Mensajeria
 
         public static MENSAJE obtenerMensaje(int codigo)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.MENSAJE.MergeOption = MergeOption.NoTracking;
                 return contexto.MENSAJE.Include("GRUPO_MENSAJE").Where(o => o.MEN_CODIGO == codigo).FirstOrDefault<MENSAJE>();
@@ -33,7 +33,7 @@ namespace DataAccess.Mensajeria
         public static List<MENSAJE> obtenerMensajePorCodigoGrupoMensaje(int codigoGrupoMensaje)
         {
 
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.MENSAJE.MergeOption = MergeOption.NoTracking;
                 var listaMensajes = from m in contexto.MENSAJE
@@ -49,7 +49,7 @@ namespace DataAccess.Mensajeria
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
 
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.MENSAJE.MergeOption = MergeOption.NoTracking;
                 DbCommand Comando = contexto.CreateCommand(
@@ -66,7 +66,7 @@ namespace DataAccess.Mensajeria
 
         public static List<MENSAJE> obtenerMensajeConCamposPorCodigoGrupoMensaje(int codigoGrupoMensaje)
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.MENSAJE.MergeOption = MergeOption.NoTracking;
                 var listaMensajes = from m in contexto.MENSAJE.Include("CAMPO").Include("CAMPO.CAMPO_PLANTILLA")
@@ -80,7 +80,7 @@ namespace DataAccess.Mensajeria
 
         public static List<MENSAJE> obtenerMensajeConCamposConTipoDato()
         {
-            using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+            using (Switch contexto = new Switch())
             {
                 contexto.MENSAJE.MergeOption = MergeOption.NoTracking;
                 var listaMensajes = from m in contexto.MENSAJE.Include("CAMPO").Include("TIPO_DATO")
@@ -95,7 +95,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
 
                         using (contexto.CreateConeccionScope())
@@ -137,7 +137,7 @@ namespace DataAccess.Mensajeria
         {
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -172,7 +172,7 @@ namespace DataAccess.Mensajeria
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
             try
             {
-                using (dbSwitch contexto = new dbSwitch(CadenaConexion.getInstance().conexionEntidades))
+                using (Switch contexto = new Switch())
                 {
                     using (contexto.CreateConeccionScope())
                     {
@@ -211,7 +211,7 @@ namespace DataAccess.Mensajeria
             }
         }
 
-        private static DbCommand crearComando(dbSwitch contexto, MENSAJE Mensaje, string query)
+        private static DbCommand crearComando(Switch contexto, MENSAJE Mensaje, string query)
         {
             DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
 
