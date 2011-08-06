@@ -123,7 +123,7 @@
                     TypeName="BusinessLayer.Terminales.TerminalBL" UpdateMethod="modificarTerminal"
                     OnUpdating="oTerminal_Updating" onupdated="oTerminal_Updated">
                     <SelectParameters>
-                        <asp:QueryStringParameter Name="Codigo" QueryStringField="Codigo" Type="Int32" />
+                        <asp:QueryStringParameter Name="Id" QueryStringField="Id" Type="Int32" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
             </td>

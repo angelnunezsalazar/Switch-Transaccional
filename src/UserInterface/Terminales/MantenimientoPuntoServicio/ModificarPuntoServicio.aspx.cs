@@ -12,14 +12,9 @@ namespace UserInterface.Terminales.MantenimientoPuntoServicio
 
         protected void dsPuntoServicio_Updated(object sender, ObjectDataSourceStatusEventArgs e)
         {
-            BusinessEntity.EstadoOperacion Estado = ((BusinessEntity.EstadoOperacion)e.ReturnValue);
-            if (Estado.Estado)
+            if (e.Exception == null)
             {
                 Response.Redirect("~/Terminales/MantenimientoPuntoServicio/ConsultarPuntoServicio.aspx");
-            }
-            else
-            {
-                this.lblMensaje.Text = Estado.Mensaje;
             }
         }
     }

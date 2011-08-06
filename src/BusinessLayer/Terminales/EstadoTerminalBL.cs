@@ -10,6 +10,7 @@ namespace BusinessLayer.Terminales
 
 
     [DataObject(true)]
+    [ExceptionHandling]
     public class EstadoTerminalBL : Service<EstadoTerminal>
     {
         [Transaction]
@@ -21,6 +22,5 @@ namespace BusinessLayer.Terminales
 
             dataAccess.Remove(estadoTerminal);
         }
-
     }
 }

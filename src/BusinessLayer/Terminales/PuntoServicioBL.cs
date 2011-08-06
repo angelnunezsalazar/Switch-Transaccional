@@ -11,15 +11,22 @@ namespace BusinessLayer.Terminales
     using DataAccess.Aspects;
 
     [DataObject(true)]
+    [ExceptionHandling]
     public class PuntoServicioBL : Service<PuntoServicio>
     {
         public List<PuntoServicio> Buscar(string nombre, string estado)
         {
-            var puntosServicio = context.PuntoServicio.Where(x => x.Nombre.Contains(nombre));
+            var puntosServicio = context.PuntoServicio.AsQueryable();
 
-            if (estado != "%")
+            if (!string.IsNullOrEmpty(nombre))
             {
-                puntosServicio = puntosServicio.Where(x => x.Estado == Boolean.Parse(estado));
+                puntosServicio = puntosServicio.Where(x => x.Nombre.Contains(nombre));
+            }
+
+            if (!string.IsNullOrEmpty(estado))
+            {
+                var estadoParsed = Boolean.Parse(estado);
+                puntosServicio = puntosServicio.Where(x => x.Estado == estadoParsed);
             }
 
             return puntosServicio.ToList();

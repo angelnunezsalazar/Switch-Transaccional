@@ -11,21 +11,19 @@ namespace UserInterface.Terminales.MantenimientoEstadoTerminal
 
     public partial class ConsultarEstadoTerminal : Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            this.lblMensaje.Text = "";
-        }
-
         protected void Button4_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
             {
                 string descripcion = ((TextBox)this.grvEstadoTerminal.FooterRow.FindControl("txtDescripcion")).Text;
-                
-                EstadoTerminalBL estadoTerminalBl=new EstadoTerminalBL();
-                estadoTerminalBl.Insertar(new EstadoTerminal { Nombre = descripcion });
-                this.grvEstadoTerminal.DataBind();
 
+                EstadoTerminalBL estadoTerminalBl = new EstadoTerminalBL();
+                try
+                {
+                    estadoTerminalBl.Insertar(new EstadoTerminal { Nombre = descripcion });
+                    this.grvEstadoTerminal.DataBind();
+                }
+                catch { }
             }
         }
 

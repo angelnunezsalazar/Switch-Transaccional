@@ -1,0 +1,6 @@
+BASE DATOS
+- CriptografíaCampo, revisar si es necesario los ids de campo y mensaje
+- ParametroTransformacionCampo, revisar si e necesario varios FKS
+- FunciónUsuario no tiene llaves FK
+- ReglaMEnsajeTransaccional, fijatar si las columnas campoid y mensajeid son necesarias
+- TransformacionCampo y ValidacionCampo, revisar sus sus columnas que antes eran compuestas ahora son necesarias y si necesitan ser KFS

@@ -1,5 +1,6 @@
 namespace DataAccess.Services
 {
+    using System;
     using System.Collections.Generic;
 
     using DataAccess;
@@ -8,6 +9,7 @@ namespace DataAccess.Services
     using StructureMap;
     using BusinessEntity;
 
+    [ExceptionHandling]
     public class Service<T> where T : Entity
     {
         protected readonly DatabaseContext context;

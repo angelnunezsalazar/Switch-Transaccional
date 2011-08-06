@@ -1,5 +1,6 @@
 namespace DataAccess.DependencyResolution
 {
+    using DataAccess.Errors;
     using DataAccess.Persistence;
 
     using StructureMap;
@@ -8,8 +9,10 @@ namespace DataAccess.DependencyResolution
     {
         public static void Register()
         {
-            ObjectFactory.Initialize(x =>{ 
-                        x.For<DatabaseContext>().HybridHttpOrThreadLocalScoped(); 
+            ObjectFactory.Initialize(x =>
+            {
+                x.For<DatabaseContext>().HybridHttpOrThreadLocalScoped();
+                x.For<IErrorStorage>().HybridHttpOrThreadLocalScoped().Use<ErrorStorage>();
             });
         }
     }

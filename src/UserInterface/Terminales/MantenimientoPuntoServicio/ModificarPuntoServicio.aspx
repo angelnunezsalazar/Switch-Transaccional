@@ -29,7 +29,7 @@
         <tr>
             <td>
                 <asp:FormView ID="FormView1" runat="server" DataSourceID="dsPuntoServicio" DefaultMode="Edit"
-                    DataKeyNames="PSR_CODIGO" HorizontalAlign="Center">
+                    DataKeyNames="Id" HorizontalAlign="Center">
                     <EditItemTemplate>
                         <table style="width: 100%;">
                             <tr>
@@ -48,7 +48,7 @@
                                     <span class="texto"></span>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txt" runat="server" Text='<%# Bind("") %>'
+                                    <asp:TextBox ID="txt" runat="server" Text='<%# Bind("Direccion") %>'
                                         MaxLength="100" Width="350px" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt"
                                         ErrorMessage="Ingrese la " ValidationGroup="ModificarPuntoServicio">*</asp:RequiredFieldValidator>
@@ -73,11 +73,13 @@
                     </EditItemTemplate>
                 </asp:FormView>
                 <asp:ObjectDataSource ID="dsPuntoServicio" runat="server" OldValuesParameterFormatString="original_{0}"
-                    SelectMethod="ObtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL"
-                    DataObjectTypeName="BusinessEntity.PuntoServicio" UpdateMethod="ModificarPuntoServicio"
-                    OnUpdated="dsPuntoServicio_Updated">
+                    SelectMethod="Obtener" 
+                    TypeName="BusinessLayer.Terminales.PuntoServicioBL"
+                    DataObjectTypeName="BusinessEntity.PuntoServicio"
+                    OnUpdated="dsPuntoServicio_Updated" 
+                    UpdateMethod="Modificar">
                     <SelectParameters>
-                        <asp:QueryStringParameter Name="codigo" QueryStringField="Codigo" Type="Int32" />
+                        <asp:QueryStringParameter Name="id" QueryStringField="Id" Type="Int32" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
             </td>

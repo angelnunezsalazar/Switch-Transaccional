@@ -67,7 +67,7 @@
                     <asp:ListItem Value="0">Todos</asp:ListItem>
                 </asp:DropDownList>
                 <asp:ObjectDataSource ID="oEstadoTerminal" runat="server" OldValuesParameterFormatString="original_{0}"
-                    SelectMethod="obtenerEstadoTerminal" TypeName="BusinessLayer.Terminales.EstadoTerminalBL">
+                    SelectMethod="ObtenerTodos" TypeName="BusinessLayer.Terminales.EstadoTerminalBL">
                 </asp:ObjectDataSource>
             </td>
         </tr>
@@ -113,7 +113,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:ImageButton ID="imgbtnModificar" runat="server" PostBackUrl='<%# "~/Terminales/MantenimientoTerminal/ModificarTerminal.aspx?Codigo="+ Eval("Id") %>'
+                                <asp:ImageButton ID="imgbtnModificar" runat="server" PostBackUrl='<%# "~/Terminales/MantenimientoTerminal/ModificarTerminal.aspx?Id="+ Eval("Id") %>'
                                     AlternateText="Modificar" ImageUrl="~/Includes/Imagenes/iconEdit.png" />
                             </ItemTemplate>
                         </asp:TemplateField>
@@ -128,13 +128,13 @@
                 <asp:ObjectDataSource ID="oTerminal" runat="server" OldValuesParameterFormatString="original_{0}"
                     SelectMethod="obtenerTerminal" 
                     TypeName="BusinessLayer.Terminales.TerminalBL" 
-                    DataObjectTypeName="BusinessEntity.Terminal" DeleteMethod="eliminarTerminal">
+                    DataObjectTypeName="BusinessEntity.Terminal" DeleteMethod="Eliminar">
                     <SelectParameters>
-                        <asp:ControlParameter ControlID="txtSerial" DefaultValue="%" Name="serial" PropertyName="Text"
+                        <asp:ControlParameter ControlID="txtSerial" Name="serial" PropertyName="Text"
                             Type="String" />
-                        <asp:ControlParameter ControlID="ddlEntidadComunicacion" DefaultValue="0" Name="entidadComunicacion"
+                        <asp:ControlParameter ControlID="ddlEntidadComunicacion" DefaultValue="0" Name="entidadComunicacionId"
                             PropertyName="SelectedValue" Type="Int32" />
-                        <asp:ControlParameter ControlID="ddlEstadoTerminal" DefaultValue="0" Name="estadoTerminal"
+                        <asp:ControlParameter ControlID="ddlEstadoTerminal" DefaultValue="0" Name="estadoTerminalId"
                             PropertyName="SelectedValue" Type="Int32" />
                     </SelectParameters>
                 </asp:ObjectDataSource>
@@ -152,7 +152,7 @@
         </tr>
         <tr>
             <td style="text-align: center">
-                <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+                &nbsp;
             </td>
         </tr>
     </table>

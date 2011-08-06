@@ -86,11 +86,6 @@
                 &nbsp;
             </td>
         </tr>
-        <tr>
-            <td style="text-align: center">
-                <asp:Label ID="lblMensaje" runat="server"></asp:Label>
-            </td>
-        </tr>
     </table>
     <asp:ValidationSummary ID="vlsNuevoEstado" runat="server" ValidationGroup="NuevoEstado"
         ShowMessageBox="True" ShowSummary="False" HeaderText="Se han producido los siguientes errores:" />

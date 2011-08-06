@@ -15,6 +15,9 @@
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
+        <div style="text-align: center; color: Red">
+            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+        </div>
     </div>
     </form>
 </body>

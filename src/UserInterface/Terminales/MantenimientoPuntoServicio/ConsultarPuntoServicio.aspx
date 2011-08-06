@@ -44,7 +44,7 @@
             </td>
             <td>
                 <asp:DropDownList ID="DropDownList1" runat="server">
-                    <asp:ListItem Value="%">Todos</asp:ListItem>
+                    <asp:ListItem Value="">Todos</asp:ListItem>
                     <asp:ListItem Value="true">Habilitado</asp:ListItem>
                     <asp:ListItem Value="false">Deshabilitado</asp:ListItem>
                 </asp:DropDownList>
@@ -86,7 +86,7 @@
                         <asp:CheckBoxField DataField="Estado" HeaderText="Habilitado"/>
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:ImageButton ID="imgModificar" runat="server" PostBackUrl='<%# "~/Terminales/MantenimientoPuntoServicio/ModificarPuntoServicio.aspx?Codigo="+ Eval("Id") %>'
+                                <asp:ImageButton ID="imgModificar" runat="server" PostBackUrl='<%# "~/Terminales/MantenimientoPuntoServicio/ModificarPuntoServicio.aspx?Id="+ Eval("Id") %>'
                                     AlternateText="Modificar" Height="16px" ImageUrl="~/Includes/Imagenes/iconEdit.png" />
                             </ItemTemplate>
                         </asp:TemplateField>
@@ -100,14 +100,15 @@
                     
                 </asp:GridView>
                 <asp:ObjectDataSource ID="dsPuntoServicio" runat="server" OldValuesParameterFormatString="original_{0}"
-                    SelectMethod="ObtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL"
-                    DataObjectTypeName="BusinessEntity.PuntoServicio"
-                    OnDeleted="dsPuntoServicio_Deleted">
+                    SelectMethod="Buscar" 
+                    DeleteMethod="Eliminar"
+                    TypeName="BusinessLayer.Terminales.PuntoServicioBL"
+                    DataObjectTypeName="BusinessEntity.PuntoServicio">
                     <SelectParameters>
-                        <asp:ControlParameter ControlID="txtNombre" DefaultValue="%" Name="nombre" PropertyName="Text"
+                        <asp:ControlParameter ControlID="txtNombre" Name="nombre" PropertyName="Text"
                             Type="String" />
                         <asp:ControlParameter ControlID="DropDownList1" Name="estado" PropertyName="SelectedValue"
-                            Type="String" DefaultValue="%" />
+                            Type="String"/>
                     </SelectParameters>
                 </asp:ObjectDataSource>
             </td>
@@ -125,11 +126,6 @@
         <tr>
             <td style="text-align: center">
                 &nbsp;</td>
-        </tr>
-        <tr>
-            <td style="text-align: center">
-                <asp:Label ID="lblError" runat="server"></asp:Label>
-            </td>
         </tr>
     </table>
 </asp:Content>

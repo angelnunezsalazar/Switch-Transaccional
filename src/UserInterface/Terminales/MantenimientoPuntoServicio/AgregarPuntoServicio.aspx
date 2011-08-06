@@ -52,7 +52,7 @@
                                     <span class="texto">Dirección</span>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txt" runat="server" Text='<%# Bind("") %>'
+                                    <asp:TextBox ID="txt" runat="server" Text='<%# Bind("Direccion") %>'
                                         MaxLength="100" Width="350px" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt"
                                         ErrorMessage="Debe ingresar la Dirección" ValidationGroup="AgregarPuntoServicio">*</asp:RequiredFieldValidator>
@@ -80,8 +80,8 @@
                     </InsertItemTemplate>
                 </asp:FormView>
                 <asp:ObjectDataSource ID="oPuntoServicio" runat="server" DataObjectTypeName="BusinessEntity.PuntoServicio"
-                    InsertMethod="insertarPuntoServicio" OldValuesParameterFormatString="original_{0}"
-                    SelectMethod="ObtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL"
+                    InsertMethod="Insertar" OldValuesParameterFormatString="original_{0}"
+                    SelectMethod="Obtener" TypeName="BusinessLayer.Terminales.PuntoServicioBL"
                     OnInserted="oPuntoServicio_Inserted"></asp:ObjectDataSource>
             </td>
         </tr>
