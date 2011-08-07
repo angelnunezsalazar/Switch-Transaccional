@@ -22,8 +22,7 @@ namespace DataAccess.Services
             dataAccess = new DataAccess<T>(context);
         }
 
-
-        public List<T> ObtenerTodos()
+        public virtual List<T> ObtenerTodos()
         {
             var obtenerTodos = dataAccess.All();
             return obtenerTodos;

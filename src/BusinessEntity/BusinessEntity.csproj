@@ -101,11 +101,6 @@
     <Compile Include="CriptografiaCampo.cs">
       <DependentUpon>DatabaseContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseContext.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
     <Compile Include="DinamicaCriptografia.cs">
       <DependentUpon>DatabaseContext.tt</DependentUpon>
     </Compile>

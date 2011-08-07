@@ -36,7 +36,7 @@
         <tr>
             <td>
                 <asp:FormView ID="fvTerminal" runat="server" DataSourceID="oTerminal" DefaultMode="Edit"
-                    HorizontalAlign="Center" Width="400px">
+                    HorizontalAlign="Center" Width="400px" DataKeyNames="Id">
                     <EditItemTemplate>
                         <table style="width: 100%;">
                             <tr>
@@ -44,7 +44,7 @@
                                     <span class="texto">Número de Serie</span>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtSerial" runat="server" MaxLength="20" Width="160px" Text='<%# Bind("TRM_SERIAL") %>' />
+                                    <asp:TextBox ID="txtSerial" runat="server" MaxLength="20" Width="160px" Text='<%# Bind("Serial") %>' />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtSerial"
                                         ErrorMessage="Debe ingresar el Número de Serie" ValidationGroup="AgregarTerminal">*</asp:RequiredFieldValidator>
                                 </td>
@@ -54,15 +54,15 @@
                                     <span class="texto">Entidad de Comunicación</span>
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="ddlEntidad" runat="server" DataSourceID="oEntidad" DataTextField="EDC_NOMBRE"
-                                        DataValueField="EDC_CODIGO" AppendDataBoundItems="True" Width="200px"
-                                        SelectedValue='<%# Eval("EntidadComunicacion.EDC_CODIGO")%>'>
+                                    <asp:DropDownList ID="ddlEntidad" runat="server" DataSourceID="oEntidad" DataTextField="Nombre"
+                                        DataValueField="Id" AppendDataBoundItems="True" Width="200px"
+                                        SelectedValue='<%# Bind("EntidadComunicacionId")%>' >
                                         <asp:ListItem Value="-1">Seleccionar Entidad</asp:ListItem>
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ddlEntidad"
                                         ErrorMessage="Debe ingresar la Entidad de Comunicación" InitialValue="-1" ValidationGroup="AgregarTerminal">*</asp:RequiredFieldValidator>
                                     <asp:ObjectDataSource ID="oEntidad" runat="server" OldValuesParameterFormatString="original_{0}"
-                                        SelectMethod="obtenerEntidadComunicacion" TypeName="BusinessLayer.Comunicacion.EntidadComunicacionBL">
+                                        SelectMethod="ObtenerTodos" TypeName="BusinessLayer.Comunicacion.EntidadComunicacionBL">
                                     </asp:ObjectDataSource>
                                 </td>
                             </tr>
@@ -72,14 +72,14 @@
                                 </td>
                                 <td>
                                     <asp:DropDownList ID="ddlPtoServicio" runat="server" DataSourceID="oPtoServicio"
-                                        DataTextField="PSR_NOMBRE" DataValueField="PSR_CODIGO" AppendDataBoundItems="True"
-                                        Width="200px" SelectedValue='<%# Eval("PuntoServicio.PSR_CODIGO")%>'>
+                                        DataTextField="Nombre" DataValueField="Id" AppendDataBoundItems="True"
+                                        Width="200px" SelectedValue='<%# Bind("PuntoServicioId")%>'>
                                         <asp:ListItem Value="-1">Seleccionar Punto de Servicio</asp:ListItem>
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlPtoServicio"
                                         ErrorMessage="Debe ingresar el Punto de Servicio" InitialValue="-1" ValidationGroup="AgregarTerminal">*</asp:RequiredFieldValidator>
                                     <asp:ObjectDataSource ID="oPtoServicio" runat="server" OldValuesParameterFormatString="original_{0}"
-                                        SelectMethod="ObtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL">
+                                        SelectMethod="ObtenerTodos" TypeName="BusinessLayer.Terminales.PuntoServicioBL">
                                     </asp:ObjectDataSource>
                                 </td>
                             </tr>
@@ -89,15 +89,17 @@
                                 </td>
                                 <td>
                                     <asp:DropDownList ID="ddlEstadoTerminal" runat="server" DataSourceID="dsEstadoTerminal"
-                                        DataTextField="EST_NOMBRE" DataValueField="EST_CODIGO" AppendDataBoundItems="True"
-                                        Width="200px" SelectedValue='<%# Eval("EstadoTerminal.EST_CODIGO")%>'>
+                                        DataTextField="Nombre" DataValueField="Id" AppendDataBoundItems="True"
+                                        Width="200px" SelectedValue='<%# Bind("EstadoTerminalId")%>'>
                                         <asp:ListItem Value="-1">Seleccionar Estado Terminal</asp:ListItem>
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlEstadoTerminal"
                                         ErrorMessage="Debe ingresar el Estado del Terminal" InitialValue="-1" ValidationGroup="AgregarTerminal">*</asp:RequiredFieldValidator>
-                                    <asp:EntityDataSource ID="dsEstadoTerminal" runat="server" ConnectionString="name=Switch"
-                                        DefaultContainerName="Switch" EntitySetName="EstadoTerminal">
-                                    </asp:EntityDataSource>
+                                    <asp:ObjectDataSource ID="dsEstadoTerminal" runat="server"
+                                        OldValuesParameterFormatString="original_{0}"
+                                        SelectMethod="ObtenerTodos" 
+                                        TypeName="BusinessLayer.Terminales.EstadoTerminalBL">
+                                    </asp:ObjectDataSource>
                                 </td>
                             </tr>
                         </table>
@@ -119,9 +121,11 @@
                     </EditItemTemplate>
                 </asp:FormView>
                 <asp:ObjectDataSource ID="oTerminal" runat="server" DataObjectTypeName="BusinessEntity.Terminal"
-                    OldValuesParameterFormatString="original_{0}" SelectMethod="obtenerTerminal"
-                    TypeName="BusinessLayer.Terminales.TerminalBL" UpdateMethod="modificarTerminal"
-                    OnUpdating="oTerminal_Updating" onupdated="oTerminal_Updated">
+                    OldValuesParameterFormatString="original_{0}" 
+                    SelectMethod="Obtener"
+                    TypeName="BusinessLayer.Terminales.TerminalBL" 
+                    UpdateMethod="Modificar"
+                    onupdated="oTerminal_Updated">
                     <SelectParameters>
                         <asp:QueryStringParameter Name="Id" QueryStringField="Id" Type="Int32" />
                     </SelectParameters>

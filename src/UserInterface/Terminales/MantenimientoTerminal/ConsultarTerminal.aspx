@@ -52,7 +52,7 @@
                 </asp:DropDownList>
                 <asp:ObjectDataSource ID="dsEntidadComunicacion" runat="server" 
                     OldValuesParameterFormatString="original_{0}" 
-                    SelectMethod="obtenerEntidadComunicacion" 
+                    SelectMethod="ObtenerTodos" 
                     TypeName="BusinessLayer.Comunicacion.EntidadComunicacionBL">
                 </asp:ObjectDataSource>
             </td>
@@ -63,7 +63,7 @@
             </td>
             <td>
                 <asp:DropDownList ID="ddlEstadoTerminal" runat="server" DataSourceID="oEstadoTerminal"
-                    DataTextField="Nombre" DataValueField="Codigo" AppendDataBoundItems="True">
+                    DataTextField="Nombre" DataValueField="Id" AppendDataBoundItems="True">
                     <asp:ListItem Value="0">Todos</asp:ListItem>
                 </asp:DropDownList>
                 <asp:ObjectDataSource ID="oEstadoTerminal" runat="server" OldValuesParameterFormatString="original_{0}"
@@ -126,9 +126,10 @@
                     </Columns>
                 </asp:GridView>
                 <asp:ObjectDataSource ID="oTerminal" runat="server" OldValuesParameterFormatString="original_{0}"
-                    SelectMethod="obtenerTerminal" 
+                    SelectMethod="Buscar" 
                     TypeName="BusinessLayer.Terminales.TerminalBL" 
-                    DataObjectTypeName="BusinessEntity.Terminal" DeleteMethod="Eliminar">
+                    DataObjectTypeName="BusinessEntity.Terminal" 
+                    DeleteMethod="Eliminar">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="txtSerial" Name="serial" PropertyName="Text"
                             Type="String" />

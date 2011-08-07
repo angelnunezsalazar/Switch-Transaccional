@@ -62,8 +62,10 @@
                                         ControlToValidate="ddlEntidad" 
                                         ErrorMessage="Debe ingresar la Entidad de Comunicación" InitialValue="-1" 
                                         ValidationGroup="AgregarTerminal">*</asp:RequiredFieldValidator>
-                                    <asp:ObjectDataSource ID="oEntidad" runat="server" OldValuesParameterFormatString="original_{0}"
-                                        SelectMethod="obtenerEntidadComunicacion" TypeName="BusinessLayer.Comunicacion.EntidadComunicacionBL">
+                                    <asp:ObjectDataSource ID="oEntidad" runat="server" 
+                                        OldValuesParameterFormatString="original_{0}"
+                                        SelectMethod="ObtenerTodos" 
+                                        TypeName="BusinessLayer.Comunicacion.EntidadComunicacionBL">
                                     </asp:ObjectDataSource>
                                 </td>
                             </tr>
@@ -74,15 +76,17 @@
                                 <td>
                                     <asp:DropDownList ID="ddlPtoServicio" runat="server" DataSourceID="oPtoServicio"
                                         DataTextField="Nombre" DataValueField="Id" 
-                                        AppendDataBoundItems="True" Width="200px" Text='<%# Bind("Id") %>'>
+                                        AppendDataBoundItems="True" Width="200px" Text='<%# Bind("PuntoServicioId") %>'>
                                         <asp:ListItem Value="-1">Seleccionar Punto de Servicio</asp:ListItem>
                                     </asp:DropDownList>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                                         ControlToValidate="ddlPtoServicio" 
                                         ErrorMessage="Debe ingresar el Punto de Servicio" InitialValue="-1" 
                                         ValidationGroup="AgregarTerminal">*</asp:RequiredFieldValidator>
-                                    <asp:ObjectDataSource ID="oPtoServicio" runat="server" OldValuesParameterFormatString="original_{0}"
-                                        SelectMethod="ObtenerPuntoServicio" TypeName="BusinessLayer.Terminales.PuntoServicioBL">
+                                    <asp:ObjectDataSource ID="oPtoServicio" runat="server" 
+                                        OldValuesParameterFormatString="original_{0}"
+                                        SelectMethod="ObtenerTodos" 
+                                        TypeName="BusinessLayer.Terminales.PuntoServicioBL">
                                     </asp:ObjectDataSource>
                                 </td>
                             </tr>
@@ -100,9 +104,11 @@
                                         ControlToValidate="ddlEstadoTerminal" 
                                         ErrorMessage="Debe ingresar el Estado del Terminal" InitialValue="-1" 
                                         ValidationGroup="AgregarTerminal">*</asp:RequiredFieldValidator>
-                                    <asp:EntityDataSource ID="dsEstadoTerminal" runat="server" ConnectionString="name=Switch"
-                                        DefaultContainerName="Switch" EntitySetName="EstadoTerminal">
-                                    </asp:EntityDataSource>
+                                    <asp:ObjectDataSource ID="dsEstadoTerminal" runat="server" 
+                                        OldValuesParameterFormatString="original_{0}"
+                                        SelectMethod="ObtenerTodos" 
+                                        TypeName="BusinessLayer.Terminales.EstadoTerminalBL">
+                                    </asp:ObjectDataSource>
                                 </td>
                             </tr>
                         </table>
@@ -125,10 +131,13 @@
                     </InsertItemTemplate>
                 </asp:FormView>
                 <asp:ObjectDataSource ID="oTerminal" runat="server" 
-                    DataObjectTypeName="BusinessEntity.Terminal" OldValuesParameterFormatString="original_{0}"
-                    SelectMethod="obtenerTerminal" TypeName="BusinessLayer.Terminales.TerminalBL"
+                    DataObjectTypeName="BusinessEntity.Terminal" 
+                    OldValuesParameterFormatString="original_{0}"
+                    SelectMethod="Obtener" 
+                    TypeName="BusinessLayer.Terminales.TerminalBL"
                     OnInserted="oTerminal_Inserted" 
-                    InsertMethod="insertarTerminal"></asp:ObjectDataSource>
+                    InsertMethod="Insertar">
+                </asp:ObjectDataSource>
             </td>
         </tr>
         <tr>

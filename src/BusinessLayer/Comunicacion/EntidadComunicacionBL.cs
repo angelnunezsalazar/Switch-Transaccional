@@ -4,57 +4,79 @@ using BusinessEntity;
 
 namespace BusinessLayer.Comunicacion
 {
+    using System.Linq;
+    using System.Data.Entity;
+
+    using DataAccess.Services;
+    using DataAccess.Aspects;
+
     [DataObject(true)]
-    public class EntidadComunicacionBL
+    [ExceptionHandling]
+    public class EntidadComunicacionBL : Service<EntidadComunicacion>
     {
-        public static List<EntidadComunicacion> obtenerEntidadComunicacion()
+        public override List<EntidadComunicacion> ObtenerTodos()
         {
-            return DataAccess.Comunicacion.EntidadComunicacionDA.obtenerEntidadComunicacion();
+            return context.EntidadComunicacion
+                .Include(x => x.TipoEntidad)
+                .Include(x => x.Protocolo)
+                .AsNoTracking().ToList();
         }
 
-        public static EntidadComunicacion obtenerEntidadComunicacion(int codigo)
+        public List<EntidadComunicacion> ObtenerAsignadasAUnGrupo(int grupoMensajeId)
         {
-            return DataAccess.Comunicacion.EntidadComunicacionDA.obtenerEntidadComunicacion(codigo);
+            return context.EntidadComunicacion.Where(c => c.GrupoMensajeId == grupoMensajeId).AsNoTracking().ToList();
         }
 
-        public static EstadoOperacion insertarEntidadComunicacion(EntidadComunicacion entidadComunicacion)
+        public List<EntidadComunicacion> ObtenerNoAsignadasAUnGrupo()
         {
-            return DataAccess.Comunicacion.EntidadComunicacionDA.insertarEntidadComunicacion(entidadComunicacion);
+            return context.EntidadComunicacion.Where(c => c.GrupoMensaje == null).AsNoTracking().ToList();
         }
 
-        public static EstadoOperacion modificarEntidadComunicacion(EntidadComunicacion entidadComunicacion)
+        [Transaction]
+        public override void Eliminar(EntidadComunicacion entidadComunicacion)
         {
-            return DataAccess.Comunicacion.EntidadComunicacionDA.modificarEntidadComunicacion(entidadComunicacion);
+            //return new EstadoOperacion(false, "La entidad Comunicacion esta asignada a un Terminal y no se puede eliminar", e, true);
         }
 
-        public static EstadoOperacion eliminarEntidadComunicacion(EntidadComunicacion entidadComunicacion)
+        public void agregarEntidadAGrupoMensaje(int codigoGrupoMensaje, int codigoEntidadComunicacion)
         {
-            return DataAccess.Comunicacion.EntidadComunicacionDA.eliminarEntidadComunicacion(entidadComunicacion);
+
+            //string query =
+            //    "UPDATE EntidadComunicacion" +
+            //    " SET GMJ_CODIGO = @grupomensaje_codigo " +
+            //    "WHERE EDC_CODIGO = @codigo";
+
+            //DbCommand Comando = contexto.CreateCommand(query, CommandType.Text);
+            //Comando.Parameters.Add(Factoria.CrearParametro("@grupomensaje_codigo", codigoGrupoMensaje));
+            //Comando.Parameters.Add(Factoria.CrearParametro("@codigo", codigoEntidadComunicacion));
+
         }
 
-        public static List<EntidadComunicacion> obtenerEntidadComunicacionEnGrupoMensaje(int codigoGrupoMensaje)
+        public void eliminarEntidadDeGrupoMensaje(EntidadComunicacion entidadComunicacion)
         {
-            return DataAccess.Comunicacion.EntidadComunicacionDA.obtenerEntidadComunicacionEnGrupoMensaje(codigoGrupoMensaje);
-        }
 
-        public static List<EntidadComunicacion> obtenerEntidadComunicacionSinGrupo()
-        {
-            return DataAccess.Comunicacion.EntidadComunicacionDA.obtenerEntidadComunicacionSinGrupo();
-        }
+            //            string query =
+            //                "UPDATE EntidadComunicacion" +
+            //                " SET GMJ_CODIGO = @grupomensaje_codigo " +
+            //                "WHERE EDC_CODIGO = @codigo";
 
-        public static List<EntidadComunicacion> obtenerEntidadComunicacionSinRelaciones()
-        {
-            return DataAccess.Comunicacion.EntidadComunicacionDA.obtenerEntidadComunicacionSinRelaciones();
-        }
+            //            DbCommand Comando = contexto.CreateCommand(query, CommandType.Text);
+            //            Comando.Parameters.Add(Factoria.CrearParametro("@grupomensaje_codigo", DBNull.Value));
+            //            Comando.Parameters.Add(Factoria.CrearParametro("@codigo", entidadComunicacion.EDC_CODIGO));
 
-        public static EstadoOperacion agregarEntidadAGrupoMensaje(int codigoGrupoMensaje, int codigoEntidadComunicacion)
-        {
-            return DataAccess.Comunicacion.EntidadComunicacionDA.agregarEntidadAGrupoMensaje(codigoGrupoMensaje, codigoEntidadComunicacion);
-        }
+            //}
+            //catch (DbException e)
+            //{
+            //    DbExceptionProduct exception = Factoria.CrearException(e);
+            //    if (exception.ForeignKeyError())
+            //    {
+            //        return new EstadoOperacion(false, "La entidad Comunicacion esta asignada a un Terminal y no se puede eliminar", e, true);
+            //    }
+            //    else
+            //    {
+            //        return new EstadoOperacion(false, e.Message, e);
+            //    }
 
-        public static EstadoOperacion eliminarEntidadDeGrupoMensaje(EntidadComunicacion entidadComunicacion)
-        {
-            return DataAccess.Comunicacion.EntidadComunicacionDA.eliminarEntidadDeGrupoMensaje(entidadComunicacion);
         }
     }
 }
