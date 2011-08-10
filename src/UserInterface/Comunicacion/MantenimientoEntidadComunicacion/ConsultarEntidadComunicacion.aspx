@@ -38,14 +38,14 @@
                                 <Columns>
                                     <asp:BoundField DataField="EDC_NOMBRE" HeaderText="Nombre" SortExpression="EDC_NOMBRE" />
                                     <asp:BoundField DataField="EDC_TIMEOUT_EN_COLA" HeaderText="TimeOut Cola" SortExpression="EDC_TIMEOUT_EN_COLA" />
-                                    <asp:TemplateField HeaderText="Protocolo" SortExpression="PROTOCOLO">
+                                    <asp:TemplateField HeaderText="Protocolo" SortExpression="Protocolo">
                                         <ItemTemplate>
-                                            <asp:Label ID="lblProtocolo" runat="server" Text='<%# Bind("PROTOCOLO.PTR_NOMBRE") %>'></asp:Label>
+                                            <asp:Label ID="lblProtocolo" runat="server" Text='<%# Bind("Protocolo.PTR_NOMBRE") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="TipoEntidad" >
                                         <ItemTemplate>
-                                            <asp:Label ID="lblTipoEntidad" runat="server" Text='<%# Bind("TIPO_ENTIDAD.TEM_NOMBRE") %>'></asp:Label>
+                                            <asp:Label ID="lblTipoEntidad" runat="server" Text='<%# Bind("TipoEntidad.TEM_NOMBRE") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:TemplateField>

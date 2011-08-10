@@ -4,12 +4,15 @@ using BusinessEntity;
 
 namespace BusinessLayer.Comunicacion
 {
+    using System.Linq;
+
+    using DataAccess.Services;
+    using DataAccess.Aspects;
+
     [DataObject(true)]
-    public class TipoEntidadBL
+    [ExceptionHandling]
+    public class TipoEntidadBL : Service<TipoEntidad>
     {
-        public static List<TIPO_ENTIDAD> obtenerTipoTerminal()
-        {
-            return DataAccess.Comunicacion.TipoEntidadDA.obtenerTipoTerminal();
-        }
+
     }
 }

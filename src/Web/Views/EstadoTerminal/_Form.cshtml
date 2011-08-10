@@ -1,0 +1,25 @@
+﻿@model BusinessEntity.EstadoTerminal
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    
+    <fieldset>
+        <legend>EstadoTerminal</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </div>
+
+        @Html.Hidden("Id", Model != null ? Model.Id : 0)
+
+        <p>
+            <input type="submit" value="Aceptar" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

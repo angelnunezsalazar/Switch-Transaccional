@@ -24,9 +24,9 @@ namespace UserInterface.Comunicacion.MantenimientoEntidadComunicacion
                     this.txtTimeOutCola.Text = entidadComunicacion.EDC_TIMEOUT_EN_COLA.ToString();
 
                     this.drlProtocolo.DataBind();
-                    this.drlProtocolo.Items.FindByValue(entidadComunicacion.PROTOCOLO.PTR_CODIGO.ToString()).Selected = true;
+                    this.drlProtocolo.Items.FindByValue(entidadComunicacion.Protocolo.PTR_CODIGO.ToString()).Selected = true;
                     this.drlTipoEntidad.DataBind();
-                    this.drlTipoEntidad.Items.FindByValue(entidadComunicacion.TIPO_ENTIDAD.TEM_CODIGO.ToString()).Selected = true;
+                    this.drlTipoEntidad.Items.FindByValue(entidadComunicacion.TipoEntidad.TEM_CODIGO.ToString()).Selected = true;
                 }
                 else
                 {
@@ -62,18 +62,18 @@ namespace UserInterface.Comunicacion.MantenimientoEntidadComunicacion
             entidadComunicacion.EDC_NOMBRE_LOG = this.txtNombreLog.Text;
             entidadComunicacion.EDC_TIMEOUT_EN_COLA = int.Parse(this.txtTimeOutCola.Text);
 
-            PROTOCOLO protocolo = new PROTOCOLO()
+            Protocolo protocolo = new Protocolo()
             {
                 PTR_CODIGO = int.Parse(this.drlProtocolo.SelectedValue)
             };
 
-            TIPO_ENTIDAD TipoEntidad = new TIPO_ENTIDAD()
+            TipoEntidad TipoEntidad = new TipoEntidad()
             {
                 TEM_CODIGO = int.Parse(this.drlTipoEntidad.SelectedValue)
             };
 
-            entidadComunicacion.PROTOCOLO = protocolo;
-            entidadComunicacion.TIPO_ENTIDAD = TipoEntidad;
+            entidadComunicacion.Protocolo = protocolo;
+            entidadComunicacion.TipoEntidad = TipoEntidad;
             BusinessEntity.EstadoOperacion Resultado = EntidadComunicacionBL.modificarEntidadComunicacion(entidadComunicacion);
 
             if (Resultado.Estado)

@@ -4,6 +4,7 @@ using BusinessEntity;
 
 namespace BusinessLayer.Comunicacion
 {
+    using System;
     using System.Linq;
     using System.Data.Entity;
 
@@ -33,9 +34,12 @@ namespace BusinessLayer.Comunicacion
         }
 
         [Transaction]
-        public override void Eliminar(EntidadComunicacion entidadComunicacion)
+        public override void Eliminar(EntidadComunicacion entity)
         {
-            //return new EstadoOperacion(false, "La entidad Comunicacion esta asignada a un Terminal y no se puede eliminar", e, true);
+            EntidadComunicacion entidadComunicacion = dataAccess.Get(entity.Id);
+            if (entidadComunicacion.Terminales.Count > 0)
+                throw new Exception("La entidad Comunicacion esta asignada a un Terminal y no se puede eliminar");
+            dataAccess.Remove(entidadComunicacion);
         }
 
         public void agregarEntidadAGrupoMensaje(int codigoGrupoMensaje, int codigoEntidadComunicacion)

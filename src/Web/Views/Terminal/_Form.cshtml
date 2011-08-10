@@ -1,0 +1,51 @@
+﻿@model BusinessEntity.Terminal
+           
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Terminal</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Serial)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Serial)
+            @Html.ValidationMessageFor(model => model.Serial)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EstadoTerminalId, "EstadoTerminal")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("EstadoTerminalId", String.Empty)
+            @Html.ValidationMessageFor(model => model.EstadoTerminalId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PuntoServicioId, "PuntoServicio")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("PuntoServicioId", String.Empty)
+            @Html.ValidationMessageFor(model => model.PuntoServicioId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EntidadComunicacionId, "EntidadComunicacion")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("EntidadComunicacionId", String.Empty)
+            @Html.ValidationMessageFor(model => model.EntidadComunicacionId)
+        </div>
+
+        @Html.Hidden("Id", Model != null ? Model.Id : 0)
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

@@ -35,18 +35,18 @@ namespace UserInterface.Comunicacion.MantenimientoEntidadComunicacion
             entidadComunicacion.EDC_NOMBRE_LOG = this.txtNombreLog.Text;
             entidadComunicacion.EDC_TIMEOUT_EN_COLA = int.Parse(this.txtTimeOutCola.Text);
 
-            PROTOCOLO protocolo = new PROTOCOLO()
+            Protocolo protocolo = new Protocolo()
             {
                 PTR_CODIGO = int.Parse(this.drlProtocolo.SelectedValue)
             };
 
-            TIPO_ENTIDAD TipoEntidad = new TIPO_ENTIDAD()
+            TipoEntidad TipoEntidad = new TipoEntidad()
             {
                 TEM_CODIGO = int.Parse(this.drlTipoEntidad.SelectedValue)
             };
 
-            entidadComunicacion.PROTOCOLO = protocolo;
-            entidadComunicacion.TIPO_ENTIDAD = TipoEntidad;
+            entidadComunicacion.Protocolo = protocolo;
+            entidadComunicacion.TipoEntidad = TipoEntidad;
             BusinessEntity.EstadoOperacion Resultado = EntidadComunicacionBL.insertarEntidadComunicacion(entidadComunicacion);
 
             if (Resultado.Estado)

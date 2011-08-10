@@ -3,9 +3,7 @@
 
 <%@ Import Namespace="BusinessLayer.Comunicacion" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
     <script src="../../Includes/Js/jquery-1.2.6.js" type="text/javascript"></script>
-
     <script type="text/javascript">
 
         function ValidarRutaComponente(sender, args) {
@@ -106,7 +104,6 @@
             }
         }
     </script>
-
     <style type="text/css">
         .style1
         {
@@ -138,7 +135,7 @@
         <tr>
             <td>
                 <asp:FormView ID="frmProtocolo" runat="server" DataSourceID="dsProtocolo" DefaultMode="Insert"
-                    OnItemInserting="frmProtocolo_ItemInserting" HorizontalAlign="Center" OnDataBound="frmProtocolo_DataBound">
+                    OnItemInserting="frmProtocolo_ItemInserting" HorizontalAlign="Center">
                     <InsertItemTemplate>
                         <table class="tabla_mantenimiento">
                             <tr>
@@ -146,7 +143,7 @@
                                     <span class="texto">Nombre</span>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtNombre" runat="server" Text='<%# Bind("PTR_NOMBRE") %>' MaxLength="50"
+                                    <asp:TextBox ID="txtNombre" runat="server" Text='<%# Bind("Nombre") %>' MaxLength="50"
                                         Width="220px" />
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre"
                                         ErrorMessage="Debe ingresar el Nombre" ValidationGroup="IngresarProtocolo">*</asp:RequiredFieldValidator>
@@ -157,7 +154,7 @@
                                     <span class="texto">TimeOut Request </span>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtTimeOutRequest" runat="server" Text='<%# Bind("PTR_TIMEOUT_REQUEST") %>'
+                                    <asp:TextBox ID="txtTimeOutRequest" runat="server" Text='<%# Bind("TimeoutRequest") %>'
                                         MaxLength="5" Width="65px" /><span class="texto">(seg)</span>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtTimeOutRequest"
                                         ErrorMessage="Debe ingresar el TimeOut Request" ValidationGroup="IngresarProtocolo"
@@ -172,7 +169,7 @@
                                     <span class="texto">TimeOut Response </span>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtTimeOutResponse" runat="server" Text='<%# Bind("PTR_TIMEOUT_RESPONSE") %>'
+                                    <asp:TextBox ID="txtTimeOutResponse" runat="server" Text='<%# Bind("TimeoutResponse") %>'
                                         MaxLength="5" Width="65px" /><span class="texto">(seg)</span>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtTimeOutResponse"
                                         ErrorMessage="Debe ingresar el TimeOut Response" ValidationGroup="IngresarProtocolo"
@@ -187,7 +184,7 @@
                                     <span class="texto">Inicia Comunicaci&oacute;n</span>
                                 </td>
                                 <td>
-                                    <asp:CheckBox ID="chkIniciaComm" runat="server" Checked='<%# Bind("PTR_INICIA_COMM") %>'
+                                    <asp:CheckBox ID="chkIniciaComm" runat="server" Checked='<%# Bind("IniciaComunicacio") %>'
                                         onClick="IniciaComunicacion()" />
                                 </td>
                             </tr>
@@ -196,7 +193,7 @@
                                     <span class="texto">Acepta Comunicaci&oacute;n</span>
                                 </td>
                                 <td>
-                                    <asp:CheckBox ID="chkAceptaComm" runat="server" Checked='<%# Bind("PTR_ACEPTA_COMM") %>'
+                                    <asp:CheckBox ID="chkAceptaComm" runat="server" Checked='<%# Bind("AceptaComunicacion") %>'
                                         onClick="AceptaComunicacion()" />
                                 </td>
                             </tr>
@@ -206,7 +203,7 @@
                                 </td>
                                 <td>
                                     <asp:DropDownList ID="drlTipoComunicacion" runat="server" DataSourceID="dsTipoComunicacion"
-                                        DataTextField="TPO_NOMBRE" DataValueField="TPO_CODIGO" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"
+                                        DataTextField="Nombre" DataValueField="Id" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"
                                         AutoPostBack="True">
                                     </asp:DropDownList>
                                     <asp:ObjectDataSource ID="dsTipoComunicacion" runat="server" OldValuesParameterFormatString="original_{0}"
@@ -225,11 +222,11 @@
                                     </td>
                                     <td>
                                         <asp:DropDownList ID="drlComponente" runat="server" AppendDataBoundItems="True" DataSourceID="dsComponente"
-                                            DataTextField="COM_NOMBRE" DataValueField="COM_NOMBRE" SelectedValue='<%# Bind("PTR_COMPONENTE") %>'>
+                                            DataTextField="Nombre" DataValueField="Nombre" SelectedValue='<%# Bind("Componente") %>'>
                                             <asp:ListItem Value="-1">Seleccionar Componente</asp:ListItem>
                                         </asp:DropDownList>
                                         <asp:ObjectDataSource ID="dsComponente" runat="server" OldValuesParameterFormatString="original_{0}"
-                                            SelectMethod="obtenerComponente" TypeName="BusinessLayer.Parametros.ComponenteBL">
+                                            SelectMethod="ObtenerTodos" TypeName="BusinessLayer.Parametros.ComponenteBL">
                                         </asp:ObjectDataSource>
                                         <asp:CustomValidator ID="CustomValidator1" runat="server" ClientValidationFunction="ValidarRutaComponente"
                                             ErrorMessage="Debe ingresar el Componente" ValidationGroup="IngresarProtocolo">*</asp:CustomValidator>
@@ -240,8 +237,8 @@
                                         <span class="texto">Nombre Clase</span>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtNombreClase" runat="server" Text='<%# Bind("PTR_NOMBRE_CLASE") %>'
-                                            MaxLength="50" Width="220px" />
+                                        <asp:TextBox ID="txtNombreClase" runat="server" Text='<%# Bind("Clase") %>' MaxLength="50"
+                                            Width="220px" />
                                         <asp:CustomValidator ID="CustomValidator2" runat="server" ClientValidationFunction="ValidarClase"
                                             ErrorMessage="Debe ingresar el Nombre Clase" ValidationGroup="IngresarProtocolo">*</asp:CustomValidator>
                                     </td>
@@ -251,8 +248,8 @@
                                         <span class="texto">Nombre M&eacute;todo</span>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtNombreMetodo" runat="server" Text='<%# Bind("PTR_NOMBRE_METODO") %>'
-                                            MaxLength="50" Width="220px" />
+                                        <asp:TextBox ID="txtNombreMetodo" runat="server" Text='<%# Bind("Metodo") %>' MaxLength="50"
+                                            Width="220px" />
                                         <asp:CustomValidator ID="CustomValidator3" runat="server" ClientValidationFunction="ValidarMetodo"
                                             ErrorMessage="Debe ingresar el Nombre Método" ValidationGroup="IngresarProtocolo">*</asp:CustomValidator>
                                     </td>
@@ -269,7 +266,7 @@
                                         <span class="texto">Puerto</span>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtPuerto" runat="server" Text='<%# Bind("PTR_PUERTO") %>' MaxLength="6"
+                                        <asp:TextBox ID="txtPuerto" runat="server" Text='<%# Bind("Puerto") %>' MaxLength="6"
                                             Width="65px" />
                                         <asp:CustomValidator ID="CustomValidator4" runat="server" ClientValidationFunction="ValidarPuerto"
                                             ErrorMessage="Debe ingresar el Puerto" ValidationGroup="IngresarProtocolo">*</asp:CustomValidator>
@@ -284,7 +281,7 @@
                                     </td>
                                     <td>
                                         <asp:DropDownList ID="drlFrame" runat="server" DataSourceID="dsFrame" DataTextField="Value"
-                                            DataValueField="Key" SelectedValue='<%# Bind("PTR_FRAME") %>' AppendDataBoundItems="True"
+                                            DataValueField="Key" SelectedValue='<%# Bind("Frame") %>' AppendDataBoundItems="True"
                                             AutoPostBack="True">
                                             <asp:ListItem Value="-1">Seleccionar Frame</asp:ListItem>
                                         </asp:DropDownList>
@@ -301,7 +298,7 @@
                                         <span class="texto">Caracter Inicio</span>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtCaracterInicio" runat="server" Text='<%# Bind("PTR_CARACTER_INICIO") %>'
+                                        <asp:TextBox ID="txtCaracterInicio" runat="server" Text='<%# Bind("CaracterInicio") %>'
                                             MaxLength="1" Width="30px"></asp:TextBox>
                                         <asp:CustomValidator ID="cvlCaracterInicio" runat="server" ClientValidationFunction="ValidarCaracterInicio"
                                             ErrorMessage="Debe ingresar el Caracter Inicio" ValidationGroup="IngresarProtocolo">*</asp:CustomValidator>
@@ -312,7 +309,7 @@
                                         <span class="texto">Caracter Fin</span>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtCaracterFin" runat="server" Text='<%# Bind("PTR_CARACTER_FIN") %>'
+                                        <asp:TextBox ID="txtCaracterFin" runat="server" Text='<%# Bind("CaracterFin") %>'
                                             MaxLength="1" Width="30px"></asp:TextBox>
                                         <asp:CustomValidator ID="cvlCaracterFin" runat="server" ClientValidationFunction="ValidarCaracterFin"
                                             ErrorMessage="Debe ingresar el Caracter Fin" ValidationGroup="IngresarProtocolo">*</asp:CustomValidator>
@@ -338,10 +335,10 @@
                         </table>
                     </InsertItemTemplate>
                 </asp:FormView>
-                <asp:ObjectDataSource ID="dsProtocolo" runat="server" DataObjectTypeName="BusinessEntity.PROTOCOLO"
-                    InsertMethod="insertarProtocolo" OldValuesParameterFormatString="original_{0}"
-                    SelectMethod="obtenerProtocolo" TypeName="BusinessLayer.Comunicacion.ProtocoloBL"
-                    OnInserting="dsProtocolo_Inserting" OnInserted="dsProtocolo_Inserted"></asp:ObjectDataSource>
+                <asp:ObjectDataSource ID="dsProtocolo" runat="server" DataObjectTypeName="BusinessEntity.Protocolo"
+                    InsertMethod="Insertar" OldValuesParameterFormatString="original_{0}" SelectMethod="Obtener"
+                    TypeName="BusinessLayer.Comunicacion.ProtocoloBL" OnInserted="dsProtocolo_Inserted">
+                </asp:ObjectDataSource>
             </td>
         </tr>
         <tr>

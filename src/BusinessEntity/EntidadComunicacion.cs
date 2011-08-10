@@ -16,8 +16,8 @@ namespace BusinessEntity
     {
         public EntidadComunicacion()
         {
-            this.PasoDinamica = new HashSet<PasoDinamica>();
-            this.Terminal = new HashSet<Terminal>();
+            this.PasosDinamica = new HashSet<PasoDinamica>();
+            this.Terminales = new HashSet<Terminal>();
         }
 
         public string Nombre { get; set; }
@@ -33,7 +33,7 @@ namespace BusinessEntity
         public virtual Protocolo Protocolo { get; set; }
         public virtual TipoEntidad TipoEntidad { get; set; }
         public virtual GrupoMensaje GrupoMensaje { get; set; }
-        public virtual ICollection<PasoDinamica> PasoDinamica { get; set; }
-        public virtual ICollection<Terminal> Terminal { get; set; }
+        public virtual ICollection<PasoDinamica> PasosDinamica { get; set; }
+        public virtual ICollection<Terminal> Terminales { get; set; }
     }
 }

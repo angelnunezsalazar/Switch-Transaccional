@@ -4,12 +4,14 @@ using DataAccess.Enumeracion.EnumTablasBD;
 
 namespace BusinessLayer.Comunicacion
 {
+    using DataAccess.Utilitarios;
+
     [DataObject(true)]
     public class FrameBL
     {
         public static SortedList<int, string> obtenerFrame()
         {
-            return DataAccess.Comunicacion.FrameDA.obtenerFrame();
+            return Util.GetEnumDataSource<EnumFrame>();
         }
 
         public static int obtenerCodigoCabecera4Bytes()

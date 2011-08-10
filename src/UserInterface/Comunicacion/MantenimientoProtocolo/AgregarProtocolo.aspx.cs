@@ -46,15 +46,6 @@ namespace UserInterface.Comunicacion.MantenimientoProtocolo
             }
         }
 
-        protected void dsProtocolo_Inserting(object sender, ObjectDataSourceMethodEventArgs e)
-        {
-            PROTOCOLO protocolo = (PROTOCOLO)e.InputParameters[0];
-            DropDownList drlProtocolo = (DropDownList)this.frmProtocolo.FindControl("drlTipoComunicacion");
-
-            TIPO_COMUNICACION tipoComunicacion = new TIPO_COMUNICACION(){TPO_CODIGO=int.Parse(drlProtocolo.SelectedValue)};
-            protocolo.TIPO_COMUNICACION = tipoComunicacion;
-        }
-
         protected void frmProtocolo_ItemInserting(object sender, FormViewInsertEventArgs e)
         {
             if (e.Values["PTR_PUERTO"].ToString() == string.Empty)
@@ -80,22 +71,10 @@ namespace UserInterface.Comunicacion.MantenimientoProtocolo
 
         protected void dsProtocolo_Inserted(object sender, ObjectDataSourceStatusEventArgs e)
         {
-            BusinessEntity.EstadoOperacion Estado = ((BusinessEntity.EstadoOperacion)e.ReturnValue);
-
-            if (Estado.Estado)
+            if (e.Exception == null)
             {
                 Response.Redirect("~/Comunicacion/MantenimientoProtocolo/ConsultarProtocolo.aspx");
             }
-            else
-            {
-                this.lblMensaje.Text = Estado.Mensaje;
-            }
-
-        }
-
-        protected void frmProtocolo_DataBound(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,19 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using BusinessEntity;
-using DataAccess.Comunicacion;
+
 using DataAccess.Enumeracion.EnumTablasBD;
 
 namespace BusinessLayer.Comunicacion
 {
-    [DataObject(true)]
-    public class TipoComunicacionBL
-    {
-        public static List<TIPO_COMUNICACION> obtenerTipoComunicacion()
-        {
-            return TipoComunicacionDA.obtenerTipoComunicacion();
-        }
+    using DataAccess.Services;
+    using DataAccess.Aspects;
 
+    [DataObject(true)]
+    [ExceptionHandling]
+    public class TipoComunicacionBL : Service<TipoComunicacion>
+    {
         public static int obtenerCodigoTCP()
         {
             return (int)EnumTipoComunicacion.TCP;

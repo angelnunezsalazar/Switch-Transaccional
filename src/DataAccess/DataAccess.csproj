@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="Aspects\ExceptionHandlingAttribute.cs" />
     <Compile Include="Aspects\TransactionAttribute.cs" />
+    <Compile Include="Comunicacion\ProtocoloDA.cs" />
     <Compile Include="DependencyResolution\DependencyRegistrar.cs" />
     <Compile Include="Errors\ErrorStorage.cs" />
     <Compile Include="Errors\IErrorStorage.cs" />
@@ -123,9 +124,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Comunicacion\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

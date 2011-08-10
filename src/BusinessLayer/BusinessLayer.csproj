@@ -73,6 +73,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comunicacion\EntidadComunicacionBL.cs" />
+    <Compile Include="Comunicacion\FrameBL.cs" />
+    <Compile Include="Comunicacion\ProtocoloBL.cs" />
+    <Compile Include="Comunicacion\TipoComunicacionBL.cs" />
+    <Compile Include="Comunicacion\TipoEntidadBL.cs" />
+    <Compile Include="Parametros\ComponenteBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Terminales\EstadoTerminalBL.cs" />
     <Compile Include="Terminales\PuntoServicioBL.cs" />

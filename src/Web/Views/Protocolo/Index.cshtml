@@ -1,0 +1,65 @@
+﻿@model IEnumerable<BusinessEntity.Protocolo>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>
+    Index</h2>
+
+<table>
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            TipoComunicacion
+        </th>
+        <th>
+            TimeoutRequest
+        </th>
+        <th>
+            TimeoutResponse
+        </th>
+        <th>
+            IniciaComunicacion
+        </th>
+        <th>
+            AceptaComunicacion
+        </th>
+        <th>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoComunicacion.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeoutRequest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeoutResponse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IniciaComunicacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AceptaComunicacion)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "editar", new { id = item.Id }) |
+                @using (Html.BeginForm("eliminar", "protocolo", new { id = item.Id }))
+                {
+                    <input type="submit" value="Eliminar" onclick="return confirm('¿Estas seguro?');" />
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+<p>
+    @Html.ActionLink("Crear", "crear")
+</p>

@@ -206,7 +206,7 @@
                                 </td>
                                 <td>
                                     <asp:DropDownList ID="drlTipoComunicacion" runat="server" DataSourceID="dsTipoComunicacion"
-                                        DataTextField="TPO_NOMBRE" DataValueField="TPO_CODIGO" SelectedValue='<%# Eval("TIPO_COMUNICACION.TPO_CODIGO") %>'
+                                        DataTextField="TPO_NOMBRE" DataValueField="TPO_CODIGO" SelectedValue='<%# Eval("TipoComunicacion.TPO_CODIGO") %>'
                                         OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="true">
                                     </asp:DropDownList>
                                     <asp:ObjectDataSource ID="dsTipoComunicacion" runat="server" OldValuesParameterFormatString="original_{0}"
@@ -340,7 +340,7 @@
                 </asp:FormView>
                 <asp:ObjectDataSource ID="dsProtocolo" runat="server" OldValuesParameterFormatString="original_{0}"
                     SelectMethod="obtenerProtocolo" TypeName="BusinessLayer.Comunicacion.ProtocoloBL"
-                    DataObjectTypeName="BusinessEntity.PROTOCOLO" UpdateMethod="modificarProtocolo"
+                    DataObjectTypeName="BusinessEntity.Protocolo" UpdateMethod="modificarProtocolo"
                     OnUpdated="dsProtocolo_Updated" OnUpdating="dsProtocolo_Updating" OnSelected="dsProtocolo_Selected">
                     <SelectParameters>
                         <asp:QueryStringParameter Name="codigo" QueryStringField="Codigo" Type="Int32" />

@@ -1,32 +1,13 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using BusinessEntity;
-using DataAccess.Parametros;
-
 
 namespace BusinessLayer.Parametros
 {
+    using DataAccess.Services;
+
     [DataObject(true)]
-    public class ComponenteBL
+    public class ComponenteBL : Service<Componente>
     {
-        public static List<COMPONENTE> obtenerComponente()
-        {
-            return ComponenteDA.obtenerComponente();
-        }
 
-        public static EstadoOperacion insertarComponente(COMPONENTE componente)
-        {
-            return ComponenteDA.insertarComponente(componente);
-        }
-
-        public static EstadoOperacion modificarComponente(COMPONENTE componente)
-        {
-            return ComponenteDA.modificarComponente(componente);
-        }
-
-        public static EstadoOperacion eliminarComponente(COMPONENTE componente)
-        {
-            return ComponenteDA.eliminarComponente(componente);
-        }
     }
 }

@@ -9,68 +9,68 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:GrupoValidacion.cs" caret="0" fromTop="0" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Mensaje.cs" caret="355" fromTop="11" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:MensajeTransaccional.cs" caret="608" fromTop="20" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:ParametroTransformacionCampo.cs" caret="383" fromTop="15" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:PasoDinamica.cs" caret="88" fromTop="4" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Protocolo.cs" caret="0" fromTop="0" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:PuntoServicio.cs" caret="0" fromTop="0" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:ReglaMensajeTransaccional.cs" caret="0" fromTop="0" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Tabla.cs" caret="216" fromTop="11" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:TipoComunicacion.cs" caret="242" fromTop="11" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:TipoDato.cs" caret="104" fromTop="4" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:TipoDatoColumna.cs" caret="230" fromTop="11" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:TipoEntidad.cs" caret="252" fromTop="11" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:TipoMensaje.cs" caret="238" fromTop="11" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Transformacion.cs" caret="258" fromTop="11" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:TransformacionCampo.cs" caret="305" fromTop="12" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Usuario.cs" caret="69" fromTop="4" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:ValidacionCampo.cs" caret="91" fromTop="4" />
-      <File id="19CC30BD-3D17-42DD-B3F1-1440C22D89C0/d:Comunicacion/f:EntidadComunicacionBL.cs" caret="345" fromTop="4" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ConsultarTerminal.aspx.cs" caret="0" fromTop="0" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ConsultarTerminal.aspx" caret="6506" fromTop="13" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Terminal.cs" caret="497" fromTop="14" />
-      <File id="19CC30BD-3D17-42DD-B3F1-1440C22D89C0/d:Terminales/f:TerminalBL.cs" caret="332" fromTop="13" />
-      <File id="081FDCDF-97C4-4F29-99FF-0330C00377A7/d:Aspects/f:ExceptionHandlingAttribute.cs" caret="224" fromTop="9" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoPuntoServicio/f:ModificarPuntoServicio.aspx" caret="1117" fromTop="0" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx" caret="6174" fromTop="25" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx" caret="5403" fromTop="11" />
-      <File id="081FDCDF-97C4-4F29-99FF-0330C00377A7/d:Services/f:Service.cs" caret="981" fromTop="17" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx.cs" caret="322" fromTop="9" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx.cs" caret="472" fromTop="16" />
+      <File id="99FD67DE-4806-4A7E-A654-CCF0D32594B5/f:DllDinamica.cs" caret="0" fromTop="0" />
+      <File id="99FD67DE-4806-4A7E-A654-CCF0D32594B5/f:ConvertidorUtil.cs" caret="0" fromTop="0" />
+      <File id="99FD67DE-4806-4A7E-A654-CCF0D32594B5/f:Bitmap.cs" caret="0" fromTop="0" />
+      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Comunicacion/d:MantenimientoProtocolo/f:ModificarProtocolo.aspx.cs" caret="1958" fromTop="19" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Shared/f:_Layout.cshtml" caret="478" fromTop="9" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:PuntoServicio/f:Crear.cshtml" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:PuntoServicio/f:Editar.cshtml" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/f:Web.config" caret="1130" fromTop="23" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/f:Web.config" caret="1486" fromTop="9" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Binders/f:CustomBinder.cs" caret="863" fromTop="19" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:PuntoServicio/f:_Form.cshtml" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1650" fromTop="46" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:BaseController.cs" caret="264" fromTop="11" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:TerminalController.cs" caret="1383" fromTop="26" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:AbstractForm.cs" caret="166" fromTop="7" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/f:Global.asax.cs" caret="1125" fromTop="16" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:_Form.cshtml" caret="2840" fromTop="75" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:Crear.cshtml" caret="31" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:Editar.cshtml" caret="31" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:ProtocoloConverter.cs" caret="685" fromTop="21" />
+      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Services/f:Service.cs" caret="1139" fromTop="26" />
+      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Persistence/f:DataAccess.cs" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:ProtocoloForm.cs" caret="63" fromTop="2" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Protocolo.cs" caret="664" fromTop="13" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="1254" fromTop="15" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:AbstractConverter.cs" caret="244" fromTop="12" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="367" fromTop="17" />
+      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Persistence/f:DatabaseContext.cs" caret="478" fromTop="13" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Comunicacion/f:ProtocoloService.cs" caret="850" fromTop="19" />
     </RecentFiles>
     <RecentEdits>
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx" caret="8997" fromTop="16" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx" caret="8997" fromTop="16" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx" caret="3453" fromTop="20" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx" caret="5195" fromTop="14" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx" caret="8517" fromTop="17" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx" caret="8497" fromTop="18" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx" caret="4369" fromTop="11" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx" caret="4965" fromTop="14" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx" caret="3498" fromTop="8" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx.cs" caret="182" fromTop="7" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx.cs" caret="451" fromTop="14" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx.cs" caret="318" fromTop="7" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx.cs" caret="452" fromTop="20" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx" caret="1388" fromTop="13" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx" caret="6631" fromTop="19" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx" caret="11150" fromTop="24" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx" caret="6641" fromTop="24" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx" caret="1852" fromTop="20" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx" caret="6328" fromTop="20" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ConsultarTerminal.aspx" caret="2472" fromTop="13" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ConsultarTerminal.aspx" caret="5952" fromTop="5" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx.cs" caret="184" fromTop="7" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx" caret="8050" fromTop="4" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Terminal.cs" caret="116" fromTop="7" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Terminal.cs" caret="27" fromTop="1" />
-      <File id="081FDCDF-97C4-4F29-99FF-0330C00377A7/d:Services/f:Service.cs" caret="588" fromTop="20" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx" caret="2788" fromTop="6" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx" caret="4250" fromTop="23" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:ModificarTerminal.aspx" caret="5403" fromTop="11" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Terminales/d:MantenimientoTerminal/f:AgregarTerminal.aspx.cs" caret="182" fromTop="7" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1650" fromTop="18" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="1511" fromTop="19" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="1744" fromTop="23" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="2183" fromTop="4" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="1301" fromTop="6" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:ProtocoloForm.cs" caret="23" fromTop="1" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="790" fromTop="15" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:AbstractConverter.cs" caret="210" fromTop="10" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="21" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:AbstractConverter.cs" caret="79" fromTop="4" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:ProtocoloConverter.cs" caret="87" fromTop="4" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:_Form.cshtml" caret="12" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:_Form.cshtml" caret="3185" fromTop="18" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:_Form.cshtml" caret="3562" fromTop="17" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:_Form.cshtml" caret="3375" fromTop="14" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="1037" fromTop="8" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:_Form.cshtml" caret="2840" fromTop="12" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:AbstractForm.cs" caret="93" fromTop="4" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/f:Global.asax.cs" caret="1125" fromTop="16" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:AbstractConverter.cs" caret="448" fromTop="12" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:Crear.cshtml" caret="20" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:Editar.cshtml" caret="20" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:ProtocoloConverter.cs" caret="685" fromTop="20" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:ProtocoloConverter.cs" caret="561" fromTop="18" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="563" fromTop="19" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="299" fromTop="13" />
+      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Persistence/f:DatabaseContext.cs" caret="478" fromTop="15" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Protocolo.cs" caret="708" fromTop="14" />
+      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Persistence/f:DatabaseContext.cs" caret="478" fromTop="13" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Comunicacion/f:ProtocoloService.cs" caret="822" fromTop="14" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -85,46 +85,46 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="this" priority="7" />
-      <Item value="return" priority="9" />
+      <Item value="this" priority="10" />
+      <Item value="return" priority="18" />
       <Item value="null" priority="3" />
-      <Item value="using" priority="12" />
+      <Item value="using" priority="17" />
       <Item value="contexto" priority="6" />
-      <Item value="System" priority="8" />
-      <Item value="entidadComunicacion" priority="5" />
-      <Item value="Terminal`0" priority="3" />
+      <Item value="System" priority="13" />
+      <Item value="entidadComunicacion" priority="6" />
+      <Item value="Terminal`0" priority="6" />
       <Item value="EntidadComunicacion`0" priority="1" />
       <Item value="Switch" priority="1" />
       <Item value="Protocolo" priority="0" />
-      <Item value="Data" priority="6" />
-      <Item value="Entity" priority="6" />
-      <Item value="EstadoTerminal`0" priority="8" />
+      <Item value="Data" priority="9" />
+      <Item value="Entity" priority="10" />
+      <Item value="EstadoTerminal`0" priority="9" />
       <Item value="codigo" priority="2" />
-      <Item value="public" priority="12" />
+      <Item value="public" priority="22" />
       <Item value="virtual" priority="3" />
       <Item value="GrupoMensaje`0" priority="0" />
       <Item value="void" priority="12" />
-      <Item value="ctor" priority="8" />
+      <Item value="ctor" priority="9" />
       <Item value="Switch`0" priority="4" />
-      <Item value="context" priority="10" />
-      <Item value="T`0" priority="12" />
+      <Item value="context" priority="20" />
+      <Item value="T`0" priority="14" />
       <Item value="where" priority="2" />
-      <Item value="class" priority="2" />
-      <Item value="int" priority="3" />
+      <Item value="class" priority="4" />
+      <Item value="int" priority="14" />
       <Item value="set" priority="3" />
-      <Item value="Linq" priority="0" />
-      <Item value="entity" priority="7" />
+      <Item value="Linq" priority="2" />
+      <Item value="entity" priority="9" />
       <Item value="switch" priority="0" />
-      <Item value="terminal" priority="0" />
+      <Item value="terminal" priority="10" />
       <Item value="Bind`0" priority="0" />
-      <Item value="private" priority="2" />
+      <Item value="private" priority="6" />
       <Item value="DataAccess" priority="1" />
       <Item value="PuntoServicio`0" priority="4" />
-      <Item value="new" priority="5" />
+      <Item value="new" priority="13" />
       <Item value="DataAccess&lt;PuntoServicio&gt;" priority="0" />
       <Item value="dataAccess" priority="19" />
-      <Item value="puntoServicio" priority="5" />
-      <Item value="if" priority="2" />
+      <Item value="puntoServicio" priority="6" />
+      <Item value="if" priority="6" />
       <Item value="puntoServicioDA" priority="1" />
       <Item value="throw" priority="1" />
       <Item value="Exception" priority="2" />
@@ -133,14 +133,14 @@
       <Item value="estado" priority="2" />
       <Item value="puntosServicio" priority="1" />
       <Item value="estadoTerminalDA" priority="7" />
-      <Item value="estadoTerminal" priority="3" />
+      <Item value="estadoTerminal" priority="6" />
       <Item value="DataAccess&lt;EstadoTerminal&gt;" priority="0" />
       <Item value="Terminal" priority="3" />
-      <Item value="var" priority="0" />
-      <Item value="serial" priority="1" />
+      <Item value="var" priority="5" />
+      <Item value="serial" priority="2" />
       <Item value="terminales" priority="6" />
-      <Item value="static" priority="5" />
-      <Item value="e" priority="1" />
+      <Item value="static" priority="7" />
+      <Item value="e" priority="4" />
       <Item value="exception" priority="0" />
       <Item value="kernel" priority="5" />
       <Item value="Ninject" priority="1" />
@@ -151,10 +151,10 @@
       <Item value="IService" priority="3" />
       <Item value="protected" priority="2" />
       <Item value="dataaccess" priority="0" />
-      <Item value="typeof" priority="2" />
+      <Item value="typeof" priority="3" />
       <Item value="x" priority="4" />
-      <Item value="prop" priority="1" />
-      <Item value="List" priority="0" />
+      <Item value="prop" priority="2" />
+      <Item value="List" priority="1" />
       <Item value="modelBuilder" priority="1" />
       <Item value="foreach" priority="0" />
       <Item value="binding" priority="0" />
@@ -169,32 +169,88 @@
       <Item value="Serializable" priority="0" />
       <Item value="EstadoTerminalBL" priority="0" />
       <Item value="oldEntity" priority="2" />
-      <Item value="Entity`0" priority="26" />
+      <Item value="Entity`0" priority="28" />
       <Item value="args" priority="3" />
-      <Item value="string" priority="6" />
+      <Item value="string" priority="8" />
       <Item value="message" priority="0" />
-      <Item value="gn" priority="1" />
+      <Item value="gn" priority="2" />
       <Item value="ErrorStorage`0" priority="0" />
       <Item value="Object`0" priority="0" />
-      <Item value="ExceptionHandling" priority="1" />
+      <Item value="ExceptionHandling" priority="2" />
       <Item value="Continue" priority="0" />
       <Item value="lblMensaje" priority="0" />
-      <Item value="ContainerFilterService`0" priority="0" />
+      <Item value="ContainerFilterService`0" priority="1" />
       <Item value="DatabaseContext`0" priority="0" />
       <Item value="Transaction" priority="0" />
+      <Item value="Protocolo`0" priority="7" />
+      <Item value="override" priority="2" />
+      <Item value="protocolo" priority="6" />
+      <Item value="lb" priority="0" />
+      <Item value="TipoEntidad`0" priority="0" />
+      <Item value="TipoComunicacion`0" priority="0" />
+      <Item value="Componente`0" priority="1" />
+      <Item value="EstadoTerminalController`0" priority="1" />
+      <Item value="EstadoTerminalService" priority="1" />
+      <Item value="estadoTerminalService" priority="3" />
+      <Item value="ActionDescriptor`0" priority="0" />
+      <Item value="handler" priority="0" />
+      <Item value="w" priority="0" />
+      <Item value="TerminalService" priority="0" />
+      <Item value="terminalService" priority="2" />
+      <Item value="EstadoTerminalService`0" priority="0" />
+      <Item value="PuntoServicioService`0" priority="0" />
+      <Item value="PuntoServicioService" priority="0" />
+      <Item value="EntidadComunicacionService" priority="0" />
+      <Item value="entidadComunicacionService" priority="0" />
+      <Item value="puntoServicioService" priority="0" />
+      <Item value="Services" priority="1" />
+      <Item value="DEFAULT_ERROR_VIEW" priority="2" />
+      <Item value="ViewResult`0" priority="2" />
+      <Item value="onError" priority="1" />
+      <Item value="else" priority="3" />
+      <Item value="HttpPost" priority="0" />
+      <Item value="object" priority="3" />
+      <Item value="puntoServicioId" priority="0" />
+      <Item value="estadoTerminalId" priority="0" />
+      <Item value="ProtocoloTCP`0" priority="3" />
+      <Item value="Service&lt;Componente&gt;" priority="0" />
+      <Item value="is" priority="0" />
+      <Item value="ProtocoloComponente`0" priority="1" />
+      <Item value="controllerContext" priority="0" />
+      <Item value="bindingContext" priority="0" />
+      <Item value="modelType" priority="4" />
+      <Item value="Type`0" priority="0" />
+      <Item value="ProtocoloBinder`0" priority="0" />
+      <Item value="type" priority="0" />
+      <Item value="childType" priority="0" />
+      <Item value="ModelBinders`0" priority="0" />
+      <Item value="AutoMapper" priority="0" />
+      <Item value="ProtocoloForm`0" priority="7" />
+      <Item value="protocoloForm" priority="0" />
+      <Item value="Mapper`0" priority="1" />
+      <Item value="as" priority="4" />
+      <Item value="protocoloTCP" priority="3" />
+      <Item value="childtype" priority="0" />
+      <Item value="Convert`0" priority="1" />
+      <Item value="source" priority="0" />
+      <Item value="Cast`1" priority="0" />
+      <Item value="destinationType" priority="0" />
+      <Item value="AbstractForm`0" priority="0" />
+      <Item value="Eliminar`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:BusinessEntity.dbSwitch">
       <Item value="Configuration" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
-      <Item value="AsNoTracking`0" priority="1" />
-      <Item value="Include`0" priority="4" />
+      <Item value="AsNoTracking`0" priority="2" />
+      <Item value="Include`0" priority="5" />
       <Item value="Remove`0" priority="0" />
       <Item value="Attach`0" priority="1" />
       <Item value="SingleOrDefault`1" priority="0" />
       <Item value="Add`0" priority="0" />
       <Item value="Where`1" priority="0" />
       <Item value="AsQueryable`0" priority="0" />
+      <Item value="OrderBy`2" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Entity.Infrastructure.DbQuery`1">
       <Item value="AsNoTracking`0" priority="1" />
@@ -209,13 +265,13 @@
       <Item value="TIPO_ENTIDAD" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
-      <Item value="AsNoTracking`0" priority="4" />
-      <Item value="ToList`1" priority="3" />
+      <Item value="AsNoTracking`0" priority="6" />
+      <Item value="ToList`1" priority="5" />
       <Item value="SingleOrDefault`1" priority="0" />
       <Item value="Where`1" priority="1" />
       <Item value="ToArray`1" priority="0" />
       <Item value="Include`2" priority="1" />
-      <Item value="ToString`0" priority="0" />
+      <Item value="ToString`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Entity.Database">
       <Item value="ExecuteSqlCommand`0" priority="0" />
@@ -226,6 +282,7 @@
       <Item value="Id" priority="0" />
       <Item value="GrupoMensajeId" priority="0" />
       <Item value="GrupoMensaje" priority="0" />
+      <Item value="Terminales" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:BusinessEntity.EstadoTerminal">
       <Item value="Id" priority="0" />
@@ -250,10 +307,11 @@
       <Item value="Id" priority="1" />
       <Item value="PuntoServicio" priority="1" />
       <Item value="EntidadComunicacion" priority="1" />
-      <Item value="EstadoTerminalId" priority="0" />
+      <Item value="EstadoTerminalId" priority="2" />
       <Item value="Serial" priority="0" />
-      <Item value="EntidadComunicacionId" priority="0" />
+      <Item value="EntidadComunicacionId" priority="1" />
       <Item value="EstadoTerminal" priority="1" />
+      <Item value="PuntoServicioId" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Ninject.Syntax.IBindingWhenInNamedWithOrOnSyntax`1">
       <Item value="InTransientScope`0" priority="0" />
@@ -277,6 +335,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
       <Item value="Contains`0" priority="1" />
+      <Item value="Replace`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.ICollection`1">
       <Item value="Count" priority="1" />
@@ -285,7 +344,7 @@
       <Item value="estadoTerminalDA" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Exception">
-      <Item value="Message" priority="1" />
+      <Item value="Message" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Ninject.IKernel">
       <Item value="Scan`0" priority="0" />
@@ -346,10 +405,11 @@
       <Item value="Register`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@StructureMap.ObjectFactory">
-      <Item value="GetInstance`1" priority="2" />
+      <Item value="GetInstance`1" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:DataAccess.Persistence.DatabaseContext">
       <Item value="SaveChanges`0" priority="0" />
+      <Item value="Protocolo" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:T">
       <Item value="Id" priority="0" />
@@ -394,13 +454,117 @@
       <Item value="RethrowException" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs">
-      <Item value="Exception" priority="2" />
+      <Item value="Exception" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="IsNullOrEmpty`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.ObjectDataSource">
       <Item value="DeleteMethod" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.Protocolo">
+      <Item value="EntidadComunicacion" priority="1" />
+      <Item value="Frame" priority="0" />
+      <Item value="Componente" priority="0" />
+      <Item value="TipoComunicacion" priority="0" />
+      <Item value="GetType`0" priority="0" />
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Terminales.EstadoTerminalService">
+      <Item value="ObtenerTodos`0" priority="1" />
+      <Item value="Insertar`0" priority="0" />
+      <Item value="Obtener`0" priority="0" />
+      <Item value="Modificar`0" priority="0" />
+      <Item value="Eliminar`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Terminales.TerminalService">
+      <Item value="ObtenerTodos`0" priority="0" />
+      <Item value="Insertar`0" priority="0" />
+      <Item value="Obtener`0" priority="0" />
+      <Item value="Eliminar`0" priority="0" />
+      <Item value="Modificar`0" priority="0" />
+      <Item value="Buscar`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Comunicacion.EntidadComunicacionService">
+      <Item value="ObtenerTodos`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="ToSelectList`1" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Terminales.PuntoServicioService">
+      <Item value="ObtenerTodos`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.ActionResults.ServiceActionResult">
+      <Item value="onError" priority="0" />
+      <Item value="OnError`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Controllers.ProtocoloController">
+      <Item value="ViewBag" priority="0" />
+      <Item value="componenteService" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infraestructure.Services.Service`1">
+      <Item value="ObtenerTodos`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.ProtocoloComponente">
+      <Item value="Componente" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.IValueProvider">
+      <Item value="GetValue`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ValueProviderResult">
+      <Item value="RawValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Type">
+      <Item value="GetType`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="Name" priority="0" />
+      <Item value="FullName" priority="2" />
+      <Item value="AssemblyQualifiedName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.ModelBinders">
+      <Item value="Binders" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ModelBinderDictionary">
+      <Item value="Clear`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AutoMapper.Mapper">
+      <Item value="Map`0" priority="2" />
+      <Item value="CreateMap`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Models.ProtocoloForm">
+      <Item value="ComponenteId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AutoMapper.IMappingExpression`2">
+      <Item value="ConvertUsing`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AutoMapper.ResolutionContext">
+      <Item value="SourceValue" priority="2" />
+      <Item value="PropertyMap" priority="0" />
+      <Item value="DestinationType" priority="1" />
+      <Item value="SourceType" priority="0" />
+      <Item value="DestinationValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Activator">
+      <Item value="CreateInstance`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Models.AbstractForm">
+      <Item value="BindingType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Web.Mapping.MappingConfiguration">
+      <Item value="Configure`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.EntityMappingConfiguration`1">
+      <Item value="Requires`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.ProtocoloTCP">
+      <Item value="TipoComunicacionId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.NotNullConditionConfiguration">
+      <Item value="HasValue`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Comunicacion.ProtocoloService">
+      <Item value="Insertar`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

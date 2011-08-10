@@ -1,0 +1,74 @@
+﻿@model IEnumerable<BusinessEntity.Terminal>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>
+    Index</h2>
+@using (Html.BeginForm())
+{
+    <div class="editor-label">
+        @Html.Label("Serial")
+    </div>
+    <div class="editor-field">
+        @Html.Editor("Serial")
+    </div>
+
+    <div class="editor-label">
+        @Html.Label("EstadoTerminalId", "EstadoTerminal")
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("EstadoTerminalId", "Todos")
+    </div>
+
+    <div class="editor-label">
+        @Html.Label("EstadoTerminalId", "PuntoServicio")
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("PuntoServicioId", "Todos")
+    </div>
+
+    <p>
+        <input type="submit" value="Buscar" />
+    </p>
+}
+<table>
+    <tr>
+        <th>
+            Serial
+        </th>
+        <th>
+            EstadoTerminal
+        </th>
+        <th>
+            PuntoServicio
+        </th>
+        <th>
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoTerminal.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PuntoServicio.Nombre)
+            </td>
+            <td>
+                <td>
+                    @Html.ActionLink("Editar", "editar", new { id = item.Id }) |
+                    @using (Html.BeginForm("eliminar", "terminal", new { id = item.Id }))
+                    {
+                        <input type="submit" value="Eliminar" onclick="return confirm('¿Estas seguro?');" />
+                    }
+                </td>
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("Crear", "crear")
+</p>

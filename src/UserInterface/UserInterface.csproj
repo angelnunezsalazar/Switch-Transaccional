@@ -61,11 +61,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Comunicacion\MantenimientoProtocolo\AgregarProtocolo.aspx" />
+    <Content Include="Comunicacion\MantenimientoProtocolo\ConsultarProtocolo.aspx" />
+    <Content Include="Comunicacion\MantenimientoProtocolo\ModificarProtocolo.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comunicacion\MantenimientoProtocolo\AgregarProtocolo.aspx.cs">
+      <DependentUpon>AgregarProtocolo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comunicacion\MantenimientoProtocolo\AgregarProtocolo.aspx.designer.cs">
+      <DependentUpon>AgregarProtocolo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comunicacion\MantenimientoProtocolo\ConsultarProtocolo.aspx.cs">
+      <DependentUpon>ConsultarProtocolo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comunicacion\MantenimientoProtocolo\ConsultarProtocolo.aspx.designer.cs">
+      <DependentUpon>ConsultarProtocolo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comunicacion\MantenimientoProtocolo\ModificarProtocolo.aspx.cs">
+      <DependentUpon>ModificarProtocolo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comunicacion\MantenimientoProtocolo\ModificarProtocolo.aspx.designer.cs">
+      <DependentUpon>ModificarProtocolo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controles\Templates\GridViewTemplated.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -219,7 +243,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49407</DevelopmentServerPort>
+          <DevelopmentServerPort>16219</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

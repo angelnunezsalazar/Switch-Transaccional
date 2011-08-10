@@ -1,41 +1,41 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using BusinessEntity;
-using DataAccess.Comunicacion;
+using System.Linq;
 
 namespace BusinessLayer.Comunicacion
 {
+    using System;
+    using System.Data.Entity;
+    using System.Data.Objects;
+    using System.Diagnostics;
+
+    using DataAccess.Services;
+    using DataAccess.Aspects;
+
     [DataObject(true)]
-    public class ProtocoloBL
+    [ExceptionHandling]
+    public class ProtocoloBL : Service<Protocolo>
     {
-        public static PROTOCOLO obtenerProtocolo(int codigo)
+        public override List<Protocolo> ObtenerTodos()
         {
-            return ProtocoloDA.obtenerProtocolo(codigo);
+            return context.Protocolo.Include(x => x.EntidadesComunicacion).AsNoTracking().ToList();
         }
 
-        public static List<PROTOCOLO> obtenerProtocolo()
+        public List<Protocolo> ObtenerNoAsignadosAEntidadComunicacion()
         {
-            return ProtocoloDA.obtenerProtocolo();
+            return context.Protocolo
+                .Where(p => p.EntidadesComunicacion.Count == 0)
+                .AsNoTracking().ToList();
         }
 
-        public static List<PROTOCOLO> obtenerProtocolosNoAsignados()
+        [Transaction]
+        public override void Eliminar(Protocolo entity)
         {
-            return ProtocoloDA.obtenerProtocolosNoAsignados();
-        }
-
-        public static EstadoOperacion insertarProtocolo(PROTOCOLO Protocolo)
-        {
-            return ProtocoloDA.insertarProtocolo(Protocolo);
-        }
-
-        public static EstadoOperacion modificarProtocolo(PROTOCOLO Protocolo)
-        {
-            return ProtocoloDA.modificarProtocolo(Protocolo);
-        }
-
-        public static EstadoOperacion eliminarProtocolo(PROTOCOLO Protocolo)
-        {
-            return ProtocoloDA.eliminarProtocolo(Protocolo);
+            Protocolo protocolo = dataAccess.Get(entity.Id);
+            if (protocolo.EntidadesComunicacion.Count > 0)
+                throw new Exception("El Protocolo esta asignado a una Entidad Comunicacion y no se puede eliminar");
+            dataAccess.Remove(protocolo);
         }
     }
 }

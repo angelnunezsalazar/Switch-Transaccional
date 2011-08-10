@@ -6,11 +6,11 @@ namespace BusinessEntity
     {
         public TipoEntidad()
         {
-            this.EntidadComunicacion = new HashSet<EntidadComunicacion>();
+            this.EntidadesComunicacion = new HashSet<EntidadComunicacion>();
         }
     
         public string Nombre { get; set; }
     
-        public virtual ICollection<EntidadComunicacion> EntidadComunicacion { get; set; }
+        public virtual ICollection<EntidadComunicacion> EntidadesComunicacion { get; set; }
     }
 }
