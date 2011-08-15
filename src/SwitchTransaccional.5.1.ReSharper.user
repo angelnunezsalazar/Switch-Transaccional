@@ -9,68 +9,68 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="99FD67DE-4806-4A7E-A654-CCF0D32594B5/f:DllDinamica.cs" caret="0" fromTop="0" />
-      <File id="99FD67DE-4806-4A7E-A654-CCF0D32594B5/f:ConvertidorUtil.cs" caret="0" fromTop="0" />
-      <File id="99FD67DE-4806-4A7E-A654-CCF0D32594B5/f:Bitmap.cs" caret="0" fromTop="0" />
-      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Comunicacion/d:MantenimientoProtocolo/f:ModificarProtocolo.aspx.cs" caret="1958" fromTop="19" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Shared/f:_Layout.cshtml" caret="478" fromTop="9" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:PuntoServicio/f:Crear.cshtml" caret="0" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:PuntoServicio/f:Editar.cshtml" caret="0" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/f:Web.config" caret="1130" fromTop="23" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/f:Web.config" caret="1486" fromTop="9" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Binders/f:CustomBinder.cs" caret="863" fromTop="19" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:PuntoServicio/f:_Form.cshtml" caret="0" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1650" fromTop="46" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:BaseController.cs" caret="264" fromTop="11" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:TerminalController.cs" caret="1383" fromTop="26" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:Index.cshtml" caret="0" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:AbstractForm.cs" caret="166" fromTop="7" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/f:Global.asax.cs" caret="1125" fromTop="16" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:_Form.cshtml" caret="2840" fromTop="75" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:Crear.cshtml" caret="31" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:Editar.cshtml" caret="31" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:ProtocoloConverter.cs" caret="685" fromTop="21" />
-      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Services/f:Service.cs" caret="1139" fromTop="26" />
-      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Persistence/f:DataAccess.cs" caret="0" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:ProtocoloForm.cs" caret="63" fromTop="2" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Protocolo.cs" caret="664" fromTop="13" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="1254" fromTop="15" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:AbstractConverter.cs" caret="244" fromTop="12" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="367" fromTop="17" />
-      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Persistence/f:DatabaseContext.cs" caret="478" fromTop="13" />
-      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Comunicacion/f:ProtocoloService.cs" caret="850" fromTop="19" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:EstadoTerminal/f:Index.cshtml" caret="436" fromTop="14" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:Index.cshtml" caret="448" fromTop="21" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Terminal/f:Index.cshtml" caret="1466" fromTop="19" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:PuntoServicio/f:Index.cshtml" caret="771" fromTop="15" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:EstadoTerminalController.cs" caret="0" fromTop="0" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Comunicacion/f:EntidadComunicacionService.cs" caret="1555" fromTop="25" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:EntidadComunicacion.cs" caret="462" fromTop="12" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:GrupoMensaje.cs" caret="470" fromTop="13" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="471" fromTop="11" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:EntidadComunicacionController.cs" caret="2282" fromTop="23" />
+      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Mensajeria/d:MantenimientoGrupoMensaje/f:AgregarGrupoMensaje.aspx" caret="4008" fromTop="0" />
+      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Mensajeria/d:MantenimientoGrupoMensaje/f:ConsultarGrupoMensaje.aspx" caret="608" fromTop="0" />
+      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Mensajeria/d:MantenimientoGrupoMensaje/f:VerEntidadesEnGrupoMensaje.aspx" caret="0" fromTop="0" />
+      <File id="475A30C8-139D-4E43-9165-5C671743C94C/f:Web.sitemap" caret="2838" fromTop="28" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:EstadoTerminal/f:_Form.cshtml" caret="494" fromTop="5" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:EntidadComunicacion/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:EntidadComunicacion/f:_Form.cshtml" caret="1772" fromTop="16" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/f:Mvc.sitemap" caret="948" fromTop="13" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:_Form.cshtml" caret="1026" fromTop="11" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:Crear.cshtml" caret="34" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:Editar.cshtml" caret="34" fromTop="0" />
+      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Services/f:Service.cs" caret="195" fromTop="10" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:GrupoMensajeService.cs" caret="2011" fromTop="3" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Shared/d:DisplayTemplates/f:TableLinks.cshtml" caret="231" fromTop="6" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:GrupoMensajeController.cs" caret="1368" fromTop="5" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Home/f:Index.cshtml" caret="45" fromTop="1" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:Index.cshtml" caret="106" fromTop="5" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1277" fromTop="27" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Shared/f:_Layout.cshtml" caret="845" fromTop="18" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Content/f:Site.css" caret="338" fromTop="13" />
     </RecentFiles>
     <RecentEdits>
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1650" fromTop="18" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="1511" fromTop="19" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="1744" fromTop="23" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="2183" fromTop="4" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="1301" fromTop="6" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:ProtocoloForm.cs" caret="23" fromTop="1" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="790" fromTop="15" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:AbstractConverter.cs" caret="210" fromTop="10" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="21" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:AbstractConverter.cs" caret="79" fromTop="4" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:ProtocoloConverter.cs" caret="87" fromTop="4" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:_Form.cshtml" caret="12" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:_Form.cshtml" caret="3185" fromTop="18" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:_Form.cshtml" caret="3562" fromTop="17" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:_Form.cshtml" caret="3375" fromTop="14" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="1037" fromTop="8" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:_Form.cshtml" caret="2840" fromTop="12" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:AbstractForm.cs" caret="93" fromTop="4" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/f:Global.asax.cs" caret="1125" fromTop="16" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:AbstractConverter.cs" caret="448" fromTop="12" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:Crear.cshtml" caret="20" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Protocolo/f:Editar.cshtml" caret="20" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:ProtocoloConverter.cs" caret="685" fromTop="20" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:ProtocoloConverter.cs" caret="561" fromTop="18" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="563" fromTop="19" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="299" fromTop="13" />
-      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Persistence/f:DatabaseContext.cs" caret="478" fromTop="15" />
-      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Protocolo.cs" caret="708" fromTop="14" />
-      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Persistence/f:DatabaseContext.cs" caret="478" fromTop="13" />
-      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Comunicacion/f:ProtocoloService.cs" caret="822" fromTop="14" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:Index.cshtml" caret="817" fromTop="13" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:Crear.cshtml" caret="82" fromTop="3" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:_Form.cshtml" caret="1086" fromTop="20" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:_Form.cshtml" caret="824" fromTop="16" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/f:Mvc.sitemap" caret="1015" fromTop="16" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/f:Mvc.sitemap" caret="948" fromTop="13" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Home/f:Index.cshtml" caret="45" fromTop="1" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:Editar.cshtml" caret="34" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="2371" fromTop="10" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1791" fromTop="14" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="2371" fromTop="26" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="2371" fromTop="20" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="2046" fromTop="20" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="485" fromTop="7" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1123" fromTop="4" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Shared/d:DisplayTemplates/f:TableLinks.cshtml" caret="231" fromTop="7" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Shared/d:DisplayTemplates/f:TableLinks.cshtml" caret="120" fromTop="2" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1791" fromTop="14" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:Index.cshtml" caret="106" fromTop="6" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1791" fromTop="13" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1825" fromTop="9" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="2003" fromTop="13" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1277" fromTop="1" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:Index.cshtml" caret="106" fromTop="5" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Shared/f:_Layout.cshtml" caret="837" fromTop="15" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Content/f:Site.css" caret="304" fromTop="8" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Content/f:Site.css" caret="310" fromTop="13" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Shared/f:_Layout.cshtml" caret="561" fromTop="7" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Shared/f:_Layout.cshtml" caret="845" fromTop="18" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Content/f:Site.css" caret="352" fromTop="14" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -88,29 +88,29 @@
       <Item value="this" priority="10" />
       <Item value="return" priority="18" />
       <Item value="null" priority="3" />
-      <Item value="using" priority="17" />
+      <Item value="using" priority="18" />
       <Item value="contexto" priority="6" />
-      <Item value="System" priority="13" />
+      <Item value="System" priority="14" />
       <Item value="entidadComunicacion" priority="6" />
       <Item value="Terminal`0" priority="6" />
       <Item value="EntidadComunicacion`0" priority="1" />
       <Item value="Switch" priority="1" />
       <Item value="Protocolo" priority="0" />
-      <Item value="Data" priority="9" />
-      <Item value="Entity" priority="10" />
+      <Item value="Data" priority="10" />
+      <Item value="Entity" priority="11" />
       <Item value="EstadoTerminal`0" priority="9" />
       <Item value="codigo" priority="2" />
       <Item value="public" priority="22" />
       <Item value="virtual" priority="3" />
-      <Item value="GrupoMensaje`0" priority="0" />
+      <Item value="GrupoMensaje`0" priority="6" />
       <Item value="void" priority="12" />
       <Item value="ctor" priority="9" />
       <Item value="Switch`0" priority="4" />
-      <Item value="context" priority="20" />
+      <Item value="context" priority="22" />
       <Item value="T`0" priority="14" />
       <Item value="where" priority="2" />
       <Item value="class" priority="4" />
-      <Item value="int" priority="14" />
+      <Item value="int" priority="15" />
       <Item value="set" priority="3" />
       <Item value="Linq" priority="2" />
       <Item value="entity" priority="9" />
@@ -120,14 +120,14 @@
       <Item value="private" priority="6" />
       <Item value="DataAccess" priority="1" />
       <Item value="PuntoServicio`0" priority="4" />
-      <Item value="new" priority="13" />
+      <Item value="new" priority="14" />
       <Item value="DataAccess&lt;PuntoServicio&gt;" priority="0" />
       <Item value="dataAccess" priority="19" />
       <Item value="puntoServicio" priority="6" />
-      <Item value="if" priority="6" />
+      <Item value="if" priority="7" />
       <Item value="puntoServicioDA" priority="1" />
-      <Item value="throw" priority="1" />
-      <Item value="Exception" priority="2" />
+      <Item value="throw" priority="2" />
+      <Item value="Exception" priority="3" />
       <Item value="from" priority="0" />
       <Item value="nombre" priority="1" />
       <Item value="estado" priority="2" />
@@ -171,7 +171,7 @@
       <Item value="oldEntity" priority="2" />
       <Item value="Entity`0" priority="28" />
       <Item value="args" priority="3" />
-      <Item value="string" priority="8" />
+      <Item value="string" priority="9" />
       <Item value="message" priority="0" />
       <Item value="gn" priority="2" />
       <Item value="ErrorStorage`0" priority="0" />
@@ -179,15 +179,15 @@
       <Item value="ExceptionHandling" priority="2" />
       <Item value="Continue" priority="0" />
       <Item value="lblMensaje" priority="0" />
-      <Item value="ContainerFilterService`0" priority="1" />
+      <Item value="ContainerFilterService`0" priority="3" />
       <Item value="DatabaseContext`0" priority="0" />
       <Item value="Transaction" priority="0" />
-      <Item value="Protocolo`0" priority="7" />
-      <Item value="override" priority="2" />
+      <Item value="Protocolo`0" priority="8" />
+      <Item value="override" priority="3" />
       <Item value="protocolo" priority="6" />
       <Item value="lb" priority="0" />
-      <Item value="TipoEntidad`0" priority="0" />
-      <Item value="TipoComunicacion`0" priority="0" />
+      <Item value="TipoEntidad`0" priority="1" />
+      <Item value="TipoComunicacion`0" priority="1" />
       <Item value="Componente`0" priority="1" />
       <Item value="EstadoTerminalController`0" priority="1" />
       <Item value="EstadoTerminalService" priority="1" />
@@ -207,7 +207,7 @@
       <Item value="DEFAULT_ERROR_VIEW" priority="2" />
       <Item value="ViewResult`0" priority="2" />
       <Item value="onError" priority="1" />
-      <Item value="else" priority="3" />
+      <Item value="else" priority="4" />
       <Item value="HttpPost" priority="0" />
       <Item value="object" priority="3" />
       <Item value="puntoServicioId" priority="0" />
@@ -237,6 +237,11 @@
       <Item value="destinationType" priority="0" />
       <Item value="AbstractForm`0" priority="0" />
       <Item value="Eliminar`0" priority="0" />
+      <Item value="grupoMensaje" priority="3" />
+      <Item value="Service" priority="0" />
+      <Item value="successAction" priority="0" />
+      <Item value="errorMessage" priority="1" />
+      <Item value="OrdinalIgnoreCase" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:BusinessEntity.dbSwitch">
       <Item value="Configuration" priority="0" />
@@ -265,9 +270,9 @@
       <Item value="TIPO_ENTIDAD" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
-      <Item value="AsNoTracking`0" priority="6" />
+      <Item value="AsNoTracking`0" priority="7" />
       <Item value="ToList`1" priority="5" />
-      <Item value="SingleOrDefault`1" priority="0" />
+      <Item value="SingleOrDefault`1" priority="1" />
       <Item value="Where`1" priority="1" />
       <Item value="ToArray`1" priority="0" />
       <Item value="Include`2" priority="1" />
@@ -336,6 +341,7 @@
     <ItemStatistics item="Qualified:System.String">
       <Item value="Contains`0" priority="1" />
       <Item value="Replace`0" priority="0" />
+      <Item value="Equals`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.ICollection`1">
       <Item value="Count" priority="1" />
@@ -457,7 +463,7 @@
       <Item value="Exception" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
-      <Item value="IsNullOrEmpty`0" priority="2" />
+      <Item value="IsNullOrEmpty`0" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.UI.WebControls.ObjectDataSource">
       <Item value="DeleteMethod" priority="0" />
@@ -565,6 +571,29 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:Web.Services.Comunicacion.ProtocoloService">
       <Item value="Insertar`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infraestructure.Persistence.DatabaseContext">
+      <Item value="GrupoMensaje" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.GrupoMensaje">
+      <Item value="TipoMensaje" priority="0" />
+      <Item value="Id" priority="0" />
+      <Item value="CampoPlantilla" priority="0" />
+      <Item value="Mensaje" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ControllerContext">
+      <Item value="Controller" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ControllerBase">
+      <Item value="ControllerContext" priority="2" />
+      <Item value="ViewData" priority="0" />
+      <Item value="TempData" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.TempDataDictionary">
+      <Item value="Add`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

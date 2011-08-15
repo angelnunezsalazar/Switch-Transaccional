@@ -41,6 +41,9 @@
       <Private>True</Private>
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="MvcSiteMapProvider">
+      <HintPath>..\packages\MvcSiteMapProvider.3.1.0.0\lib\net40\MvcSiteMapProvider.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\packages\structuremap.2.6.2\lib\StructureMap.dll</HintPath>
     </Reference>
@@ -66,6 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionResults\ServiceActionResult.cs" />
+    <Compile Include="Controllers\EntidadComunicacionController.cs" />
+    <Compile Include="Controllers\GrupoMensajeController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Mapping\MappingConfiguration.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\EstadoTerminalController.cs" />
@@ -84,6 +90,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\blank.gif" />
+    <Content Include="Content\images\iconCancel.png" />
+    <Content Include="Content\images\iconEdit.png" />
+    <Content Include="Content\images\iconErase.png" />
+    <Content Include="Content\images\iconFind.png" />
+    <Content Include="Content\images\iconNew.png" />
+    <Content Include="Content\images\iconSave.png" />
+    <Content Include="Content\images\tabla_cabecera.gif" />
+    <Content Include="Content\images\tabla_fila_impar.gif" />
+    <Content Include="Content\images\tabla_fila_par.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -145,7 +161,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -211,6 +229,56 @@
   <ItemGroup>
     <Content Include="Views\Protocolo\_Form.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mvc.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EntidadComunicacion\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EntidadComunicacion\_Form.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EntidadComunicacion\Crear.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EntidadComunicacion\Editar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\DisplayTemplates\TableLinks.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\GrupoMensaje\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\GrupoMensaje\_Form.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\GrupoMensaje\Crear.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\GrupoMensaje\Editar.cshtml" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -228,7 +296,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>15141</DevelopmentServerPort>
+          <DevelopmentServerPort>16816</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

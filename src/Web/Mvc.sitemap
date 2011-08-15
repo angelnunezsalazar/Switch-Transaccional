@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-3.0" enableLocalization="true">
+  <mvcSiteMapNode title="Switch" controller="Home" action="Index" clickable="false">
+    <mvcSiteMapNode title="Comunicación" clickable="false">
+      <mvcSiteMapNode title="Protocolo" controller="Protocolo" action="Index"/>
+      <mvcSiteMapNode title="Entidad Comunicación" controller="EntidadComunicacion" action="Index"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Terminales" clickable="false">
+      <mvcSiteMapNode title="Estado Terminal" controller="EstadoTerminal" action="Index"/>
+      <mvcSiteMapNode title="Punto de Servicio" controller="PuntoServicio" action="Index"/>
+      <mvcSiteMapNode title="Terminal" controller="Terminal" action="Index"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Mensajería" clickable="false">
+      <mvcSiteMapNode title="Grupo Mensaje" controller="GrupoMensaje" action="Index"/>
+    </mvcSiteMapNode>
+  </mvcSiteMapNode>
+</mvcSiteMap>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BusinessEntity.GrupoMensaje>
+
+@{
+    ViewBag.Title = "Consultar Grupo Mensaje";
+}
+
+<table class="list">
+<thead>
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Descripcion
+        </th>
+        <th>
+            Tipo Mensaje
+        </th>
+        <th></th>
+    </tr>
+</thead>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoMensaje.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id, "TableLinks")
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    @Html.ActionLink("Crear", "crear")
+</p>

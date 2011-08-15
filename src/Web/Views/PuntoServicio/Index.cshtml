@@ -1,11 +1,10 @@
 ﻿@model IEnumerable<BusinessEntity.PuntoServicio>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Consultar Punto Servicio";
 }
 
-<h2>Index</h2>
-
-<table>
+<table class="list">
+<thead>
     <tr>
         <th>
             Nombre
@@ -19,6 +18,7 @@
         <th>
         </th>
     </tr>
+</thead>
     @foreach (var item in Model)
     {
         <tr>
@@ -32,11 +32,7 @@
                 @Html.DisplayFor(modelItem => item.Direccion)
             </td>
             <td>
-                @Html.ActionLink("Editar", "editar", new { id = item.Id }) |
-                @using (Html.BeginForm("eliminar", "puntoservicio", new { id = item.Id }))
-                {
-                    <input type="submit" value="Eliminar" onclick="return confirm('¿Estas seguro?');" />
-                }
+                @Html.DisplayFor(modelItem => item.Id,"tableLinks")
             </td>
         </tr>
     }

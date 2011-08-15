@@ -35,6 +35,8 @@
             EntidadComunicacion entidadComunicacion = dataAccess.Get(id);
             if (entidadComunicacion.Terminales.Count > 0)
                 throw new Exception("La entidad Comunicacion esta asignada a un Terminal y no se puede eliminar");
+            if (entidadComunicacion.PasosDinamica.Count > 0)
+                throw new Exception("La entidad Comunicacion esta asignada a un Paso Dinámica y no se puede eliminar");
             dataAccess.Remove(entidadComunicacion);
         }
 

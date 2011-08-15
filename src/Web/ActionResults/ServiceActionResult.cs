@@ -33,6 +33,7 @@
 
         public override void ExecuteResult(ControllerContext context)
         {
+            string errorMessage = "";
             if (context.Controller.ViewData.ModelState.IsValid)
             {
                 try
@@ -42,18 +43,27 @@
                 }
                 catch (Exception e)
                 {
-                    context.Controller.ViewData.ModelState.AddModelError("", e.Message);
+                    errorMessage = e.Message;
                 }
             }
 
-            if (!context.Controller.ViewData.ModelState.IsValid)
+            if (!context.Controller.ViewData.ModelState.IsValid ||
+                !string.IsNullOrEmpty(errorMessage))
             {
                 if (onError != null) onError();
 
-                errorView.ViewData = context.Controller.ViewData;
-                errorView.TempData = context.Controller.TempData;
-                errorView.ExecuteResult(context);
-
+                if (context.RouteData.Values["action"].ToString().Equals("eliminar", StringComparison.OrdinalIgnoreCase))
+                {
+                    context.Controller.TempData.Add("message", errorMessage);
+                    successAction.ExecuteResult(context);
+                }
+                else
+                {
+                    context.Controller.ViewData.ModelState.AddModelError("", errorMessage);
+                    errorView.ViewData = context.Controller.ViewData;
+                    errorView.TempData = context.Controller.TempData;
+                    errorView.ExecuteResult(context);
+                }
                 return;
             }
 

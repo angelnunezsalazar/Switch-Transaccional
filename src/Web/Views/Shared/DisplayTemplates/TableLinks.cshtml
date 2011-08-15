@@ -1,0 +1,6 @@
+﻿@model Int32
+@Html.ActionLink("Editar", "editar", new { id = Model }, new { @class = "edit" })
+@using (Html.BeginForm(new { action = "eliminar", id = Model }))
+{
+    <a href="javascript:void(0)" class="delete">Eliminar</a>
+}

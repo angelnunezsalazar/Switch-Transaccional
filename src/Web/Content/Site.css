@@ -1,47 +1,138 @@
 body
 {
-    font-size: .85em;
-    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
-    color: #232323;
-    background-color: #fff;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background-color:#F3F3F3;
 }
 
-header,
-footer,
-nav,
-section {
-    display: block;
+h2
+{
+	font-size:18px;
+	color:#0F5C05;
+	font-weight: bolder;
+	text-align:center;
+}
+
+#menu
+{
+	float: left;
+	width: 20%;
+}
+
+#content
+{
+	float: left;
+	width: 80%;
+}
+
+.list, .list td, .list th
+{
+	border-style:solid;
+	border-color:Gray;
+}
+
+.list
+{
+	border-width: 1px 1px 0 0;
+	border-collapse:collapse;
+}
+
+.list td, .list th
+{
+	border-width: 0 0 1px 1px;
+	padding:4px;
+}
+
+.list thead tr
+{
+	font-size:13px;
+	font-weight: bold;
+	height:30px;
+	background-image:url('images/tabla_cabecera.gif');
+	color:#FFFFFF;
+}
+
+.list tbody tr.even
+{
+	font-size:12px;
+	height:30px;
+	background: #ACCFAD url('images/tabla_fila_impar.gif') repeat-x top left;
+	color:#000000;
+}
+
+.list tbody tr.odd
+{
+	font-size:12px;
+	height:30px;
+	background: #D7D7D7 url('images/tabla_fila_par.gif') repeat-x top left;
+	color:#000000;
+}
+
+.list form
+{
+	display:inline;
+}
+
+.delete
+{
+	background-image:url('images/iconErase.png');
+    height:22px;
+	text-indent:-9999px;
+    width:22px;
+    float:left;
+}
+
+.edit
+{
+	background-image:url('images/iconEdit.png');
+    height:22px;
+    text-indent:-9999px;
+    width:22px;
+    float:left;
+}
+
+input[type="text"].medium
+{
+	width:300px;
+}
+
+input[type="text"].big
+{
+	width:600px;
 }
 
 /* Styles for basic forms
 -----------------------------------------------------------*/
 
-fieldset 
+fieldset
 {
-    border:1px solid #ddd;
-    padding:0 1.4em 1.4em 1.4em;
-    margin:0 0 1.5em 0;
+	border: 1px solid #ddd;
+	padding: 0 1.4em 1.4em 1.4em;
+	margin: 0 0 1.5em 0;
 }
 
-legend 
+legend
 {
-    font-size:1.2em;
-    font-weight: bold;
+	font-size: 1.2em;
+	font-weight: bold;
 }
 
-textarea 
+textarea
 {
-    min-height: 75px;
+	min-height: 75px;
 }
 
-.editor-label 
+.editor-label
 {
-    margin: 1em 0 0 0;
+	margin: 1em 0 0 0;
 }
 
-.editor-field 
+.editor-field
 {
-    margin:0.5em 0 0 0;
+	margin: 0.5em 0 0 0;
 }
 
 
@@ -49,27 +140,27 @@ textarea
 -----------------------------------------------------------*/
 .field-validation-error
 {
-    color: #ff0000;
+	color: #ff0000;
 }
 
 .field-validation-valid
 {
-    display: none;
+	display: none;
 }
 
 .input-validation-error
 {
-    border: 1px solid #ff0000;
-    background-color: #ffeeee;
+	border: 1px solid #ff0000;
+	background-color: #ffeeee;
 }
 
 .validation-summary-errors
 {
-    font-weight: bold;
-    color: #ff0000;
+	font-weight: bold;
+	color: #ff0000;
 }
 
 .validation-summary-valid
 {
-    display: none;
+	display: none;
 }

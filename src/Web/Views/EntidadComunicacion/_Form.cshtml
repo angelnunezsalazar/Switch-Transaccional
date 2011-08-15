@@ -1,0 +1,74 @@
+﻿@model BusinessEntity.EntidadComunicacion
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>EntidadComunicacion</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Descripcion)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Descripcion, new { @class = "big" })
+            @Html.ValidationMessageFor(model => model.Descripcion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RutaLog)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.RutaLog, new { @class = "big" })
+            @Html.ValidationMessageFor(model => model.RutaLog)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NombreLog)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NombreLog)
+            @Html.ValidationMessageFor(model => model.NombreLog)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Cola)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Cola)
+            @Html.ValidationMessageFor(model => model.Cola)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ProtocoloId,"Protocolo")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ProtocoloId", String.Empty)
+            @Html.ValidationMessageFor(model => model.ProtocoloId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TipoEntidadId,"Tipo Entidad")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("TipoEntidadId",String.Empty)
+            @Html.ValidationMessageFor(model => model.TipoEntidadId)
+        </div>
+
+        @Html.Hidden("Id", Model != null ? Model.Id : 0)
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

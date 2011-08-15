@@ -1,9 +1,8 @@
 ﻿@model IEnumerable<BusinessEntity.Terminal>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Consultar Terminal";
 }
-<h2>
-    Index</h2>
+
 @using (Html.BeginForm())
 {
     <div class="editor-label">
@@ -31,20 +30,22 @@
         <input type="submit" value="Buscar" />
     </p>
 }
-<table>
+<table class="list">
+<thead>
     <tr>
         <th>
             Serial
         </th>
         <th>
-            EstadoTerminal
+            Estado
         </th>
         <th>
-            PuntoServicio
+            Punto Servicio
         </th>
         <th>
         </th>
     </tr>
+</thead>
     @foreach (var item in Model)
     {
         <tr>
@@ -58,13 +59,7 @@
                 @Html.DisplayFor(modelItem => item.PuntoServicio.Nombre)
             </td>
             <td>
-                <td>
-                    @Html.ActionLink("Editar", "editar", new { id = item.Id }) |
-                    @using (Html.BeginForm("eliminar", "terminal", new { id = item.Id }))
-                    {
-                        <input type="submit" value="Eliminar" onclick="return confirm('¿Estas seguro?');" />
-                    }
-                </td>
+                @Html.DisplayFor(modelItem => item.Id,"TableLinks")
             </td>
         </tr>
     }

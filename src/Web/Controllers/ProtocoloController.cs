@@ -15,7 +15,7 @@ namespace Web.Controllers
     public class ProtocoloController : BaseController
     {
         ProtocoloService protocoloService = new ProtocoloService();
-        TipoComunicacionService tipoComunicacionService = new TipoComunicacionService();
+        Service<TipoComunicacion> tipoComunicacionService = new Service<TipoComunicacion>();
         Service<Componente> componenteService = new Service<Componente>();
 
         public ViewResult Index()

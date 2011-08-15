@@ -45,9 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comunicacion\EntidadComunicacionService.cs" />
+    <Compile Include="Mensajeria\GrupoMensajeService.cs" />
     <Compile Include="Comunicacion\ProtocoloService.cs" />
-    <Compile Include="Comunicacion\TipoComunicacionBL.cs" />
-    <Compile Include="Comunicacion\TipoEntidadBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Terminales\EstadoTerminalService.cs" />
     <Compile Include="Terminales\PuntoServicioService.cs" />

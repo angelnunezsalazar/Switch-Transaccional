@@ -1,11 +1,10 @@
 ﻿@model IEnumerable<BusinessEntity.EstadoTerminal>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Consultar Estado Terminal";
 }
 
-<h2>Index</h2>
-
-<table>
+<table class="list">
+<thead>
     <tr>
         <th>
             Nombre
@@ -13,6 +12,7 @@
         <th>
         </th>
     </tr>
+</thead>
     @foreach (var item in Model)
     {
         <tr>
@@ -20,11 +20,7 @@
                 @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
-                @Html.ActionLink("Editar", "editar", new { id = item.Id }) |
-                @using (Html.BeginForm("eliminar","estadoterminal",new { id = item.Id }))
-                {
-                    <input type="submit" value="Eliminar" onclick="return confirm('¿Estas seguro?');" />
-                }
+                @Html.DisplayFor(modelItem => item.Id,"TableLinks")
             </td>
         </tr>
     }
