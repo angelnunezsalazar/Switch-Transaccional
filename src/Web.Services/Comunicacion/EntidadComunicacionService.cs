@@ -8,14 +8,14 @@
     using System.Linq;
     using System.Data.Entity;
 
-    using Infraestructure.Services;
+    using Web.Services.Bases;
 
     public class EntidadComunicacionService : Service<EntidadComunicacion>
     {
         public override List<EntidadComunicacion> ObtenerTodos()
         {
             return context.EntidadComunicacion
-                .Include(x => x.TipoEntidad)
+                .Include(x => x.GrupoMensaje)
                 .Include(x => x.Protocolo)
                 .AsNoTracking().ToList();
         }

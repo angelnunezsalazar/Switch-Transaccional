@@ -8,7 +8,7 @@
     using System.Linq;
     using System;
 
-    using Infraestructure.Services;
+    using Web.Services.Bases;
 
     public class ProtocoloService : Service<Protocolo>
     {

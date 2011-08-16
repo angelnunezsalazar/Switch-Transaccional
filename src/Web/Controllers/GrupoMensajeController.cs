@@ -4,9 +4,8 @@ namespace Web.Controllers
 {
     using BusinessEntity;
 
-    using Infraestructure.Services;
-
     using Web.Extensions;
+    using Web.Services.Bases;
     using Web.Services.Mensajeria;
 
     public class GrupoMensajeController : BaseController
@@ -34,9 +33,9 @@ namespace Web.Controllers
 
         public ActionResult Editar(int id)
         {
-            var terminal = this.grupoMensajeService.Obtener(id);
-            DatosAdicionales(terminal);
-            return View(terminal);
+            var grupoMensaje = this.grupoMensajeService.Obtener(id);
+            DatosAdicionales(grupoMensaje);
+            return View(grupoMensaje);
         }
 
         [HttpPost]

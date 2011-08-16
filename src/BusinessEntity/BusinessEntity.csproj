@@ -161,9 +161,6 @@
     <Compile Include="TipoDatoColumna.cs">
       <DependentUpon>DatabaseContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="TipoEntidad.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
     <Compile Include="TipoMensaje.cs">
       <DependentUpon>DatabaseContext.tt</DependentUpon>
     </Compile>

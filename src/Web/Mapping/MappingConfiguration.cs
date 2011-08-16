@@ -22,6 +22,8 @@ namespace Web.Mapping
             Mapper.CreateMap<ProtocoloForm, Protocolo>().ConvertUsing<ProtocoloConverter>();
             Mapper.CreateMap<ProtocoloForm, ProtocoloTCP>();
             Mapper.CreateMap<ProtocoloForm, ProtocoloComponente>();
+
+            Mapper.CreateMap<CampoMaestro, Campo>();
         }
     }
 }

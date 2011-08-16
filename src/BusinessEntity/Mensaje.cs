@@ -16,24 +16,24 @@ namespace BusinessEntity
     {
         public Mensaje()
         {
-            this.Campo = new HashSet<Campo>();
-            this.DinamicaCriptografia = new HashSet<DinamicaCriptografia>();
-            this.GrupoValidacion = new HashSet<GrupoValidacion>();
-            this.MensajeTransaccional = new HashSet<MensajeTransaccional>();
-            this.Transformacion = new HashSet<Transformacion>();
-            this.Transformacion1 = new HashSet<Transformacion>();
+            this.Campos = new HashSet<Campo>();
+            this.DinamicasCriptografia = new HashSet<DinamicaCriptografia>();
+            this.GruposValidacion = new HashSet<GrupoValidacion>();
+            this.MensajesTransaccional = new HashSet<MensajeTransaccional>();
+            this.TransformacionesOrigen = new HashSet<Transformacion>();
+            this.TransformacionesDestino = new HashSet<Transformacion>();
         }
 
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public Nullable<int> GrupoMensajeId { get; set; }
+        public int GrupoMensajeId { get; set; }
 
-        public virtual ICollection<Campo> Campo { get; set; }
-        public virtual ICollection<DinamicaCriptografia> DinamicaCriptografia { get; set; }
+        public virtual ICollection<Campo> Campos { get; set; }
+        public virtual ICollection<DinamicaCriptografia> DinamicasCriptografia { get; set; }
         public virtual GrupoMensaje GrupoMensaje { get; set; }
-        public virtual ICollection<GrupoValidacion> GrupoValidacion { get; set; }
-        public virtual ICollection<MensajeTransaccional> MensajeTransaccional { get; set; }
-        public virtual ICollection<Transformacion> Transformacion { get; set; }
-        public virtual ICollection<Transformacion> Transformacion1 { get; set; }
+        public virtual ICollection<GrupoValidacion> GruposValidacion { get; set; }
+        public virtual ICollection<MensajeTransaccional> MensajesTransaccional { get; set; }
+        public virtual ICollection<Transformacion> TransformacionesOrigen { get; set; }
+        public virtual ICollection<Transformacion> TransformacionesDestino { get; set; }
     }
 }

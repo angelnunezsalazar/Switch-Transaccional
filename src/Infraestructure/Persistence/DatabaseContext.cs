@@ -22,7 +22,7 @@
         }
 
         public DbSet<Campo> Campo { get; set; }
-        public DbSet<CampoPlantilla> CampoPlantilla { get; set; }
+        public DbSet<CampoMaestro> CampoPlantilla { get; set; }
         public DbSet<Columna> Columna { get; set; }
         public DbSet<Componente> Componente { get; set; }
         public DbSet<CondicionMensaje> CondicionMensaje { get; set; }
@@ -46,7 +46,6 @@
         public DbSet<TipoComunicacion> TipoComunicacion { get; set; }
         public DbSet<TipoDato> TipoDato { get; set; }
         public DbSet<TipoDatoColumna> TipoDatoColumna { get; set; }
-        public DbSet<TipoEntidad> TipoEntidad { get; set; }
         public DbSet<TipoMensaje> TipoMensaje { get; set; }
         public DbSet<Transformacion> Transformacion { get; set; }
         public DbSet<TransformacionCampo> TransformacionCampo { get; set; }

@@ -4,16 +4,15 @@ namespace Web.Controllers
 {
     using BusinessEntity;
 
-    using Infraestructure.Services;
-
     using Web.Extensions;
     using Web.Services.Comunicacion;
+    using Web.Services.Mensajeria;
 
     public class EntidadComunicacionController : BaseController
     {
         EntidadComunicacionService entidadComunicacionService = new EntidadComunicacionService();
-        Service<TipoEntidad> tipoEntidadService = new Service<TipoEntidad>();
         ProtocoloService protoloService = new ProtocoloService();
+        GrupoMensajeService grupoMensajeService=new GrupoMensajeService();
 
         public ViewResult Index()
         {
@@ -35,9 +34,9 @@ namespace Web.Controllers
 
         public ActionResult Editar(int id)
         {
-            var terminal = this.entidadComunicacionService.Obtener(id);
-            DatosAdicionales(terminal);
-            return View(terminal);
+            var entidadComunicacion = this.entidadComunicacionService.Obtener(id);
+            DatosAdicionales(entidadComunicacion);
+            return View(entidadComunicacion);
         }
 
         [HttpPost]
@@ -55,14 +54,14 @@ namespace Web.Controllers
 
         public void DatosAdicionales()
         {
+            ViewBag.GrupoMensajeId = grupoMensajeService.ObtenerTodos().ToSelectList();
             ViewBag.ProtocoloId = protoloService.ObtenerTodos().ToSelectList();
-            ViewBag.TipoEntidadId = tipoEntidadService.ObtenerTodos().ToSelectList();
         }
 
         public void DatosAdicionales(EntidadComunicacion entidadComunicacion)
         {
+            ViewBag.GrupoMensajeId = grupoMensajeService.ObtenerTodos().ToSelectList(entidadComunicacion.GrupoMensajeId);
             ViewBag.ProtocoloId = protoloService.ObtenerTodos().ToSelectList(entidadComunicacion.ProtocoloId);
-            ViewBag.TipoEntidadId = tipoEntidadService.ObtenerTodos().ToSelectList(entidadComunicacion.TipoEntidadId);
         }
     }
 }

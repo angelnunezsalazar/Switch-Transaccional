@@ -10,31 +10,28 @@
 namespace BusinessEntity
 {
     using System;
-    using System.Collections.Generic;
 
     public class Campo : Entity
     {
         public int MensajeId { get; set; }
         public string Nombre { get; set; }
-        public int Longitud { get; set; }
+        public int LongitudCuerpo { get; set; }
         public bool Selector { get; set; }
         public Nullable<bool> Variable { get; set; }
         public Nullable<int> LongitudCabecera { get; set; }
         public bool Requerido { get; set; }
-        public bool Almacenado { get; set; }
         public int PosicionRelativa { get; set; }
-        public bool ProtegidoLog { get; set; }
         public string ValorSelectorRequest { get; set; }
         public string ValorSelectorResponse { get; set; }
         public int TipoDatoId { get; set; }
-        public int CampoPlantillaId { get; set; }
+        public int CampoMaestroId { get; set; }
         public bool Cabecera { get; set; }
         public bool Bitmap { get; set; }
         public bool Transaccional { get; set; }
-        public Nullable<bool> Tanqueo { get; set; }
-        public Nullable<bool> Destanqueo { get; set; }
+        public bool Tanqueo { get; set; }
+        public bool Destanqueo { get; set; }
     
-        public virtual CampoPlantilla CampoPlantilla { get; set; }
+        public virtual CampoMaestro CampoMaestro { get; set; }
         public virtual Mensaje Mensaje { get; set; }
         public virtual TipoDato TipoDato { get; set; }
     }

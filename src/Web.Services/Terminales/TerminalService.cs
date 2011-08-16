@@ -7,8 +7,8 @@
     using System.Linq;
     using System.Data.Entity;
 
-    using Infraestructure.Services;
-
+    using Web.Services.Bases;
+    
     public class TerminalService : Service<Terminal>
     {
         public override List<Terminal> ObtenerTodos()

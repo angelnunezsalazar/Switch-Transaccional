@@ -4,7 +4,7 @@
 
     using System;
 
-    using Infraestructure.Services;
+    using Web.Services.Bases;
 
     public class EstadoTerminalService : Service<EstadoTerminal>
     {

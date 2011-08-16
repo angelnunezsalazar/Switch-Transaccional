@@ -7,7 +7,7 @@
     using System;
     using System.Linq;
 
-    using Infraestructure.Services;
+    using Web.Services.Bases;
 
     public class PuntoServicioService : Service<PuntoServicio>
     {

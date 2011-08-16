@@ -33,6 +33,7 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Id, "TableLinks")
+            @Html.ActionLink("Ver", "index","campomaestro", new { grupoMensajeId = item.Id }, new { @class = "find" })
         </td>
     </tr>
 }

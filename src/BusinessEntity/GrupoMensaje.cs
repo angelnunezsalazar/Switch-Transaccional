@@ -6,7 +6,7 @@ namespace BusinessEntity
     {
         public GrupoMensaje()
         {
-            this.CamposPlantilla = new HashSet<CampoPlantilla>();
+            this.CamposPlantilla = new HashSet<CampoMaestro>();
             this.Mensajes = new HashSet<Mensaje>();
         }
 
@@ -14,7 +14,7 @@ namespace BusinessEntity
         public string Descripcion { get; set; }
         public int TipoMensajeId { get; set; }
 
-        public virtual ICollection<CampoPlantilla> CamposPlantilla { get; set; }
+        public virtual ICollection<CampoMaestro> CamposPlantilla { get; set; }
         public virtual TipoMensaje TipoMensaje { get; set; }
         public virtual ICollection<Mensaje> Mensajes { get; set; }
     }

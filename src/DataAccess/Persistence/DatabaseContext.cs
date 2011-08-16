@@ -19,7 +19,7 @@
         }
 
         public DbSet<Campo> Campo { get; set; }
-        public DbSet<CampoPlantilla> CampoPlantilla { get; set; }
+        public DbSet<CampoMaestro> CampoPlantilla { get; set; }
         public DbSet<Columna> Columna { get; set; }
         public DbSet<Componente> Componente { get; set; }
         public DbSet<CondicionMensaje> CondicionMensaje { get; set; }

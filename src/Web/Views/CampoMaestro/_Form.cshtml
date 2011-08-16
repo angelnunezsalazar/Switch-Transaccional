@@ -1,0 +1,147 @@
+﻿@model BusinessEntity.CampoMaestro
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>CampoMaestro</legend>
+
+        <div class="editor-label">
+            @Html.Label("GrupoMensaje.Nombre","Grupo Mensaje")
+        </div>
+        <div class="editor-field">
+            @Html.Display("GrupoMensaje.Nombre")
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("GrupoMensaje.TipoMensaje.Nombre","Tipo Mensaje")
+        </div>
+        <div class="editor-field">
+            @Html.Display("GrupoMensaje.TipoMensaje.Nombre")
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Cabecera)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Cabecera)
+            @Html.ValidationMessageFor(model => model.Cabecera)
+        </div>
+
+        <div class="cabecera-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Selector)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Selector)
+                @Html.ValidationMessageFor(model => model.Selector)
+            </div>
+        </div>
+
+        <div class="cuerpo-field">
+            <div class="editor-label">
+                @Html.LabelFor(model => model.PosicionRelativa,"Posición Relativa")
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.PosicionRelativa)
+                @Html.ValidationMessageFor(model => model.PosicionRelativa)
+            </div>
+        </div>
+
+        <div id="tiposmensaje">
+            <div id="1-bitmap">
+                <div class="cabecera-field">
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Bitmap)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Bitmap)
+                        @Html.ValidationMessageFor(model => model.Bitmap)
+                    </div>
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Variable)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Variable)
+                    @Html.ValidationMessageFor(model => model.Variable)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.LongitudCabecera,"Longitud Cabecera")
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.LongitudCabecera)
+                    @Html.ValidationMessageFor(model => model.LongitudCabecera)
+                </div>
+            </div>
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LongitudCuerpo,"Longitud Cuerpo")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LongitudCuerpo)
+            @Html.ValidationMessageFor(model => model.LongitudCuerpo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TipoDatoId,"Tipo Dato")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("TipoDatoId")
+            @Html.ValidationMessageFor(model => model.TipoDatoId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Transaccional)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Transaccional)
+            @Html.ValidationMessageFor(model => model.Transaccional)
+        </div>
+
+        @Html.Hidden("Id", Model != null ? Model.Id : 0)
+        @Html.Hidden("TipoMensajeId",(int)ViewBag.GrupoMensaje.TipoMensaje.Id)
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        function cabeceraCuerpoToogle() {
+            if ($("#Cabecera").is(':checked')) {
+                $(".cabecera-field").show();
+                $(".cuerpo-field").hide();
+                $(':input', '.cuerpo-field').val('').removeAttr('checked').removeAttr('selected');
+            }
+            else {
+                $(".cabecera-field").hide();
+                $(".cuerpo-field").show();
+                $(':input', '.cabecera-field').val('').removeAttr('checked').removeAttr('selected');
+            }
+        }
+
+        $("#Cabecera").click(function () {
+            cabeceraCuerpoToogle();
+        });
+
+        cabeceraCuerpoToogle();
+        $("#tiposmensaje > div[id*='" + $("#TipoMensajeId").val() + "']").show();
+    });
+</script>

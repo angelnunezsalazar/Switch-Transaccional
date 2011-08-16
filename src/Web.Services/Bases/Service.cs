@@ -1,4 +1,4 @@
-namespace Infraestructure.Services
+namespace Web.Services.Bases
 {
     using System.Collections.Generic;
 

@@ -1,0 +1,105 @@
+﻿@model Web.Models.CampoMaestroList
+
+@{
+    ViewBag.Title = "Consultar Campo Maestro";
+}
+
+<table class="list">
+<thead>
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Longitud
+        </th>
+        <th>
+            Selector
+        </th>
+        
+        <th>
+            Tipo Dato
+        </th>
+       
+        <th></th>
+    </tr>
+</thead>
+@foreach (var item in Model.Cabecera) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LongitudCuerpo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Selector)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDatoId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id,"TableLinks")
+        </td>
+    </tr>
+}
+
+</table>
+
+<br />  
+
+<table class="list">
+<thead>
+    <tr>
+        <th>
+            PosicionRelativa
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Variable
+        </th>
+        <th>
+            Longitud Cabecera
+        </th>
+        <th>
+            Longitud Cuerpo
+        </th>
+        <th>
+            Tipo Dato
+        </th>
+        <th></th>
+    </tr>
+</thead>
+@foreach (var item in Model.Cuerpo) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PosicionRelativa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Variable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LongitudCabecera)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LongitudCuerpo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDato.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id,"TableLinks")
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>
+    @Html.ActionLink("Crear", "crear", new { grupoMensajeId=Request.QueryString["grupoMensajeId"]})
+</p>

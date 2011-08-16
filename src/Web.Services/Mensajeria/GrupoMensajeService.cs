@@ -8,7 +8,7 @@
     using System.Linq;
     using System.Data.Entity;
 
-    using Infraestructure.Services;
+    using Web.Services.Bases;
 
     public class GrupoMensajeService : Service<GrupoMensaje>
     {
