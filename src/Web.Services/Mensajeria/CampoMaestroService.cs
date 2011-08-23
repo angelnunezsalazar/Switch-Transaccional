@@ -77,16 +77,14 @@
             var grupoMensaje = grupoMensajeDataAccess.Get(campoMaestro.GrupoMensajeId);
             if (!campoMaestro.Cabecera)
             {
-                var campoPlantillaEnPosicionRelativa = grupoMensaje.CamposPlantilla
-                                                          .Where(x => x.PosicionRelativa == campoMaestro.PosicionRelativa)
-                                                          .SingleOrDefault();
-                if (campoPlantillaEnPosicionRelativa != null)
+                CampoMaestro campoAntiguo = grupoMensaje.CampoPlantillaEnPosicionRelativa(campoMaestro.PosicionRelativa);
+                if (campoAntiguo != null)
                     throw new Exception("La Posición Relativa ya ha sido asignada");
             }
 
             dataAccess.Add(campoMaestro);
 
-            if (campoMaestro.Selector || campoMaestro.Transaccional || campoMaestro.Cabecera)
+            if (campoMaestro.EsRequeridoEnTodosLosMensajes())
             {
                 foreach (var mensaje in grupoMensaje.Mensajes)
                 {
@@ -99,26 +97,49 @@
             }
         }
 
-        public override void Modificar(CampoMaestro campoPlantilla)
+        public override void Modificar(CampoMaestro campoMaestro)
         {
-            if (!campoPlantilla.Cabecera)
+            var grupoMensaje = this.grupoMensajeDataAccess.Get(campoMaestro.GrupoMensajeId);
+            if (!campoMaestro.Cabecera)
             {
-                var grupoMensaje = grupoMensajeDataAccess.Get(campoPlantilla.GrupoMensajeId);
-                var campoPlantillaEnPosicionRelativa = grupoMensaje.CamposPlantilla
-                                                          .Where(x => x.PosicionRelativa == campoPlantilla.PosicionRelativa)
-                                                          .SingleOrDefault();
-
-                if (campoPlantilla.PosicionRelativa != campoPlantillaEnPosicionRelativa.PosicionRelativa)
+                var campoAntiguo = grupoMensaje.CampoPlantillaEnPosicionRelativa(campoMaestro.PosicionRelativa);
+                if (campoAntiguo != null && campoAntiguo.Id != campoMaestro.Id) 
                     throw new Exception("La Posición Relativa ya ha sido asignada");
             }
-            base.Modificar(campoPlantilla);
+
+            /*TODO verificar esta lógica cuando esté implementado el mensaje
+             * cuando se creo un mensaje como no requerido para todos los mensajes 
+             * y luego como requerido no debería darse esta lógica
+             * debería darse solo para aquellos que antes eran y ahora no lo son.
+             */
+            if (campoMaestro.EsRequeridoEnTodosLosMensajes())
+            {
+                foreach (var mensaje in grupoMensaje.Mensajes)
+                {
+                    var campo = mensaje.Campos.SingleOrDefault(x => x.CampoMaestroId == campoMaestro.Id);
+                    if (campo == null)
+                        throw new Exception("No se puede asignar la condición de cabecera, selector o transaccional. No todos los mensajes tienen el campo");
+                }
+            }
+            foreach (var mensaje in grupoMensaje.Mensajes)
+            {
+                var campo = mensaje.Campos.SingleOrDefault(x => x.CampoMaestroId == campoMaestro.Id);
+                if (campo != null)
+                {
+                    Mapper.Map(campoMaestro, campo);
+                    if (campoMaestro.EsRequeridoEnTodosLosMensajes()) 
+                        campo.Requerido = true;
+                }
+            }
+
+            base.Modificar(campoMaestro);
         }
 
         public override void Eliminar(int id)
         {
             CampoMaestro campoPlantilla = dataAccess.Get(id);
             if (campoPlantilla.Campos.Count > 0)
-                throw new Exception("La entidad Comunicacion esta asignada a un Campo y no se puede eliminar");
+                throw new Exception("El Campo Plantilla tiene Campos y no se puede eliminar");
             dataAccess.Remove(campoPlantilla);
 
         }

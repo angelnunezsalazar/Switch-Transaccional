@@ -7,6 +7,7 @@ namespace Web.Controllers
     using Web.Services.Bases;
     using Web.Services.Mensajeria;
     using BusinessEntity;
+    using System.Web.Routing;
 
     public class CampoMaestroController : BaseController
     {
@@ -33,7 +34,7 @@ namespace Web.Controllers
         public ActionResult Crear(CampoMaestro campoMaestro)
         {
             return Service(() => campoMaestroService.Insertar(campoMaestro))
-                   .OnError(() => DatosAdicionales(campoMaestro));
+                    .OnError(() => DatosAdicionales(campoMaestro));
         }
 
         public ActionResult Editar(int id)
@@ -47,7 +48,7 @@ namespace Web.Controllers
         public ActionResult Editar(CampoMaestro campoMaestro)
         {
             return Service(() => campoMaestroService.Modificar(campoMaestro))
-                   .OnError(() => DatosAdicionales(campoMaestro));
+                    .OnError(() => DatosAdicionales(campoMaestro));
         }
 
         [HttpPost]

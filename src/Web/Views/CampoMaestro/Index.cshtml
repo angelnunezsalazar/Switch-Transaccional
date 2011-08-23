@@ -4,6 +4,15 @@
     ViewBag.Title = "Consultar Campo Maestro";
 }
 
+@{
+    RouteValueDictionary routeValues = new RouteValueDictionary();
+    foreach (string key in Request.QueryString.Keys )
+    {
+        routeValues.Add(key, Request.QueryString[key]);
+    }
+}
+
+
 <table class="list">
 <thead>
     <tr>
@@ -39,7 +48,7 @@
             @Html.DisplayFor(modelItem => item.TipoDatoId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Id,"TableLinks")
+            @Html.DisplayFor(modelItem => item.Id, "TableLinks", new { routeValues = routeValues })
         </td>
     </tr>
 }
@@ -93,7 +102,7 @@
             @Html.DisplayFor(modelItem => item.TipoDato.Nombre)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Id,"TableLinks")
+            @Html.DisplayFor(modelItem => item.Id, "TableLinks", new { routeValues = routeValues })
         </td>
     </tr>
 }
@@ -101,5 +110,5 @@
 </table>
 
 <p>
-    @Html.ActionLink("Crear", "crear", new { grupoMensajeId=Request.QueryString["grupoMensajeId"]})
+    @Html.ActionLink("Crear", "crear", routeValues)
 </p>

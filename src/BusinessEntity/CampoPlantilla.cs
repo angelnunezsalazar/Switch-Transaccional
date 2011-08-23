@@ -16,7 +16,7 @@ namespace BusinessEntity
         public bool Variable { get; set; }
         public int GrupoMensajeId { get; set; }
         public int TipoDatoId { get; set; }
-        public int PosicionRelativa { get; set; }
+        public Nullable<int> PosicionRelativa { get; set; }
         public Nullable<int> LongitudCabecera { get; set; }
         public bool Cabecera { get; set; }
         public bool Bitmap { get; set; }
@@ -25,5 +25,10 @@ namespace BusinessEntity
         public virtual ICollection<Campo> Campos { get; set; }
         public virtual GrupoMensaje GrupoMensaje { get; set; }
         public virtual TipoDato TipoDato { get; set; }
+
+        public bool EsRequeridoEnTodosLosMensajes()
+        {
+            return Transaccional || Selector || Cabecera;
+        }
     }
 }

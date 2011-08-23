@@ -83,7 +83,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Binders\CustomBinder.cs" />
     <Compile Include="Models\AbstractForm.cs" />
     <Compile Include="Mapping\Converters\AbstractConverter.cs" />
     <Compile Include="Mapping\Converters\ProtocoloConverter.cs" />

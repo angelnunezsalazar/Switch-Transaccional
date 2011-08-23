@@ -128,12 +128,12 @@
             if ($("#Cabecera").is(':checked')) {
                 $(".cabecera-field").show();
                 $(".cuerpo-field").hide();
-                $(':input', '.cuerpo-field').val('').removeAttr('checked').removeAttr('selected');
+                $(':input', '.cuerpo-field').not(':hidden').val('').removeAttr('checked').removeAttr('selected');
             }
             else {
                 $(".cabecera-field").hide();
                 $(".cuerpo-field").show();
-                $(':input', '.cabecera-field').val('').removeAttr('checked').removeAttr('selected');
+                $(':input', '.cabecera-field').not(':hidden').val('').removeAttr('checked').removeAttr('selected');
             }
         }
 

@@ -1,6 +1,7 @@
 namespace BusinessEntity
 {
     using System.Collections.Generic;
+    using System.Linq;
 
     public class GrupoMensaje : Entity
     {
@@ -17,5 +18,12 @@ namespace BusinessEntity
         public virtual ICollection<CampoMaestro> CamposPlantilla { get; set; }
         public virtual TipoMensaje TipoMensaje { get; set; }
         public virtual ICollection<Mensaje> Mensajes { get; set; }
+
+        public CampoMaestro CampoPlantillaEnPosicionRelativa(int? posicionRelativa)
+        {
+            return CamposPlantilla
+                .Where(x => x.PosicionRelativa == posicionRelativa)
+                .SingleOrDefault();
+        }
     }
 }

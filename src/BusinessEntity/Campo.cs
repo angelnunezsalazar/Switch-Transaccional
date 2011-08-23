@@ -17,7 +17,7 @@ namespace BusinessEntity
         public string Nombre { get; set; }
         public int LongitudCuerpo { get; set; }
         public bool Selector { get; set; }
-        public Nullable<bool> Variable { get; set; }
+        public bool Variable { get; set; }
         public Nullable<int> LongitudCabecera { get; set; }
         public bool Requerido { get; set; }
         public int PosicionRelativa { get; set; }

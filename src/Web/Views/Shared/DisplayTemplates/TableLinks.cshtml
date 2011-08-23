@@ -1,6 +1,13 @@
 ﻿@model Int32
-@Html.ActionLink("Editar", "editar", new { id = Model }, new { @class = "edit" })
-@using (Html.BeginForm(new { action = "eliminar", id = Model }))
+@{
+    RouteValueDictionary routeValues = this.ViewData["routeValues"] != null
+                                       ? new RouteValueDictionary(this.ViewData["routeValues"] as RouteValueDictionary)
+                                       : new RouteValueDictionary();
+    routeValues["id"] = Model;
+
+}
+@Html.ActionLink("Editar", "editar", routeValues, new Dictionary<string, object> { { "class", "edit" } })
+@using (Html.BeginForm("eliminar", null, routeValues))
 {
     <a href="javascript:void(0)" class="delete">Eliminar</a>
 }

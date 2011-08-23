@@ -12,12 +12,12 @@
     {
         private readonly Action service;
 
-        private ActionResult successAction;
+        private RedirectToRouteResult successAction;
         private ViewResult errorView;
 
         private Action onError;
 
-        private ActionResult DEFAULT_SUCCESS_ACTION = new RedirectToRouteResult(new RouteValueDictionary
+        private RedirectToRouteResult DEFAULT_SUCCESS_ACTION = new RedirectToRouteResult(new RouteValueDictionary
                                                         {
                                                             { "action", "Index" }
                                                         });
@@ -43,6 +43,7 @@
                 }
                 catch (Exception e)
                 {
+                    e = this.Unwrap(e);
                     errorMessage = e.Message;
                 }
             }
@@ -55,7 +56,6 @@
                 if (context.RouteData.Values["action"].ToString().Equals("eliminar", StringComparison.OrdinalIgnoreCase))
                 {
                     context.Controller.TempData.Add("message", errorMessage);
-                    successAction.ExecuteResult(context);
                 }
                 else
                 {
@@ -63,10 +63,14 @@
                     errorView.ViewData = context.Controller.ViewData;
                     errorView.TempData = context.Controller.TempData;
                     errorView.ExecuteResult(context);
+                    return;
                 }
-                return;
             }
 
+            foreach (string key in context.HttpContext.Request.QueryString.Keys)
+            {
+                successAction.RouteValues.Add(key, context.HttpContext.Request.QueryString[key]);
+            }
             successAction.ExecuteResult(context);
         }
 
@@ -74,6 +78,16 @@
         {
             this.onError = onError;
             return this;
+        }
+
+        private Exception Unwrap(Exception ex)
+        {
+            while (null != ex.InnerException)
+            {
+                ex = ex.InnerException;
+            }
+
+            return ex;
         }
     }
 }

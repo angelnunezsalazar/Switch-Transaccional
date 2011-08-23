@@ -78,6 +78,7 @@
     <Compile Include="Comunicacion\TipoComunicacionBL.cs" />
     <Compile Include="Comunicacion\TipoEntidadBL.cs" />
     <Compile Include="Mensajeria\CampoPlantillaBL.cs" />
+    <Compile Include="Mensajeria\MensajeBL.cs" />
     <Compile Include="Parametros\ComponenteBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Terminales\EstadoTerminalBL.cs" />
