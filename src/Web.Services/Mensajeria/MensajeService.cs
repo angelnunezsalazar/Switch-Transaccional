@@ -1,5 +1,7 @@
 ﻿namespace Web.Services.Mensajeria
 {
+    using System.Collections.Generic;
+
     using BusinessEntity;
 
     using System;
@@ -10,26 +12,16 @@
 
     public class MensajeService:Service<Mensaje>
     {
-        public 
 
         public override Mensaje Obtener(int id)
         {
             return context.Mensaje.Include(x => x.GrupoMensaje).Where(o => o.Id == id).SingleOrDefault();
         }
 
-        //public  List<Mensaje> obtenerMensajePorCodigoGrupoMensaje(int codigoGrupoMensaje)
-        //{
-        //    using (Switch context = new Switch())
-        //    {
-        //        context.Mensaje.MergeOption = MergeOption.NoTracking;
-        //        var listaMensajes = from m in context.Mensaje
-        //                            where m.GRUPO_Mensaje.GMJ_CODIGO == codigoGrupoMensaje
-        //                            orderby m.MEN_NOMBRE ascending
-        //                            select m;
-
-        //        return listaMensajes.ToList<Mensaje>();
-        //    }
-        //}
+        public List<Mensaje> ObtenerPorGrupoMensaje(int grupoMensajeId)
+        {
+            return context.Mensaje.Where(m => m.GrupoMensaje.Id == grupoMensajeId).AsNoTracking().ToList();
+        }
 
         //public  List<Mensaje> obtenerMensajePorCodigoGrupoMensajeTodosEnCasoContrario(string codigoGrupoMensaje)
         //{

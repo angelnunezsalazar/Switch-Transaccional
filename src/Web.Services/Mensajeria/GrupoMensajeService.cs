@@ -36,7 +36,7 @@
         public override void Eliminar(int id)
         {
             GrupoMensaje grupoMensaje = dataAccess.Get(id);
-            if (grupoMensaje.CamposPlantilla.Count > 0)
+            if (grupoMensaje.CamposMaestro.Count > 0)
                 throw new Exception("La entidad Comunicacion esta asignada a un Campo Plantilla y no se puede eliminar");
             if (grupoMensaje.Mensajes.Count > 0)
                 throw new Exception("La entidad Comunicacion esta asignada a un Mensaje y no se puede eliminar");

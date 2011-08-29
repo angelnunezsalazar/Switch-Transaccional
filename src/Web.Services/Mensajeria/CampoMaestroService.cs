@@ -24,50 +24,38 @@
 
         public override List<CampoMaestro> ObtenerTodos()
         {
-            return context.CampoPlantilla.OrderBy(o => o.PosicionRelativa).AsNoTracking().ToList();
+            return context.CampoMaestro.OrderBy(o => o.PosicionRelativa).AsNoTracking().ToList();
         }
 
         public override CampoMaestro Obtener(int id)
         {
-            return context.CampoPlantilla.Include(x => x.TipoDato)
+            return context.CampoMaestro.Include(x => x.TipoDato)
                 .Where(o => o.Id == id).AsNoTracking().FirstOrDefault();
-
         }
 
-        //public List<CampoPlantilla> obtenerCampoPlantillaNoAsignadosMensaje(int codigoMensaje)
-        //{
-
-        //        var listaCampoPlantilla = (from m in context.MENSAJE
-        //                                   where m.MEN_CODIGO == codigoMensaje
-        //                                   from cp in contexto.CampoPlantilla
-        //                                   where cp.GRUPO_MENSAJE.GMJ_CODIGO == m.GRUPO_MENSAJE.GMJ_CODIGO
-        //                                   select cp).Except
-        //            (from c in context.CAMPO
-        //             where c.MEN_CODIGO == codigoMensaje
-        //             select c.CampoPlantilla);
-
-
-        //        return listaCampoPlantilla.ToList();
-        //    }
-        //}
+        public List<CampoMaestro> ObtenerNoAsignadosMensaje(int mensajeId)
+        {
+            var camposGruposMensaje = context.Mensaje.Where(x => x.Id == mensajeId).SelectMany(x => x.GrupoMensaje.CamposMaestro);
+            var camposMensaje = context.Campo.Where(c => c.MensajeId == mensajeId).Select(c => c.CampoMaestro);
+            return camposGruposMensaje.Except(camposMensaje).ToList();
+        }
 
         public List<CampoMaestro> ObtenerCamposCabecera(int grupoMensajeId)
         {
-            return context.CampoPlantilla.Include(x => x.TipoDato)
+            return context.CampoMaestro.Include(x => x.TipoDato)
                           .Where(c => c.GrupoMensaje.Id == grupoMensajeId && c.Cabecera).AsNoTracking().ToList();
-
         }
 
         public List<CampoMaestro> ObtenerCamposCuerpo(int grupoMensajeId)
         {
-            return context.CampoPlantilla.Include(x => x.TipoDato)
+            return context.CampoMaestro.Include(x => x.TipoDato)
                     .Where(c => c.GrupoMensaje.Id == grupoMensajeId && !c.Cabecera)
                     .OrderBy(c => c.PosicionRelativa).AsNoTracking().ToList();
         }
 
         public List<CampoMaestro> ObtenerTodos(int grupoMensajeId)
         {
-            return context.CampoPlantilla.Include(x => x.TipoDato)
+            return context.CampoMaestro.Include(x => x.TipoDato)
                           .Where(c => c.GrupoMensaje.Id == grupoMensajeId)
                           .OrderBy(c => c.PosicionRelativa).ToList();
         }
@@ -103,7 +91,7 @@
             if (!campoMaestro.Cabecera)
             {
                 var campoAntiguo = grupoMensaje.CampoPlantillaEnPosicionRelativa(campoMaestro.PosicionRelativa);
-                if (campoAntiguo != null && campoAntiguo.Id != campoMaestro.Id) 
+                if (campoAntiguo != null && campoAntiguo.Id != campoMaestro.Id)
                     throw new Exception("La Posición Relativa ya ha sido asignada");
             }
 
@@ -127,7 +115,7 @@
                 if (campo != null)
                 {
                     Mapper.Map(campoMaestro, campo);
-                    if (campoMaestro.EsRequeridoEnTodosLosMensajes()) 
+                    if (campoMaestro.EsRequeridoEnTodosLosMensajes())
                         campo.Requerido = true;
                 }
             }

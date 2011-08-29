@@ -66,6 +66,7 @@
     <Content Include="Comunicacion\MantenimientoProtocolo\ModificarProtocolo.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Mensajeria\MantenimientoCampoMensaje\ConsultarCampoMensaje.aspx" />
     <Content Include="Mensajeria\MantenimientoCampoPlantilla\AgregarCampoPlantilla.aspx" />
     <Content Include="Mensajeria\MantenimientoCampoPlantilla\ConsultarCampoPlantilla.aspx" />
     <Content Include="Mensajeria\MantenimientoCampoPlantilla\ModificarCampoPlantilla.aspx" />
@@ -73,6 +74,9 @@
     <Content Include="Mensajeria\MantenimientoGrupoMensaje\ConsultarGrupoMensaje.aspx" />
     <Content Include="Mensajeria\MantenimientoGrupoMensaje\ModificarGrupoMensaje.aspx" />
     <Content Include="Mensajeria\MantenimientoGrupoMensaje\VerEntidadesEnGrupoMensaje.aspx" />
+    <Content Include="Mensajeria\MantenimientoMensaje\AgregarMensaje.aspx" />
+    <Content Include="Mensajeria\MantenimientoMensaje\ConsultarMensaje.aspx" />
+    <Content Include="Mensajeria\MantenimientoMensaje\ModificarMensaje.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +133,13 @@
     <Compile Include="MasterPage\Principal.Master.designer.cs">
       <DependentUpon>Principal.Master</DependentUpon>
     </Compile>
+    <Compile Include="Mensajeria\MantenimientoCampoMensaje\ConsultarCampoMensaje.aspx.cs">
+      <DependentUpon>ConsultarCampoMensaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mensajeria\MantenimientoCampoMensaje\ConsultarCampoMensaje.aspx.designer.cs">
+      <DependentUpon>ConsultarCampoMensaje.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mensajeria\MantenimientoCampoPlantilla\AgregarCampoPlantilla.aspx.cs">
       <DependentUpon>AgregarCampoPlantilla.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -177,6 +188,27 @@
     </Compile>
     <Compile Include="Mensajeria\MantenimientoGrupoMensaje\VerEntidadesEnGrupoMensaje.aspx.designer.cs">
       <DependentUpon>VerEntidadesEnGrupoMensaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mensajeria\MantenimientoMensaje\AgregarMensaje.aspx.cs">
+      <DependentUpon>AgregarMensaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mensajeria\MantenimientoMensaje\AgregarMensaje.aspx.designer.cs">
+      <DependentUpon>AgregarMensaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mensajeria\MantenimientoMensaje\ConsultarMensaje.aspx.cs">
+      <DependentUpon>ConsultarMensaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mensajeria\MantenimientoMensaje\ConsultarMensaje.aspx.designer.cs">
+      <DependentUpon>ConsultarMensaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mensajeria\MantenimientoMensaje\ModificarMensaje.aspx.cs">
+      <DependentUpon>ModificarMensaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mensajeria\MantenimientoMensaje\ModificarMensaje.aspx.designer.cs">
+      <DependentUpon>ModificarMensaje.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Terminales\MantenimientoEstadoTerminal\ConsultarEstadoTerminal.aspx.cs">

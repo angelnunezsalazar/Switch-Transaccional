@@ -1,0 +1,866 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:CampoMaestroController.cs" caret="197" fromTop="8" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Mensaje/f:Crear.cshtml" caret="63" fromTop="3" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Mensaje/f:Editar.cshtml" caret="65" fromTop="3" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ProtocoloController.cs" caret="1743" fromTop="5" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Content/f:Site.css" caret="1788" fromTop="26" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:CampoMaestro/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="19CC30BD-3D17-42DD-B3F1-1440C22D89C0/d:Mensajeria/f:CampoMensajeBL.cs" caret="19933" fromTop="11" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:CampoMaestroList.cs" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:AbstractForm.cs" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:GrupoMensajeController.cs" caret="499" fromTop="17" />
+      <File id="475A30C8-139D-4E43-9165-5C671743C94C/d:Mensajeria/d:MantenimientoCampoMensaje/f:ConsultarCampoMensaje.aspx" caret="725" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Mensaje/f:Index.cshtml" caret="1246" fromTop="6" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:CampoList.cs" caret="368" fromTop="10" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/f:Mvc.sitemap" caret="1124" fromTop="15" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:CampoPlantilla.cs" caret="1112" fromTop="26" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:_Form.cshtml" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:CampoMaestro/f:_Form.cshtml" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:MensajeController.cs" caret="913" fromTop="13" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:_Form.cshtml" caret="274" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:CampoForm.cs" caret="204" fromTop="8" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Crear.cshtml" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Editar.cshtml" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Mensaje/f:_Form.cshtml" caret="300" fromTop="13" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:GrupoMensaje.cs" caret="517" fromTop="13" />
+      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Persistence/f:DatabaseContext.cs" caret="751" fromTop="13" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="957" fromTop="0" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:MensajeService.cs" caret="1499" fromTop="42" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:CampoController.cs" caret="79" fromTop="5" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoService.cs" caret="0" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Models/f:CampoForm.cs" caret="190" fromTop="8" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:CampoController.cs" caret="2186" fromTop="23" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:CampoController.cs" caret="1986" fromTop="20" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:_Form.cshtml" caret="950" fromTop="18" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:_Form.cshtml" caret="937" fromTop="15" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:_Form.cshtml" caret="1536" fromTop="24" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Crear.cshtml" caret="69" fromTop="3" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Editar.cshtml" caret="27" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Index.cshtml" caret="3465" fromTop="12" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:CampoController.cs" caret="2836" fromTop="20" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoService.cs" caret="1415" fromTop="19" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Mensaje/f:_Form.cshtml" caret="1072" fromTop="18" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Mensaje/f:_Form.cshtml" caret="704" fromTop="4" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Mensaje/f:_Form.cshtml" caret="1226" fromTop="26" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Mensaje/f:_Form.cshtml" caret="100" fromTop="3" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:_Form.cshtml" caret="139" fromTop="4" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:GrupoMensaje.cs" caret="517" fromTop="13" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="1070" fromTop="10" />
+      <File id="103FE544-5FE3-40B6-ABE6-7FC98EA23DD9/d:Persistence/f:DatabaseContext.cs" caret="751" fromTop="13" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Index.cshtml" caret="0" fromTop="0" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="1189" fromTop="11" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="1299" fromTop="11" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="1257" fromTop="11" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="1656" fromTop="19" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="957" fromTop="5" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:CampoController.cs" caret="2186" fromTop="20" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:CampoController.cs" caret="2453" fromTop="23" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:MensajeService.cs" caret="1797" fromTop="17" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:MensajeService.cs" caret="1497" fromTop="7" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:CampoController.cs" caret="2318" fromTop="23" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.5\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="this" priority="13" />
+      <Item value="return" priority="21" />
+      <Item value="null" priority="4" />
+      <Item value="using" priority="20" />
+      <Item value="contexto" priority="6" />
+      <Item value="System" priority="16" />
+      <Item value="entidadComunicacion" priority="7" />
+      <Item value="Terminal`0" priority="6" />
+      <Item value="EntidadComunicacion`0" priority="1" />
+      <Item value="Switch" priority="1" />
+      <Item value="Protocolo" priority="0" />
+      <Item value="Data" priority="11" />
+      <Item value="Entity" priority="12" />
+      <Item value="EstadoTerminal`0" priority="9" />
+      <Item value="codigo" priority="2" />
+      <Item value="public" priority="24" />
+      <Item value="virtual" priority="3" />
+      <Item value="GrupoMensaje`0" priority="10" />
+      <Item value="void" priority="12" />
+      <Item value="ctor" priority="10" />
+      <Item value="Switch`0" priority="4" />
+      <Item value="context" priority="25" />
+      <Item value="T`0" priority="14" />
+      <Item value="where" priority="2" />
+      <Item value="class" priority="4" />
+      <Item value="int" priority="20" />
+      <Item value="set" priority="3" />
+      <Item value="Linq" priority="3" />
+      <Item value="entity" priority="9" />
+      <Item value="switch" priority="0" />
+      <Item value="terminal" priority="10" />
+      <Item value="Bind`0" priority="0" />
+      <Item value="private" priority="6" />
+      <Item value="DataAccess" priority="1" />
+      <Item value="PuntoServicio`0" priority="4" />
+      <Item value="new" priority="18" />
+      <Item value="DataAccess&lt;PuntoServicio&gt;" priority="0" />
+      <Item value="dataAccess" priority="20" />
+      <Item value="puntoServicio" priority="6" />
+      <Item value="if" priority="11" />
+      <Item value="puntoServicioDA" priority="1" />
+      <Item value="throw" priority="4" />
+      <Item value="Exception" priority="4" />
+      <Item value="from" priority="0" />
+      <Item value="nombre" priority="1" />
+      <Item value="estado" priority="2" />
+      <Item value="puntosServicio" priority="1" />
+      <Item value="estadoTerminalDA" priority="7" />
+      <Item value="estadoTerminal" priority="6" />
+      <Item value="DataAccess&lt;EstadoTerminal&gt;" priority="0" />
+      <Item value="Terminal" priority="3" />
+      <Item value="var" priority="7" />
+      <Item value="serial" priority="2" />
+      <Item value="terminales" priority="6" />
+      <Item value="static" priority="7" />
+      <Item value="e" priority="5" />
+      <Item value="exception" priority="0" />
+      <Item value="kernel" priority="5" />
+      <Item value="Ninject" priority="1" />
+      <Item value="Extensions" priority="1" />
+      <Item value="Conventions" priority="1" />
+      <Item value="AssemblyScanner`0" priority="0" />
+      <Item value="interface" priority="0" />
+      <Item value="IService" priority="3" />
+      <Item value="protected" priority="2" />
+      <Item value="dataaccess" priority="0" />
+      <Item value="typeof" priority="3" />
+      <Item value="x" priority="5" />
+      <Item value="prop" priority="2" />
+      <Item value="List" priority="1" />
+      <Item value="modelBuilder" priority="1" />
+      <Item value="foreach" priority="1" />
+      <Item value="binding" priority="0" />
+      <Item value="dependencyRegistrar" priority="0" />
+      <Item value="DependencyRegistrar" priority="0" />
+      <Item value="assembly" priority="1" />
+      <Item value="Assembly`0" priority="0" />
+      <Item value="base" priority="3" />
+      <Item value="estadoTerminalBl" priority="0" />
+      <Item value="KernelBase`0" priority="0" />
+      <Item value="register" priority="0" />
+      <Item value="Serializable" priority="0" />
+      <Item value="EstadoTerminalBL" priority="0" />
+      <Item value="oldEntity" priority="2" />
+      <Item value="Entity`0" priority="28" />
+      <Item value="args" priority="3" />
+      <Item value="string" priority="10" />
+      <Item value="message" priority="0" />
+      <Item value="gn" priority="2" />
+      <Item value="ErrorStorage`0" priority="0" />
+      <Item value="Object`0" priority="0" />
+      <Item value="ExceptionHandling" priority="2" />
+      <Item value="Continue" priority="0" />
+      <Item value="lblMensaje" priority="0" />
+      <Item value="ContainerFilterService`0" priority="4" />
+      <Item value="DatabaseContext`0" priority="0" />
+      <Item value="Transaction" priority="0" />
+      <Item value="Protocolo`0" priority="8" />
+      <Item value="override" priority="4" />
+      <Item value="protocolo" priority="6" />
+      <Item value="lb" priority="1" />
+      <Item value="TipoEntidad`0" priority="1" />
+      <Item value="TipoComunicacion`0" priority="1" />
+      <Item value="Componente`0" priority="1" />
+      <Item value="EstadoTerminalController`0" priority="1" />
+      <Item value="EstadoTerminalService" priority="1" />
+      <Item value="estadoTerminalService" priority="3" />
+      <Item value="ActionDescriptor`0" priority="0" />
+      <Item value="handler" priority="0" />
+      <Item value="w" priority="0" />
+      <Item value="TerminalService" priority="0" />
+      <Item value="terminalService" priority="2" />
+      <Item value="EstadoTerminalService`0" priority="0" />
+      <Item value="PuntoServicioService`0" priority="0" />
+      <Item value="PuntoServicioService" priority="0" />
+      <Item value="EntidadComunicacionService" priority="0" />
+      <Item value="entidadComunicacionService" priority="0" />
+      <Item value="puntoServicioService" priority="0" />
+      <Item value="Services" priority="1" />
+      <Item value="DEFAULT_ERROR_VIEW" priority="2" />
+      <Item value="ViewResult`0" priority="3" />
+      <Item value="onError" priority="1" />
+      <Item value="else" priority="4" />
+      <Item value="HttpPost" priority="0" />
+      <Item value="object" priority="4" />
+      <Item value="puntoServicioId" priority="0" />
+      <Item value="estadoTerminalId" priority="0" />
+      <Item value="ProtocoloTCP`0" priority="3" />
+      <Item value="Service&lt;Componente&gt;" priority="0" />
+      <Item value="is" priority="0" />
+      <Item value="ProtocoloComponente`0" priority="1" />
+      <Item value="controllerContext" priority="0" />
+      <Item value="bindingContext" priority="0" />
+      <Item value="modelType" priority="4" />
+      <Item value="Type`0" priority="0" />
+      <Item value="ProtocoloBinder`0" priority="0" />
+      <Item value="type" priority="0" />
+      <Item value="childType" priority="0" />
+      <Item value="ModelBinders`0" priority="0" />
+      <Item value="AutoMapper" priority="0" />
+      <Item value="ProtocoloForm`0" priority="7" />
+      <Item value="protocoloForm" priority="0" />
+      <Item value="Mapper`0" priority="2" />
+      <Item value="as" priority="4" />
+      <Item value="protocoloTCP" priority="3" />
+      <Item value="childtype" priority="0" />
+      <Item value="Convert`0" priority="1" />
+      <Item value="source" priority="0" />
+      <Item value="Cast`1" priority="0" />
+      <Item value="destinationType" priority="0" />
+      <Item value="AbstractForm`0" priority="0" />
+      <Item value="Eliminar`0" priority="0" />
+      <Item value="grupoMensaje" priority="5" />
+      <Item value="Service" priority="0" />
+      <Item value="successAction" priority="2" />
+      <Item value="errorMessage" priority="1" />
+      <Item value="OrdinalIgnoreCase" priority="0" />
+      <Item value="ViewBag" priority="0" />
+      <Item value="GrupoMensajeService" priority="1" />
+      <Item value="grupoMensajeService" priority="1" />
+      <Item value="CampoPlantilla`0" priority="1" />
+      <Item value="campoPlantilla" priority="15" />
+      <Item value="grupoMensajeDataAccess" priority="0" />
+      <Item value="GrupoMensajeService`0" priority="0" />
+      <Item value="grupoMensajeId" priority="0" />
+      <Item value="campoMaestro" priority="3" />
+      <Item value="ServiceActionResult`0" priority="0" />
+      <Item value="key" priority="1" />
+      <Item value="value" priority="0" />
+      <Item value="Unwrap`0" priority="0" />
+      <Item value="Campo`0" priority="2" />
+      <Item value="mensaje" priority="1" />
+      <Item value="campo" priority="2" />
+      <Item value="CampoMaestro`0" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="Mensaje`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.dbSwitch">
+      <Item value="Configuration" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
+      <Item value="AsNoTracking`0" priority="2" />
+      <Item value="Include`0" priority="5" />
+      <Item value="Remove`0" priority="0" />
+      <Item value="Attach`0" priority="1" />
+      <Item value="SingleOrDefault`1" priority="0" />
+      <Item value="Add`0" priority="0" />
+      <Item value="Where`1" priority="104" />
+      <Item value="AsQueryable`0" priority="0" />
+      <Item value="OrderBy`2" priority="0" />
+      <Item value="SelectMany`2" priority="49" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.Infrastructure.DbQuery`1">
+      <Item value="AsNoTracking`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataAccess.dbSwitch">
+      <Item value="CAMPO" priority="1" />
+      <Item value="Database" priority="0" />
+      <Item value="ENTIDAD_COMUNICACION" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.ENTIDAD_COMUNICACION">
+      <Item value="PROTOCOLO" priority="1" />
+      <Item value="TIPO_ENTIDAD" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="AsNoTracking`0" priority="7" />
+      <Item value="ToList`1" priority="32" />
+      <Item value="SingleOrDefault`1" priority="2" />
+      <Item value="Where`1" priority="28" />
+      <Item value="ToArray`1" priority="0" />
+      <Item value="Include`2" priority="1" />
+      <Item value="ToString`0" priority="1" />
+      <Item value="AsNoTracking`1" priority="26" />
+      <Item value="SelectMany`2" priority="54" />
+      <Item value="Except`1" priority="27" />
+      <Item value="Select`2" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.Database">
+      <Item value="ExecuteSqlCommand`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.EntidadComunicacion">
+      <Item value="TipoEntidad" priority="1" />
+      <Item value="Protocolo" priority="0" />
+      <Item value="Id" priority="0" />
+      <Item value="GrupoMensajeId" priority="1" />
+      <Item value="GrupoMensaje" priority="1" />
+      <Item value="Terminales" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.EstadoTerminal">
+      <Item value="Id" priority="0" />
+      <Item value="Nombre" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataAccess.Switch">
+      <Item value="EntidadComunicacion" priority="1" />
+      <Item value="SaveChanges`0" priority="1" />
+      <Item value="Set`0" priority="1" />
+      <Item value="PuntoServicio" priority="0" />
+      <Item value="Terminal" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.IDbSet`1">
+      <Item value="SingleOrDefault`1" priority="0" />
+      <Item value="Find`0" priority="0" />
+      <Item value="Add`0" priority="0" />
+      <Item value="Remove`0" priority="0" />
+      <Item value="ToList`1" priority="0" />
+      <Item value="AsNoTracking`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.Terminal">
+      <Item value="Id" priority="1" />
+      <Item value="PuntoServicio" priority="1" />
+      <Item value="EntidadComunicacion" priority="1" />
+      <Item value="EstadoTerminalId" priority="2" />
+      <Item value="Serial" priority="0" />
+      <Item value="EntidadComunicacionId" priority="1" />
+      <Item value="EstadoTerminal" priority="1" />
+      <Item value="PuntoServicioId" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ninject.Syntax.IBindingWhenInNamedWithOrOnSyntax`1">
+      <Item value="InTransientScope`0" priority="0" />
+      <Item value="InRequestScope`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.PuntoServicio">
+      <Item value="Id" priority="1" />
+      <Item value="Terminal" priority="0" />
+      <Item value="Nombre" priority="0" />
+      <Item value="Estado" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessLayer.Terminales.PuntoServicioBL">
+      <Item value="puntosServicio" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataAccess.DataAccess`1">
+      <Item value="Get`0" priority="4" />
+      <Item value="Add`0" priority="4" />
+      <Item value="Update`0" priority="3" />
+      <Item value="All`0" priority="2" />
+      <Item value="Remove`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Contains`0" priority="1" />
+      <Item value="Replace`0" priority="0" />
+      <Item value="Equals`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.ICollection`1">
+      <Item value="Count" priority="1" />
+      <Item value="Where`1" priority="0" />
+      <Item value="Select`2" priority="0" />
+      <Item value="SelectMany`2" priority="80" />
+      <Item value="ToList`1" priority="26" />
+      <Item value="Contains`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessLayer.Terminales.TerminalBL">
+      <Item value="estadoTerminalDA" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ninject.IKernel">
+      <Item value="Scan`0" priority="0" />
+      <Item value="Settings" priority="0" />
+      <Item value="GetBindings`0" priority="2" />
+      <Item value="GetAll`0" priority="0" />
+      <Item value="Get`0" priority="1" />
+      <Item value="Bind`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ninject.Extensions.Conventions.AssemblyScanner">
+      <Item value="FromAssemblyContaining`0" priority="0" />
+      <Item value="InTransientScope`0" priority="0" />
+      <Item value="InRequestScope`0" priority="0" />
+      <Item value="BindingGenerators" priority="0" />
+      <Item value="BindWith`0" priority="1" />
+      <Item value="FromAssembliesMatching`0" priority="0" />
+      <Item value="From`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Ninject.Syntax.IBindingToSyntax`1">
+      <Item value="ToSelf`0" priority="0" />
+      <Item value="To`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Intersect`1" priority="0" />
+      <Item value="SingleOrDefault`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Practices.ServiceLocation.ServiceLocator">
+      <Item value="Current" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Practices.ServiceLocation.IServiceLocator">
+      <Item value="GetInstance`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="JetBrains.ReSharper.Feature.Services.WebConfig.CodeCompletion.WebConfigBasicCompletionContext">
+      <Item value="ctx" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.DbModelBuilder">
+      <Item value="Conventions" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.ConventionsConfiguration">
+      <Item value="Remove`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.Assembly">
+      <Item value="Load`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessLayer.Terminales.IEstadoTerminalBL">
+      <Item value="Something`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessLayer.Terminales.EstadoTerminalBL">
+      <Item value="Something`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserInterface.Terminales.MantenimientoEstadoTerminal.ConsultarEstadoTerminal">
+      <Item value="grvEstadoTerminal" priority="0" />
+      <Item value="Master" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.GridView">
+      <Item value="DataBind`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DataAccess.DependencyResolution.DependencyRegistrar">
+      <Item value="Register`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@StructureMap.ObjectFactory">
+      <Item value="GetInstance`1" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataAccess.Persistence.DatabaseContext">
+      <Item value="SaveChanges`0" priority="0" />
+      <Item value="Protocolo" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:T">
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.Entity">
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:PostSharp.Aspects.MethodExecutionArgs">
+      <Item value="Method" priority="0" />
+      <Item value="FlowBehavior" priority="1" />
+      <Item value="Exception" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Label">
+      <Item value="id" priority="0" />
+      <Item value="TemplateSourceDirectory" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UserInterface.MasterPage.Principal">
+      <Item value="mensaje" priority="0" />
+      <Item value="lblMensaje" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="JetBrains.ReSharper.Feature.Services.Asp.CodeCompletion.AspBasicCodeCompletionContext">
+      <Item value="ctx" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataAccess.Utilitarios.Errors.ErrorStorage">
+      <Item value="message" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.IInitializationExpression">
+      <Item value="For`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.Configuration.DSL.Expressions.CreatePluginFamilyExpression`1">
+      <Item value="Use`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataAccess.Errors.IErrorStorage">
+      <Item value="ErrorMessage" priority="0" />
+      <Item value="Save`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ASP.masterpage_principal_master">
+      <Item value="RequestError`0" priority="0" />
+      <Item value="ErrorMessage`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@PostSharp.Aspects.FlowBehavior">
+      <Item value="RethrowException" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ObjectDataSourceStatusEventArgs">
+      <Item value="Exception" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ObjectDataSource">
+      <Item value="DeleteMethod" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.Protocolo">
+      <Item value="EntidadComunicacion" priority="1" />
+      <Item value="Frame" priority="0" />
+      <Item value="Componente" priority="0" />
+      <Item value="TipoComunicacion" priority="0" />
+      <Item value="GetType`0" priority="0" />
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Terminales.EstadoTerminalService">
+      <Item value="ObtenerTodos`0" priority="1" />
+      <Item value="Insertar`0" priority="0" />
+      <Item value="Obtener`0" priority="0" />
+      <Item value="Modificar`0" priority="0" />
+      <Item value="Eliminar`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Terminales.TerminalService">
+      <Item value="ObtenerTodos`0" priority="0" />
+      <Item value="Insertar`0" priority="0" />
+      <Item value="Obtener`0" priority="0" />
+      <Item value="Eliminar`0" priority="0" />
+      <Item value="Modificar`0" priority="0" />
+      <Item value="Buscar`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Comunicacion.EntidadComunicacionService">
+      <Item value="ObtenerTodos`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="ToSelectList`1" priority="84" />
+      <Item value="First`1" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Terminales.PuntoServicioService">
+      <Item value="ObtenerTodos`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.ActionResults.ServiceActionResult">
+      <Item value="onError" priority="0" />
+      <Item value="OnError`0" priority="0" />
+      <Item value="successAction" priority="1" />
+      <Item value="SuccessRouteValues`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Controllers.ProtocoloController">
+      <Item value="ViewBag" priority="0" />
+      <Item value="componenteService" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infraestructure.Services.Service`1">
+      <Item value="ObtenerTodos`0" priority="0" />
+      <Item value="Insertar`0" priority="1" />
+      <Item value="Modificar`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.ProtocoloComponente">
+      <Item value="Componente" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.IValueProvider">
+      <Item value="GetValue`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ValueProviderResult">
+      <Item value="RawValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Type">
+      <Item value="GetType`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="Name" priority="0" />
+      <Item value="FullName" priority="2" />
+      <Item value="AssemblyQualifiedName" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.ModelBinders">
+      <Item value="Binders" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ModelBinderDictionary">
+      <Item value="Clear`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AutoMapper.Mapper">
+      <Item value="Map`0" priority="3" />
+      <Item value="CreateMap`0" priority="0" />
+      <Item value="Map`2" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Models.ProtocoloForm">
+      <Item value="ComponenteId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AutoMapper.IMappingExpression`2">
+      <Item value="ConvertUsing`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AutoMapper.ResolutionContext">
+      <Item value="SourceValue" priority="2" />
+      <Item value="PropertyMap" priority="0" />
+      <Item value="DestinationType" priority="1" />
+      <Item value="SourceType" priority="0" />
+      <Item value="DestinationValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Activator">
+      <Item value="CreateInstance`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Models.AbstractForm">
+      <Item value="BindingType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Web.Mapping.MappingConfiguration">
+      <Item value="Configure`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.EntityMappingConfiguration`1">
+      <Item value="Requires`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.ProtocoloTCP">
+      <Item value="TipoComunicacionId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.ModelConfiguration.Configuration.NotNullConditionConfiguration">
+      <Item value="HasValue`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Comunicacion.ProtocoloService">
+      <Item value="Insertar`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infraestructure.Persistence.DatabaseContext">
+      <Item value="GrupoMensaje" priority="50" />
+      <Item value="CampoPlantilla" priority="53" />
+      <Item value="CampoMaestro" priority="81" />
+      <Item value="Mensaje" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.GrupoMensaje">
+      <Item value="TipoMensaje" priority="0" />
+      <Item value="Id" priority="112" />
+      <Item value="CampoPlantilla" priority="0" />
+      <Item value="Mensaje" priority="0" />
+      <Item value="CamposPlantilla" priority="54" />
+      <Item value="CampoPlantillaEnPosicionRelativa`0" priority="0" />
+      <Item value="Mensajes" priority="134" />
+      <Item value="CamposMaestro" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ControllerContext">
+      <Item value="Controller" priority="2" />
+      <Item value="RouteData" priority="0" />
+      <Item value="RequestContext" priority="0" />
+      <Item value="HttpContext" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ControllerBase">
+      <Item value="ControllerContext" priority="2" />
+      <Item value="ViewData" priority="0" />
+      <Item value="TempData" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.TempDataDictionary">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Mensajeria.GrupoMensajeService">
+      <Item value="ObtenerTodos`0" priority="27" />
+      <Item value="Obtener`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.CampoPlantilla">
+      <Item value="PosicionRelativa" priority="6" />
+      <Item value="Id" priority="0" />
+      <Item value="TipoDato" priority="1" />
+      <Item value="GrupoMensaje" priority="3" />
+      <Item value="Cabecera" priority="3" />
+      <Item value="Campos" priority="0" />
+      <Item value="GrupoMensajeId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Infraestructure.Persistence.DataAccess`1">
+      <Item value="Add`0" priority="27" />
+      <Item value="Get`0" priority="81" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.CampoMaestro">
+      <Item value="GrupoMensajeId" priority="1" />
+      <Item value="Id" priority="4" />
+      <Item value="Transaccional" priority="0" />
+      <Item value="Selector" priority="0" />
+      <Item value="Cabecera" priority="0" />
+      <Item value="EsRequeridoEnTodosLosMensajes`0" priority="0" />
+      <Item value="PosicionRelativa" priority="0" />
+      <Item value="GrupoMensaje" priority="81" />
+      <Item value="Nombre" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.RedirectToRouteResult">
+      <Item value="RouteValues" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Routing.RouteValueDictionary">
+      <Item value="Add`0" priority="30" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpContextBase">
+      <Item value="Request" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpRequestBase">
+      <Item value="QueryString" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Specialized.NameValueCollection">
+      <Item value="Keys" priority="27" />
+      <Item value="Indexer" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.Mensaje">
+      <Item value="Campos" priority="28" />
+      <Item value="Id" priority="55" />
+      <Item value="GrupoMensaje" priority="137" />
+      <Item value="GrupoMensajeId" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.Campo">
+      <Item value="Id" priority="28" />
+      <Item value="CampoMaestroId" priority="27" />
+      <Item value="Requerido" priority="138" />
+      <Item value="Cabecera" priority="55" />
+      <Item value="PosicionRelativa" priority="27" />
+      <Item value="MensajeId" priority="81" />
+      <Item value="LongitudCuerpo" priority="55" />
+      <Item value="Selector" priority="27" />
+      <Item value="TipoDato" priority="27" />
+      <Item value="Nombre" priority="27" />
+      <Item value="Variable" priority="27" />
+      <Item value="LongitudCabecera" priority="27" />
+      <Item value="CampoMaestro" priority="81" />
+    </ItemStatistics>
+    <ItemStatistics item="HtmlCodeCompletionContext">
+      <Item value="list" priority="6" />
+      <Item value="br" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="int" priority="285" />
+      <Item value="if" priority="123" />
+      <Item value="grupoMensajeId" priority="380" />
+      <Item value="ViewBag" priority="157" />
+      <Item value="GrupoMensajeService`0" priority="63" />
+      <Item value="grupoMensajeService" priority="96" />
+      <Item value="new" priority="287" />
+      <Item value="GrupoMensajeService" priority="57" />
+      <Item value="var" priority="191" />
+      <Item value="gruposMensaje" priority="63" />
+      <Item value="grupoMensajes" priority="31" />
+      <Item value="FormMethod`0" priority="31" />
+      <Item value="null" priority="127" />
+      <Item value="routeValues" priority="63" />
+      <Item value="ViewContext" priority="26" />
+      <Item value="Html" priority="29" />
+      <Item value="mensaje" priority="95" />
+      <Item value="public" priority="95" />
+      <Item value="void" priority="95" />
+      <Item value="DatosAdicionales`0" priority="63" />
+      <Item value="Model" priority="187" />
+      <Item value="Dictionary&lt;string,object&gt;" priority="28" />
+      <Item value="Mensaje`0" priority="62" />
+      <Item value="lb" priority="31" />
+      <Item value="using" priority="30" />
+      <Item value="System" priority="30" />
+      <Item value="Data" priority="26" />
+      <Item value="Entity" priority="26" />
+      <Item value="bool" priority="94" />
+      <Item value="CampoMaestro`0" priority="159" />
+      <Item value="campoMaestro" priority="64" />
+      <Item value="campoMaestroDataAccess" priority="31" />
+      <Item value="campoMaestroId" priority="95" />
+      <Item value="requerido" priority="95" />
+      <Item value="campo" priority="226" />
+      <Item value="mensajeId" priority="352" />
+      <Item value="dataAccess" priority="95" />
+      <Item value="Campo`0" priority="31" />
+      <Item value="campoId" priority="31" />
+      <Item value="prop" priority="223" />
+      <Item value="IList" priority="30" />
+      <Item value="IEnumerable" priority="63" />
+      <Item value="CampoService`0" priority="31" />
+      <Item value="campoService" priority="130" />
+      <Item value="CampoService" priority="28" />
+      <Item value="grupoMensaje" priority="32" />
+      <Item value="this" priority="31" />
+      <Item value="Cabecera" priority="63" />
+      <Item value="Cuerpo" priority="64" />
+      <Item value="CampoList`0" priority="31" />
+      <Item value="BinaryReader`0" priority="31" />
+      <Item value="ctor" priority="31" />
+      <Item value="GrupoMensajeId" priority="31" />
+      <Item value="GrupoMensaje`0" priority="31" />
+      <Item value="return" priority="95" />
+      <Item value="CampoList" priority="28" />
+      <Item value="model" priority="63" />
+      <Item value="CampoMaestroService`0" priority="63" />
+      <Item value="campoMaestroService" priority="59" />
+      <Item value="CampoMaestroService" priority="28" />
+      <Item value="from" priority="32" />
+      <Item value="context" priority="63" />
+      <Item value="where" priority="31" />
+      <Item value="cp" priority="31" />
+      <Item value="codigoMensaje" priority="31" />
+      <Item value="mensajeService" priority="31" />
+      <Item value="CampoForm`0" priority="31" />
+      <Item value="campoForm" priority="161" />
+      <Item value="string" priority="30" />
+      <Item value="CampoForm" priority="29" />
+      <Item value="CampoMaestroNombre" priority="31" />
+      <Item value="Requerido" priority="32" />
+      <Item value="Id" priority="31" />
+      <Item value="Request" priority="31" />
+      <Item value="x" priority="31" />
+      <Item value="camposGruposMensaje" priority="31" />
+      <Item value="camposMensaje" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="HasValue" priority="107" />
+      <Item value="Value" priority="107" />
+    </ItemStatistics>
+    <ItemStatistics item="JavaScriptSpecificContext">
+      <Item value="jquery" priority="7" />
+      <Item value="jQuery" priority="10" />
+      <Item value="$" priority="59" />
+      <Item value="function" priority="32" />
+      <Item value="var" priority="10" />
+      <Item value="url" priority="10" />
+      <Item value="cambiarUrl" priority="10" />
+      <Item value="if" priority="10" />
+    </ItemStatistics>
+    <ItemStatistics item="JavaScriptSpecificContextQualified">
+      <Item value="click" priority="17" />
+      <Item value="change" priority="7" />
+      <Item value="constructor" priority="8" />
+      <Item value="val" priority="19" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.FormMethod">
+      <Item value="Get" priority="26" />
+      <Item value="TryParse`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.SelectList">
+      <Item value="SelectedValue" priority="81" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ViewContext">
+      <Item value="RouteData" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Routing.RouteData">
+      <Item value="Values" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="RazorTransitionCompletionContext">
+      <Item value="Html" priority="7" />
+      <Item value="Model" priority="17" />
+      <Item value="ViewBag" priority="9" />
+      <Item value="if" priority="15" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="Hidden`0" priority="26" />
+      <Item value="DropDownList`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Controllers.CampoController">
+      <Item value="ViewBag" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Mensajeria.CampoService">
+      <Item value="ObtenerCabecera`0" priority="27" />
+      <Item value="ObtenerCuerpo`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Models.CampoList">
+      <Item value="Cabecera" priority="26" />
+      <Item value="Cuerpo" priority="27" />
+      <Item value="GrupoMensajeId" priority="80" />
+      <Item value="MensajeId" priority="50" />
+      <Item value="TieneCampos" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessEntity.TipoDato">
+      <Item value="Nombre" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Mensajeria.CampoMaestroService">
+      <Item value="Obtener`0" priority="26" />
+      <Item value="ObtenerNoAsignadosMensaje`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.Mensajeria.MensajeService">
+      <Item value="Obtener`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Models.CampoForm">
+      <Item value="CampoMaestroId" priority="26" />
+      <Item value="Requerido" priority="109" />
+      <Item value="CampoMaestroNombre" priority="26" />
+      <Item value="Id" priority="26" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

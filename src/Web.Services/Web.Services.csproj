@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Comunicacion\EntidadComunicacionService.cs" />
     <Compile Include="Mensajeria\CampoMaestroService.cs" />
+    <Compile Include="Mensajeria\CampoService.cs" />
     <Compile Include="Mensajeria\GrupoMensajeService.cs" />
     <Compile Include="Comunicacion\ProtocoloService.cs" />
     <Compile Include="Mensajeria\MensajeService.cs" />
