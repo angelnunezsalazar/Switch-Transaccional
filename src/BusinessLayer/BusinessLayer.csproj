@@ -75,6 +75,7 @@
     <Compile Include="Mensajeria\CampoMensajeBL.cs" />
     <Compile Include="Mensajeria\CampoPlantillaBL.cs" />
     <Compile Include="Mensajeria\MensajeBL.cs" />
+    <Compile Include="Mensajeria\MensajeTransaccionalBL.cs" />
     <Compile Include="Parametros\ComponenteBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

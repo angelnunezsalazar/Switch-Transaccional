@@ -38,31 +38,32 @@
         public void Insertar(int mensajeId, int campoMaestroId, bool requerido)
         {
             CampoMaestro campoMaestro = campoMaestroDataAccess.Get(campoMaestroId);
-            Campo campo = Mapper.Map<CampoMaestro,Campo>(campoMaestro);
+            Campo campo = Mapper.Map<CampoMaestro, Campo>(campoMaestro);
             campo.Requerido = requerido;
             campo.MensajeId = mensajeId;
             campo.CampoMaestroId = campoMaestroId;
             dataAccess.Add(campo);
         }
 
-        public void Modificar(int id,bool requerido)
+        public void Modificar(int id, bool requerido)
         {
             var campo = dataAccess.Get(id);
             campo.Requerido = requerido;
         }
 
-        //public List<Campo> obtenerCampoSelector(int codigoMensaje)
-        //{
-        //    using (Switch context = new Switch())
-        //    {
-        //        context.Campo.MergeOption = MergeOption.NoTracking;
-        //        return (from c in context.Campo.Include("TIPO_DATO")
-        //                where c.Mensaje.Id == codigoMensaje
-        //                      && c.CAM_SELECTOR
-        //                select c).ToList();
+        public List<Campo> ObtenerCampoSelector(int mensajeId)
+        {
+            return context.Campo.Include(x => x.TipoDato)
+                .Where(c => c.Mensaje.Id == mensajeId && c.Selector).ToList();
 
-        //    }
-        //}
+        }
+
+        public void ActualizarValorSelector(int campoId, string valorRequest, string valorResponse)
+        {
+            var campo = dataAccess.Get(campoId);
+            campo.SelectorRequest = valorRequest;
+            campo.SelectorResponse = valorResponse;
+        }
 
         //public List<Campo> obtenerCampoOrigenPorTransaccion(int codigoTransaccion)
         //{
@@ -105,42 +106,7 @@
         //    }
         //}
 
-        //public  EstadoOperacion actualizarValorSelector(Campo Campo)
-        //{
-        //    DbFactory Factoria = DataAccessFactory.ObtenerProveedor();
-        //    try
-        //    {
-        //        using (Switch context = new Switch())
-        //        {
-        //            using (context.CreateConeccionScope())
-        //            {
-        //                string query =
-        //                    "UPDATE Campo" +
-        //                    " SET CAM_VALOR_SELECTOR_REQUEST = @valorselectorRequest" +
-        //                    " ,CAM_VALOR_SELECTOR_RESPONSE = @valorselectorResponse" +
-        //                    " WHERE CAM_CODIGO = @codigo" +
-        //                    " AND Id = @Mensaje_codigo";
 
-        //                DbCommand Comando = context.CreateCommand(query, CommandType.Text);
-        //                Comando.Parameters.Add(Factoria.CrearParametro("@codigo", Campo.CAM_CODIGO));
-        //                Comando.Parameters.Add(Factoria.CrearParametro("@valorselectorRequest", Campo.CAM_VALOR_SELECTOR_REQUEST));
-        //                Comando.Parameters.Add(Factoria.CrearParametro("@valorselectorResponse", Campo.CAM_VALOR_SELECTOR_RESPONSE));
-        //                Comando.Parameters.Add(Factoria.CrearParametro("@Mensaje_codigo", Campo.Id));
-
-        //                if (Comando.ExecuteNonQuery() != 1)
-        //                {
-        //                    return new EstadoOperacion(false, null, null);
-        //                }
-
-        //                return new EstadoOperacion(true, null, null);
-        //            }
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        return new EstadoOperacion(false, e.Message, null);
-        //    }
-        //}
 
     }
 }

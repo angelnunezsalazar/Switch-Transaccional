@@ -4,16 +4,16 @@ body
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-	background-color:#F3F3F3;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #F3F3F3;
 }
 
 h2
 {
-	font-size:18px;
-	color:#0F5C05;
+	font-size: 18px;
+	color: #0F5C05;
 	font-weight: bolder;
-	text-align:center;
+	text-align: center;
 }
 
 #menu
@@ -30,87 +30,105 @@ h2
 
 .list, .list td, .list th
 {
-	border-style:solid;
-	border-color:Gray;
+	border-style: solid;
+	border-color: Gray;
 }
 
 .list
 {
 	border-width: 1px 1px 0 0;
-	border-collapse:collapse;
+	border-collapse: collapse;
 }
 
 .list td, .list th
 {
 	border-width: 0 0 1px 1px;
-	padding:4px;
+	padding: 4px;
 }
 
 .list thead tr
 {
-	font-size:13px;
+	font-size: 13px;
 	font-weight: bold;
-	height:30px;
-	background-image:url('images/tabla_cabecera.gif');
-	color:#FFFFFF;
+	height: 30px;
+	background-image: url('images/tabla_cabecera.gif');
+	color: #FFFFFF;
 }
 
 .list tbody tr.even
 {
-	font-size:12px;
-	height:30px;
+	font-size: 12px;
+	height: 30px;
 	background: #ACCFAD url('images/tabla_fila_impar.gif') repeat-x top left;
-	color:#000000;
+	color: #000000;
 }
 
 .list tbody tr.odd
 {
-	font-size:12px;
-	height:30px;
+	font-size: 12px;
+	height: 30px;
 	background: #D7D7D7 url('images/tabla_fila_par.gif') repeat-x top left;
-	color:#000000;
+	color: #000000;
 }
 
 .list form
 {
-	display:inline;
+	display: inline;
 }
 
-.find
+a.find
 {
-	background-image:url('images/iconFind.png');
-    height:22px;
-	text-indent:-9999px;
-    width:22px;
-    float:left;
+	background-image: url('images/iconFind.png');
+	height: 22px;
+	text-indent: -9999px;
+	width: 22px;
+	float: left;
 }
 
-.delete
+a.delete
 {
-	background-image:url('images/iconErase.png');
-    height:22px;
-	text-indent:-9999px;
-    width:22px;
-    float:left;
+	background-image: url('images/iconErase.png');
+	height: 22px;
+	text-indent: -9999px;
+	width: 22px;
+	float: left;
 }
 
-.edit
+a.edit
 {
-	background-image:url('images/iconEdit.png');
-    height:22px;
-    text-indent:-9999px;
-    width:22px;
-    float:left;
+	background-image: url('images/iconEdit.png');
+	height: 22px;
+	text-indent: -9999px;
+	width: 22px;
+	float: left;
+}
+
+a.cancel
+{
+	background-image: url('images/iconCancel.png');
+	height: 22px;
+	text-indent: -9999px;
+	width: 22px;
+	float: left;
+}
+
+a.save
+{
+	background-image: url('images/iconSave.png');
+	height: 22px;
+	text-indent: -9999px;
+	width: 22px;
+	float: left;
 }
 
 input[type="text"].medium
 {
-	width:300px;
+	width: 300px;
 }
 
 input[type="text"].big
 {
-	width:600px;
+	width: 600px;
 }
 
 /* Styles for basic forms

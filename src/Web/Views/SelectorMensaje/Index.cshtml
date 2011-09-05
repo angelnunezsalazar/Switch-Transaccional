@@ -1,0 +1,132 @@
+﻿@model Web.Models.ValorSelectorList
+@{
+    ViewBag.Title = "Consultar Selector de Mensaje";
+}
+@using (Html.BeginForm("index", "valorselector", FormMethod.Post, new { id = "form-buscar" }))
+{
+    <div class="editor-label">
+        @Html.Label("GrupoMensajeId", "Grupo Mensaje")
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("GrupoMensajeId", "Seleccionar Grupo Mensaje")
+    </div>
+    
+    <div class="editor-label">
+        @Html.Label("MensajeId", "Mensaje")
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("MensajeId", "Seleccionar Mensaje")
+    </div>
+}
+<br />
+@if (Model.MostrarCampos)
+{
+    <table class="list">
+        <thead>
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Longitud Cuerpo
+                </th>
+                <th>
+                    Tipo Dato
+                </th>
+                <th>
+                    Valor Selector Request
+                </th>
+                <th>
+                    Valor Selector Response
+                </th>
+                <th>
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.Campos)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LongitudCuerpo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoDato.Nombre)
+                </td>
+                <td>
+                    <div class="display_template">
+                        @Html.DisplayFor(modelItem => item.SelectorRequest)
+                    </div>
+                    <div class="edit_template">
+                        @Html.TextBox("SelectorRequest", item.SelectorRequest)
+                    </div>
+                </td>
+                <td>
+                    <div class="display_template">
+                        @Html.DisplayFor(modelItem => item.SelectorResponse)
+                    </div>
+                    <div class="edit_template">
+                        @Html.TextBox("SelectorResponse", item.SelectorResponse)
+                    </div>
+                </td>
+                <td>
+                    <div class="display_template">
+                        <a href="#" class="edit">Editar</a>
+                    </div>
+                    <div class="edit_template">
+                        <a href="@Url.Action("Actualizar", new { campoId = item.Id })" class="save">Guardar</a>
+                        <a href="#" class="cancel">Cancelar</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </table>
+
+}
+<script type="text/javascript">
+    $(function () {
+
+        $("#GrupoMensajeId, #MensajeId").change(function () {
+            if ($("#GrupoMensajeId")[0] == this) {
+                $("#MensajeId").val("");
+            }
+            $("#form-buscar").submit();
+        });
+
+        $("a.edit").click(function (e) {
+            e.preventDefault();
+            var selectedRow = $(this).closest("tr");
+            $(".edit_template", selectedRow).show();
+            $(".display_template", selectedRow).hide();
+        });
+
+        $("a.cancel").click(function (e) {
+            e.preventDefault();
+            var selectedRow = $(this).closest("tr");
+            $(".edit_template", selectedRow).hide();
+            $(".display_template", selectedRow).show();
+        });
+
+        $("a.save").click(function (e) {
+            e.preventDefault();
+            var selectedRow = $(this).closest("tr");
+            var data = {
+                valorSelectorRequest: $("#SelectorRequest", selectedRow).val(),
+                valorSelectorResponse: $("#SelectorResponse", selectedRow).val()
+            };
+            $.post($(this).attr("href"), data, function () {
+                var editTemplate = $(".edit_template", selectedRow);
+                $("input:text", editTemplate).each(function () {
+                    $(".display_template", $(this).closest("td")).html($(this).val());
+                });
+                editTemplate.hide();
+                $(".display_template", selectedRow).show();
+            });
+        });
+
+        $(".edit_template").hide();
+
+    });
+</script>

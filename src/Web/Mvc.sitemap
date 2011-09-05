@@ -14,6 +14,8 @@
       <mvcSiteMapNode title="Grupo Mensaje" controller="GrupoMensaje" action="Index"/>
       <mvcSiteMapNode title="Mensaje" controller="Mensaje" action="Index"/>
       <mvcSiteMapNode title="Campo" controller="Campo" action="Index"/>
+      <mvcSiteMapNode title="Selector de Mensaje" controller="SelectorMensaje" action="Index"/>
+      <mvcSiteMapNode title="Mensaje Transaccional" controller="MensajeTransaccional" action="Index"/>
     </mvcSiteMapNode>
   </mvcSiteMapNode>
 </mvcSiteMap>

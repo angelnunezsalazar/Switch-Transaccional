@@ -33,7 +33,7 @@
 
         public override void ExecuteResult(ControllerContext context)
         {
-            string errorMessage = "";
+            string errorMessage = null;
             if (context.Controller.ViewData.ModelState.IsValid)
             {
                 try
@@ -46,6 +46,13 @@
                     e = this.Unwrap(e);
                     errorMessage = e.Message;
                 }
+            }
+
+            if (context.HttpContext.Request.IsAjaxRequest())
+            {
+                ContentResult result = new ContentResult { Content = errorMessage ?? string.Empty };
+                result.ExecuteResult(context);
+                return;
             }
 
             if (!context.Controller.ViewData.ModelState.IsValid ||

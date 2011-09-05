@@ -21,8 +21,8 @@ namespace BusinessEntity
         public Nullable<int> LongitudCabecera { get; set; }
         public bool Requerido { get; set; }
         public int PosicionRelativa { get; set; }
-        public string ValorSelectorRequest { get; set; }
-        public string ValorSelectorResponse { get; set; }
+        public string SelectorRequest { get; set; }
+        public string SelectorResponse { get; set; }
         public int TipoDatoId { get; set; }
         public int CampoMaestroId { get; set; }
         public bool Cabecera { get; set; }
