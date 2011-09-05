@@ -70,6 +70,9 @@
             Variable
         </th>
         <th>
+            Transaccional
+        </th>
+        <th>
             Longitud Cabecera
         </th>
         <th>
@@ -93,6 +96,9 @@
             @Html.DisplayFor(modelItem => item.Variable)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Transaccional)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.LongitudCabecera)
         </td>
         <td>
@@ -102,7 +108,7 @@
             @Html.DisplayFor(modelItem => item.TipoDato.Nombre)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Id, "TableLinks", new { routeValues = routeValues })
+            @Html.DisplayFor(modelItem => item.Id, "TableLinks", new { routeValues })
         </td>
     </tr>
 }

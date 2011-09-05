@@ -87,6 +87,8 @@
 
         public override void Modificar(CampoMaestro campoMaestro)
         {
+
+            dataAccess.Update(campoMaestro);
             var grupoMensaje = this.grupoMensajeDataAccess.Get(campoMaestro.GrupoMensajeId);
             if (!campoMaestro.Cabecera)
             {
@@ -94,7 +96,6 @@
                 if (campoAntiguo != null && campoAntiguo.Id != campoMaestro.Id)
                     throw new Exception("La Posición Relativa ya ha sido asignada");
             }
-
             /*TODO verificar esta lógica cuando esté implementado el mensaje
              * cuando se creo un mensaje como no requerido para todos los mensajes 
              * y luego como requerido no debería darse esta lógica
@@ -109,6 +110,7 @@
                         throw new Exception("No se puede asignar la condición de cabecera, selector o transaccional. No todos los mensajes tienen el campo");
                 }
             }
+            
             foreach (var mensaje in grupoMensaje.Mensajes)
             {
                 var campo = mensaje.Campos.SingleOrDefault(x => x.CampoMaestroId == campoMaestro.Id);
@@ -119,8 +121,6 @@
                         campo.Requerido = true;
                 }
             }
-
-            base.Modificar(campoMaestro);
         }
 
         public override void Eliminar(int id)

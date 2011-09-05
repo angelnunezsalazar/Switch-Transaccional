@@ -113,13 +113,13 @@
         @Html.Hidden("TipoMensajeId",(int)ViewBag.GrupoMensaje.TipoMensaje.Id)
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Guardar" />
         </p>
     </fieldset>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Regresar", "Index",new {grupoMensajeId=ViewBag.GrupoMensaje.Id})
 </div>
 
 <script type="text/javascript">

@@ -23,7 +23,8 @@ namespace Web.Mapping
             Mapper.CreateMap<ProtocoloForm, ProtocoloTCP>();
             Mapper.CreateMap<ProtocoloForm, ProtocoloComponente>();
 
-            Mapper.CreateMap<CampoMaestro, Campo>();
+            Mapper.CreateMap<CampoMaestro, Campo>().ForMember(campoMaestro => campoMaestro.Id, opt => opt.Ignore());
+            Mapper.CreateMap<CampoMaestro, CampoMaestro>();
         }
     }
 }

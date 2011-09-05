@@ -57,6 +57,7 @@
     <Compile Include="Comunicacion\ProtocoloService.cs" />
     <Compile Include="Mensajeria\MensajeService.cs" />
     <Compile Include="Mensajeria\MensajeTransaccionalService.cs" />
+    <Compile Include="Mensajeria\ReglaMensajeTransaccionalService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Bases\Service.cs" />
     <Compile Include="Terminales\EstadoTerminalService.cs" />

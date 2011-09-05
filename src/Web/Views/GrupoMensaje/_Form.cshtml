@@ -17,7 +17,7 @@
             @Html.LabelFor(model => model.Descripcion)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Descripcion)
+            @Html.TextBoxFor(model => model.Descripcion,new {@class="big"})
             @Html.ValidationMessageFor(model => model.Descripcion)
         </div>
 

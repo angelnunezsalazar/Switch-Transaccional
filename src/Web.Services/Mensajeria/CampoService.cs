@@ -65,6 +65,14 @@
             campo.SelectorResponse = valorResponse;
         }
 
+        public List<Campo> ObtenerNoAsignadosReglaTransaccional(int mensajeId)
+        {
+                return context.Campo.Where(c =>c.Mensaje.Id == mensajeId && c.Transaccional
+                            //TODO: modificar la regla para que sea que no tenga ninguna regla transaccional
+                            //pero dentro del mismo Mensaje transaccional
+                            && c.ReglasMensajeTransaccional.Count == 0).ToList();
+        }
+
         //public List<Campo> obtenerCampoOrigenPorTransaccion(int codigoTransaccion)
         //{
         //    using (Switch context = new Switch())
@@ -90,23 +98,5 @@
 
         //    }
         //}
-
-        //public List<Campo> obtenerCampoNoSelectorNoAsignadoReglaTransaccional(int codigoMensaje)
-        //{
-        //    using (Switch context = new Switch())
-        //    {
-        //        context.Campo.MergeOption = MergeOption.NoTracking;
-        //        return (from c in context.Campo.Include("TIPO_DATO")
-        //                where c.Mensaje.Id == codigoMensaje
-        //                      && c.CAM_TRANSACCIONAL==true
-        //                TODO: modificar la regla para que sea que no tenga ninguna regla transaccional
-        //                pero dentro del mismo Mensaje transaccional
-        //                && c.REGLA_Mensaje_TRANSACCIONAL.Count==0
-        //                select c).ToList<Campo>();
-        //    }
-        //}
-
-
-
     }
 }

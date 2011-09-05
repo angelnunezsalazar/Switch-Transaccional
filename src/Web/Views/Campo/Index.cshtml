@@ -37,9 +37,6 @@
                 Nombre
             </th>
             <th>
-                Requerido
-            </th>
-            <th>
                 Longitud Cuerpo
             </th>
             <th>
@@ -55,9 +52,6 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Requerido)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LongitudCuerpo)
@@ -87,6 +81,9 @@
                 Requerido
             </th>
             <th>
+                Transaccional
+            </th>
+            <th>
                 Variable
             </th>
             <th>
@@ -113,6 +110,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Requerido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transaccional)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Variable)

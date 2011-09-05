@@ -76,7 +76,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MensajeController.cs" />
     <Compile Include="Controllers\MensajeTransaccionalController.cs" />
-    <Compile Include="Controllers\ValorSelectorController.cs" />
+    <Compile Include="Controllers\ReglaMensajeTransaccionalController.cs" />
+    <Compile Include="Controllers\SelectorMensajeController.cs" />
     <Compile Include="Mapping\MappingConfiguration.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\EstadoTerminalController.cs" />
@@ -338,6 +339,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\MensajeTransaccional\Crear.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ReglaMensajeTransaccional\Crear.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ReglaMensajeTransaccional\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ReglaMensajeTransaccional\Editar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ReglaMensajeTransaccional\_Form.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

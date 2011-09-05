@@ -50,6 +50,7 @@
                     @Html.DisplayFor(modelItem => item.CondicionMensaje.Nombre)
                 </td>
                 <td>
+                    @Html.ActionLink("Reglas Mensaje Transaccional", "index","ReglaMensajeTransaccional", new { mensajeTransaccionalId = item.Id }, new { @class = "find" })
                     @Html.DisplayFor(modelItem => item.Id, "TableLinks", new { routeValues })
                 </td>
             </tr>

@@ -15,7 +15,7 @@
         public List<MensajeTransaccional> ObtenerPorMensaje(int mensajeId)
         {
             return context.MensajeTransaccional.Include(x => x.CondicionMensaje)
-                            .Where(o => o.Mensaje.Id == mensajeId).ToList();
+                            .Where(o => o.Mensaje.Id == mensajeId).AsNoTracking().ToList();
         }
     }
 }
