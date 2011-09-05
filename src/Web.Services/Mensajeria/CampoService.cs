@@ -65,12 +65,13 @@
             campo.SelectorResponse = valorResponse;
         }
 
-        public List<Campo> ObtenerNoAsignadosReglaTransaccional(int mensajeId)
+        public List<Campo> ObtenerNoAsignadosReglaTransaccional(int mensajeId, int mensajeTransaccionalId)
         {
-                return context.Campo.Where(c =>c.Mensaje.Id == mensajeId && c.Transaccional
-                            //TODO: modificar la regla para que sea que no tenga ninguna regla transaccional
-                            //pero dentro del mismo Mensaje transaccional
-                            && c.ReglasMensajeTransaccional.Count == 0).ToList();
+            var camposTodos = context.Campo.Where(c => c.Mensaje.Id == mensajeId && c.Transaccional);
+            var camposAsignados = context.ReglaMensajeTransaccional
+                                    .Where(x => x.MensajeTransaccionalId == mensajeTransaccionalId)
+                                    .Select(x => x.Campo);
+            return camposTodos.Except(camposAsignados).ToList();
         }
 
         //public List<Campo> obtenerCampoOrigenPorTransaccion(int codigoTransaccion)

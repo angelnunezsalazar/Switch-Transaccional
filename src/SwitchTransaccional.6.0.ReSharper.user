@@ -16,35 +16,31 @@
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:MensajeTransaccionalController.cs" caret="3106" fromTop="15" />
       <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:ReglaMensajeTransaccional.cs" caret="48" fromTop="3" />
       <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Mensaje.cs" caret="277" fromTop="10" />
-      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoService.cs" caret="2604" fromTop="19" />
       <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:ReglaMensajeTransaccionalService.cs" caret="216" fromTop="8" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/f:Mvc.sitemap" caret="1345" fromTop="18" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:Index.cshtml" caret="0" fromTop="0" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Editar.cshtml" caret="27" fromTop="0" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Crear.cshtml" caret="27" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ReglaMensajeTransaccionalController.cs" caret="2663" fromTop="42" />
       <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Campo.cs" caret="106" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:MensajeTransaccional/f:Index.cshtml" caret="938" fromTop="0" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:CampoController.cs" caret="0" fromTop="0" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Index.cshtml" caret="2822" fromTop="17" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:CampoMaestro/f:Index.cshtml" caret="2020" fromTop="13" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:_Form.cshtml" caret="647" fromTop="19" />
       <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Bases/f:Service.cs" caret="898" fromTop="13" />
       <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:CampoPlantilla.cs" caret="106" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="959" fromTop="19" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:CampoMaestroController.cs" caret="1605" fromTop="12" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1452" fromTop="14" />
-      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="5190" fromTop="20" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:CampoMaestro/f:_Form.cshtml" caret="4267" fromTop="11" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:MensajeTransaccional/f:_Form.cshtml" caret="1133" fromTop="16" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:_Form.cshtml" caret="461" fromTop="15" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Index.cshtml" caret="1362" fromTop="14" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:MensajeTransaccional/f:_Form.cshtml" caret="1133" fromTop="16" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="912" fromTop="19" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:ActionResults/f:ServiceActionResult.cs" caret="1452" fromTop="14" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="306" fromTop="0" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoService.cs" caret="2705" fromTop="25" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ReglaMensajeTransaccionalController.cs" caret="2762" fromTop="20" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:MensajeTransaccional/f:Index.cshtml" caret="1985" fromTop="24" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Index.cshtml" caret="1377" fromTop="15" />
     </RecentFiles>
     <RecentEdits>
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Index.cshtml" caret="1654" fromTop="19" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Crear.cshtml" caret="27" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Editar.cshtml" caret="27" fromTop="0" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:_Form.cshtml" caret="871" fromTop="17" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:_Form.cshtml" caret="271" fromTop="2" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:_Form.cshtml" caret="139" fromTop="3" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:_Form.cshtml" caret="85" fromTop="3" />
@@ -52,7 +48,7 @@
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Index.cshtml" caret="584" fromTop="20" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Index.cshtml" caret="773" fromTop="6" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Index.cshtml" caret="966" fromTop="16" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Index.cshtml" caret="1709" fromTop="25" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Index.cshtml" caret="1698" fromTop="25" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:CampoMaestro/f:_Form.cshtml" caret="4346" fromTop="0" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Index.cshtml" caret="971" fromTop="7" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Index.cshtml" caret="1358" fromTop="10" />
@@ -62,7 +58,6 @@
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:CampoMaestro/f:Index.cshtml" caret="2020" fromTop="13" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:_Form.cshtml" caret="647" fromTop="19" />
       <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="5036" fromTop="15" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="971" fromTop="19" />
       <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="4749" fromTop="24" />
       <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="3459" fromTop="3" />
       <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="3905" fromTop="10" />
@@ -70,7 +65,12 @@
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:CampoMaestro/f:_Form.cshtml" caret="4267" fromTop="11" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:_Form.cshtml" caret="809" fromTop="17" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:_Form.cshtml" caret="461" fromTop="15" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Index.cshtml" caret="1430" fromTop="19" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="912" fromTop="19" />
+      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoService.cs" caret="2646" fromTop="22" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ReglaMensajeTransaccionalController.cs" caret="2419" fromTop="14" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ReglaMensajeTransaccionalController.cs" caret="2846" fromTop="20" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:MensajeTransaccional/f:Index.cshtml" caret="1806" fromTop="15" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Index.cshtml" caret="1454" fromTop="19" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -272,7 +272,7 @@
       <Item value="Attach`0" priority="1" />
       <Item value="SingleOrDefault`1" priority="0" />
       <Item value="Add`0" priority="0" />
-      <Item value="Where`1" priority="104" />
+      <Item value="Where`1" priority="131" />
       <Item value="AsQueryable`0" priority="0" />
       <Item value="OrderBy`2" priority="0" />
       <Item value="SelectMany`2" priority="49" />
@@ -298,8 +298,8 @@
       <Item value="Include`2" priority="1" />
       <Item value="ToString`0" priority="1" />
       <Item value="AsNoTracking`1" priority="53" />
-      <Item value="SelectMany`2" priority="54" />
-      <Item value="Except`1" priority="27" />
+      <Item value="SelectMany`2" priority="108" />
+      <Item value="Except`1" priority="55" />
       <Item value="Select`2" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Data.Entity.Database">
@@ -614,6 +614,7 @@
       <Item value="CampoPlantilla" priority="53" />
       <Item value="CampoMaestro" priority="81" />
       <Item value="Mensaje" priority="26" />
+      <Item value="MensajeTransaccional" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:BusinessEntity.GrupoMensaje">
       <Item value="TipoMensaje" priority="0" />
@@ -732,7 +733,7 @@
       <Item value="grupoMensajeService" priority="96" />
       <Item value="new" priority="511" />
       <Item value="GrupoMensajeService" priority="57" />
-      <Item value="var" priority="287" />
+      <Item value="var" priority="319" />
       <Item value="gruposMensaje" priority="63" />
       <Item value="grupoMensajes" priority="31" />
       <Item value="FormMethod`0" priority="31" />
@@ -785,7 +786,7 @@
       <Item value="campoMaestroService" priority="59" />
       <Item value="CampoMaestroService" priority="28" />
       <Item value="from" priority="32" />
-      <Item value="context" priority="127" />
+      <Item value="context" priority="159" />
       <Item value="where" priority="31" />
       <Item value="cp" priority="31" />
       <Item value="codigoMensaje" priority="31" />
@@ -827,7 +828,7 @@
       <Item value="MensajeTransaccional" priority="65" />
       <Item value="DisplayTemplates/TableLinks" priority="32" />
       <Item value="ReglaMensajeTransaccional`0" priority="126" />
-      <Item value="mensajeTransaccionalId" priority="95" />
+      <Item value="mensajeTransaccionalId" priority="154" />
       <Item value="ReglaMensajeTransaccionalService`0" priority="63" />
       <Item value="reglaMensajeTransaccionalService" priority="64" />
       <Item value="ReglaMensajeTransaccionalService" priority="28" />
@@ -838,6 +839,7 @@
       <Item value="ReglaMensajeTransaccional" priority="32" />
       <Item value="Mapper`0" priority="63" />
       <Item value="campoMaestroAntiguo" priority="31" />
+      <Item value="camposAsignados" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Nullable`1">
       <Item value="HasValue" priority="107" />
@@ -963,7 +965,7 @@
       <Item value="MensajeId" priority="53" />
       <Item value="CondicionMensajeId" priority="26" />
       <Item value="CondicionMensaje" priority="27" />
-      <Item value="Id" priority="26" />
+      <Item value="Id" priority="53" />
       <Item value="Nombre" priority="83" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Web.Models.MensajeTransaccionalList">
@@ -976,9 +978,9 @@
     <ItemStatistics item="Qualified:BusinessEntity.ReglaMensajeTransaccional">
       <Item value="MensajeTransaccional" priority="27" />
       <Item value="CampoId" priority="161" />
-      <Item value="MensajeTransaccionalId" priority="80" />
+      <Item value="MensajeTransaccionalId" priority="108" />
       <Item value="Id" priority="27" />
-      <Item value="Campo" priority="27" />
+      <Item value="Campo" priority="81" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Web.Services.Mensajeria.MensajeTransaccionalService">
       <Item value="Obtener`0" priority="26" />

@@ -56,13 +56,13 @@ namespace Web.Controllers
         public void DatosAdicionales(int mensajeTransaccionalId)
         {
             var mensajeTransaccional = this.mensajeTransaccionalService.Obtener(mensajeTransaccionalId);
-            ViewBag.CampoId = campoService.ObtenerNoAsignadosReglaTransaccional(mensajeTransaccional.MensajeId).ToSelectList();
+            ViewBag.CampoId = campoService.ObtenerNoAsignadosReglaTransaccional(mensajeTransaccional.MensajeId,mensajeTransaccionalId).ToSelectList();
         }
 
         private void DatosAdicionales(ReglaMensajeTransaccional reglaMensajeTransaccional)
         {
             var mensajeTransaccional = this.mensajeTransaccionalService.Obtener(reglaMensajeTransaccional.MensajeTransaccionalId);
-            ViewBag.CampoId = campoService.ObtenerNoAsignadosReglaTransaccional(mensajeTransaccional.MensajeId).ToSelectList(reglaMensajeTransaccional.CampoId);
+            ViewBag.CampoId = campoService.ObtenerNoAsignadosReglaTransaccional(mensajeTransaccional.MensajeId, reglaMensajeTransaccional.MensajeTransaccionalId).ToSelectList(reglaMensajeTransaccional.CampoId);
         }
     }
 }
