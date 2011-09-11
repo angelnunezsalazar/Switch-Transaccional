@@ -186,9 +186,9 @@
       <Project>{103FE544-5FE3-40B6-ABE6-7FC98EA23DD9}</Project>
       <Name>Infraestructure</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Web.Services\Web.Services.csproj">
+    <ProjectReference Include="..\Web.Services\Web.Application.csproj">
       <Project>{D0A325CD-48EE-4444-86DF-D009B992DFAB}</Project>
-      <Name>Web.Services</Name>
+      <Name>Web.Application</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,14 +1,13 @@
-﻿namespace Web.Services.Mensajeria
+﻿namespace Web.Application.Mensajeria
 {
     using System.Collections.Generic;
 
     using BusinessEntity;
 
     using System.Linq;
-
-    using Web.Services.Bases;
-
     using System.Data.Entity;
+
+    using Web.Application.Bases;
 
     public sealed class MensajeTransaccionalService : Service<MensajeTransaccional>
     {

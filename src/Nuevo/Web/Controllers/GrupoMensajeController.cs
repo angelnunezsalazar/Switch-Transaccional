@@ -4,9 +4,9 @@ namespace Web.Controllers
 {
     using BusinessEntity;
 
+    using Web.Application.Bases;
+    using Web.Application.Mensajeria;
     using Web.Extensions;
-    using Web.Services.Bases;
-    using Web.Services.Mensajeria;
 
     public class GrupoMensajeController : BaseController
     {

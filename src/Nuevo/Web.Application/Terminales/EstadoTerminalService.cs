@@ -1,10 +1,10 @@
-﻿namespace Web.Services.Terminales
+﻿namespace Web.Application.Terminales
 {
     using BusinessEntity;
 
     using System;
 
-    using Web.Services.Bases;
+    using Web.Application.Bases;
 
     public class EstadoTerminalService : Service<EstadoTerminal>
     {

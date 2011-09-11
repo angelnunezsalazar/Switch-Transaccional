@@ -1,4 +1,4 @@
-﻿namespace Web.Services.Comunicacion
+﻿namespace Web.Application.Comunicacion
 {
     using System.Collections.Generic;
 
@@ -8,7 +8,7 @@
     using System.Linq;
     using System.Data.Entity;
 
-    using Web.Services.Bases;
+    using Web.Application.Bases;
 
     public class EntidadComunicacionService : Service<EntidadComunicacion>
     {

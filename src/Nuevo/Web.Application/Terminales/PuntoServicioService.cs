@@ -1,4 +1,4 @@
-﻿namespace Web.Services.Terminales
+﻿namespace Web.Application.Terminales
 {
     using System.Collections.Generic;
 
@@ -7,7 +7,7 @@
     using System;
     using System.Linq;
 
-    using Web.Services.Bases;
+    using Web.Application.Bases;
 
     public class PuntoServicioService : Service<PuntoServicio>
     {

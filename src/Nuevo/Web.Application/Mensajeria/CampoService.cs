@@ -1,4 +1,4 @@
-﻿namespace Web.Services.Mensajeria
+﻿namespace Web.Application.Mensajeria
 {
     using System.Collections.Generic;
     using System.Linq;
@@ -10,7 +10,7 @@
 
     using Infraestructure.Persistence;
 
-    using Web.Services.Bases;
+    using Web.Application.Bases;
 
     public class CampoService : Service<Campo>
     {

@@ -4,9 +4,9 @@ namespace Web.Controllers
 {
     using BusinessEntity;
 
+    using Web.Application.Comunicacion;
+    using Web.Application.Terminales;
     using Web.Extensions;
-    using Web.Services.Comunicacion;
-    using Web.Services.Terminales;
 
     public class TerminalController : BaseController
     {

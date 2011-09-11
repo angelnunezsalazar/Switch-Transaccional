@@ -6,8 +6,9 @@ using System.Web.Mvc;
 
 namespace Web.Controllers
 {
-    using Web.Services.Terminales;
     using BusinessEntity;
+
+    using Web.Application.Terminales;
 
     public class EstadoTerminalController : BaseController
     {

@@ -7,8 +7,8 @@ namespace Web.Controllers
 
     using BusinessEntity;
 
+    using Web.Application.Mensajeria;
     using Web.Extensions;
-    using Web.Services.Mensajeria;
 
     public class MensajeController : BaseController
     {

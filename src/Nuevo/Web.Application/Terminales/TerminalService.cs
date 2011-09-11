@@ -1,4 +1,4 @@
-﻿namespace Web.Services.Terminales
+﻿namespace Web.Application.Terminales
 {
     using System.Collections.Generic;
 
@@ -7,8 +7,8 @@
     using System.Linq;
     using System.Data.Entity;
 
-    using Web.Services.Bases;
-    
+    using Web.Application.Bases;
+
     public class TerminalService : Service<Terminal>
     {
         public override List<Terminal> ObtenerTodos()

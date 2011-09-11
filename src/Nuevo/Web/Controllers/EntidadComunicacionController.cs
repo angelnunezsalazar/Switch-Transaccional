@@ -4,9 +4,9 @@ namespace Web.Controllers
 {
     using BusinessEntity;
 
+    using Web.Application.Comunicacion;
+    using Web.Application.Mensajeria;
     using Web.Extensions;
-    using Web.Services.Comunicacion;
-    using Web.Services.Mensajeria;
 
     public class EntidadComunicacionController : BaseController
     {

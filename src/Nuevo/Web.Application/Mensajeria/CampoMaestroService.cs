@@ -1,4 +1,4 @@
-﻿namespace Web.Services.Mensajeria
+﻿namespace Web.Application.Mensajeria
 {
     using System;
     using System.Collections.Generic;
@@ -10,8 +10,9 @@
 
     using Infraestructure.Persistence;
 
-    using Web.Services.Bases;
     using AutoMapper;
+
+    using Web.Application.Bases;
 
     public sealed class CampoMaestroService : Service<CampoMaestro>
     {

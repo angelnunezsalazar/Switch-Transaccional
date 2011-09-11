@@ -51,10 +51,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EFExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Extension\EFExtensions.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
     </Reference>
@@ -66,124 +62,48 @@
     <Reference Include="System.Data.Entity">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Design" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Security" />
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Data.DataSetExtensions">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Campo.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CampoPlantilla.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Columna.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Componente.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CondicionMensaje.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CriptografiaCampo.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DinamicaCriptografia.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EntidadComunicacion.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Campo.cs" />
+    <Compile Include="CampoPlantilla.cs" />
+    <Compile Include="Columna.cs" />
+    <Compile Include="Componente.cs" />
+    <Compile Include="CondicionMensaje.cs" />
+    <Compile Include="CriptografiaCampo.cs" />
+    <Compile Include="DinamicaCriptografia.cs" />
+    <Compile Include="EntidadComunicacion.cs" />
     <Compile Include="Entity.cs" />
-    <Compile Include="EstadoOperacion.cs" />
-    <Compile Include="EstadoTerminal.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Funcion.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FuncionUsuario.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GrupoMensaje.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GrupoValidacion.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Mensaje.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MensajeTransaccional.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ParametroTransformacionCampo.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PasoDinamica.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
+    <Compile Include="EstadoTerminal.cs" />
+    <Compile Include="Funcion.cs" />
+    <Compile Include="FuncionUsuario.cs" />
+    <Compile Include="GrupoMensaje.cs" />
+    <Compile Include="GrupoValidacion.cs" />
+    <Compile Include="Mensaje.cs" />
+    <Compile Include="MensajeTransaccional.cs" />
+    <Compile Include="ParametroTransformacionCampo.cs" />
+    <Compile Include="PasoDinamica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Protocolo.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PuntoServicio.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ReglaMensajeTransaccional.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tabla.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Terminal.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TipoComunicacion.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TipoDato.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TipoDatoColumna.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TipoMensaje.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Transformacion.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TransformacionCampo.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Usuario.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ValidacionCampo.cs">
-      <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Protocolo.cs" />
+    <Compile Include="PuntoServicio.cs" />
+    <Compile Include="ReglaMensajeTransaccional.cs" />
+    <Compile Include="Tabla.cs" />
+    <Compile Include="Terminal.cs" />
+    <Compile Include="TipoComunicacion.cs" />
+    <Compile Include="TipoDato.cs" />
+    <Compile Include="TipoDatoColumna.cs" />
+    <Compile Include="TipoMensaje.cs" />
+    <Compile Include="Transformacion.cs" />
+    <Compile Include="TransformacionCampo.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="ValidacionCampo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="DatabaseContext.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DatabaseContext.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

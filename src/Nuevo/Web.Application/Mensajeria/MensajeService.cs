@@ -1,4 +1,4 @@
-﻿namespace Web.Services.Mensajeria
+﻿namespace Web.Application.Mensajeria
 {
     using System.Collections.Generic;
 
@@ -8,7 +8,7 @@
     using System.Linq;
     using System.Data.Entity;
 
-    using Web.Services.Bases;
+    using Web.Application.Bases;
 
     public class MensajeService:Service<Mensaje>
     {

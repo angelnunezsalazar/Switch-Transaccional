@@ -8,8 +8,8 @@
     <ProjectGuid>{D0A325CD-48EE-4444-86DF-D009B992DFAB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Web.Services</RootNamespace>
-    <AssemblyName>Web.Services</AssemblyName>
+    <RootNamespace>Web.Application</RootNamespace>
+    <AssemblyName>Web.Application</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
