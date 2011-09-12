@@ -9,7 +9,7 @@ namespace BusinessEntity
         {
             this.Campos = new HashSet<Campo>();
         }
-    
+
         public string Nombre { get; set; }
         public int LongitudCuerpo { get; set; }
         public bool Selector { get; set; }
@@ -21,10 +21,18 @@ namespace BusinessEntity
         public bool Cabecera { get; set; }
         public bool Bitmap { get; set; }
         public bool Transaccional { get; set; }
-    
+
         public virtual ICollection<Campo> Campos { get; set; }
         public virtual GrupoMensaje GrupoMensaje { get; set; }
         public virtual TipoDato TipoDato { get; set; }
+
+        public int LongitudTotal
+        {
+            get
+            {
+                return this.LongitudCuerpo + (this.LongitudCabecera == null ? 0 : this.LongitudCabecera.Value);
+            }
+        }
 
         public bool EsRequeridoEnTodosLosMensajes()
         {

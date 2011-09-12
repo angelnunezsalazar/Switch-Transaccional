@@ -33,5 +33,13 @@ namespace BusinessEntity
         public virtual TipoDato TipoDato { get; set; }
 
         public virtual ICollection<ReglaMensajeTransaccional> ReglasMensajeTransaccional { get; set; }
+
+        public int LongitudTotal
+        {
+            get
+            {
+                return this.LongitudCuerpo + (this.LongitudCabecera == null ? 0 : this.LongitudCabecera.Value);
+            }
+        }
     }
 }

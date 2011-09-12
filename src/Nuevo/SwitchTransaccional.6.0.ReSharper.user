@@ -18,28 +18,49 @@
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:MensajeTransaccional/f:Index.cshtml" caret="1985" fromTop="24" />
       <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Index.cshtml" caret="1377" fromTop="15" />
       <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Comunicacion/f:EntidadComunicacionService.cs" caret="298" fromTop="12" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/d:Converters/f:ProtocoloConverter.cs" caret="0" fromTop="0" />
+      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:MensajeController.cs" caret="0" fromTop="0" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:TipoMensaje.cs" caret="91" fromTop="4" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Mensaje.cs" caret="809" fromTop="23" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:Campo.cs" caret="1357" fromTop="13" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:CampoPlantilla.cs" caret="151" fromTop="7" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:GrupoMensaje.cs" caret="1445" fromTop="26" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:GrupoTests.cs" caret="3401" fromTop="13" />
+      <File id="5D877764-3069-499A-9809-1489C34EA066/f:ISOParser.cs" caret="1200" fromTop="14" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/d:Builders/f:GrupoMensajeBuilder.cs" caret="489" fromTop="0" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="784" fromTop="11" />
     </RecentFiles>
     <RecentEdits>
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Index.cshtml" caret="1358" fromTop="10" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Index.cshtml" caret="2018" fromTop="15" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:Campo/f:Index.cshtml" caret="2822" fromTop="17" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:CampoMaestro/f:Index.cshtml" caret="1403" fromTop="12" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:CampoMaestro/f:Index.cshtml" caret="2020" fromTop="13" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:GrupoMensaje/f:_Form.cshtml" caret="647" fromTop="19" />
-      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="5551" fromTop="15" />
-      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="5551" fromTop="24" />
-      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="5551" fromTop="3" />
-      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="5551" fromTop="10" />
-      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoMaestroService.cs" caret="5551" fromTop="20" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:CampoMaestro/f:_Form.cshtml" caret="4267" fromTop="11" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:_Form.cshtml" caret="809" fromTop="17" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:_Form.cshtml" caret="461" fromTop="15" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Mapping/f:MappingConfiguration.cs" caret="912" fromTop="19" />
-      <File id="D0A325CD-48EE-4444-86DF-D009B992DFAB/d:Mensajeria/f:CampoService.cs" caret="3753" fromTop="22" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ReglaMensajeTransaccionalController.cs" caret="2422" fromTop="14" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Controllers/f:ReglaMensajeTransaccionalController.cs" caret="2849" fromTop="20" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:MensajeTransaccional/f:Index.cshtml" caret="1806" fromTop="15" />
-      <File id="EFD30F70-F82F-4774-A228-A1D74C2EEC08/d:Views/d:ReglaMensajeTransaccional/f:Index.cshtml" caret="1454" fromTop="19" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="4310" fromTop="10" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="3207" fromTop="12" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/d:Builders/f:GrupoMensajeBuilder.cs" caret="1377" fromTop="2" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/d:Builders/f:GrupoMensajeBuilder.cs" caret="1377" fromTop="13" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/d:Builders/f:GrupoMensajeBuilder.cs" caret="1377" fromTop="7" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="2471" fromTop="2" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:GrupoTests.cs" caret="889" fromTop="6" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:GrupoTests.cs" caret="1473" fromTop="21" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:GrupoTests.cs" caret="474" fromTop="13" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:GrupoTests.cs" caret="3429" fromTop="13" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:GrupoTests.cs" caret="3429" fromTop="13" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:GrupoTests.cs" caret="3430" fromTop="13" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="4312" fromTop="6" />
+      <File id="8A204E0B-0B2A-4645-82C1-696C70A7FBFB/f:GrupoMensaje.cs" caret="948" fromTop="13" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="4312" fromTop="13" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/d:Builders/f:GrupoMensajeBuilder.cs" caret="1377" fromTop="10" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="2812" fromTop="6" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="3815" fromTop="10" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="4262" fromTop="13" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/d:Builders/f:GrupoMensajeBuilder.cs" caret="1377" fromTop="10" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/d:Builders/f:GrupoMensajeBuilder.cs" caret="1377" fromTop="17" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="41" fromTop="3" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="782" fromTop="12" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="273" fromTop="1" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/f:ISOParserTests.cs" caret="4312" fromTop="1" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/d:Builders/f:GrupoMensajeBuilder.cs" caret="1521" fromTop="26" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/d:Builders/f:GrupoMensajeBuilder.cs" caret="1377" fromTop="24" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/d:Builders/f:GrupoMensajeBuilder.cs" caret="1252" fromTop="21" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/d:Builders/f:GrupoMensajeBuilder.cs" caret="1461" fromTop="20" />
+      <File id="654271B9-57E3-4B84-AC80-2C59ACE4E444/d:Builders/f:GrupoMensajeBuilder.cs" caret="301" fromTop="7" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -497,6 +518,7 @@
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
       <Item value="ToSelectList`1" priority="111" />
       <Item value="First`1" priority="27" />
+      <Item value="Add`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Web.Services.Terminales.PuntoServicioService">
       <Item value="ObtenerTodos`0" priority="0" />
@@ -592,8 +614,9 @@
       <Item value="Mensaje" priority="0" />
       <Item value="CamposPlantilla" priority="54" />
       <Item value="CampoPlantillaEnPosicionRelativa`0" priority="0" />
-      <Item value="Mensajes" priority="134" />
-      <Item value="CamposMaestro" priority="107" />
+      <Item value="Mensajes" priority="269" />
+      <Item value="CamposMaestro" priority="242" />
+      <Item value="MensajePorValorSelector`0" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Web.Mvc.ControllerContext">
       <Item value="Controller" priority="2" />
@@ -637,7 +660,7 @@
       <Item value="GrupoMensajeId" priority="1" />
       <Item value="Id" priority="31" />
       <Item value="Transaccional" priority="28" />
-      <Item value="Selector" priority="0" />
+      <Item value="Selector" priority="27" />
       <Item value="Cabecera" priority="0" />
       <Item value="EsRequeridoEnTodosLosMensajes`0" priority="0" />
       <Item value="PosicionRelativa" priority="0" />
@@ -662,7 +685,7 @@
       <Item value="Indexer" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:BusinessEntity.Mensaje">
-      <Item value="Campos" priority="28" />
+      <Item value="Campos" priority="136" />
       <Item value="Id" priority="55" />
       <Item value="GrupoMensaje" priority="137" />
       <Item value="GrupoMensajeId" priority="53" />
@@ -674,17 +697,18 @@
       <Item value="Cabecera" priority="55" />
       <Item value="PosicionRelativa" priority="27" />
       <Item value="MensajeId" priority="81" />
-      <Item value="LongitudCuerpo" priority="55" />
-      <Item value="Selector" priority="55" />
+      <Item value="LongitudCuerpo" priority="163" />
+      <Item value="Selector" priority="109" />
       <Item value="TipoDato" priority="27" />
       <Item value="Nombre" priority="54" />
       <Item value="Variable" priority="27" />
-      <Item value="LongitudCabecera" priority="27" />
+      <Item value="LongitudCabecera" priority="163" />
       <Item value="CampoMaestro" priority="81" />
       <Item value="ValorSelectorRequest" priority="54" />
       <Item value="ValorSelectorResponse" priority="81" />
       <Item value="Transaccional" priority="55" />
       <Item value="ReglasMensajeTransaccional" priority="27" />
+      <Item value="SelectorRequest" priority="49" />
     </ItemStatistics>
     <ItemStatistics item="HtmlCodeCompletionContext">
       <Item value="list" priority="24" />
@@ -694,61 +718,61 @@
       <Item value="thead" priority="5" />
     </ItemStatistics>
     <ItemStatistics item="CSharpCodeCompletionContext">
-      <Item value="int" priority="509" />
-      <Item value="if" priority="155" />
+      <Item value="int" priority="541" />
+      <Item value="if" priority="347" />
       <Item value="grupoMensajeId" priority="380" />
       <Item value="ViewBag" priority="283" />
       <Item value="GrupoMensajeService`0" priority="63" />
       <Item value="grupoMensajeService" priority="96" />
-      <Item value="new" priority="511" />
+      <Item value="new" priority="1348" />
       <Item value="GrupoMensajeService" priority="57" />
-      <Item value="var" priority="319" />
+      <Item value="var" priority="479" />
       <Item value="gruposMensaje" priority="63" />
       <Item value="grupoMensajes" priority="31" />
       <Item value="FormMethod`0" priority="31" />
-      <Item value="null" priority="127" />
+      <Item value="null" priority="286" />
       <Item value="routeValues" priority="95" />
       <Item value="ViewContext" priority="26" />
       <Item value="Html" priority="89" />
-      <Item value="mensaje" priority="95" />
+      <Item value="mensaje" priority="349" />
       <Item value="public" priority="95" />
-      <Item value="void" priority="95" />
+      <Item value="void" priority="127" />
       <Item value="DatosAdicionales`0" priority="95" />
       <Item value="Model" priority="187" />
       <Item value="Dictionary&lt;string,object&gt;" priority="28" />
-      <Item value="Mensaje`0" priority="62" />
-      <Item value="lb" priority="64" />
+      <Item value="Mensaje`0" priority="93" />
+      <Item value="lb" priority="97" />
       <Item value="using" priority="61" />
       <Item value="System" priority="61" />
       <Item value="Data" priority="53" />
       <Item value="Entity" priority="53" />
-      <Item value="bool" priority="94" />
-      <Item value="CampoMaestro`0" priority="255" />
-      <Item value="campoMaestro" priority="193" />
+      <Item value="bool" priority="190" />
+      <Item value="CampoMaestro`0" priority="287" />
+      <Item value="campoMaestro" priority="224" />
       <Item value="campoMaestroDataAccess" priority="31" />
       <Item value="campoMaestroId" priority="95" />
       <Item value="requerido" priority="95" />
-      <Item value="campo" priority="290" />
+      <Item value="campo" priority="705" />
       <Item value="mensajeId" priority="480" />
       <Item value="dataAccess" priority="191" />
-      <Item value="Campo`0" priority="31" />
+      <Item value="Campo`0" priority="64" />
       <Item value="campoId" priority="95" />
       <Item value="prop" priority="223" />
-      <Item value="IList" priority="30" />
-      <Item value="IEnumerable" priority="63" />
+      <Item value="IList" priority="190" />
+      <Item value="IEnumerable" priority="95" />
       <Item value="CampoService`0" priority="63" />
       <Item value="campoService" priority="227" />
       <Item value="CampoService" priority="57" />
-      <Item value="grupoMensaje" priority="32" />
-      <Item value="this" priority="31" />
+      <Item value="grupoMensaje" priority="509" />
+      <Item value="this" priority="127" />
       <Item value="Cabecera" priority="63" />
       <Item value="Cuerpo" priority="64" />
       <Item value="CampoList`0" priority="31" />
       <Item value="BinaryReader`0" priority="31" />
       <Item value="ctor" priority="63" />
       <Item value="GrupoMensajeId" priority="31" />
-      <Item value="GrupoMensaje`0" priority="31" />
-      <Item value="return" priority="159" />
+      <Item value="GrupoMensaje`0" priority="223" />
+      <Item value="return" priority="415" />
       <Item value="CampoList" priority="28" />
       <Item value="model" priority="63" />
       <Item value="CampoMaestroService`0" priority="63" />
@@ -762,7 +786,7 @@
       <Item value="mensajeService" priority="31" />
       <Item value="CampoForm`0" priority="31" />
       <Item value="campoForm" priority="161" />
-      <Item value="string" priority="254" />
+      <Item value="string" priority="347" />
       <Item value="CampoForm" priority="29" />
       <Item value="CampoMaestroNombre" priority="31" />
       <Item value="Requerido" priority="32" />
@@ -773,7 +797,7 @@
       <Item value="camposMensaje" priority="31" />
       <Item value="valorRequest" priority="63" />
       <Item value="valorResponse" priority="63" />
-      <Item value="Campos" priority="31" />
+      <Item value="Campos" priority="127" />
       <Item value="RedirectToAction`0" priority="31" />
       <Item value="ValorSelector" priority="32" />
       <Item value="DBNull`0" priority="31" />
@@ -811,10 +835,62 @@
       <Item value="camposAsignados" priority="31" />
       <Item value="ContainerFilterService`0" priority="31" />
       <Item value="PasoDinamica`0" priority="30" />
+      <Item value="data" priority="31" />
+      <Item value="Length" priority="26" />
+      <Item value="test" priority="159" />
+      <Item value="Mensaje" priority="86" />
+      <Item value="List&lt;Campo&gt;" priority="57" />
+      <Item value="Campo" priority="115" />
+      <Item value="LongitudCuerpo" priority="95" />
+      <Item value="foreach" priority="255" />
+      <Item value="byte" priority="185" />
+      <Item value="campoData" priority="95" />
+      <Item value="index" priority="31" />
+      <Item value="LongitudCabecera" priority="31" />
+      <Item value="LongitudTotal`0" priority="127" />
+      <Item value="GrupoMensaje" priority="86" />
+      <Item value="Collection&lt;Mensaje&gt;" priority="28" />
+      <Item value="CrearGrupoMensaje`0" priority="63" />
+      <Item value="Moq" priority="31" />
+      <Item value="Mock" priority="56" />
+      <Item value="params" priority="31" />
+      <Item value="campos" priority="63" />
+      <Item value="valores" priority="30" />
+      <Item value="break" priority="159" />
+      <Item value="true" priority="162" />
+      <Item value="mensajeSeleccionado" priority="31" />
+      <Item value="false" priority="192" />
+      <Item value="ae" priority="31" />
+      <Item value="List&lt;Mensaje&gt;" priority="28" />
+      <Item value="Collection&lt;Campo&gt;" priority="28" />
+      <Item value="SelectorRequest" priority="97" />
+      <Item value="Mensajes" priority="62" />
+      <Item value="Selector" priority="95" />
+      <Item value="valorPresente" priority="31" />
+      <Item value="else" priority="63" />
+      <Item value="existeValor" priority="127" />
+      <Item value="existenTodosLosValores" priority="190" />
+      <Item value="private" priority="63" />
+      <Item value="List&lt;CampoMaestro&gt;" priority="57" />
+      <Item value="CampoMaestro" priority="28" />
+      <Item value="camposMaestro" priority="63" />
+      <Item value="byteConverter" priority="155" />
+      <Item value="gn" priority="31" />
+      <Item value="IByteConverter`0" priority="62" />
+      <Item value="CreateParser`0" priority="31" />
+      <Item value="Build`0" priority="28" />
+      <Item value="valoresSelector" priority="190" />
+      <Item value="List" priority="61" />
+      <Item value="It`0" priority="31" />
+      <Item value="Assert`0" priority="31" />
+      <Item value="Exception`0" priority="31" />
+      <Item value="isoParser" priority="26" />
+      <Item value="throw" priority="31" />
+      <Item value="Exception" priority="29" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Nullable`1">
       <Item value="HasValue" priority="107" />
-      <Item value="Value" priority="161" />
+      <Item value="Value" priority="242" />
     </ItemStatistics>
     <ItemStatistics item="JavaScriptSpecificContext">
       <Item value="jquery" priority="7" />
@@ -959,5 +1035,51 @@
     <ItemStatistics item="Qualified:Web.Services.Mensajeria.ReglaMensajeTransaccionalService">
       <Item value="ObtenerPorMensajeTransaccional`0" priority="26" />
     </ItemStatistics>
+    <ItemStatistics item="Qualified:Moq.Mock`1">
+      <Item value="When`0" priority="26" />
+      <Item value="Setup`0" priority="53" />
+      <Item value="Object" priority="161" />
+      <Item value="SetupProperty`1" priority="26" />
+      <Item value="SetupGet`1" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
+      <Item value="IsNull`0" priority="53" />
+      <Item value="Throws`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UnitTests.Builders.GrupoMensajeBuilder">
+      <Item value="ConCampos`0" priority="53" />
+      <Item value="camposMaestro" priority="22" />
+      <Item value="WithCamposMaestro`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:UnitTests.IByteConverter">
+      <Item value="Convert`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Moq.Language.Flow.ISetup`2">
+      <Item value="Returns`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Moq.It">
+      <Item value="IsAny`1" priority="26" />
+    </ItemStatistics>
   </CompletionStatisticsManager>
+  <UnitTestSessions>
+    <Session>
+      <Name>Session #1</Name>
+      <Elements>
+        <UnitTestElement Provider="nUnit" Id="UnitTests.GrupoTests" type="NUnitTestFixtureElement" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.SwitchTests" type="NUnitTestFixtureElement" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.SwitchTests.LanzaExceptionSiNoEncuentraMensajePorSelectores" ParentId="UnitTests.SwitchTests" type="NUnitTestElement" TypeName="UnitTests.SwitchTests" MethodName="LanzaExceptionSiNoEncuentraMensajePorSelectores" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.SwitchTests.RetornaMensajeConCamposCabecera" ParentId="UnitTests.SwitchTests" type="NUnitTestElement" TypeName="UnitTests.SwitchTests" MethodName="RetornaMensajeConCamposCabecera" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.SwitchTests.RetornaMensajeConCamposVariables" ParentId="UnitTests.SwitchTests" type="NUnitTestElement" TypeName="UnitTests.SwitchTests" MethodName="RetornaMensajeConCamposVariables" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.SwitchTests.RetornaMensajeConDosCampos" ParentId="UnitTests.SwitchTests" type="NUnitTestElement" TypeName="UnitTests.SwitchTests" MethodName="RetornaMensajeConDosCampos" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.SwitchTests.RetornaMensajeConUnCampo" ParentId="UnitTests.SwitchTests" type="NUnitTestElement" TypeName="UnitTests.SwitchTests" MethodName="RetornaMensajeConUnCampo" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.GrupoTests.RetornaMensajePorSelector" ParentId="UnitTests.GrupoTests" type="NUnitTestElement" TypeName="UnitTests.GrupoTests" MethodName="RetornaMensajePorSelector" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.GrupoTests.RetornaMensajePorSelectorCuandoElGrupoTieneVariosMensajes" ParentId="UnitTests.GrupoTests" type="NUnitTestElement" TypeName="UnitTests.GrupoTests" MethodName="RetornaMensajePorSelectorCuandoElGrupoTieneVariosMensajes" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.GrupoTests.RetornaMensajePorSelectorCuandoExistenCamposSelectoresYNoSelectores" ParentId="UnitTests.GrupoTests" type="NUnitTestElement" TypeName="UnitTests.GrupoTests" MethodName="RetornaMensajePorSelectorCuandoExistenCamposSelectoresYNoSelectores" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.GrupoTests.RetornaMensajePorSelectorDadosVariosValores" ParentId="UnitTests.GrupoTests" type="NUnitTestElement" TypeName="UnitTests.GrupoTests" MethodName="RetornaMensajePorSelectorDadosVariosValores" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.SwitchTests.RetornaMensajeSinCamposCuandoNoHayDatos" ParentId="UnitTests.SwitchTests" type="NUnitTestElement" TypeName="UnitTests.SwitchTests" MethodName="RetornaMensajeSinCamposCuandoNoHayDatos" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.GrupoTests.RetornaNullSinoEncuentraSelectorDadoVariosValores" ParentId="UnitTests.GrupoTests" type="NUnitTestElement" TypeName="UnitTests.GrupoTests" MethodName="RetornaNullSinoEncuentraSelectorDadoVariosValores" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+        <UnitTestElement Provider="nUnit" Id="UnitTests.GrupoTests.RetornaNullSiNoEncuentraUnMensajePorSelector" ParentId="UnitTests.GrupoTests" type="NUnitTestElement" TypeName="UnitTests.GrupoTests" MethodName="RetornaNullSiNoEncuentraUnMensajePorSelector" Project="654271B9-57E3-4B84-AC80-2C59ACE4E444" />
+      </Elements>
+    </Session>
+  </UnitTestSessions>
 </Configuration>
