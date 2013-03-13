@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch.Main", "Switch.Main\Switch.Main.csproj", "{8255C816-4B13-460D-B4B5-41DFF38C7E4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comunicacion.Autorizador", "Comunicacion.Autorizador\Comunicacion.Autorizador.csproj", "{784F6F95-0EAD-4356-BB95-AD0051D7F712}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comunicacion.Celular", "Comunicacion.Celular\Comunicacion.Celular.csproj", "{484C103F-7116-4CBC-A48A-BB848E06D5B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch.CelularSimulator", "Switch.CelularSimulator\Switch.CelularSimulator.csproj", "{AC304DBA-2B65-42A5-A95F-7BEE985DC0C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8255C816-4B13-460D-B4B5-41DFF38C7E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8255C816-4B13-460D-B4B5-41DFF38C7E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8255C816-4B13-460D-B4B5-41DFF38C7E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8255C816-4B13-460D-B4B5-41DFF38C7E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{784F6F95-0EAD-4356-BB95-AD0051D7F712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{784F6F95-0EAD-4356-BB95-AD0051D7F712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{784F6F95-0EAD-4356-BB95-AD0051D7F712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{784F6F95-0EAD-4356-BB95-AD0051D7F712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{484C103F-7116-4CBC-A48A-BB848E06D5B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{484C103F-7116-4CBC-A48A-BB848E06D5B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{484C103F-7116-4CBC-A48A-BB848E06D5B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{484C103F-7116-4CBC-A48A-BB848E06D5B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC304DBA-2B65-42A5-A95F-7BEE985DC0C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC304DBA-2B65-42A5-A95F-7BEE985DC0C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC304DBA-2B65-42A5-A95F-7BEE985DC0C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC304DBA-2B65-42A5-A95F-7BEE985DC0C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

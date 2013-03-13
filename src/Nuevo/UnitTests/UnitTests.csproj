@@ -56,10 +56,6 @@
       <Project>{8A204E0B-0B2A-4645-82C1-696C70A7FBFB}</Project>
       <Name>BusinessEntity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Switch\Switch.csproj">
-      <Project>{5D877764-3069-499A-9809-1489C34EA066}</Project>
-      <Name>Switch</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
