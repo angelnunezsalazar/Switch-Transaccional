@@ -7,7 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comunicacion.Autorizador", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comunicacion.Celular", "Comunicacion.Celular\Comunicacion.Celular.csproj", "{484C103F-7116-4CBC-A48A-BB848E06D5B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch.CelularSimulator", "Switch.CelularSimulator\Switch.CelularSimulator.csproj", "{AC304DBA-2B65-42A5-A95F-7BEE985DC0C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulador.Celular", "Switch.CelularSimulator\Simulador.Celular.csproj", "{AC304DBA-2B65-42A5-A95F-7BEE985DC0C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulador.Autorizador", "Simulador.Autorizador\Simulador.Autorizador.csproj", "{71774494-8BFE-4A29-9A0F-AF13BD7BC142}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch.Tests", "Switch.Tests\Switch.Tests.csproj", "{29BC68BD-C317-4377-9AB0-C736771712DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,14 @@ Global
 		{AC304DBA-2B65-42A5-A95F-7BEE985DC0C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC304DBA-2B65-42A5-A95F-7BEE985DC0C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC304DBA-2B65-42A5-A95F-7BEE985DC0C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71774494-8BFE-4A29-9A0F-AF13BD7BC142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71774494-8BFE-4A29-9A0F-AF13BD7BC142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71774494-8BFE-4A29-9A0F-AF13BD7BC142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71774494-8BFE-4A29-9A0F-AF13BD7BC142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29BC68BD-C317-4377-9AB0-C736771712DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29BC68BD-C317-4377-9AB0-C736771712DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29BC68BD-C317-4377-9AB0-C736771712DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29BC68BD-C317-4377-9AB0-C736771712DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
