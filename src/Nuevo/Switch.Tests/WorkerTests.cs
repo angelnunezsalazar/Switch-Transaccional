@@ -60,35 +60,13 @@ namespace Switch.Tests
 
             A.CallTo(() => dataAccess.GrupoMensajePorEntidad(1)).Returns(grupoMensaje);
 
-            MessageFromQueue messageForQueue = new MessageFromQueue { EntidadId = 1, Contenido = "SELECTORAxxxxxxxxxx" };
-            Mensaje mensajeObtenido = worker.IdentificarMensaje(messageForQueue);
+            MessageQueued messageForQueue = new MessageQueued { EntidadId = 1, RawData = "SELECTORAxxxxxxxxxx" };
+            Mensaje mensajeObtenido = worker.IdentificarMensaje(messageForQueue, this.worker.IdentificarGrupoMensaje(messageForQueue));
             Assert.AreEqual(mensajeA, mensajeObtenido);
 
-            messageForQueue = new MessageFromQueue { EntidadId = 1, Contenido = "xSELECTORBxxxxxxxxx" };
-            mensajeObtenido = worker.IdentificarMensaje(messageForQueue);
+            messageForQueue = new MessageQueued { EntidadId = 1, RawData = "xSELECTORBxxxxxxxxx" };
+            mensajeObtenido = worker.IdentificarMensaje(messageForQueue, this.worker.IdentificarGrupoMensaje(messageForQueue));
             Assert.AreEqual(mensajeB, mensajeObtenido);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(MensajeNoIdentificadoException))]
-        public void LanzaExceptionSiNoEncuentraUnMensajeDadoUnValorSelector()
-        {
-            var mensaje = new Mensaje();
-            var grupoMensaje = new GrupoMensaje();
-            grupoMensaje.ValoresSelectores = new List<ValorSelector>(new[]
-                {
-                    new ValorSelector
-                        {
-                            Posicion=1,
-                            Longitud=8,
-                            Valor="SELECTOR",
-                            Mensaje= mensaje
-                        }
-                });
-            A.CallTo(() => dataAccess.GrupoMensajePorEntidad(A<int>.Ignored)).Returns(grupoMensaje);
-
-            MessageFromQueue messageForQueue = new MessageFromQueue { Contenido = "xxxxxxxxxxSELECTOR_EN_OTRA_POSICION" };
-            worker.IdentificarMensaje(messageForQueue);
         }
 
         [TestMethod]
@@ -117,12 +95,12 @@ namespace Switch.Tests
             messageDataOut.RawData = "nuevo_mensaje";
             A.CallTo(() => dinamica.Ejecutar(messageDataIn)).Returns(messageDataOut);
 
-            MessageFromQueue messageForQueueIn = new MessageFromQueue { Id = 1, EntidadId = 1, Contenido = "SELECTOR_otros_campos_del_mensaje" };
-            MessageFromQueue messageForQueueOut = worker.Procesar(messageForQueueIn);
+            MessageQueued messageForQueueIn = new MessageQueued { Id = 1, EntidadId = 1, RawData = "SELECTOR_otros_campos_del_mensaje" };
+            MessageQueued messageForQueueOut = worker.Procesar(messageForQueueIn);
 
             Assert.AreEqual(1, messageForQueueOut.Id);
             Assert.AreEqual(1, messageForQueueOut.EntidadId);
-            Assert.AreEqual("nuevo_mensaje", messageForQueueOut.Contenido);
+            Assert.AreEqual("nuevo_mensaje", messageForQueueOut.RawData);
         }
     }
 }

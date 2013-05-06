@@ -44,15 +44,19 @@
   <ItemGroup>
     <Compile Include="Core\GrupoMensaje.cs" />
     <Compile Include="Core\Mensaje.cs" />
+    <Compile Include="Core\MensajeTransaccional.cs" />
     <Compile Include="Core\ValorSelector.cs" />
     <Compile Include="Contracts\IDataAccess.cs" />
     <Compile Include="Contracts\IDinamica.cs" />
     <Compile Include="Contracts\IParser.cs" />
     <Compile Include="Exceptions\MensajeNoIdentificadoException.cs" />
+    <Compile Include="Identificadores\IdentificadorGrupoMensaje.cs" />
+    <Compile Include="Identificadores\IdentificadorMensaje.cs" />
+    <Compile Include="Identificadores\IdentificadorTransaccional.cs" />
     <Compile Include="MessageData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queue\MessageFromQueue.cs" />
+    <Compile Include="Queue\MessageQueued.cs" />
     <Compile Include="Queue\QueueConstants.cs" />
     <Compile Include="Queue\QueueListener.cs" />
     <Compile Include="Queue\QueueSender.cs" />
@@ -63,6 +67,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -20,18 +20,16 @@ namespace Swich.Main
             this.dataAccess = dataAccess;
         }
 
-        private GrupoMensaje IdentificarGrupoMensaje(MessageFromQueue message)
+        public GrupoMensaje IdentificarGrupoMensaje(MessageQueued message)
         {
             return this.dataAccess.GrupoMensajePorEntidad(message.EntidadId);
         }
 
-        public Mensaje IdentificarMensaje(MessageFromQueue messageForQueue)
+        public Mensaje IdentificarMensaje(MessageQueued messageForQueue, GrupoMensaje grupoMensaje)
         {
-            GrupoMensaje grupoMensaje = this.IdentificarGrupoMensaje(messageForQueue);
-
             foreach (var selector in grupoMensaje.ValoresSelectores)
             {
-                var valorCampoSeleccionado = messageForQueue.Contenido.Substring(selector.Posicion, selector.Longitud);
+                var valorCampoSeleccionado = messageForQueue.RawData.Substring(selector.Posicion, selector.Longitud);
                 if (valorCampoSeleccionado == selector.Valor)
                 {
                     return selector.Mensaje;
@@ -40,13 +38,14 @@ namespace Swich.Main
             throw new MensajeNoIdentificadoException();
         }
 
-        public MessageFromQueue Procesar(MessageFromQueue messageForQueue)
+        public MessageQueued Procesar(MessageQueued messageQueued)
         {
-            Mensaje mensaje = this.IdentificarMensaje(messageForQueue);
-            MessageData messageDataIn = this.parser.Parse(messageForQueue.Contenido, mensaje);
+            var grupoMensaje = this.IdentificarGrupoMensaje(messageQueued);
+            var mensaje = this.IdentificarMensaje(messageQueued, grupoMensaje);
+            var messageDataIn = this.parser.Parse(messageQueued.RawData, mensaje);
             var messageDataOut = this.dinamica.Ejecutar(messageDataIn);
-            messageForQueue.Contenido = messageDataOut.RawData;
-            return messageForQueue;
+            messageQueued.RawData = messageDataOut.RawData;
+            return messageQueued;
         }
     }
 }

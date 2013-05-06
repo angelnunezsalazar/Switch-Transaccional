@@ -54,11 +54,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Identificadores\IdentificadorGrupoMensajeTests.cs" />
+    <Compile Include="Identificadores\IdentificadorMensajeTests.cs" />
+    <Compile Include="Identificadores\IdentificadorTransaccionalTests.cs" />
+    <Compile Include="MessageDataFactoryTests.cs" />
     <Compile Include="WorkerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Switch.Main\Switch.Main.csproj">
