@@ -2,107 +2,52 @@
 
 namespace Switch.Tests
 {
-    using System.Collections.Generic;
-
     using FakeItEasy;
 
     using Swich.Main;
     using Swich.Main.Contracts;
-    using Swich.Main.Core;
-    using Swich.Main.Exceptions;
+    using Swich.Main.Mensajeria;
     using Swich.Main.Queue;
 
-    //TODO: Obtener el mensaje Transaccional
+    //TODO: Ver si devuelve el mismo EntidadId
 
     [TestClass]
     public class WorkerTests
     {
-        private IDataAccess dataAccess;
+        private IMessageDataFactory messageDataFactory;
 
         private IDinamica dinamica;
 
-        private IParser parser;
-
         private Worker worker;
 
-        [TestInitialize]
-        public void Setup()
+        public WorkerTests()
         {
-            dataAccess = A.Fake<IDataAccess>();
+            messageDataFactory = A.Fake<IMessageDataFactory>();
             dinamica = A.Fake<IDinamica>();
-            parser = A.Fake<IParser>();
-            worker = new Worker(parser, dinamica, dataAccess);
+            worker = new Worker(messageDataFactory, dinamica);
         }
 
         [TestMethod]
-        public void IdentificaElMensajeDadoUnValorSelector()
+        public void RetornaLaRespuestaConElMismoIdDeLaSolicitud()
         {
-            var mensajeA = new Mensaje();
-            var mensajeB = new Mensaje();
-            var grupoMensaje = new GrupoMensaje();
-            grupoMensaje.ValoresSelectores = new List<ValorSelector>(new[]
-                {
-                    new ValorSelector
-                        {
-                            Posicion=0,
-                            Longitud=9,
-                            Valor="SELECTORA",
-                            Mensaje= mensajeA
-                        },
-                    new ValorSelector
-                        {
-                            Posicion=1,
-                            Longitud=9,
-                            Valor="SELECTORB",
-                            Mensaje= mensajeB
-                        },
-                });
+            var messageQueuedIn = new MessageQueued { Id = 1 };
+            var messageQueuedOut = worker.Procesar(messageQueuedIn);
 
-            A.CallTo(() => dataAccess.GrupoMensajePorEntidad(1)).Returns(grupoMensaje);
-
-            MessageQueued messageForQueue = new MessageQueued { EntidadId = 1, RawData = "SELECTORAxxxxxxxxxx" };
-            Mensaje mensajeObtenido = worker.IdentificarMensaje(messageForQueue, this.worker.IdentificarGrupoMensaje(messageForQueue));
-            Assert.AreEqual(mensajeA, mensajeObtenido);
-
-            messageForQueue = new MessageQueued { EntidadId = 1, RawData = "xSELECTORBxxxxxxxxx" };
-            mensajeObtenido = worker.IdentificarMensaje(messageForQueue, this.worker.IdentificarGrupoMensaje(messageForQueue));
-            Assert.AreEqual(mensajeB, mensajeObtenido);
+            Assert.AreEqual(messageQueuedIn.Id, messageQueuedOut.Id);
         }
 
         [TestMethod]
-        public void RetornaElMensajeDeRespuesta()
+        public void RetornaLaRespuestaConElMensajeEnRaw()
         {
-            GrupoMensaje grupoMensaje = new GrupoMensaje();
-            Mensaje mensaje = new Mensaje();
-            mensaje.GrupoMensaje = grupoMensaje;
-            grupoMensaje.ValoresSelectores = new List<ValorSelector>(new[]
-                {
-                    new ValorSelector
-                        {
-                            Posicion=0,
-                            Longitud=8,
-                            Valor="SELECTOR",
-                            Mensaje= mensaje
-                        }
-                });
-
-            A.CallTo(() => dataAccess.GrupoMensajePorEntidad(1)).Returns(grupoMensaje);
-
-            MessageData messageDataIn = new MessageData();
-            A.CallTo(() => parser.Parse("SELECTOR_otros_campos_del_mensaje", mensaje)).Returns(messageDataIn);
-
-            MessageData messageDataOut = new MessageData();
-            messageDataOut.RawData = "nuevo_mensaje";
+            var messageQueuedIn = new MessageQueued();
+            var messageDataIn = new MessageData();
+            A.CallTo(() => messageDataFactory.Create(messageQueuedIn)).Returns(messageDataIn);
+            var messageDataOut = new MessageData{RawData = "xxxxx"};
             A.CallTo(() => dinamica.Ejecutar(messageDataIn)).Returns(messageDataOut);
 
-            MessageQueued messageForQueueIn = new MessageQueued { Id = 1, EntidadId = 1, RawData = "SELECTOR_otros_campos_del_mensaje" };
-            MessageQueued messageForQueueOut = worker.Procesar(messageForQueueIn);
+            var messageQueuedOut = worker.Procesar(messageQueuedIn);
 
-            Assert.AreEqual(1, messageForQueueOut.Id);
-            Assert.AreEqual(1, messageForQueueOut.EntidadId);
-            Assert.AreEqual("nuevo_mensaje", messageForQueueOut.RawData);
+            Assert.AreEqual("xxxxx", messageQueuedOut.RawData);
         }
     }
 }
-
-

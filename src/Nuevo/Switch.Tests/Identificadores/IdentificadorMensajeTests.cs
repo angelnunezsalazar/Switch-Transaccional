@@ -2,14 +2,11 @@
 {
     using System.Collections.Generic;
 
-    using FakeItEasy;
-
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using Swich.Main.Core;
     using Swich.Main.Exceptions;
     using Swich.Main.Identificadores;
-    using Swich.Main.Queue;
 
     [TestClass]
     public class IdentificadorMensajeTests
@@ -31,14 +28,14 @@
                         },
                 };
 
-            var messageQueued = new MessageQueued { RawData = "SELECTOR1xxxxxxxxxx" };
+            var rawMessage = "SELECTOR1xxxxxxxxxx";
             var identificadorMensaje = new IdentificadorMensaje();
-            var mensaje = identificadorMensaje.Identificar(messageQueued, valoresSelectores);
+            var mensaje = identificadorMensaje.Identificar(rawMessage, valoresSelectores);
             Assert.AreEqual(mensaje1, mensaje);
 
-            messageQueued = new MessageQueued { RawData = "xSELECTOR2xxxxxxxxx" };
+            rawMessage = "xSELECTOR2xxxxxxxxx";
             identificadorMensaje = new IdentificadorMensaje();
-            mensaje = identificadorMensaje.Identificar(messageQueued, valoresSelectores);
+            mensaje = identificadorMensaje.Identificar(rawMessage, valoresSelectores);
             Assert.AreEqual(mensaje2, mensaje);
         }
 
@@ -56,9 +53,9 @@
                             Mensaje= new Mensaje()
                         }
                 });
-            var messageQueued = new MessageQueued { RawData = "xxxxxxxxxxSELECTOR_EN_OTRA_POSICION" };
             var identificadorMensaje = new IdentificadorMensaje();
-            identificadorMensaje.Identificar(messageQueued, valoresSelectores);
+            var rawMessage = "xxxxxxxxxxSELECTOR_EN_OTRA_POSICION";
+            identificadorMensaje.Identificar(rawMessage, valoresSelectores);
         }
 
     }

@@ -57,7 +57,7 @@
     <Compile Include="Identificadores\IdentificadorGrupoMensajeTests.cs" />
     <Compile Include="Identificadores\IdentificadorMensajeTests.cs" />
     <Compile Include="Identificadores\IdentificadorTransaccionalTests.cs" />
-    <Compile Include="MessageDataFactoryTests.cs" />
+    <Compile Include="Mensajeria\MessageDataFactoryTests.cs" />
     <Compile Include="WorkerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

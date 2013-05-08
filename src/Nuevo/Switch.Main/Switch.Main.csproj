@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mensajeria\FieldData.cs" />
     <Compile Include="Core\GrupoMensaje.cs" />
     <Compile Include="Core\Mensaje.cs" />
     <Compile Include="Core\MensajeTransaccional.cs" />
@@ -53,7 +54,8 @@
     <Compile Include="Identificadores\IdentificadorGrupoMensaje.cs" />
     <Compile Include="Identificadores\IdentificadorMensaje.cs" />
     <Compile Include="Identificadores\IdentificadorTransaccional.cs" />
-    <Compile Include="MessageData.cs" />
+    <Compile Include="Mensajeria\MessageData.cs" />
+    <Compile Include="Mensajeria\MessageDataFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queue\MessageQueued.cs" />

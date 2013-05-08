@@ -6,7 +6,7 @@
 
     public interface IIdentificadorGrupoMensaje
     {
-        GrupoMensaje Identificar(MessageQueued messageQueued);
+        GrupoMensaje Identificar(int entidadId);
     }
 
     public class IdentificadorGrupoMensaje : IIdentificadorGrupoMensaje
@@ -18,9 +18,9 @@
             this.dataAccess = dataAccess;
         }
 
-        public GrupoMensaje Identificar(MessageQueued messageQueued)
+        public GrupoMensaje Identificar(int entidadId)
         {
-            return this.dataAccess.GrupoMensajePorEntidad(messageQueued.EntidadId);
+            return this.dataAccess.GrupoMensajePorEntidad(entidadId);
         }
     }
 }

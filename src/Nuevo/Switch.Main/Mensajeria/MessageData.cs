@@ -1,10 +1,8 @@
-namespace Swich.Main
+namespace Swich.Main.Mensajeria
 {
     using System.Collections.Generic;
 
-    using Swich.Main.Contracts;
     using Swich.Main.Core;
-    using Swich.Main.Queue;
 
     public class MessageData
     {

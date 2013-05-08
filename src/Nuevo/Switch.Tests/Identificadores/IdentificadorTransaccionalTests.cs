@@ -4,9 +4,9 @@
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-    using Swich.Main.Contracts;
     using Swich.Main.Core;
     using Swich.Main.Identificadores;
+    using Swich.Main.Mensajeria;
 
     [TestClass]
     public class IdentificadorTransaccionalTests
@@ -34,12 +34,12 @@
 
             var fields = new List<FieldData> { new FieldData { CampoId = 1, Data = "TRANSACCIONAL1" }, new FieldData { CampoId = 2, Data = "xxxxxxxxxxx" } };
             var identificadorTransaccional = new IdentificadorTransaccional();
-            var transaccional = identificadorTransaccional.IdentificarTransaccional(mensaje, fields);
+            var transaccional = identificadorTransaccional.Identificar(mensaje, fields);
             Assert.AreEqual(transaccional1, transaccional);
 
             fields = new List<FieldData> { new FieldData { CampoId = 1, Data = "xxxxxxxxxxx" }, new FieldData { CampoId = 2, Data = "TRANSACCIONAL2" } };
             identificadorTransaccional = new IdentificadorTransaccional();
-            transaccional = identificadorTransaccional.IdentificarTransaccional(mensaje, fields);
+            transaccional = identificadorTransaccional.Identificar(mensaje, fields);
             Assert.AreEqual(transaccional2, transaccional);
         }
     }

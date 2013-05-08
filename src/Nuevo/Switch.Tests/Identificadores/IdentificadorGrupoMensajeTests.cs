@@ -10,7 +10,6 @@
     using Swich.Main.Core;
     using Swich.Main.Identificadores;
     using Swich.Main.Queue;
-    //TODO: refactorizar para que solo ingrese cuál es la entidad y no todo el messagequeued
 
     [TestClass]
     public class IdentificadorGrupoMensajeTests
@@ -21,10 +20,10 @@
             var dataAccess = A.Fake<IDataAccess>();
             A.CallTo(() => dataAccess.GrupoMensajePorEntidad(1))
                 .Returns(new GrupoMensaje { TipoMensaje = TipoMensaje.ISO8583 });
-            var messageQueued = new MessageQueued { EntidadId = 1 };
             var identificador = new IdentificadorGrupoMensaje(dataAccess);
 
-            var grupoMensaje = identificador.Identificar(messageQueued);
+            var entidadId = 1;
+            var grupoMensaje = identificador.Identificar(entidadId);
 
             Assert.AreEqual(TipoMensaje.ISO8583, grupoMensaje.TipoMensaje);
         }

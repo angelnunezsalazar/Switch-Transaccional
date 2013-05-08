@@ -4,17 +4,19 @@
 
     using Swich.Main.Core;
     using Swich.Main.Exceptions;
-    using Swich.Main.Queue;
 
-    //TODO: Pasar únicamente el RawData
-
-    public class IdentificadorMensaje
+    public interface IIdentificadorMensaje
     {
-        public Mensaje Identificar(MessageQueued messageQueued, IEnumerable<ValorSelector> valoresSelectores)
+        Mensaje Identificar(string rawMessage, IEnumerable<ValorSelector> valoresSelectores);
+    }
+
+    public class IdentificadorMensaje : IIdentificadorMensaje
+    {
+        public Mensaje Identificar(string rawMessage, IEnumerable<ValorSelector> valoresSelectores)
         {
             foreach (var selector in valoresSelectores)
             {
-                var valorCampoSeleccionado = messageQueued.RawData.Substring(selector.Posicion, selector.Longitud);
+                var valorCampoSeleccionado = rawMessage.Substring(selector.Posicion, selector.Longitud);
                 if (valorCampoSeleccionado == selector.Valor)
                 {
                     return selector.Mensaje;
