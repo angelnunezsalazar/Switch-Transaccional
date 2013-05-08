@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Fakes\DataAccessFake.cs" />
+    <Compile Include="Contracts\Fakes\DinamicaFake.cs" />
+    <Compile Include="Contracts\Fakes\ParserFake.cs" />
     <Compile Include="Mensajeria\FieldData.cs" />
     <Compile Include="Core\GrupoMensaje.cs" />
     <Compile Include="Core\Mensaje.cs" />

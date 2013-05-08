@@ -16,6 +16,6 @@
 
         public static readonly string BANKAUTHORIZER_QUEQUE = "BankAuthorizer";
 
-        public static readonly Type TIPO_SERIALIZACION = typeof(string);
+        public static readonly Type TIPO_SERIALIZACION = typeof(MessageQueued);
     }
 }

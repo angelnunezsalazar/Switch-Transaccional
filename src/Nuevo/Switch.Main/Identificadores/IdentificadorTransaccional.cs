@@ -12,7 +12,7 @@
         MensajeTransaccional Identificar(Mensaje mensaje, List<FieldData> fields);
     }
 
-    public class IdentificadorTransaccional
+    public class IdentificadorTransaccional:IIdentificadorTransaccional
     {
         public MensajeTransaccional Identificar(Mensaje mensaje, List<FieldData> fields)
         {

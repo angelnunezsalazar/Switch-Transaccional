@@ -2,7 +2,7 @@ namespace Swich.Main.Queue
 {
     public class MessageQueued
     {
-        public int Id { get; set; }
+        public string ClientKey { get; set; }
 
         public int EntidadId { get; set; }
 

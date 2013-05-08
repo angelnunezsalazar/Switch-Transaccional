@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace Swich.Main
 {
+    using Swich.Main.Contracts.Fakes;
+    using Swich.Main.Mensajeria;
     using Swich.Main.Queue;
 
     class Program
@@ -36,14 +38,14 @@ namespace Swich.Main
 
         private void SentToAuthorizerQueue(Message message)
         {
-            Console.WriteLine("Processing request message. Key: {0}", message.Label);
-            QueueSender.Send(message.Label, message.Body, QueueConstants.BANKAUTHORIZER_QUEQUE);
+            var worker = new Worker();
+            worker.Procesar(null);
         }
 
         private void SentToCellQueue(Message message)
         {
-            Console.WriteLine("Processing response message. Key: {0}", message.Label);
-            QueueSender.Send(message.Label, message.Body, QueueConstants.CELLPHONE_QUEQUE);
+            var worker = new Worker();
+            worker.Procesar(null);
         }
     }
 }

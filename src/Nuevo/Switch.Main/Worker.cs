@@ -1,6 +1,7 @@
 namespace Swich.Main
 {
     using Swich.Main.Contracts;
+    using Swich.Main.Contracts.Fakes;
     using Swich.Main.Core;
     using Swich.Main.Exceptions;
     using Swich.Main.Mensajeria;
@@ -12,17 +13,22 @@ namespace Swich.Main
 
         private readonly IDinamica dinamica;
 
+        public Worker()
+        {
+            this.messageDataFactory=new MessageDataFactory();
+            this.dinamica=new DinamicaFake();
+        }
+
         public Worker(IMessageDataFactory messageDataFactory, IDinamica dinamica)
         {
             this.messageDataFactory = messageDataFactory;
             this.dinamica = dinamica;
         }
 
-        public MessageQueued Procesar(MessageQueued messageQueuedIn)
+        public void Procesar(MessageQueued messageQueuedIn)
         {
             var messageDataIn = messageDataFactory.Create(messageQueuedIn);
-            var messageDataOut = this.dinamica.Ejecutar(messageDataIn);
-            return new MessageQueued { Id = messageQueuedIn.Id, RawData = messageDataOut.RawData };
+            dinamica.Ejecutar(messageDataIn);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿namespace Swich.Main.Mensajeria
 {
     using Swich.Main.Contracts;
+    using Swich.Main.Contracts.Fakes;
     using Swich.Main.Identificadores;
     using Swich.Main.Queue;
 
@@ -18,6 +19,14 @@
         private readonly IIdentificadorMensaje identificadorMensaje;
 
         private readonly IIdentificadorTransaccional identificadorTransaccional;
+
+        public MessageDataFactory()
+        {
+            this.parser=new ParserFake();
+            this.identificadorGrupoMensaje=new IdentificadorGrupoMensaje(new DataAccessFake());
+            this.identificadorMensaje=new IdentificadorMensaje();
+            this.identificadorTransaccional = new IdentificadorTransaccional();
+        }
 
         public MessageDataFactory(IParser parser, IIdentificadorGrupoMensaje identificadorGrupoMensaje,
                                   IIdentificadorMensaje identificadorMensaje,

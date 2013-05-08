@@ -3,9 +3,11 @@
     using System;
     using System.Messaging;
 
+    //TODO: ver un buen nombre para el clientKey
+
     public class QueueSender
     {
-        public static void Send(string clientKey, object body, string quequeName, string responseQueueName = null)
+        public static void Send(string clientKey, MessageQueued body, string quequeName, string responseQueueName = null)
         {
             var requestQueue = new MessageQueue(QueueConstants.PRIVATE_QUEQUE + quequeName);
             requestQueue.Formatter = new XmlMessageFormatter(new[] { QueueConstants.TIPO_SERIALIZACION });

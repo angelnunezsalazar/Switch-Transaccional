@@ -28,26 +28,15 @@ namespace Switch.Tests
         }
 
         [TestMethod]
-        public void RetornaLaRespuestaConElMismoIdDeLaSolicitud()
-        {
-            var messageQueuedIn = new MessageQueued { Id = 1 };
-            var messageQueuedOut = worker.Procesar(messageQueuedIn);
-
-            Assert.AreEqual(messageQueuedIn.Id, messageQueuedOut.Id);
-        }
-
-        [TestMethod]
-        public void RetornaLaRespuestaConElMensajeEnRaw()
+        public void ProcesaLosMensajesQueIngresan()
         {
             var messageQueuedIn = new MessageQueued();
             var messageDataIn = new MessageData();
             A.CallTo(() => messageDataFactory.Create(messageQueuedIn)).Returns(messageDataIn);
-            var messageDataOut = new MessageData{RawData = "xxxxx"};
-            A.CallTo(() => dinamica.Ejecutar(messageDataIn)).Returns(messageDataOut);
+            
+            worker.Procesar(messageQueuedIn);
 
-            var messageQueuedOut = worker.Procesar(messageQueuedIn);
-
-            Assert.AreEqual("xxxxx", messageQueuedOut.RawData);
+            A.CallTo(() => dinamica.Ejecutar(messageDataIn)).MustHaveHappened();
         }
     }
 }
