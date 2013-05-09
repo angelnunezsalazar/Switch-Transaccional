@@ -5,6 +5,7 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using Swich.Main.Core;
+    using Swich.Main.Exceptions;
     using Swich.Main.Identificadores;
     using Swich.Main.Mensajeria;
 
@@ -41,6 +42,32 @@
             identificadorTransaccional = new IdentificadorTransaccional();
             transaccional = identificadorTransaccional.Identificar(mensaje, fields);
             Assert.AreEqual(transaccional2, transaccional);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(TransaccionalNoIdentificadoException))]
+        public void LanzaExcepcionSiNoIdentificaElTransaccional()
+        {
+            var identificadorTransaccional = new IdentificadorTransaccional();
+            var mensaje = new Mensaje
+                {
+                    Transaccionales = new List<MensajeTransaccional>
+                        {
+                            new MensajeTransaccional
+                                {
+                                    CampoId = 1, Valor = "VALOR"
+                                }
+                        }
+                };
+            var fields = new List<FieldData>
+                {
+                    new FieldData
+                        {
+                            CampoId = 1,
+                            Data = "VALOR_INCORRECTO"
+                        }
+                };
+            identificadorTransaccional.Identificar(mensaje, fields);
         }
     }
 }

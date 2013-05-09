@@ -9,7 +9,14 @@
     {
         public List<FieldData> Parse(string rawData, Mensaje mensaje)
         {
-            return new List<FieldData>();
+            return new List<FieldData>
+                {
+                    new FieldData
+                        {
+                            CampoId = 1,
+                            Data = "TRANSACCIONAL"
+                        }
+                };
         }
     }
 }

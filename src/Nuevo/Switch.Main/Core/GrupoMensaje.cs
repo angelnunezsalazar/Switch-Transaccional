@@ -4,14 +4,16 @@ namespace Swich.Main.Core
 
     public enum TipoMensaje
     {
-        ISO8583=1
+        ISO8583 = 1,
+
+        XML = 2,
     }
 
     public class GrupoMensaje
     {
-        public GrupoMensaje( )
+        public GrupoMensaje()
         {
-            ValoresSelectores=new List<ValorSelector>();
+            ValoresSelectores = new List<ValorSelector>();
         }
         public List<ValorSelector> ValoresSelectores { get; set; }
 

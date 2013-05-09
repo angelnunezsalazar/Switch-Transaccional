@@ -21,6 +21,8 @@
 
     public class SocketHandler
     {
+        private static int ENTIDAD_ID = 2;
+
         private ManualResetEvent connectDone = new ManualResetEvent(false);
 
         private ManualResetEvent sendDone = new ManualResetEvent(false);
@@ -79,10 +81,10 @@
             }
         }
 
-        private void Send(Socket client, String data)
+        private void Send(Socket client, String content)
         {
-            var frame = data.Length.ToString().PadLeft(4, '0');
-            data = frame + data;
+            var frame = content.Length.ToString().PadLeft(4, '0');
+            var data = frame + content;
             byte[] byteData = Encoding.ASCII.GetBytes(data);
             client.BeginSend(byteData, 0, byteData.Length, 0, SendCallback, client);
         }
@@ -138,7 +140,15 @@
                     if (state.Sb.ToString().Substring(4).Length == int.Parse(frame))
                     {
                         Console.WriteLine("Receive {0} bytes from client. \n Data: {1}", state.Sb.Length, state.Sb);
-                        QueueSender.Send(clientKey, content, QueueConstants.RESPONSE_QUEQUE);
+
+                        var messageQueued = new MessageQueued
+                        {
+                            ClientKey = clientKey,
+                            EntidadId = ENTIDAD_ID,
+                            RawData = content
+                        };
+
+                        QueueSender.Send(clientKey, messageQueued, QueueConstants.RESPONSE_QUEQUE);
                         receiveDone.Set();
                     }
                     else

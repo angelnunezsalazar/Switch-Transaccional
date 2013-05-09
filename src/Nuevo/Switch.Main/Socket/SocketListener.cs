@@ -16,11 +16,11 @@
 
     public class SocketListener
     {
-        private static ManualResetEvent allDone = new ManualResetEvent(false);
-
-        private Action<Socket,string> receiveHandler;
+        private ManualResetEvent allDone = new ManualResetEvent(false);
 
         private int port;
+
+        private Action<Socket,string> receiveHandler;
 
         public SocketListener(int port, Action<Socket, string> receiveHandler)
         {

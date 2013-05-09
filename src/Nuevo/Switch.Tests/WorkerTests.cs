@@ -9,8 +9,6 @@ namespace Switch.Tests
     using Swich.Main.Mensajeria;
     using Swich.Main.Queue;
 
-    //TODO: Ver si devuelve el mismo EntidadId
-
     [TestClass]
     public class WorkerTests
     {

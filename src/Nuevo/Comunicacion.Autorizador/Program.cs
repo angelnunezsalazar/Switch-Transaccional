@@ -2,10 +2,9 @@
 
 namespace ComunicacionAutorizador
 {
-    using System;
-    using System.Messaging;
-
     using Swich.Main.Queue;
+
+    //TODO: No se debe enviar el ClientKey al Autorizador
 
     class Program
     {
@@ -13,9 +12,9 @@ namespace ComunicacionAutorizador
         {
             var queueThread = new Thread(() =>
                 {
-                    var queueListener = new QueueListener(QueueConstants.BANKAUTHORIZER_QUEQUE, message =>
+                    var queueListener = new QueueListener(QueueConstants.BANKAUTHORIZER_QUEQUE, messageQueued =>
                         {
-                            var data = message.Label + message.Body;
+                            var data = messageQueued.ClientKey + messageQueued.RawData;
                             new SocketHandler().Connect(data);
                         });
                     queueListener.Start();

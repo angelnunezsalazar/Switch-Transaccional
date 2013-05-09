@@ -22,9 +22,9 @@
 
         public MessageDataFactory()
         {
-            this.parser=new ParserFake();
-            this.identificadorGrupoMensaje=new IdentificadorGrupoMensaje(new DataAccessFake());
-            this.identificadorMensaje=new IdentificadorMensaje();
+            this.parser = new ParserFake();
+            this.identificadorGrupoMensaje = new IdentificadorGrupoMensaje(new DataAccessFake());
+            this.identificadorMensaje = new IdentificadorMensaje();
             this.identificadorTransaccional = new IdentificadorTransaccional();
         }
 
@@ -46,9 +46,11 @@
             var transaccionalEncontrado = this.identificadorTransaccional.Identificar(mensaje, fields);
             return new MessageData
                 {
+                    ClientKey = messageQueued.ClientKey,
+                    EntidadId = messageQueued.EntidadId,
                     RawData = messageQueued.RawData,
-                    Fields = fields,
                     Tipo = grupoMensaje.TipoMensaje,
+                    Fields = fields,
                     MensajeTransaccionalId = transaccionalEncontrado.Id,
                 };
         }

@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Switch.CelularSimulator
 {
@@ -15,11 +12,15 @@ namespace Switch.CelularSimulator
         {
             Thread.Sleep(4000);//Esperar a que los servicios levanten
 
-            var data = Enviar(Encoding.ASCII.GetBytes("00101234567890"));
+            var data = Enviar(Encoding.ASCII.GetBytes("0017SELECTORxxREQUEST"));
             Console.WriteLine("Receive {0} bytes from socket. \n Data : {1}", data.Length, data);
-            data = Enviar(Encoding.ASCII.GetBytes("0010ABCDEFGHIJ"));
+            data = Enviar(Encoding.ASCII.GetBytes("0018SELECTORyyyREQUEST"));
             Console.WriteLine("Receive {0} bytes from socket. \n Data : {1}", data.Length, data);
-            
+            data = Enviar(Encoding.ASCII.GetBytes("0017SELECTORxxREQUEST"));
+            Console.WriteLine("Receive {0} bytes from socket. \n Data : {1}", data.Length, data);
+            data = Enviar(Encoding.ASCII.GetBytes("0018SELECTORyyyREQUEST"));
+            Console.WriteLine("Receive {0} bytes from socket. \n Data : {1}", data.Length, data);
+
             Console.ReadLine();
         }
 

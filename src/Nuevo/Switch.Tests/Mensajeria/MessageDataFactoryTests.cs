@@ -35,27 +35,26 @@
         }
 
         [TestMethod]
-        public void CreaUnMessageDataConLosValoresDelRequest()
+        public void CreaUnMessageDataBasadoEnLosValoresDelRequest()
         {
-            var RAW_MESSAGE = "xxxxx";
-            var ENTIDAD_ID = 1;
-
             var grupoMensaje = new GrupoMensaje { TipoMensaje = TipoMensaje.ISO8583 };
-            A.CallTo(() => this.identificadorGrupoMensaje.Identificar(ENTIDAD_ID)).Returns(grupoMensaje);
+            A.CallTo(() => this.identificadorGrupoMensaje.Identificar(1)).Returns(grupoMensaje);
             var mensaje = new Mensaje();
-            A.CallTo(() => this.identificadorMensaje.Identificar(RAW_MESSAGE, A<List<ValorSelector>>.Ignored)).Returns(mensaje);
+            A.CallTo(() => this.identificadorMensaje.Identificar("xxxxx", A<List<ValorSelector>>.Ignored)).Returns(mensaje);
             var fields = new List<FieldData>();
-            A.CallTo(() => this.parser.Parse(RAW_MESSAGE, mensaje)).Returns(fields);
+            A.CallTo(() => this.parser.Parse("xxxxx", mensaje)).Returns(fields);
             var transaccional = new MensajeTransaccional { Id = 1 };
             A.CallTo(() => this.identificadorTransaccional.Identificar(mensaje, fields)).Returns(transaccional);
 
-            var messageQueued = new MessageQueued { EntidadId = ENTIDAD_ID, RawData = RAW_MESSAGE };
+            var messageQueued = new MessageQueued { EntidadId = 1, RawData = "xxxxx", ClientKey = "clientKey"};
             var messageData = this.factory.Create(messageQueued);
 
-            Assert.AreEqual(grupoMensaje.TipoMensaje, messageData.Tipo);
+            Assert.AreEqual(1, messageData.EntidadId);
+            Assert.AreEqual("clientKey",messageData.ClientKey);
+            Assert.AreEqual(TipoMensaje.ISO8583, messageData.Tipo);
             Assert.AreEqual(fields, messageData.Fields);
-            Assert.AreEqual(RAW_MESSAGE, messageData.RawData);
-            Assert.AreEqual(transaccional.Id, messageData.MensajeTransaccionalId);
+            Assert.AreEqual("xxxxx", messageData.RawData);
+            Assert.AreEqual(1, messageData.MensajeTransaccionalId);
         }
     }
 }

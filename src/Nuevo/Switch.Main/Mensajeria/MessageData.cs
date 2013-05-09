@@ -4,7 +4,6 @@ namespace Swich.Main.Mensajeria
 
     using Swich.Main.Core;
 
-    //TODO: Probar que el clientkey u el entidadID se asignen en el factory
     public class MessageData
     {
         public string ClientKey { get; set; }

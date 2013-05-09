@@ -4,6 +4,7 @@
     using System.Net.Sockets;
     using System.Text;
 
+    //TODO: El SocketSender.Send debería agregar el frame internamente
     public class SocketSender
     {
         public static void Send(Socket handler, string data)

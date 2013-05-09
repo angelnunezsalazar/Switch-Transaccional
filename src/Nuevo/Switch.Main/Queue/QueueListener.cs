@@ -8,11 +8,11 @@
     {
         private readonly string queueName;
 
-        private Action<Message> receiveHandler;
+        private Action<MessageQueued> receiveHandler;
 
-        public static ManualResetEvent allDone = new ManualResetEvent(false);
+        private ManualResetEvent allDone = new ManualResetEvent(false);
 
-        public QueueListener(string queueName, Action<Message> receiveHandler)
+        public QueueListener(string queueName, Action<MessageQueued> receiveHandler)
         {
             this.queueName = queueName;
             this.receiveHandler = receiveHandler;
@@ -43,7 +43,7 @@
             var queue = (MessageQueue)ar.AsyncState;
             var message = queue.EndReceive(ar);
             Console.WriteLine("Receive message. Key: {0}", message.Label);
-            this.receiveHandler(message);
+            this.receiveHandler(message.Body as MessageQueued);
         }
     }
 }

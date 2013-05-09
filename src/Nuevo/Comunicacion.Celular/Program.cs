@@ -11,6 +11,8 @@ namespace Comunicacion
 
     class Program
     {
+        private static int ENTIDAD_ID = 1;
+
         private static ConcurrentDictionary<string, Socket> connectedClients = new ConcurrentDictionary<string, Socket>();
 
         static void Main(string[] args)
@@ -21,7 +23,13 @@ namespace Comunicacion
                         {
                             var clientKey = Guid.NewGuid().ToString();
                             connectedClients.GetOrAdd(clientKey, handler);
-                            QueueSender.Send(clientKey, content, QueueConstants.REQUEST_QUEQUE, QueueConstants.CELLPHONE_QUEQUE);
+                            var messageQueued = new MessageQueued
+                                {
+                                    ClientKey = clientKey,
+                                    EntidadId = ENTIDAD_ID,
+                                    RawData = content
+                                };
+                            QueueSender.Send(clientKey, messageQueued, QueueConstants.REQUEST_QUEQUE, QueueConstants.CELLPHONE_QUEQUE);
                         });
                     socketHandler.StartListening();
                 });
@@ -29,11 +37,15 @@ namespace Comunicacion
 
             var queueThread = new Thread(() =>
                 {
-                    var queueListener = new QueueListener(QueueConstants.CELLPHONE_QUEQUE, message =>
+                    var queueListener = new QueueListener(QueueConstants.CELLPHONE_QUEQUE, messageQueued =>
                         {
                             Socket handler;
-                            connectedClients.TryRemove(message.Label, out handler);
-                            SocketSender.Send(handler, message.Body.ToString());
+                            connectedClients.TryRemove(messageQueued.ClientKey, out handler);
+                            if (handler==null)
+                            {
+                                throw new ClienteConectadoNoReconocidoException(messageQueued.ClientKey);
+                            }
+                            SocketSender.Send(handler, messageQueued.RawData.ToString());
                         });
                     queueListener.Start();
                 });

@@ -3,7 +3,7 @@
     using System;
     using System.Messaging;
 
-    //TODO: ver un buen nombre para el clientKey
+    //TODO: cambiar el label por un mensaje más informativo
 
     public class QueueSender
     {
