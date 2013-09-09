@@ -1,0 +1,8 @@
+2008/06/10 10:15:42.030,1128,,^,1.6.0.0
+2008/06/10 10:15:42.108,3848,,^,0610101542093-1128-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/10 10:15:42.233,1380,,^,0610101542171-1128-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/10 10:15:42.312,3924,,^,0610101542233-1128-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/10 10:15:42.312,3944,,^,0610101542296-1128-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/10 10:15:42.374,2852,,^,0610101542358-1128-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/10 10:17:58.640,3848,330,->,<SRTDoc><Input_Identificador_Terminal>DIR10018</Input_Identificador_Terminal><Input_OpCode>700000</Input_OpCode><Input_OpNumber>07880718</Input_OpNumber><Input_Nro_Serie_RP3L>00016540</Input_Nro_Serie_RP3L><Input_Origen>1</Input_Origen><Input_UserId>8000500300008358</Input_UserId><Input_Pin>?&#x7;&gt;4&#x4;c</Input_Pin></SRTDoc>
+2008/06/10 10:17:58.780,3848,579,<-,<XML_RESPUESTA><Output_UserId>8000500300008358</Output_UserId><Output_OpCode>700000</Output_OpCode><Output_OpNumber>07880718</Output_OpNumber><Output_AccountFrom></Output_AccountFrom><Output_AccountTo></Output_AccountTo><Output_Amount></Output_Amount><Output_AuthCode>000</Output_AuthCode><Output_CustomerId></Output_CustomerId><Output_OutData>00ASTRID Y GASTON     RESTAURANT                                                </Output_OutData><Output_ServData></Output_ServData><Output_Nro_Serie_RP3L>00016540</Output_Nro_Serie_RP3L><Output_Origen>1</Output_Origen></XML_RESPUESTA>

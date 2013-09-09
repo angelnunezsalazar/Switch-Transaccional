@@ -1,0 +1,30 @@
+2008/06/11 10:56:42.171,3756,,^,1.6.0.0
+2008/06/11 10:56:42.265,3760,,^,0611105642265-3756-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 10:56:42.374,3640,,^,0611105642374-3756-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 10:56:42.437,3676,,^,0611105642437-3756-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 10:56:42.499,3768,,^,0611105642499-3756-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 10:56:42.593,3452,,^,0611105642577-3756-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 11:17:17.655,2748,,^,1.6.0.0
+2008/06/11 11:17:17.765,2756,,^,0611111717734-2748-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 11:17:17.796,2760,,^,0611111717796-2748-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 11:17:17.921,2764,,^,0611111717921-2748-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 11:17:17.984,2768,,^,0611111717984-2748-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 11:17:18.046,2772,,^,0611111718046-2748-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 13:18:40.312,3048,,^,1.6.0.0
+2008/06/11 13:18:40.453,3056,,^,0611131840437-3048-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 13:18:40.515,3060,,^,0611131840515-3048-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 13:18:40.578,3064,,^,0611131840578-3048-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 13:18:40.640,3068,,^,0611131840640-3048-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 13:18:40.750,3116,,^,0611131840703-3048-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 13:26:00.715,2856,,^,1.6.0.0
+2008/06/11 13:26:00.824,2864,,^,0611132600793-2856-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 13:26:00.856,2868,,^,0611132600856-2856-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 13:26:00.918,2872,,^,0611132600918-2856-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 13:26:00.981,2876,,^,0611132600981-2856-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 13:26:01.043,2880,,^,0611132601043-2856-AdaptadorMTS.CAdaptadorMTS-Procesar
+2008/06/11 13:27:36.670,2864,324,->,<SRTDoc><Input_Identificador_Terminal>DIR99999</Input_Identificador_Terminal><Input_OpCode>700000</Input_OpCode><Input_OpNumber>20160001</Input_OpNumber><Input_Nro_Serie_RP3L>10053700</Input_Nro_Serie_RP3L><Input_Origen>2</Input_Origen><Input_UserId>8000500300011956</Input_UserId><Input_Pin>0xL}&#x16;*</Input_Pin></SRTDoc>
+2008/06/11 13:27:36.732,2864,579,<-,<XML_RESPUESTA><Output_UserId>8000500300011956</Output_UserId><Output_OpCode>700000</Output_OpCode><Output_OpNumber>20160001</Output_OpNumber><Output_AccountFrom></Output_AccountFrom><Output_AccountTo></Output_AccountTo><Output_Amount></Output_Amount><Output_AuthCode>000</Output_AuthCode><Output_CustomerId></Output_CustomerId><Output_OutData>00ASTRID Y GASTON     RESTAURANT                                                </Output_OutData><Output_ServData></Output_ServData><Output_Nro_Serie_RP3L>10053700</Output_Nro_Serie_RP3L><Output_Origen>2</Output_Origen></XML_RESPUESTA>
+2008/06/11 13:28:59.564,2864,324,->,<SRTDoc><Input_Identificador_Terminal>DIR99999</Input_Identificador_Terminal><Input_OpCode>700000</Input_OpCode><Input_OpNumber>20160001</Input_OpNumber><Input_Nro_Serie_RP3L>10053700</Input_Nro_Serie_RP3L><Input_Origen>2</Input_Origen><Input_UserId>8000500300011956</Input_UserId><Input_Pin>0xL}&#x16;*</Input_Pin></SRTDoc>
+2008/06/11 13:28:59.595,2864,579,<-,<XML_RESPUESTA><Output_UserId>8000500300011956</Output_UserId><Output_OpCode>700000</Output_OpCode><Output_OpNumber>20160001</Output_OpNumber><Output_AccountFrom></Output_AccountFrom><Output_AccountTo></Output_AccountTo><Output_Amount></Output_Amount><Output_AuthCode>000</Output_AuthCode><Output_CustomerId></Output_CustomerId><Output_OutData>00ASTRID Y GASTON     RESTAURANT                                                </Output_OutData><Output_ServData></Output_ServData><Output_Nro_Serie_RP3L>10053700</Output_Nro_Serie_RP3L><Output_Origen>2</Output_Origen></XML_RESPUESTA>
+2008/06/11 13:30:23.973,2864,324,->,<SRTDoc><Input_Identificador_Terminal>DIR99999</Input_Identificador_Terminal><Input_OpCode>700000</Input_OpCode><Input_OpNumber>20160001</Input_OpNumber><Input_Nro_Serie_RP3L>10053700</Input_Nro_Serie_RP3L><Input_Origen>2</Input_Origen><Input_UserId>8000500300011956</Input_UserId><Input_Pin>0xL}&#x16;*</Input_Pin></SRTDoc>
+2008/06/11 13:30:24.004,2864,579,<-,<XML_RESPUESTA><Output_UserId>8000500300011956</Output_UserId><Output_OpCode>700000</Output_OpCode><Output_OpNumber>20160001</Output_OpNumber><Output_AccountFrom></Output_AccountFrom><Output_AccountTo></Output_AccountTo><Output_Amount></Output_Amount><Output_AuthCode>000</Output_AuthCode><Output_CustomerId></Output_CustomerId><Output_OutData>00ASTRID Y GASTON     RESTAURANT                                                </Output_OutData><Output_ServData></Output_ServData><Output_Nro_Serie_RP3L>10053700</Output_Nro_Serie_RP3L><Output_Origen>2</Output_Origen></XML_RESPUESTA>
