@@ -1,0 +1,73 @@
+﻿@model Web.Models.MensajeTransaccionalList
+@{
+    ViewBag.Title = "Consultar Mensaje Transaccional";
+}
+@using (Html.BeginForm("index", "MensajeTransaccional", FormMethod.Post, new { id = "form-buscar" }))
+{
+    <div class="editor-label">
+        @Html.Label("GrupoMensajeId", "Grupo Mensaje")
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("GrupoMensajeId", "Seleccionar Grupo Mensaje")
+    </div>
+    
+    <div class="editor-label">
+        @Html.Label("MensajeId", "Mensaje")
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("MensajeId", "Seleccionar Mensaje")
+    </div>
+}
+<br />
+@if (Model.MostrarCampos)
+{
+    RouteValueDictionary routeValues = new RouteValueDictionary
+        {
+            { "grupoMensajeId", Model.GrupoMensajeId.SelectedValue },
+            { "mensajeId", Model.MensajeId.SelectedValue }
+        };
+
+    <table class="list">
+        <thead>
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Condición
+                </th>
+                <th>
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.MensajesTransaccionales)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CondicionMensaje.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id, "TableLinks", new { routeValues })
+                    @Html.ActionLink("Reglas Mensaje Transaccional", "index","ReglaMensajeTransaccional", new { mensajeTransaccionalId = item.Id }, new { @class = "find" })
+                </td>
+            </tr>
+        }
+    </table>
+    
+    <p>
+        @Html.ActionLink("Agregar", "crear", routeValues)
+    </p>
+}
+<script type="text/javascript">
+    $(function () {
+        $("#GrupoMensajeId, #MensajeId").change(function () {
+            if ($("#GrupoMensajeId")[0] == this) {
+                $("#MensajeId").val("");
+            }
+            $("#form-buscar").submit();
+        });
+    });
+</script>

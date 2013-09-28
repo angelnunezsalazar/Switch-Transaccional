@@ -1,0 +1,69 @@
+﻿@model IEnumerable<BusinessEntity.Terminal>
+@{
+    ViewBag.Title = "Consultar Terminal";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="editor-label">
+        @Html.Label("Serial")
+    </div>
+    <div class="editor-field">
+        @Html.Editor("Serial")
+    </div>
+
+    <div class="editor-label">
+        @Html.Label("EstadoTerminalId", "EstadoTerminal")
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("EstadoTerminalId", "Todos")
+    </div>
+
+    <div class="editor-label">
+        @Html.Label("EstadoTerminalId", "PuntoServicio")
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("PuntoServicioId", "Todos")
+    </div>
+
+    <p>
+        <input type="submit" value="Buscar" />
+    </p>
+}
+<table class="list">
+<thead>
+    <tr>
+        <th>
+            Serial
+        </th>
+        <th>
+            Estado
+        </th>
+        <th>
+            Punto Servicio
+        </th>
+        <th>
+        </th>
+    </tr>
+</thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoTerminal.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PuntoServicio.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id,"TableLinks")
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("Crear", "crear")
+</p>

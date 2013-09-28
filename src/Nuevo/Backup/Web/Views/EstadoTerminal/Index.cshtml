@@ -1,0 +1,31 @@
+﻿@model IEnumerable<BusinessEntity.EstadoTerminal>
+@{
+    ViewBag.Title = "Consultar Estado Terminal";
+}
+
+<table class="list">
+<thead>
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+        </th>
+    </tr>
+</thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id,"TableLinks")
+            </td>
+        </tr>
+    }
+</table>
+
+<p>
+    @Html.ActionLink("Crear", "crear")
+</p>

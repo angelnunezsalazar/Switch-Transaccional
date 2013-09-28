@@ -1,0 +1,61 @@
+﻿@model IEnumerable<BusinessEntity.Protocolo>
+@{
+    ViewBag.Title = "Consultar Protocolo";
+}
+
+<table class="list">
+<thead>
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Tipo
+        </th>
+        <th>
+            Timeout Request
+        </th>
+        <th>
+            Timeout Response
+        </th>
+        <th>
+            Inicia Comunicacion
+        </th>
+        <th>
+            Acepta Comunicacion
+        </th>
+        <th>
+        </th>
+    </tr>
+</thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoComunicacion.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeoutRequest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeoutResponse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IniciaComunicacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AceptaComunicacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id,"TableLinks")
+            </td>
+        </tr>
+    }
+</table>
+
+<p>
+    @Html.ActionLink("Crear", "crear")
+</p>

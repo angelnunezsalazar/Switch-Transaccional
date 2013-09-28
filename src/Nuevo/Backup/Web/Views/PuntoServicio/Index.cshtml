@@ -1,0 +1,43 @@
+﻿@model IEnumerable<BusinessEntity.PuntoServicio>
+@{
+    ViewBag.Title = "Consultar Punto Servicio";
+}
+
+<table class="list">
+<thead>
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Estado
+        </th>
+        <th>
+            Direccion
+        </th>
+        <th>
+        </th>
+    </tr>
+</thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id,"tableLinks")
+            </td>
+        </tr>
+    }
+</table>
+
+<p>
+    @Html.ActionLink("Crear", "crear")
+</p>

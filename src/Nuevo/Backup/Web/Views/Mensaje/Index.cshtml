@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BusinessEntity.Mensaje>
+@{
+    ViewBag.Title = "Consultar Mensaje";
+}
+
+@using (Html.BeginForm("index", "mensaje", FormMethod.Post, new { id = "form-grupomensaje" }))
+{
+    <div class="editor-label">
+        @Html.Label("GrupoMensajeId", "Grupo Mensaje")
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("GrupoMensajeId", "Seleccionar Grupo Mensaje")
+    </div>
+}
+
+<br />
+
+@if (Model != null)
+{
+    var grupoMensajeId = ((SelectList)ViewBag.GrupoMensajeId).SelectedValue;
+    RouteValueDictionary routeValues = new RouteValueDictionary { { "grupoMensajeId", grupoMensajeId } };
+
+    <table class="list">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Descripcion
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id, "TableLinks", new { routeValues })
+            </td>
+        </tr>
+    }
+    </table>
+    <p>
+        @Html.ActionLink("Crear", "crear",routeValues)
+    </p>
+}
+
+<script type="text/javascript">
+    $(function () {
+        $("#GrupoMensajeId").change(function () {
+            $("#form-grupomensaje").submit();
+        });
+    });
+</script>
+

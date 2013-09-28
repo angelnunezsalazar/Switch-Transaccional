@@ -1,0 +1,120 @@
+﻿@model Web.Models.ProtocoloForm
+
+<script type="text/javascript">
+    $(function () {
+        $("#TipoComunicacionId").change(function (e) {
+            MostrarTipoComunicacion();
+        });
+
+        function MostrarTipoComunicacion() {
+            $("#tiposcomunicacion > div").hide();
+            $("#tiposcomunicacion > div[id*='" + $("#TipoComunicacionId").val() + "']").show();
+            $("#bindingType").val($("#TipoComunicacionId :selected").text());
+        }
+
+        MostrarTipoComunicacion();
+    });
+</script>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Protocolo</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TimeoutRequest)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TimeoutRequest)
+            @Html.ValidationMessageFor(model => model.TimeoutRequest)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TimeoutResponse)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TimeoutResponse)
+            @Html.ValidationMessageFor(model => model.TimeoutResponse)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IniciaComunicacion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IniciaComunicacion)
+            @Html.ValidationMessageFor(model => model.IniciaComunicacion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AceptaComunicacion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AceptaComunicacion)
+            @Html.ValidationMessageFor(model => model.AceptaComunicacion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TipoComunicacionId, "TipoComunicacion")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("TipoComunicacionId")
+            @Html.ValidationMessageFor(model => model.TipoComunicacionId)
+            @Html.Hidden("bindingType")
+        </div>
+
+        <div id="tiposcomunicacion">
+            <div id="1-tcp">
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Puerto)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Puerto)
+                    @Html.ValidationMessageFor(model => model.Puerto)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Frame)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Frame)
+                    @Html.ValidationMessageFor(model => model.Frame)
+                </div>
+            </div>
+            <div id="2-componente">
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.ComponenteId, "Componente")
+                </div>
+                <div class="editor-field">
+                    @Html.DropDownList("ComponenteId")
+                    @Html.ValidationMessageFor(model => model.ComponenteId)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Clase)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Clase)
+                    @Html.ValidationMessageFor(model => model.Clase)
+                </div>
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.Metodo)
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Metodo)
+                    @Html.ValidationMessageFor(model => model.Metodo)
+                </div>
+            </div>
+        </div>
+
+        @Html.Hidden("Id", Model != null ? Model.Id : 0)
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

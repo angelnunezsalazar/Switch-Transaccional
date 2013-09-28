@@ -1,0 +1,65 @@
+﻿@model IEnumerable<BusinessEntity.ReglaMensajeTransaccional>
+@{
+    ViewBag.Title = "Consultar Regla Mensaje Transaccional";
+}
+
+@{
+    RouteValueDictionary routeValues = new RouteValueDictionary();
+    routeValues.Add("mensajeTransaccionalId", Request.QueryString["mensajeTransaccionalId"]);
+}
+
+<div class="editor-label">
+    Grupo Mensaje
+</div>
+<div class="editor-field">
+    @ViewBag.MensajeTransaccional.Mensaje.GrupoMensaje.Nombre
+</div>
+<div class="editor-label">
+    Mensaje
+</div>
+<div class="editor-field">
+    @ViewBag.MensajeTransaccional.Mensaje.Nombre
+</div>
+<div class="editor-label">
+    Mensaje Transaccional
+</div>
+<div class="editor-field">
+    @ViewBag.MensajeTransaccional.Nombre
+</div>
+
+<br />
+
+<table class="list">
+    <thead>
+        <tr>
+            <th>
+                Valor
+            </th>
+            <th>
+                Campo
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Campo.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id, "TableLinks", new { routeValues })
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("Agregar", "crear", routeValues)
+    @Html.ActionLink("Regresar", "index", "MensajeTransaccional",
+                    new {grupoMensajeId=ViewBag.MensajeTransaccional.Mensaje.GrupoMensaje.Id,
+                         mensajeId=ViewBag.MensajeTransaccional.Mensaje.Id},null)
+</p>

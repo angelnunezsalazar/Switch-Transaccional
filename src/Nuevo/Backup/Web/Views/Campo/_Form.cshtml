@@ -1,0 +1,58 @@
+﻿@model Web.Models.CampoForm
+
+@{
+    var grupoMensajeId = Request.QueryString["grupoMensajeId"];
+    var mensajeId = Request.QueryString["mensajeId"];
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Mensaje</legend>
+
+        <div class="editor-label">
+            Grupo Mensaje
+        </div>
+        <div class="editor-field">
+            @ViewBag.Mensaje.GrupoMensaje.Nombre
+        </div>
+
+        <div class="editor-label">
+            Mensaje
+        </div>
+        <div class="editor-field">
+            @ViewBag.Mensaje.Nombre
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("CampoMaestroId","Campo Maestro")
+        </div>
+        <div class="editor-field">
+            @if (Model == null) { 
+                @Html.DropDownList("CampoMaestroId")
+            }
+            else{
+                @Model.CampoMaestroNombre
+            }
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Requerido)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Requerido)
+            @Html.ValidationMessageFor(model => model.Requerido)
+        </div>
+
+        @Html.Hidden("Id", Model != null ? Model.Id : 0)
+        @Html.Hidden("MensajeId", mensajeId)
+
+        <p>
+            <input type="submit" value="Guardar" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Regresar", "Index",new {grupoMensajeId,mensajeId})
+</div>
